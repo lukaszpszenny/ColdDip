@@ -41,7 +41,7 @@ Screenshot gallery: Polish pages use Polish watch screenshots where they exist; 
 
 ## Flags
 
-Language-switcher flags in `assets/flags/` are the 4×3 SVG files from the [flag-icons](https://github.com/lipis/flag-icons) project (MIT license), copied locally so they work offline and on Windows (emoji flags often do not).
+Language-switcher flags in `assets/flags/` come from the 4×3 SVG files of the [flag-icons](https://github.com/lipis/flag-icons) project (MIT license). They are copied locally and also rasterized to small PNGs, which Windows displays reliably (emoji flags often do not).
 
 ## After you have a public URL
 
