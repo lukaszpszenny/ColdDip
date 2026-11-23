@@ -24,6 +24,13 @@
  * showSupport      true  → show the “buy me a coffee” block.
  * supportUrl             Full payment link (Buy Me a Coffee, PayPal, …).
  *                        The block stays hidden if the URL is empty.
+ *
+ * faceStoreUrl          Connect IQ store URL for the Mors – tarcza
+ *                        watch face. Leave empty until the face is
+ *                        published: the site then shows a localized
+ *                        “Coming soon to Connect IQ Store” badge
+ *                        instead of a store button. When you have
+ *                        the link, paste it here and republish.
  */
 window.COLDDIP_CONFIG = {
   instinctPending: false,
@@ -31,5 +38,6 @@ window.COLDDIP_CONFIG = {
   showVideo: false,
   youtubeId: "",
   showSupport: false,
-  supportUrl: ""
+  supportUrl: "",
+  faceStoreUrl: ""
 };

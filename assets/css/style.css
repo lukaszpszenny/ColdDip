@@ -817,3 +817,94 @@ a.pill:hover { color: var(--ice); background: rgba(126, 214, 240, 0.22); }
   .footer .mail-cluster,
   .footer .mail-alt { align-items: flex-start; justify-content: flex-start; }
 }
+
+
+/* Watch face (Mors – tarcza) */
+#face { scroll-margin-top: calc(var(--header-h) + 12px); }
+.face-grid {
+  display: grid;
+  gap: 28px;
+  margin-bottom: 8px;
+}
+.face-copy .sec-lead { margin-bottom: 18px; }
+.face-copy .badge { margin-bottom: 14px; }
+.face-copy .local-name { margin-top: -4px; }
+.face-price {
+  font-size: clamp(1.7rem, 4vw, 2.35rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 0 0 16px;
+  line-height: 1.15;
+}
+.face-price small {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.95rem;
+  font-weight: 550;
+  color: var(--muted);
+  letter-spacing: 0;
+}
+.face-steps {
+  margin: 0 0 22px;
+  padding-left: 1.2em;
+  color: var(--muted);
+  max-width: 40rem;
+}
+.face-steps li { margin: 0 0 8px; }
+.face-steps a { font-weight: 650; }
+.face-hero-clip,
+.face-scenes figure {
+  margin: 0;
+  background: #050b12;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.face-hero-clip video,
+.face-scenes video {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  display: block;
+  background: #050b12;
+}
+.face-hero-clip figcaption,
+.face-scenes figcaption {
+  font-size: 0.8rem;
+  color: var(--muted);
+  padding: 8px 10px 10px;
+  text-align: center;
+}
+.face-scenes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 28px;
+}
+.face-families {
+  display: grid;
+  gap: 14px;
+  margin-top: 28px;
+}
+@media (min-width: 720px) {
+  .face-scenes { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+@media (min-width: 800px) {
+  .cta-row { flex-direction: row; align-items: center; flex-wrap: wrap; }
+  .face-families { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 800px) and (max-width: 1099px) {
+  .nav a { padding: 8px 7px; font-size: 0.85rem; }
+}
+@media (min-width: 860px) {
+  .face-grid {
+    grid-template-columns: 1.08fr 0.92fr;
+    align-items: center;
+    gap: 40px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .face-hero-clip video,
+  .face-scenes video { /* posters remain visible; JS pauses playback */ }
+}

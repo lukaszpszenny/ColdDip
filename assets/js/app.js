@@ -300,7 +300,68 @@
     (root || document).querySelectorAll('a[href^="mailto:"]').forEach(enhanceMailto);
   }
 
+
+  function applyFaceStore() {
+    var url = String((cfg && cfg.faceStoreUrl) || "").trim();
+    document.querySelectorAll("[data-face-store]").forEach(function (el) {
+      if (url) {
+        el.hidden = false;
+        if (el.tagName === "A") {
+          el.href = url;
+          el.target = "_blank";
+          el.rel = "noopener";
+        }
+      } else {
+        el.hidden = true;
+      }
+    });
+    document.querySelectorAll("[data-face-soon]").forEach(function (el) {
+      el.hidden = !!url;
+    });
+  }
+
+  function setupFaceClips() {
+    var clips = document.querySelectorAll("#face video.face-clip");
+    if (!clips.length) return;
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) {
+      clips.forEach(function (v) {
+        v.removeAttribute("autoplay");
+        try { v.pause(); } catch (e) {}
+      });
+      return;
+    }
+    function play(v) {
+      var p = v.play();
+      if (p && p.catch) p.catch(function () {});
+    }
+    if (!("IntersectionObserver" in window)) {
+      clips.forEach(function (v) {
+        v.preload = "metadata";
+        play(v);
+      });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        var v = e.target;
+        if (e.isIntersecting) {
+          if (v.preload !== "auto") v.preload = "auto";
+          play(v);
+        } else {
+          try { v.pause(); } catch (err) {}
+        }
+      });
+    }, { rootMargin: "120px 0px", threshold: 0.2 });
+    clips.forEach(function (v) {
+      v.preload = "none";
+      io.observe(v);
+    });
+  }
+
   applyFlags();
+  applyFaceStore();
+  setupFaceClips();
   initChecker();
   initVideo();
   enhanceMailtos(document);
