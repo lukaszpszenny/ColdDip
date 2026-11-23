@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cold Dip – aplikace pro otužování a zimní plavání na hodinky Garmin</title>
+  <meta name="description" content="Bezplatná aplikace pro hodinky Garmin na otužování a koupání ve studené vodě. Fáze, časovač, tep, teplota vody, GPS a další. Funguje na 130+ hodinkách Garmin.">
+  <meta name="author" content="Łukasz Pszenny">
+  <meta name="theme-color" content="#07111c">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Cold Dip">
+  <meta property="og:title" content="Cold Dip – aplikace pro otužování a zimní plavání na hodinky Garmin">
+  <meta property="og:description" content="Bezplatná aplikace pro hodinky Garmin na otužování a koupání ve studené vodě. Fáze, časovač, tep, teplota vody, GPS a další. Funguje na 130+ hodinkách Garmin.">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="../assets/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Cold Dip – aplikace pro otužování a zimní plavání na hodinky Garmin">
+  <meta property="og:locale" content="cs_CZ">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="pl_PL">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="sk_SK">
+  <meta property="og:locale:alternate" content="fi_FI">
+  <meta property="og:locale:alternate" content="nb_NO">
+  <meta property="og:locale:alternate" content="sv_SE">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="ru_RU">
+  <meta property="og:locale:alternate" content="uk_UA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cold Dip – aplikace pro otužování a zimní plavání na hodinky Garmin">
+  <meta name="twitter:description" content="Bezplatná aplikace pro hodinky Garmin na otužování a koupání ve studené vodě. Fáze, časovač, tep, teplota vody, GPS a další. Funguje na 130+ hodinkách Garmin.">
+  <meta name="twitter:image" content="../assets/img/og.jpg">
+  <meta name="twitter:image:alt" content="Cold Dip – aplikace pro otužování a zimní plavání na hodinky Garmin">
+  <link rel="canonical" href="../cs/">
+  <link rel="icon" href="../assets/img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="../assets/img/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <meta name="apple-mobile-web-app-title" content="Cold Dip">
+  <link rel="preload" as="image" type="image/webp" href="../assets/img/promo/cs/1.webp" fetchpriority="high">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="pl" href="../pl/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="cs" href="../cs/">
+  <link rel="alternate" hreflang="sk" href="../sk/">
+  <link rel="alternate" hreflang="fi" href="../fi/">
+  <link rel="alternate" hreflang="nb" href="../nb/">
+  <link rel="alternate" hreflang="sv" href="../sv/">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="uk" href="../uk/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+  (function () {
+    var LANGS = ["en","pl","de","cs","sk","fi","nb","sv","es","ru","uk"];
+    var parts = location.pathname.split("/").filter(Boolean);
+    if (parts.length && parts[parts.length - 1] === "index.html") parts.pop();
+    if (parts.length && LANGS.indexOf(parts[parts.length - 1]) !== -1) parts.pop();
+    var root = location.origin + "/" + (parts.length ? parts.join("/") + "/" : "");
+    function abs(lang) { return (!lang || lang === "en" || lang === "x-default") ? root : root + lang + "/"; }
+    var here = document.documentElement.lang || "en";
+    document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(function (l) {
+      l.href = abs(l.getAttribute("hreflang"));
+    });
+    var canon = document.querySelector('link[rel="canonical"]');
+    if (canon) canon.href = abs(here);
+    function setMeta(sel, val) {
+      var m = document.querySelector(sel);
+      if (m) m.setAttribute("content", val);
+    }
+    setMeta('meta[property="og:url"]', abs(here));
+    setMeta('meta[property="og:image"]', root + "assets/img/og.jpg");
+    setMeta('meta[name="twitter:image"]', root + "assets/img/og.jpg");
+  })();
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Cold Dip",
+  "alternateName": [
+    "Morsowanie",
+    "Eisbaden",
+    "Otužování",
+    "Otužovanie",
+    "Avanto",
+    "Isbading",
+    "Vinterbad",
+    "Baño frío",
+    "Моржевание",
+    "Моржування"
+  ],
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Garmin Connect IQ",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "url": "https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0",
+  "downloadUrl": "https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0",
+  "installUrl": "https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0",
+  "isAccessibleForFree": true,
+  "description": "Bezplatná aplikace pro hodinky Garmin na otužování a koupání ve studené vodě. Fáze, časovač, tep, teplota vody, GPS a další. Funguje na 130+ hodinkách Garmin.",
+  "author": {
+    "@type": "Person",
+    "name": "Łukasz Pszenny",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bydgoszcz",
+      "addressCountry": "PL"
+    }
+  },
+  "inLanguage": [
+    "en",
+    "pl",
+    "de",
+    "cs",
+    "sk",
+    "fi",
+    "nb",
+    "sv",
+    "es",
+    "ru",
+    "uk"
+  ],
+  "featureList": [
+    "Před vstupem / ve vodě / po výstupu",
+    "Tep a teplota vody",
+    "Počasí z telefonu",
+    "GPS mapa místa koupání",
+    "Pocit, 1–5",
+    "Vlastní aktivita, ne plavání"
+  ]
+}
+  </script>
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true"></div>
+  <a class="skip" href="#main">Přejít k obsahu</a>
+  <header class="header">
+    <div class="wrap">
+      <a class="brand" href="../cs/" aria-label="Cold Dip">
+        <img src="../assets/img/logo.webp" width="36" height="36" alt="" decoding="async">
+        Cold Dip
+      </a>
+      <nav class="nav">
+        <a href="#features">Funkce</a>
+        <a href="#watches">Hodinky</a>
+        <a href="#howto">Jak na to</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+      <a class="header-cta" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">Stáhnout aplikaci</a>
+      <details class="lang">
+        <summary aria-label="Jazyk: Čeština"><span>Čeština</span></summary>
+        <ul class="lang-panel"><li><a href="../" hreflang="en" lang="en">English</a></li><li><a href="../pl/" hreflang="pl" lang="pl">Polski</a></li><li><a href="../de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="../cs/" hreflang="cs" lang="cs" aria-current="page">Čeština</a></li><li><a href="../sk/" hreflang="sk" lang="sk">Slovenčina</a></li><li><a href="../fi/" hreflang="fi" lang="fi">Suomi</a></li><li><a href="../nb/" hreflang="nb" lang="nb">Norsk</a></li><li><a href="../sv/" hreflang="sv" lang="sv">Svenska</a></li><li><a href="../es/" hreflang="es" lang="es">Español</a></li><li><a href="../ru/" hreflang="ru" lang="ru">Русский</a></li><li><a href="../uk/" hreflang="uk" lang="uk">Українська</a></li></ul>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <span class="badge">Bezplatná aplikace pro hodinky Garmin</span>
+          <h1>Cold Dip</h1>
+          <p class="local-name">Na hodinkách se aplikace jmenuje Otužování.</p>
+          <p class="tagline">Otužování a zimní plavání zaznamenané pořádně — ne jako plavání.</p>
+          <div class="cta-row">
+            <a class="btn" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">Zdarma v Connect IQ</a>
+          </div>
+          <p class="search-note">Nebo v aplikaci Connect IQ v telefonu vyhledejte „Cold Dip“.</p>
+          <p class="byline">Vytvořil Łukasz Pszenny, otužilec z Bydhoště v Polsku.</p>
+        </div>
+        <div class="gallery">
+          <figure>
+            <img src="../assets/img/promo/cs/1.webp" width="720" height="900" alt="Úvodní obrazovka: GPS, počasí a teplota vody před vstupem" fetchpriority="high" decoding="async">
+            <figcaption>Před vstupem</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/promo/cs/2.webp" width="720" height="900" alt="Ve vodě: čas a tep" loading="lazy" decoding="async">
+            <figcaption>Ve vodě</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/promo/cs/3.webp" width="720" height="900" alt="Po výstupu: shrnutí a pocit" loading="lazy" decoding="async">
+            <figcaption>Po výstupu</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="wrap">
+        <h2 class="sec-title">Co umí</h2>
+        <p class="sec-lead">Dělaná pro otužování, ne pro bazén. Rozhodujete vy, po celou dobu.</p>
+        <div class="features">
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14"/><path d="M5 12h14"/><path d="M5 17h14"/><circle cx="9" cy="7" r="1.6" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"/><circle cx="15" cy="17" r="1.6" fill="currentColor" stroke="none"/></svg></div>
+            <h3>Před vstupem / ve vodě / po výstupu</h3>
+            <p>Horní tlačítko přepíná fáze. Čas ve vodě prostě běží — aplikace vám nikdy neřekne, abyste vylezli. To je vaše rozhodnutí. Poslední čas je jen orientační hodnota, ne cíl, který musíte překonat.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.6-7 10-7 10z"/></svg></div>
+            <h3>Tep a teplota vody</h3>
+            <p>Tep se zaznamenává po celou dobu. Teplotu vody zadáte ručně a uloží se k aktivitě.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 16h10a4 4 0 0 0 0-8 6 6 0 0 0-11.5 1.5A3.5 3.5 0 0 0 7 16z"/><path d="M8 19v1M12 19v2M16 19v1"/></svg></div>
+            <h3>Počasí z telefonu</h3>
+            <p>Teplota vzduchu, pocitová teplota a vítr — z počasí Garmin v telefonu.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.2"/></svg></div>
+            <h3>GPS mapa místa koupání</h3>
+            <p>Místo vstupu se uloží a v Garmin Connect se zobrazí na mapě.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 13.5s1.5 2.5 4 2.5 4-2.5 4-2.5"/><path d="M9 9.5h.01M15 9.5h.01"/></svg></div>
+            <h3>Pocit, 1–5</h3>
+            <p>Po každém vstupu krátké hodnocení, jak se cítíte. Navíc špička a zotavení tepu a Body Battery a stres před vstupem.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></div>
+            <h3>Vlastní aktivita, ne plavání</h3>
+            <p>Vše se v Garmin Connect uloží jako vlastní aktivita, ne jako plavání.</p>
+          </article>
+        </div>
+        <div class="compat">
+          <h3>11 jazyků</h3>
+          <p>Angličtina, polština, němčina, čeština, slovenština, finština, norština, švédština, španělština, ruština a ukrajinština. Aplikace se automaticky přepne do jazyka hodinek.</p>
+          <div class="pill-row">
+<a class="pill" href="../" hreflang="en" lang="en">English</a><a class="pill" href="../pl/" hreflang="pl" lang="pl">Polski</a><a class="pill" href="../de/" hreflang="de" lang="de">Deutsch</a><a class="pill" href="../cs/" hreflang="cs" lang="cs">Čeština</a><a class="pill" href="../sk/" hreflang="sk" lang="sk">Slovenčina</a><a class="pill" href="../fi/" hreflang="fi" lang="fi">Suomi</a><a class="pill" href="../nb/" hreflang="nb" lang="nb">Norsk</a><a class="pill" href="../sv/" hreflang="sv" lang="sv">Svenska</a><a class="pill" href="../es/" hreflang="es" lang="es">Español</a><a class="pill" href="../ru/" hreflang="ru" lang="ru">Русский</a><a class="pill" href="../uk/" hreflang="uk" lang="uk">Українська</a>
+          </div>
+        </div>
+        <div class="compat">
+          <h3 data-compat-title data-compat-live="Funguje na 130+ hodinkách Garmin">Funguje na 130+ hodinkách Garmin</h3>
+          <p>Forerunner, Fenix, Epix, Enduro, Venu, Vivoactive, Instinct 2 / 3 / E / Crossover a další. Není podporována na velmi starých hodinkách, například Forerunner 920XT (Connect IQ 1.x).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="watches"
+      data-i18n-supported="Podporováno"
+      data-i18n-pending="Přijde s v1.0.3"
+      data-i18n-pending-note="Už je v aplikaci, čeká na schválení v obchodě Garmin."
+      data-i18n-more="Ještě {n} shod — napište trochu víc, abyste seznam zúžili."
+      data-i18n-not-found="Tento model v seznamu podporovaných není."
+      data-i18n-not-found-body="Cold Dip běží jen na hodinkách Garmin s Connect IQ 3.0 nebo novějším."
+      data-i18n-legacy="Tohle jsou starší hodinky s Connect IQ 1.x nebo 2.x, proto na nich Cold Dip nemůže běžet. Chybí jim funkce, které aplikace potřebuje, a také nemají dost paměti."
+      data-i18n-ask="Zeptat se, zda lze váš model přidat"
+      data-i18n-ask-subject="Cold Dip – is this watch supported?"
+      data-i18n-empty="Začněte psát název modelu a zjistíte, zda je podporován.">
+      <div class="wrap">
+        <h2 class="sec-title">Poběží na vašich hodinkách?</h2>
+        <p class="sec-lead">Vyhledejte svůj model. Seznam odpovídá 133 hodinkám v Cold Dip 1.0.3.</p>
+        <div class="checker">
+          <form role="search" action="#" method="get">
+            <div class="checker-field">
+              <label for="watch-q">Model hodinek</label>
+              <input id="watch-q" name="q" type="search" autocomplete="off" spellcheck="false" placeholder="např. Venu 2 Plus nebo Forerunner 265">
+            </div>
+          </form>
+          <div id="watch-results" class="watch-results" aria-live="polite"></div>
+          <p class="chk-note">Velmi staré hodinky s Connect IQ 1.x, například Forerunner 920XT, podporovat nelze.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="wrap">
+        <h2 class="sec-title">Na hodinkách</h2>
+        <p class="sec-lead">Jak Cold Dip vypadá na různých displejích Garmin.</p>
+        <div class="fam-block">
+          <h3>Venu / AMOLED (kulatý)</h3>
+          <div class="shot-row">
+          <figure>
+            <img src="../assets/img/gallery/en/venu/start.webp" width="474" height="720" alt="Úvodní obrazovka: GPS, počasí a teplota vody před vstupem" loading="lazy" decoding="async">
+            <figcaption>Před vstupem</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/venu/water.webp" width="474" height="720" alt="Ve vodě: čas a tep" loading="lazy" decoding="async">
+            <figcaption>Ve vodě</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/venu/after.webp" width="474" height="720" alt="Po výstupu: shrnutí a pocit" loading="lazy" decoding="async">
+            <figcaption>Po výstupu</figcaption>
+          </figure>
+          </div>
+        </div>
+        <div class="fam-block">
+          <h3>Fenix / MIP (kulatý)</h3>
+          <div class="shot-row">
+          <figure>
+            <img src="../assets/img/gallery/en/fenix/start.webp" width="560" height="560" alt="Úvodní obrazovka: GPS, počasí a teplota vody před vstupem" loading="lazy" decoding="async">
+            <figcaption>Před vstupem</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/fenix/water.webp" width="560" height="560" alt="Ve vodě: čas a tep" loading="lazy" decoding="async">
+            <figcaption>Ve vodě</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/fenix/after.webp" width="560" height="560" alt="Po výstupu: shrnutí a pocit" loading="lazy" decoding="async">
+            <figcaption>Po výstupu</figcaption>
+          </figure>
+          </div>
+        </div>
+        <div class="fam-block">
+          <h3>Instinct (černobílý)</h3>
+          <div class="shot-row">
+          <figure>
+            <img src="../assets/img/gallery/en/instinct/start.webp" width="408" height="408" alt="Úvodní obrazovka: GPS, počasí a teplota vody před vstupem" loading="lazy" decoding="async">
+            <figcaption>Před vstupem</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/instinct/water.webp" width="408" height="408" alt="Ve vodě: čas a tep" loading="lazy" decoding="async">
+            <figcaption>Ve vodě</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/instinct/after.webp" width="408" height="408" alt="Po výstupu: shrnutí a pocit" loading="lazy" decoding="async">
+            <figcaption>Po výstupu</figcaption>
+          </figure>
+          </div>
+        </div>
+        <div class="fam-block">
+          <h3>Venu Sq / Venu X1 (obdélníkový)</h3>
+          <div class="shot-row">
+          <figure>
+            <img src="../assets/img/gallery/en/rect/start.webp" width="465" height="720" alt="Úvodní obrazovka: GPS, počasí a teplota vody před vstupem" loading="lazy" decoding="async">
+            <figcaption>Před vstupem</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/rect/water.webp" width="465" height="720" alt="Ve vodě: čas a tep" loading="lazy" decoding="async">
+            <figcaption>Ve vodě</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/rect/after.webp" width="465" height="720" alt="Po výstupu: shrnutí a pocit" loading="lazy" decoding="async">
+            <figcaption>Po výstupu</figcaption>
+          </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="changelog">
+      <div class="wrap">
+        <h2 class="sec-title">Co je nového</h2>
+        <p class="sec-lead">Poslední verze Cold Dip.</p>
+        <ol class="changelog">
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.0.3</h3>
+              <span class="ch-flag">Čeká na schválení v obchodě</span>
+            </div>
+            <p>133 hodinek, včetně Instinct 2, Instinct 2S, Instinct 2X, Instinct 3 Solar, Instinct E a Instinct Crossover, a nové černobílé rozložení pro MIP displeje.</p>
+          </li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.0.2</h3>
+              
+            </div>
+            <p>126 hodinek, včetně Forerunner 55.</p>
+          </li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.0.1</h3>
+              <span class="ch-date">17. 11. 2026</span>
+            </div>
+            <p>105 hodinek, včetně obdélníkových rozložení pro Venu X1 a Venu Sq 2.</p>
+          </li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.0.0</h3>
+              <span class="ch-date">14. 11. 2026</span>
+            </div>
+            <p>První vydání.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="testimonials" hidden data-flag="showTestimonials">
+      <div class="wrap">
+        <h2 class="sec-title">Od lidí, kteří s tím už otužují</h2>
+        <div class="quotes">
+          <blockquote class="quote">
+            <p>“Działa idealnie” <span class="tr">(Funguje ideálně)</span></p>
+            <footer>Radosław S., Facebook — Poznań, Jezioro Rusałka, 16 min</footer>
+          </blockquote>
+          <blockquote class="quote">
+            <p>Přes 10 minut při 5°C — teplota vody na hodinkách a všechna data uložená v Garmin Connect.</p>
+            <footer>Jadwiga</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="howto" class="howto">
+      <div class="wrap" id="faq">
+        <h2 class="sec-title">Jak na to</h2>
+        <p class="sec-lead">Pár věcí, na které se lidé po instalaci často ptají.</p>
+        <div class="faq">
+          <details>
+            <summary><h3>Jak aplikaci nainstaluji?</h3></summary>
+            <p class="answer">Nainstalujte ji v aplikaci Connect IQ Store v telefonu — ne z Google Play ani z App Store. Na hodinkách najdete Cold Dip (Otužování) v seznamu aktivit / aplikací.</p>
+          </details>
+          <details>
+            <summary><h3>Jak nastavím teplotu vody?</h3></summary>
+            <p class="answer">V profilu „Díra v ledu“ ji nastavíte tlačítky − / + na úvodní obrazovce. V ostatních profilech přes menu: „Tepl. vody ručně“. Pokud ve vodě vidíte „--°C“, teplota ještě není nastavená.</p>
+          </details>
+          <details>
+            <summary><h3>Kde jsou moje data v Garmin Connect?</h3></summary>
+            <p class="answer">Otevřete aktivitu, přejděte na kartu „Statistiky“ a sjeďte do sekce „Connect IQ“. Tam je tep, teplota vody, počasí, pocit a časy fází. Dlaždice na obrazovce „Přehled“ nastavuje sám Garmin — aplikace je změnit nedokáže.</p>
+          </details>
+          <details>
+            <summary><h3>Měří hodinky tělesnou teplotu?</h3></summary>
+            <p class="answer">Ne. Hodinky tělesnou teplotu změřit nedokážou. Snímač ukazuje teplotu samotných hodinek, kterou ovlivňuje kůže i vzduch. V Cold Dip zadáváte teplotu vody ručně.</p>
+          </details>
+          <details>
+            <summary><h3>A kalorie?</h3></summary>
+            <p class="answer">Kalorie odhadují hodinky podle tepu, Cold Dip je nepočítá.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="safety" class="howto">
+      <div class="wrap">
+        <div class="safety">
+          <h2 class="sec-title">Bezpečnost</h2>
+          <p class="sec-lead">Studená voda je vážná věc. Jsou to obecná bezpečnostní připomenutí, ne lékařská rada. Vy rozhodujete, kdy vejít a kdy vyjít.</p>
+          <div class="safety-list">
+            <article class="safety-item">
+              <h3>Nikdy nechoďte sami</h3>
+              <p>Vždy jděte s někým, kdo může pomoct, kdyby se něco stalo, nebo se ujistěte, že vás někdo na břehu hlídá.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Dejte tělu čas</h3>
+              <p>Pokud se studenou vodou teprve začínáte, zvykejte si postupně, místo abyste hned zůstávali dlouho ve velmi studené vodě.</p>
+            </article>
+            <article class="safety-item">
+              <h3>První vstupy nechte krátké</h3>
+              <p>Mnozí začínají jen krátkou dobou ve vodě a teprve pomalu ji prodlužují. Neexistuje čas, který byste „měli“ vydržet.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Vyjděte, když to cítíte</h3>
+              <p>Opusťte vodu, jakmile cítíte, že je čas — při silném třesu, bolesti, znecitlivění, zmatení, nebo prostě když máte dost. Cold Dip vám nikdy neřekne, abyste vyšli, a nestanovuje čas, který je třeba překonat. Poslední čas je jen orientační bod.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Po výstupu se zahřejte</h3>
+              <p>Po výstupu z vody se co nejdřív osušte a zahřejte. Teplé oblečení mějte připravené ještě před vstupem.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Afterdrop</h3>
+              <p>Po výstupu může teplota jádra ještě chvíli klesat, když se chladnější krev vrací z kůže a končetin. Často se tomu říká afterdrop. Dál se zahřívejte, nespěchejte a počkejte, až se opravdu budete cítit dobře, než usednete do auta nebo na kolo.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Není to zdravotnický prostředek</h3>
+              <p>Cold Dip je aplikace pro záznam aktivity, nikoli zdravotnický prostředek, a neposkytuje lékařské rady. Nemůže vám říct, zda je pro vás vstup do studené vody bezpečný. Máte-li zdravotní potíže, jste těhotná, nebo si nejste jistí, nejdřív se poraďte s kvalifikovanou osobou.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="video" hidden data-flag="showVideo">
+      <div class="wrap">
+        <h2 class="sec-title">Podívejte se ve vodě</h2>
+        <p class="sec-lead">Krátký pohled na jedno otužování: od úvodní obrazovky po uložení v Garmin Connect.</p>
+        <button type="button" class="video-facade" data-youtube="" data-title="Podívejte se ve vodě" aria-label="Přehrát video">
+          <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></span>
+          <span class="play-label">Přehrát video</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="request" id="contact">
+      <div class="wrap">
+        <div class="request-box">
+          <h2 class="sec-title">Chcete Cold Dip na Apple Watch nebo Suunto?</h2>
+          <p class="sec-lead">Máte nápad na aplikaci nebo ciferník pro Garmin? Pojďme to postavit spolu. Napište mi a uveďte, jaké hodinky používáte.</p>
+          <div class="interest-row">
+            <a class="btn" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20I%20want%20Apple%20Watch&amp;body=Ahoj%20%C5%81ukaszi%2C%0A%0A">Chci to na Apple Watch</a>
+            <a class="btn btn-ghost" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20I%20want%20Suunto&amp;body=Ahoj%20%C5%81ukaszi%2C%0A%0A">Chci to na Suunto</a>
+            <a class="btn btn-ghost" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20I%20want%20other%20watch&amp;body=Ahoj%20%C5%81ukaszi%2C%0A%0A">Nosím jiné hodinky</a>
+          </div>
+          <div class="cta-row">
+            <a class="btn btn-ghost" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%94%20Apple%20Watch%2C%20Suunto%20nebo%20n%C3%A1pad&amp;body=Ahoj%20%C5%81ukaszi%2C%0A%0A">Napsat Łukaszovi</a>
+            <a class="btn btn-ghost" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">Napsat recenzi</a>
+          </div>
+          <p class="search-note">Pokud už Cold Dip používáte, recenze v Connect IQ hodně pomůže — děkuji!</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="support" hidden data-flag="showSupport">
+      <div class="wrap">
+        <div class="support-box">
+          <h2 class="sec-title">Dejte mi kafe</h2>
+          <p class="sec-lead">Cold Dip je zdarma. Když vám při otužování pomáhá, můžete práci na něm podpořit.</p>
+          <a class="btn" id="support-link" href="#">Dejte mi kafe</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <p>© 2026 Łukasz Pszenny, Bydhošť, Polsko</p>
+        <address><a href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%94%20Apple%20Watch%2C%20Suunto%20nebo%20n%C3%A1pad&amp;body=Ahoj%20%C5%81ukaszi%2C%0A%0A">lukasz.pszenny@gmail.com</a></address>
+      </div>
+      <p class="privacy">Cold Dip neshromažďuje osobní údaje na žádném serveru. Vaše tréninky zůstávají na hodinkách a v Garmin Connect. Počasí pochází z vestavěné meteorologické služby Garmin v telefonu, ne z mého serveru. Tento web nepoužívá trackery ani analytické cookies — v prohlížeči se uloží jen zvolený jazyk, pokud ho změníte.</p>
+    </div>
+  </footer>
+  <script src="../assets/js/config.js"></script>
+  <script src="../assets/js/devices.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/lang.js"></script>
+</body>
+</html>

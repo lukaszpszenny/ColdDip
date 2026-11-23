@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cold Dip – app för vinterbad och kallbad på Garmin-klockor</title>
+  <meta name="description" content="Gratis Garmin-app för vinterbad och kallbad. Faser, timer, puls, vattentemperatur, GPS och mer. Fungerar på 130+ Garmin-klockor.">
+  <meta name="author" content="Łukasz Pszenny">
+  <meta name="theme-color" content="#07111c">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Cold Dip">
+  <meta property="og:title" content="Cold Dip – app för vinterbad och kallbad på Garmin-klockor">
+  <meta property="og:description" content="Gratis Garmin-app för vinterbad och kallbad. Faser, timer, puls, vattentemperatur, GPS och mer. Fungerar på 130+ Garmin-klockor.">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="../assets/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Cold Dip – app för vinterbad och kallbad på Garmin-klockor">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="pl_PL">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="cs_CZ">
+  <meta property="og:locale:alternate" content="sk_SK">
+  <meta property="og:locale:alternate" content="fi_FI">
+  <meta property="og:locale:alternate" content="nb_NO">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="ru_RU">
+  <meta property="og:locale:alternate" content="uk_UA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cold Dip – app för vinterbad och kallbad på Garmin-klockor">
+  <meta name="twitter:description" content="Gratis Garmin-app för vinterbad och kallbad. Faser, timer, puls, vattentemperatur, GPS och mer. Fungerar på 130+ Garmin-klockor.">
+  <meta name="twitter:image" content="../assets/img/og.jpg">
+  <meta name="twitter:image:alt" content="Cold Dip – app för vinterbad och kallbad på Garmin-klockor">
+  <link rel="canonical" href="../sv/">
+  <link rel="icon" href="../assets/img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="../assets/img/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <meta name="apple-mobile-web-app-title" content="Cold Dip">
+  <link rel="preload" as="image" type="image/webp" href="../assets/img/promo/sv/1.webp" fetchpriority="high">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="pl" href="../pl/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="cs" href="../cs/">
+  <link rel="alternate" hreflang="sk" href="../sk/">
+  <link rel="alternate" hreflang="fi" href="../fi/">
+  <link rel="alternate" hreflang="nb" href="../nb/">
+  <link rel="alternate" hreflang="sv" href="../sv/">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="uk" href="../uk/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+  (function () {
+    var LANGS = ["en","pl","de","cs","sk","fi","nb","sv","es","ru","uk"];
+    var parts = location.pathname.split("/").filter(Boolean);
+    if (parts.length && parts[parts.length - 1] === "index.html") parts.pop();
+    if (parts.length && LANGS.indexOf(parts[parts.length - 1]) !== -1) parts.pop();
+    var root = location.origin + "/" + (parts.length ? parts.join("/") + "/" : "");
+    function abs(lang) { return (!lang || lang === "en" || lang === "x-default") ? root : root + lang + "/"; }
+    var here = document.documentElement.lang || "en";
+    document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(function (l) {
+      l.href = abs(l.getAttribute("hreflang"));
+    });
+    var canon = document.querySelector('link[rel="canonical"]');
+    if (canon) canon.href = abs(here);
+    function setMeta(sel, val) {
+      var m = document.querySelector(sel);
+      if (m) m.setAttribute("content", val);
+    }
+    setMeta('meta[property="og:url"]', abs(here));
+    setMeta('meta[property="og:image"]', root + "assets/img/og.jpg");
+    setMeta('meta[name="twitter:image"]', root + "assets/img/og.jpg");
+  })();
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Cold Dip",
+  "alternateName": [
+    "Morsowanie",
+    "Eisbaden",
+    "Otužování",
+    "Otužovanie",
+    "Avanto",
+    "Isbading",
+    "Vinterbad",
+    "Baño frío",
+    "Моржевание",
+    "Моржування"
+  ],
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Garmin Connect IQ",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "url": "https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0",
+  "downloadUrl": "https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0",
+  "installUrl": "https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0",
+  "isAccessibleForFree": true,
+  "description": "Gratis Garmin-app för vinterbad och kallbad. Faser, timer, puls, vattentemperatur, GPS och mer. Fungerar på 130+ Garmin-klockor.",
+  "author": {
+    "@type": "Person",
+    "name": "Łukasz Pszenny",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bydgoszcz",
+      "addressCountry": "PL"
+    }
+  },
+  "inLanguage": [
+    "en",
+    "pl",
+    "de",
+    "cs",
+    "sk",
+    "fi",
+    "nb",
+    "sv",
+    "es",
+    "ru",
+    "uk"
+  ],
+  "featureList": [
+    "Före / i vattnet / efter",
+    "Puls och vattentemperatur",
+    "Väder från telefonen",
+    "GPS-karta över badplatsen",
+    "Känsla, 1–5",
+    "Egen aktivitet, inte simning"
+  ]
+}
+  </script>
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true"></div>
+  <a class="skip" href="#main">Hoppa till innehållet</a>
+  <header class="header">
+    <div class="wrap">
+      <a class="brand" href="../sv/" aria-label="Cold Dip">
+        <img src="../assets/img/logo.webp" width="36" height="36" alt="" decoding="async">
+        Cold Dip
+      </a>
+      <nav class="nav">
+        <a href="#features">Funktioner</a>
+        <a href="#watches">Klockor</a>
+        <a href="#howto">Så använder du den</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+      <a class="header-cta" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">Hämta appen</a>
+      <details class="lang">
+        <summary aria-label="Språk: Svenska"><span>Svenska</span></summary>
+        <ul class="lang-panel"><li><a href="../" hreflang="en" lang="en">English</a></li><li><a href="../pl/" hreflang="pl" lang="pl">Polski</a></li><li><a href="../de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="../cs/" hreflang="cs" lang="cs">Čeština</a></li><li><a href="../sk/" hreflang="sk" lang="sk">Slovenčina</a></li><li><a href="../fi/" hreflang="fi" lang="fi">Suomi</a></li><li><a href="../nb/" hreflang="nb" lang="nb">Norsk</a></li><li><a href="../sv/" hreflang="sv" lang="sv" aria-current="page">Svenska</a></li><li><a href="../es/" hreflang="es" lang="es">Español</a></li><li><a href="../ru/" hreflang="ru" lang="ru">Русский</a></li><li><a href="../uk/" hreflang="uk" lang="uk">Українська</a></li></ul>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <span class="badge">Gratis app för Garmin-klockor</span>
+          <h1>Cold Dip</h1>
+          <p class="local-name">På klockan heter appen Vinterbad.</p>
+          <p class="tagline">Vinterbad och kallbad sparade på riktigt — inte som simning.</p>
+          <div class="cta-row">
+            <a class="btn" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">Ladda ner gratis i Connect IQ</a>
+          </div>
+          <p class="search-note">Eller sök efter ”Cold Dip” i Connect IQ-appen i telefonen.</p>
+          <p class="byline">Skapad av Łukasz Pszenny, vinterbadare från Bydgoszcz i Polen.</p>
+        </div>
+        <div class="gallery">
+          <figure>
+            <img src="../assets/img/promo/sv/1.webp" width="720" height="900" alt="Startskärm: GPS, väder och vattentemperatur innan du går i" fetchpriority="high" decoding="async">
+            <figcaption>Innan du går i</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/promo/sv/2.webp" width="720" height="900" alt="I vattnet: tid och puls" loading="lazy" decoding="async">
+            <figcaption>I vattnet</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/promo/sv/3.webp" width="720" height="900" alt="Efter badet: sammanfattning och känsla" loading="lazy" decoding="async">
+            <figcaption>Efter badet</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="wrap">
+        <h2 class="sec-title">Vad den gör</h2>
+        <p class="sec-lead">Gjort för vinterbad, inte för bassäng. Du bestämmer hela tiden.</p>
+        <div class="features">
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14"/><path d="M5 12h14"/><path d="M5 17h14"/><circle cx="9" cy="7" r="1.6" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"/><circle cx="15" cy="17" r="1.6" fill="currentColor" stroke="none"/></svg></div>
+            <h3>Före / i vattnet / efter</h3>
+            <p>Övre knappen byter fas. Tiden i vattnet bara fortsätter räkna — appen säger aldrig åt dig att gå upp. Det bestämmer du. Föregående tid är bara en referens, inte ett mål du måste slå.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.6-7 10-7 10z"/></svg></div>
+            <h3>Puls och vattentemperatur</h3>
+            <p>Pulsen spelas in hela tiden. Vattentemperaturen skriver du in manuellt och den sparas med aktiviteten.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 16h10a4 4 0 0 0 0-8 6 6 0 0 0-11.5 1.5A3.5 3.5 0 0 0 7 16z"/><path d="M8 19v1M12 19v2M16 19v1"/></svg></div>
+            <h3>Väder från telefonen</h3>
+            <p>Lufttemperatur, känns som och vind — från Garmin-vädret i din telefon.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.2"/></svg></div>
+            <h3>GPS-karta över badplatsen</h3>
+            <p>Platsen för badet sparas och visas på en karta i Garmin Connect.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 13.5s1.5 2.5 4 2.5 4-2.5 4-2.5"/><path d="M9 9.5h.01M15 9.5h.01"/></svg></div>
+            <h3>Känsla, 1–5</h3>
+            <p>Efter varje bad en snabb bedömning av hur du mår. Dessutom pulstopp och återhämtning samt Body Battery och stress innan du gick i.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></div>
+            <h3>Egen aktivitet, inte simning</h3>
+            <p>Allt sparas i Garmin Connect som en egen aktivitet, inte som simning.</p>
+          </article>
+        </div>
+        <div class="compat">
+          <h3>11 språk</h3>
+          <p>Engelska, polska, tyska, tjeckiska, slovakiska, finska, norska, svenska, spanska, ryska och ukrainska. Appen följer automatiskt klockans språk.</p>
+          <div class="pill-row">
+<a class="pill" href="../" hreflang="en" lang="en">English</a><a class="pill" href="../pl/" hreflang="pl" lang="pl">Polski</a><a class="pill" href="../de/" hreflang="de" lang="de">Deutsch</a><a class="pill" href="../cs/" hreflang="cs" lang="cs">Čeština</a><a class="pill" href="../sk/" hreflang="sk" lang="sk">Slovenčina</a><a class="pill" href="../fi/" hreflang="fi" lang="fi">Suomi</a><a class="pill" href="../nb/" hreflang="nb" lang="nb">Norsk</a><a class="pill" href="../sv/" hreflang="sv" lang="sv">Svenska</a><a class="pill" href="../es/" hreflang="es" lang="es">Español</a><a class="pill" href="../ru/" hreflang="ru" lang="ru">Русский</a><a class="pill" href="../uk/" hreflang="uk" lang="uk">Українська</a>
+          </div>
+        </div>
+        <div class="compat">
+          <h3 data-compat-title data-compat-live="Fungerar på 130+ Garmin-klockor">Fungerar på 130+ Garmin-klockor</h3>
+          <p>Forerunner, Fenix, Epix, Enduro, Venu, Vivoactive, Instinct 2 / 3 / E / Crossover och fler. Stöds inte på mycket gamla klockor som Forerunner 920XT (Connect IQ 1.x).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="watches"
+      data-i18n-supported="Stöds"
+      data-i18n-pending="Kommer med v1.0.3"
+      data-i18n-pending-note="Redan i appen, väntar på godkännande i Garmin-butiken."
+      data-i18n-more="{n} träffar till — skriv lite mer för att begränsa listan."
+      data-i18n-not-found="Den här modellen finns inte på listan över stödda klockor."
+      data-i18n-not-found-body="Cold Dip körs bara på Garmin-klockor med Connect IQ 3.0 eller senare."
+      data-i18n-legacy="Det här är en äldre klocka med Connect IQ 1.x eller 2.x, så Cold Dip kan inte köras på den. Den saknar funktionerna appen behöver, och det finns inte tillräckligt med minne."
+      data-i18n-ask="Fråga om din modell kan läggas till"
+      data-i18n-ask-subject="Cold Dip – is this watch supported?"
+      data-i18n-empty="Börja skriva ett modellnamn för att se om den stöds.">
+      <div class="wrap">
+        <h2 class="sec-title">Fungerar den på din klocka?</h2>
+        <p class="sec-lead">Sök efter din modell. Listan stämmer med de 133 klockorna i Cold Dip 1.0.3.</p>
+        <div class="checker">
+          <form role="search" action="#" method="get">
+            <div class="checker-field">
+              <label for="watch-q">Klockmodell</label>
+              <input id="watch-q" name="q" type="search" autocomplete="off" spellcheck="false" placeholder="t.ex. Venu 2 Plus eller Forerunner 265">
+            </div>
+          </form>
+          <div id="watch-results" class="watch-results" aria-live="polite"></div>
+          <p class="chk-note">Mycket gamla klockor med Connect IQ 1.x, som Forerunner 920XT, kan inte stödjas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="wrap">
+        <h2 class="sec-title">På klockan</h2>
+        <p class="sec-lead">Så ser Cold Dip ut på olika Garmin-skärmar.</p>
+        <div class="fam-block">
+          <h3>Venu / AMOLED (rund)</h3>
+          <div class="shot-row">
+          <figure>
+            <img src="../assets/img/gallery/en/venu/start.webp" width="474" height="720" alt="Startskärm: GPS, väder och vattentemperatur innan du går i" loading="lazy" decoding="async">
+            <figcaption>Innan du går i</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/venu/water.webp" width="474" height="720" alt="I vattnet: tid och puls" loading="lazy" decoding="async">
+            <figcaption>I vattnet</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/venu/after.webp" width="474" height="720" alt="Efter badet: sammanfattning och känsla" loading="lazy" decoding="async">
+            <figcaption>Efter badet</figcaption>
+          </figure>
+          </div>
+        </div>
+        <div class="fam-block">
+          <h3>Fenix / MIP (rund)</h3>
+          <div class="shot-row">
+          <figure>
+            <img src="../assets/img/gallery/en/fenix/start.webp" width="560" height="560" alt="Startskärm: GPS, väder och vattentemperatur innan du går i" loading="lazy" decoding="async">
+            <figcaption>Innan du går i</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/fenix/water.webp" width="560" height="560" alt="I vattnet: tid och puls" loading="lazy" decoding="async">
+            <figcaption>I vattnet</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/fenix/after.webp" width="560" height="560" alt="Efter badet: sammanfattning och känsla" loading="lazy" decoding="async">
+            <figcaption>Efter badet</figcaption>
+          </figure>
+          </div>
+        </div>
+        <div class="fam-block">
+          <h3>Instinct (svartvit)</h3>
+          <div class="shot-row">
+          <figure>
+            <img src="../assets/img/gallery/en/instinct/start.webp" width="408" height="408" alt="Startskärm: GPS, väder och vattentemperatur innan du går i" loading="lazy" decoding="async">
+            <figcaption>Innan du går i</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/instinct/water.webp" width="408" height="408" alt="I vattnet: tid och puls" loading="lazy" decoding="async">
+            <figcaption>I vattnet</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/instinct/after.webp" width="408" height="408" alt="Efter badet: sammanfattning och känsla" loading="lazy" decoding="async">
+            <figcaption>Efter badet</figcaption>
+          </figure>
+          </div>
+        </div>
+        <div class="fam-block">
+          <h3>Venu Sq / Venu X1 (rektangulär)</h3>
+          <div class="shot-row">
+          <figure>
+            <img src="../assets/img/gallery/en/rect/start.webp" width="465" height="720" alt="Startskärm: GPS, väder och vattentemperatur innan du går i" loading="lazy" decoding="async">
+            <figcaption>Innan du går i</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/rect/water.webp" width="465" height="720" alt="I vattnet: tid och puls" loading="lazy" decoding="async">
+            <figcaption>I vattnet</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/rect/after.webp" width="465" height="720" alt="Efter badet: sammanfattning och känsla" loading="lazy" decoding="async">
+            <figcaption>Efter badet</figcaption>
+          </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="changelog">
+      <div class="wrap">
+        <h2 class="sec-title">Vad är nytt</h2>
+        <p class="sec-lead">De senaste versionerna av Cold Dip.</p>
+        <ol class="changelog">
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.0.3</h3>
+              <span class="ch-flag">Väntar på godkännande i butiken</span>
+            </div>
+            <p>133 klockor, inklusive Instinct 2, Instinct 2S, Instinct 2X, Instinct 3 Solar, Instinct E och Instinct Crossover, plus en ny svartvit layout för MIP-skärmar.</p>
+          </li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.0.2</h3>
+              
+            </div>
+            <p>126 klockor, inklusive Forerunner 55.</p>
+          </li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.0.1</h3>
+              <span class="ch-date">17 nov 2026</span>
+            </div>
+            <p>105 klockor, inklusive rektangulära layouter för Venu X1 och Venu Sq 2.</p>
+          </li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.0.0</h3>
+              <span class="ch-date">14 nov 2026</span>
+            </div>
+            <p>Första utgåvan.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="testimonials" hidden data-flag="showTestimonials">
+      <div class="wrap">
+        <h2 class="sec-title">Från folk som redan badar med den</h2>
+        <div class="quotes">
+          <blockquote class="quote">
+            <p>“Działa idealnie” <span class="tr">(Fungerar perfekt)</span></p>
+            <footer>Radosław S., Facebook — Poznań, Jezioro Rusałka, 16 min</footer>
+          </blockquote>
+          <blockquote class="quote">
+            <p>Över 10 minuter vid 5°C — vattentemperatur på klockan, och all data sparad i Garmin Connect.</p>
+            <footer>Jadwiga</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="howto" class="howto">
+      <div class="wrap" id="faq">
+        <h2 class="sec-title">Så använder du den</h2>
+        <p class="sec-lead">Några saker folk ofta frågar om efter installationen.</p>
+        <div class="faq">
+          <details>
+            <summary><h3>Hur installerar jag appen?</h3></summary>
+            <p class="answer">Installera den från Connect IQ Store-appen i telefonen — inte från Google Play eller App Store. På klockan hittar du Cold Dip (Vinterbad) i listan över aktiviteter / appar.</p>
+          </details>
+          <details>
+            <summary><h3>Hur ställer jag in vattentemperaturen?</h3></summary>
+            <p class="answer">I profilen ”Vak” ställer du in den med knapparna − / + på startskärmen. I andra profiler görs det via menyn: ”Vattentemp. manuellt”. Om du ser ”--°C” i vattnet har temperaturen inte ställts in ännu.</p>
+          </details>
+          <details>
+            <summary><h3>Var finns mina data i Garmin Connect?</h3></summary>
+            <p class="answer">Öppna aktiviteten, gå till fliken ”Statistik” och scrolla ner till avsnittet ”Connect IQ”. Där finns puls, vattentemperatur, väder, känsla och tiderna för varje fas. Rutorna på skärmen ”Översikt” sätts av Garmin — appen kan inte ändra dem.</p>
+          </details>
+          <details>
+            <summary><h3>Mäter klockan kroppstemperatur?</h3></summary>
+            <p class="answer">Nej. Klockan kan inte mäta kroppstemperatur. Sensorn visar klockans egen temperatur, som påverkas av huden och luften. I Cold Dip skriver du in vattentemperaturen manuellt.</p>
+          </details>
+          <details>
+            <summary><h3>Hur är det med kalorier?</h3></summary>
+            <p class="answer">Kalorierna uppskattas av klockan utifrån pulsen, de räknas inte av Cold Dip.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="safety" class="howto">
+      <div class="wrap">
+        <div class="safety">
+          <h2 class="sec-title">Säkerhet</h2>
+          <p class="sec-lead">Kallt vatten är allvar. Det här är allmänna säkerhetspåminnelser, inte medicinska råd. Du bestämmer när du går i och när du går upp.</p>
+          <div class="safety-list">
+            <article class="safety-item">
+              <h3>Gå aldrig i ensam</h3>
+              <p>Gå alltid tillsammans med någon som kan hjälpa om något händer, eller se till att någon på land håller koll på dig.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Ge kroppen tid</h3>
+              <p>Om du är ny i kallt vatten, vänj dig successivt i stället för att börja med ett långt bad i mycket kallt vatten.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Håll de första baden korta</h3>
+              <p>Många börjar med bara kort tid i vattnet och ökar långsamt. Det finns ingen tid du “bör” hålla ut.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Gå upp när du känner det</h3>
+              <p>Lämna vattnet så snart du känner att du bör — kraftiga frossa, smärta, domningar, förvirring, eller bara en känsla av att det räcker. Cold Dip säger aldrig åt dig att gå upp, och sätter aldrig en måltid. Din senaste tid är bara en referens.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Värm upp efteråt</h3>
+              <p>Torka dig och värm upp så snart du kan efter att du gått upp. Ha varma kläder redo innan du går i.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Afterdrop</h3>
+              <p>När du har gått upp kan kroppstemperaturen i kärnan fortsätta sjunka en stund när kallare blod kommer tillbaka från hud och armar och ben. Det kallas ofta afterdrop. Fortsätt värma upp, ta det lugnt och vänta tills du mår bra innan du kör eller cyklar.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Inte en medicinteknisk produkt</h3>
+              <p>Cold Dip är en registreringsapp, inte en medicinteknisk produkt, och ger inte medicinska råd. Den kan inte säga om det är säkert för dig att gå i kallt vatten. Har du ett hälsotillstånd, är du gravid, eller är du osäker, tala först med en kvalificerad yrkesperson.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="video" hidden data-flag="showVideo">
+      <div class="wrap">
+        <h2 class="sec-title">Se den i vattnet</h2>
+        <p class="sec-lead">En kort titt på ett bad, från startskärmen till sparandet i Garmin Connect.</p>
+        <button type="button" class="video-facade" data-youtube="" data-title="Se den i vattnet" aria-label="Spela upp video">
+          <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></span>
+          <span class="play-label">Spela upp video</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="request" id="contact">
+      <div class="wrap">
+        <div class="request-box">
+          <h2 class="sec-title">Vill du ha Cold Dip på Apple Watch eller Suunto?</h2>
+          <p class="sec-lead">Har du en idé till en Garmin-app eller en urtavla? Då gör vi den tillsammans. Skriv till mig och berätta vilken klocka du använder.</p>
+          <div class="interest-row">
+            <a class="btn" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20I%20want%20Apple%20Watch&amp;body=Hej%20%C5%81ukasz%2C%0A%0A">Jag vill ha den på Apple Watch</a>
+            <a class="btn btn-ghost" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20I%20want%20Suunto&amp;body=Hej%20%C5%81ukasz%2C%0A%0A">Jag vill ha den på Suunto</a>
+            <a class="btn btn-ghost" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20I%20want%20other%20watch&amp;body=Hej%20%C5%81ukasz%2C%0A%0A">Jag använder en annan klocka</a>
+          </div>
+          <div class="cta-row">
+            <a class="btn btn-ghost" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%94%20Apple%20Watch%2C%20Suunto%20eller%20en%20id%C3%A9&amp;body=Hej%20%C5%81ukasz%2C%0A%0A">Mejla Łukasz</a>
+            <a class="btn btn-ghost" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">Lämna ett omdöme</a>
+          </div>
+          <p class="search-note">Om du redan använder Cold Dip hjälper ett omdöme i Connect IQ mycket — tack!</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="support" hidden data-flag="showSupport">
+      <div class="wrap">
+        <div class="support-box">
+          <h2 class="sec-title">Bjud på en kaffe</h2>
+          <p class="sec-lead">Cold Dip är gratis. Om den hjälper dina bad kan du stötta arbetet bakom den.</p>
+          <a class="btn" id="support-link" href="#">Bjud på en kaffe</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <p>© 2026 Łukasz Pszenny, Bydgoszcz, Polen</p>
+        <address><a href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%94%20Apple%20Watch%2C%20Suunto%20eller%20en%20id%C3%A9&amp;body=Hej%20%C5%81ukasz%2C%0A%0A">lukasz.pszenny@gmail.com</a></address>
+      </div>
+      <p class="privacy">Cold Dip samlar inte in personuppgifter på någon server. Dina pass stannar på klockan och i Garmin Connect. Vädret kommer från Garmins egen vädertjänst i telefonen, inte från en server som jag har. Den här webbplatsen använder inga spårare eller analyscookies — i webbläsaren sparas bara språkvalet om du ändrar det.</p>
+    </div>
+  </footer>
+  <script src="../assets/js/config.js"></script>
+  <script src="../assets/js/devices.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/lang.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replace YOUR-DOMAIN with the real host (no trailing slash), e.g. lukasz.github.io/colddip, then uncomment the Sitemap line in robots.txt. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://lukaszpszenny.github.io/ColdDip/</loc>
+  </url>
+  <url>
+    <loc>https://lukaszpszenny.github.io/ColdDip/pl/</loc>
+  </url>
+  <url>
+    <loc>https://lukaszpszenny.github.io/ColdDip/de/</loc>
+  </url>
+  <url>
+    <loc>https://lukaszpszenny.github.io/ColdDip/cs/</loc>
+  </url>
+  <url>
+    <loc>https://lukaszpszenny.github.io/ColdDip/sk/</loc>
+  </url>
+  <url>
+    <loc>https://lukaszpszenny.github.io/ColdDip/fi/</loc>
+  </url>
+  <url>
+    <loc>https://lukaszpszenny.github.io/ColdDip/nb/</loc>
+  </url>
+  <url>
+    <loc>https://lukaszpszenny.github.io/ColdDip/sv/</loc>
+  </url>
+  <url>
+    <loc>https://lukaszpszenny.github.io/ColdDip/es/</loc>
+  </url>
+  <url>
+    <loc>https://lukaszpszenny.github.io/ColdDip/ru/</loc>
+  </url>
+  <url>
+    <loc>https://lukaszpszenny.github.io/ColdDip/uk/</loc>
+  </url>
+</urlset>

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cold Dip – app de baño frío y natación invernal para relojes Garmin</title>
+  <meta name="description" content="App gratuita para relojes Garmin de baños de agua fría y natación invernal. Fases, temporizador, frecuencia cardíaca, temperatura del agua, GPS y más. Compatible con más de 120 relojes Garmin.">
+  <meta name="author" content="Łukasz Pszenny">
+  <meta name="theme-color" content="#07111c">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Cold Dip">
+  <meta property="og:title" content="Cold Dip – app de baño frío y natación invernal para relojes Garmin">
+  <meta property="og:description" content="App gratuita para relojes Garmin de baños de agua fría y natación invernal. Fases, temporizador, frecuencia cardíaca, temperatura del agua, GPS y más. Compatible con más de 120 relojes Garmin.">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="../assets/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Cold Dip – app de baño frío y natación invernal para relojes Garmin">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="pl_PL">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="cs_CZ">
+  <meta property="og:locale:alternate" content="sk_SK">
+  <meta property="og:locale:alternate" content="fi_FI">
+  <meta property="og:locale:alternate" content="nb_NO">
+  <meta property="og:locale:alternate" content="sv_SE">
+  <meta property="og:locale:alternate" content="ru_RU">
+  <meta property="og:locale:alternate" content="uk_UA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cold Dip – app de baño frío y natación invernal para relojes Garmin">
+  <meta name="twitter:description" content="App gratuita para relojes Garmin de baños de agua fría y natación invernal. Fases, temporizador, frecuencia cardíaca, temperatura del agua, GPS y más. Compatible con más de 120 relojes Garmin.">
+  <meta name="twitter:image" content="../assets/img/og.jpg">
+  <meta name="twitter:image:alt" content="Cold Dip – app de baño frío y natación invernal para relojes Garmin">
+  <link rel="canonical" href="../es/">
+  <link rel="icon" href="../assets/img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="../assets/img/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <meta name="apple-mobile-web-app-title" content="Cold Dip">
+  <link rel="preload" as="image" type="image/webp" href="../assets/img/promo/en/1.webp" fetchpriority="high">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="pl" href="../pl/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="cs" href="../cs/">
+  <link rel="alternate" hreflang="sk" href="../sk/">
+  <link rel="alternate" hreflang="fi" href="../fi/">
+  <link rel="alternate" hreflang="nb" href="../nb/">
+  <link rel="alternate" hreflang="sv" href="../sv/">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="uk" href="../uk/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+  (function () {
+    var LANGS = ["en","pl","de","cs","sk","fi","nb","sv","es","ru","uk"];
+    var parts = location.pathname.split("/").filter(Boolean);
+    if (parts.length && parts[parts.length - 1] === "index.html") parts.pop();
+    if (parts.length && LANGS.indexOf(parts[parts.length - 1]) !== -1) parts.pop();
+    var root = location.origin + "/" + (parts.length ? parts.join("/") + "/" : "");
+    function abs(lang) { return (!lang || lang === "en" || lang === "x-default") ? root : root + lang + "/"; }
+    var here = document.documentElement.lang || "en";
+    document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(function (l) {
+      l.href = abs(l.getAttribute("hreflang"));
+    });
+    var canon = document.querySelector('link[rel="canonical"]');
+    if (canon) canon.href = abs(here);
+    function setMeta(sel, val) {
+      var m = document.querySelector(sel);
+      if (m) m.setAttribute("content", val);
+    }
+    setMeta('meta[property="og:url"]', abs(here));
+    setMeta('meta[property="og:image"]', root + "assets/img/og.jpg");
+    setMeta('meta[name="twitter:image"]', root + "assets/img/og.jpg");
+  })();
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Cold Dip",
+  "alternateName": [
+    "Morsowanie",
+    "Eisbaden",
+    "Otužování",
+    "Otužovanie",
+    "Avanto",
+    "Isbading",
+    "Vinterbad",
+    "Baño frío",
+    "Моржевание",
+    "Моржування"
+  ],
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Garmin Connect IQ",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "url": "https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0",
+  "downloadUrl": "https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0",
+  "installUrl": "https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0",
+  "isAccessibleForFree": true,
+  "description": "App gratuita para relojes Garmin de baños de agua fría y natación invernal. Fases, temporizador, frecuencia cardíaca, temperatura del agua, GPS y más. Compatible con más de 120 relojes Garmin.",
+  "author": {
+    "@type": "Person",
+    "name": "Łukasz Pszenny",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bydgoszcz",
+      "addressCountry": "PL"
+    }
+  },
+  "inLanguage": [
+    "en",
+    "pl",
+    "de",
+    "cs",
+    "sk",
+    "fi",
+    "nb",
+    "sv",
+    "es",
+    "ru",
+    "uk"
+  ],
+  "featureList": [
+    "Antes / en el agua / después",
+    "Frecuencia cardíaca y temperatura del agua",
+    "El tiempo desde el teléfono",
+    "Mapa GPS del lugar del baño",
+    "Cómo te sientes, 1–5",
+    "Actividad propia, no una natación"
+  ]
+}
+  </script>
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true"></div>
+  <a class="skip" href="#main">Saltar al contenido</a>
+  <header class="header">
+    <div class="wrap">
+      <a class="brand" href="../es/" aria-label="Cold Dip">
+        <img src="../assets/img/logo.webp" width="36" height="36" alt="" decoding="async">
+        Cold Dip
+      </a>
+      <nav class="nav">
+        <a href="#features">Funciones</a>
+        <a href="#watches">Relojes</a>
+        <a href="#howto">Cómo usarla</a>
+        <a href="#contact">Contacto</a>
+      </nav>
+      <a class="header-cta" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">Obtener la app</a>
+      <details class="lang">
+        <summary aria-label="Idioma: Español"><span>Español</span></summary>
+        <ul class="lang-panel"><li><a href="../" hreflang="en" lang="en">English</a></li><li><a href="../pl/" hreflang="pl" lang="pl">Polski</a></li><li><a href="../de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="../cs/" hreflang="cs" lang="cs">Čeština</a></li><li><a href="../sk/" hreflang="sk" lang="sk">Slovenčina</a></li><li><a href="../fi/" hreflang="fi" lang="fi">Suomi</a></li><li><a href="../nb/" hreflang="nb" lang="nb">Norsk</a></li><li><a href="../sv/" hreflang="sv" lang="sv">Svenska</a></li><li><a href="../es/" hreflang="es" lang="es" aria-current="page">Español</a></li><li><a href="../ru/" hreflang="ru" lang="ru">Русский</a></li><li><a href="../uk/" hreflang="uk" lang="uk">Українська</a></li></ul>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <span class="badge">App gratuita para relojes Garmin</span>
+          <h1>Cold Dip</h1>
+          <p class="local-name">En el reloj, la app se llama Baño frío.</p>
+          <p class="tagline">Baños de agua fría y natación invernal registrados como deben — no como una natación.</p>
+          <div class="cta-row">
+            <a class="btn" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">Consíguela gratis en Connect IQ</a>
+          </div>
+          <p class="search-note">O busca “Cold Dip” en la app Connect IQ del teléfono.</p>
+          <p class="byline">Creada por Łukasz Pszenny, nadador de aguas frías de Bydgoszcz, Polonia.</p>
+        </div>
+        <div class="gallery">
+          <figure>
+            <img src="../assets/img/promo/en/1.webp" width="720" height="900" alt="Pantalla de inicio: GPS, tiempo y temperatura del agua antes de entrar" fetchpriority="high" decoding="async">
+            <figcaption>Antes de entrar</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/promo/en/2.webp" width="720" height="900" alt="En el agua: tiempo y frecuencia cardíaca" loading="lazy" decoding="async">
+            <figcaption>En el agua</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/promo/en/3.webp" width="720" height="900" alt="Al salir: resumen y cómo te sientes" loading="lazy" decoding="async">
+            <figcaption>Al salir</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="wrap">
+        <h2 class="sec-title">Qué hace</h2>
+        <p class="sec-lead">Hecha para un baño frío, no para la piscina. Tú decides en todo momento.</p>
+        <div class="features">
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14"/><path d="M5 12h14"/><path d="M5 17h14"/><circle cx="9" cy="7" r="1.6" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"/><circle cx="15" cy="17" r="1.6" fill="currentColor" stroke="none"/></svg></div>
+            <h3>Antes / en el agua / después</h3>
+            <p>El botón superior cambia de fase. El tiempo en el agua sigue contando — la app nunca te dice que salgas. Eso lo decides tú. Tu último tiempo es solo una referencia, no una marca que tengas que superar.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.6-7 10-7 10z"/></svg></div>
+            <h3>Frecuencia cardíaca y temperatura del agua</h3>
+            <p>La frecuencia cardíaca se registra durante todo el baño. La temperatura del agua se introduce a mano y se guarda con la actividad.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 16h10a4 4 0 0 0 0-8 6 6 0 0 0-11.5 1.5A3.5 3.5 0 0 0 7 16z"/><path d="M8 19v1M12 19v2M16 19v1"/></svg></div>
+            <h3>El tiempo desde el teléfono</h3>
+            <p>Temperatura del aire, sensación térmica y viento, tomados del tiempo de Garmin en tu teléfono.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.2"/></svg></div>
+            <h3>Mapa GPS del lugar del baño</h3>
+            <p>El lugar del baño se guarda y se muestra en un mapa en Garmin Connect.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 13.5s1.5 2.5 4 2.5 4-2.5 4-2.5"/><path d="M9 9.5h.01M15 9.5h.01"/></svg></div>
+            <h3>Cómo te sientes, 1–5</h3>
+            <p>Después de cada baño, una valoración rápida de cómo te sientes. También el pico y la recuperación de la frecuencia cardíaca, más Body Battery y el estrés antes de entrar.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></div>
+            <h3>Actividad propia, no una natación</h3>
+            <p>Todo se guarda en Garmin Connect como una actividad propia, no como una natación.</p>
+          </article>
+        </div>
+        <div class="compat">
+          <h3>11 idiomas</h3>
+          <p>Inglés, polaco, alemán, checo, eslovaco, finés, noruego, sueco, español, ruso y ucraniano. La app cambia automáticamente al idioma del reloj.</p>
+          <div class="pill-row">
+<a class="pill" href="../" hreflang="en" lang="en">English</a><a class="pill" href="../pl/" hreflang="pl" lang="pl">Polski</a><a class="pill" href="../de/" hreflang="de" lang="de">Deutsch</a><a class="pill" href="../cs/" hreflang="cs" lang="cs">Čeština</a><a class="pill" href="../sk/" hreflang="sk" lang="sk">Slovenčina</a><a class="pill" href="../fi/" hreflang="fi" lang="fi">Suomi</a><a class="pill" href="../nb/" hreflang="nb" lang="nb">Norsk</a><a class="pill" href="../sv/" hreflang="sv" lang="sv">Svenska</a><a class="pill" href="../es/" hreflang="es" lang="es">Español</a><a class="pill" href="../ru/" hreflang="ru" lang="ru">Русский</a><a class="pill" href="../uk/" hreflang="uk" lang="uk">Українська</a>
+          </div>
+        </div>
+        <div class="compat">
+          <h3 data-compat-title data-compat-live="Funciona en más de 130 relojes Garmin">Compatible con más de 120 relojes Garmin</h3>
+          <p>Forerunner, Fenix, Epix, Enduro, Venu, Vivoactive, Instinct 2 / 3 / E / Crossover y más. No es compatible con relojes muy antiguos, como el Forerunner 920XT (Connect IQ 1.x).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="watches"
+      data-i18n-supported="Compatible"
+      data-i18n-pending="Llega con la v1.0.3"
+      data-i18n-pending-note="Ya está en la app, pendiente de la aprobación en la tienda de Garmin."
+      data-i18n-more="{n} resultados más: escribe un poco más para acotar la lista."
+      data-i18n-not-found="Este modelo no está en la lista de compatibles."
+      data-i18n-not-found-body="Cold Dip solo funciona en relojes Garmin con Connect IQ 3.0 o posterior."
+      data-i18n-legacy="Este es un reloj antiguo con Connect IQ 1.x o 2.x, así que Cold Dip no puede ejecutarse en él. Le faltan las funciones que necesita la app y no tiene memoria suficiente."
+      data-i18n-ask="Preguntar si se puede añadir tu modelo"
+      data-i18n-ask-subject="Cold Dip – is this watch supported?"
+      data-i18n-empty="Empieza a escribir el nombre del modelo para ver si es compatible.">
+      <div class="wrap">
+        <h2 class="sec-title">¿Funciona en tu reloj?</h2>
+        <p class="sec-lead">Busca tu modelo. La lista coincide con los 133 relojes de Cold Dip 1.0.3.</p>
+        <div class="checker">
+          <form role="search" action="#" method="get">
+            <div class="checker-field">
+              <label for="watch-q">Modelo de reloj</label>
+              <input id="watch-q" name="q" type="search" autocomplete="off" spellcheck="false" placeholder="p. ej. Venu 2 Plus o Forerunner 265">
+            </div>
+          </form>
+          <div id="watch-results" class="watch-results" aria-live="polite"></div>
+          <p class="chk-note">Los relojes muy antiguos con Connect IQ 1.x, como el Forerunner 920XT, no se pueden admitir.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="wrap">
+        <h2 class="sec-title">En el reloj</h2>
+        <p class="sec-lead">Así se ve Cold Dip en distintas pantallas Garmin.</p>
+        <div class="fam-block">
+          <h3>Venu / AMOLED (redondo)</h3>
+          <div class="shot-row">
+          <figure>
+            <img src="../assets/img/gallery/en/venu/start.webp" width="474" height="720" alt="Pantalla de inicio: GPS, tiempo y temperatura del agua antes de entrar" loading="lazy" decoding="async">
+            <figcaption>Antes de entrar</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/venu/water.webp" width="474" height="720" alt="En el agua: tiempo y frecuencia cardíaca" loading="lazy" decoding="async">
+            <figcaption>En el agua</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/venu/after.webp" width="474" height="720" alt="Al salir: resumen y cómo te sientes" loading="lazy" decoding="async">
+            <figcaption>Al salir</figcaption>
+          </figure>
+          </div>
+        </div>
+        <div class="fam-block">
+          <h3>Fenix / MIP (redondo)</h3>
+          <div class="shot-row">
+          <figure>
+            <img src="../assets/img/gallery/en/fenix/start.webp" width="560" height="560" alt="Pantalla de inicio: GPS, tiempo y temperatura del agua antes de entrar" loading="lazy" decoding="async">
+            <figcaption>Antes de entrar</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/fenix/water.webp" width="560" height="560" alt="En el agua: tiempo y frecuencia cardíaca" loading="lazy" decoding="async">
+            <figcaption>En el agua</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/fenix/after.webp" width="560" height="560" alt="Al salir: resumen y cómo te sientes" loading="lazy" decoding="async">
+            <figcaption>Al salir</figcaption>
+          </figure>
+          </div>
+        </div>
+        <div class="fam-block">
+          <h3>Instinct (blanco y negro)</h3>
+          <div class="shot-row">
+          <figure>
+            <img src="../assets/img/gallery/en/instinct/start.webp" width="408" height="408" alt="Pantalla de inicio: GPS, tiempo y temperatura del agua antes de entrar" loading="lazy" decoding="async">
+            <figcaption>Antes de entrar</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/instinct/water.webp" width="408" height="408" alt="En el agua: tiempo y frecuencia cardíaca" loading="lazy" decoding="async">
+            <figcaption>En el agua</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/instinct/after.webp" width="408" height="408" alt="Al salir: resumen y cómo te sientes" loading="lazy" decoding="async">
+            <figcaption>Al salir</figcaption>
+          </figure>
+          </div>
+        </div>
+        <div class="fam-block">
+          <h3>Venu Sq / Venu X1 (rectangular)</h3>
+          <div class="shot-row">
+          <figure>
+            <img src="../assets/img/gallery/en/rect/start.webp" width="465" height="720" alt="Pantalla de inicio: GPS, tiempo y temperatura del agua antes de entrar" loading="lazy" decoding="async">
+            <figcaption>Antes de entrar</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/rect/water.webp" width="465" height="720" alt="En el agua: tiempo y frecuencia cardíaca" loading="lazy" decoding="async">
+            <figcaption>En el agua</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/rect/after.webp" width="465" height="720" alt="Al salir: resumen y cómo te sientes" loading="lazy" decoding="async">
+            <figcaption>Al salir</figcaption>
+          </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="changelog">
+      <div class="wrap">
+        <h2 class="sec-title">Novedades</h2>
+        <p class="sec-lead">Las versiones recientes de Cold Dip.</p>
+        <ol class="changelog">
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.0.3</h3>
+              <span class="ch-flag">Pendiente de aprobación en la tienda</span>
+            </div>
+            <p>133 relojes, incluidos Instinct 2, Instinct 2S, Instinct 2X, Instinct 3 Solar, Instinct E e Instinct Crossover, y un nuevo diseño en blanco y negro para pantallas MIP.</p>
+          </li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.0.2</h3>
+              
+            </div>
+            <p>126 relojes, incluido el Forerunner 55.</p>
+          </li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.0.1</h3>
+              <span class="ch-date">17 nov 2026</span>
+            </div>
+            <p>105 relojes, incluidos diseños rectangulares para Venu X1 y Venu Sq 2.</p>
+          </li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.0.0</h3>
+              <span class="ch-date">14 nov 2026</span>
+            </div>
+            <p>Primera publicación.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="testimonials" hidden data-flag="showTestimonials">
+      <div class="wrap">
+        <h2 class="sec-title">De quienes ya se bañan con ella</h2>
+        <div class="quotes">
+          <blockquote class="quote">
+            <p>“Działa idealnie” <span class="tr">(Funciona de maravilla)</span></p>
+            <footer>Radosław S., Facebook — Poznań, Jezioro Rusałka, 16 min</footer>
+          </blockquote>
+          <blockquote class="quote">
+            <p>Más de 10 minutos a 5°C: temperatura del agua en el reloj y todos los datos guardados en Garmin Connect.</p>
+            <footer>Jadwiga</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="howto" class="howto">
+      <div class="wrap" id="faq">
+        <h2 class="sec-title">Cómo usarla</h2>
+        <p class="sec-lead">Algunas cosas que la gente suele preguntar después de instalarla.</p>
+        <div class="faq">
+          <details>
+            <summary><h3>¿Cómo la instalo?</h3></summary>
+            <p class="answer">Instálala desde la app Connect IQ Store del teléfono, no desde Google Play ni el App Store. En el reloj encontrarás Cold Dip (Baño frío) en la lista de actividades / apps.</p>
+          </details>
+          <details>
+            <summary><h3>¿Cómo pongo la temperatura del agua?</h3></summary>
+            <p class="answer">En el perfil «Agujero hielo» la ajustas con los botones − / + en la pantalla de inicio. En los demás perfiles, desde el menú: «Temp. agua manual». Si en el agua ves «--°C», la temperatura aún no se ha fijado.</p>
+          </details>
+          <details>
+            <summary><h3>¿Dónde están mis datos en Garmin Connect?</h3></summary>
+            <p class="answer">Abre la actividad, entra en la pestaña «Estadísticas» y baja hasta la sección «Connect IQ». Ahí están la frecuencia cardíaca, la temperatura del agua, el tiempo, cómo te sentiste y los tiempos de cada fase. Las tarjetas de la pantalla «Resumen» las pone Garmin; la app no puede cambiarlas.</p>
+          </details>
+          <details>
+            <summary><h3>¿El reloj mide la temperatura corporal?</h3></summary>
+            <p class="answer">No. El reloj no puede medir la temperatura corporal. El sensor lee la temperatura del propio reloj, que depende de la piel y del aire. En Cold Dip la temperatura del agua se introduce a mano.</p>
+          </details>
+          <details>
+            <summary><h3>¿Y las calorías?</h3></summary>
+            <p class="answer">Las calorías las estima el reloj a partir de la frecuencia cardíaca; no las calcula Cold Dip.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="safety" class="howto">
+      <div class="wrap">
+        <div class="safety">
+          <h2 class="sec-title">Seguridad</h2>
+          <p class="sec-lead">El agua fría es cosa seria. Estos son recordatorios generales de seguridad, no consejo médico. Tú decides cuándo entrar y cuándo salir.</p>
+          <div class="safety-list">
+            <article class="safety-item">
+              <h3>Nunca entres solo</h3>
+              <p>Ve siempre con alguien que pueda ayudar si ocurre algo, o asegúrate de que alguien en la orilla te está vigilando.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Dale tiempo a tu cuerpo</h3>
+              <p>Si eres nuevo en el agua fría, acostúmbrate poco a poco en lugar de empezar con un baño largo en agua muy fría.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Mantén cortos los primeros baños</h3>
+              <p>Mucha gente empieza con poco tiempo en el agua y lo aumenta despacio. No hay un tiempo que “debas” aguantar.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Sal cuando lo sientas</h3>
+              <p>Sal del agua en cuanto sientas que debes hacerlo: temblores fuertes, dolor, entumecimiento, confusión, o simplemente la sensación de que ya es suficiente. Cold Dip nunca te dice que salgas ni fija un tiempo que superar. Tu último tiempo es solo una referencia.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Abrígate después</h3>
+              <p>Sécate y abrígate lo antes posible al salir del agua. Ten la ropa de abrigo lista antes de entrar.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Afterdrop</h3>
+              <p>Al salir, la temperatura corporal central puede seguir bajando un rato mientras la sangre más fría vuelve de la piel y las extremidades. A esto se le suele llamar afterdrop. Sigue abrigándote, tómate tu tiempo y espera a encontrarte bien antes de conducir o montar en bici.</p>
+            </article>
+            <article class="safety-item">
+              <h3>No es un producto sanitario</h3>
+              <p>Cold Dip es una app de registro, no un producto sanitario, y no ofrece consejo médico. No puede decirte si es seguro para ti entrar en agua fría. Si tienes una condición de salud, estás embarazada o no estás seguro, habla primero con un profesional cualificado.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="video" hidden data-flag="showVideo">
+      <div class="wrap">
+        <h2 class="sec-title">Mírala en el agua</h2>
+        <p class="sec-lead">Una mirada breve a un baño, desde la pantalla de inicio hasta el guardado en Garmin Connect.</p>
+        <button type="button" class="video-facade" data-youtube="" data-title="Mírala en el agua" aria-label="Reproducir vídeo">
+          <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></span>
+          <span class="play-label">Reproducir vídeo</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="request" id="contact">
+      <div class="wrap">
+        <div class="request-box">
+          <h2 class="sec-title">¿Quieres Cold Dip en el Apple Watch o en Suunto?</h2>
+          <p class="sec-lead">¿Tienes una idea para una app o una esfera Garmin? Hagámoslo juntos. Escríbeme y dime qué reloj usas.</p>
+          <div class="interest-row">
+            <a class="btn" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20I%20want%20Apple%20Watch&amp;body=Hola%20%C5%81ukasz%2C%0A%0A">La quiero en Apple Watch</a>
+            <a class="btn btn-ghost" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20I%20want%20Suunto&amp;body=Hola%20%C5%81ukasz%2C%0A%0A">La quiero en Suunto</a>
+            <a class="btn btn-ghost" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20I%20want%20other%20watch&amp;body=Hola%20%C5%81ukasz%2C%0A%0A">Uso otro reloj</a>
+          </div>
+          <div class="cta-row">
+            <a class="btn btn-ghost" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%94%20Apple%20Watch%2C%20Suunto%20o%20una%20idea&amp;body=Hola%20%C5%81ukasz%2C%0A%0A">Escribir a Łukasz</a>
+            <a class="btn btn-ghost" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">Dejar una reseña</a>
+          </div>
+          <p class="search-note">Si ya usas Cold Dip, una reseña en Connect IQ ayuda mucho. ¡Gracias!</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="support" hidden data-flag="showSupport">
+      <div class="wrap">
+        <div class="support-box">
+          <h2 class="sec-title">Invítame a un café</h2>
+          <p class="sec-lead">Cold Dip es gratuita. Si te ayuda en tus baños, puedes apoyar el trabajo que hay detrás.</p>
+          <a class="btn" id="support-link" href="#">Invítame a un café</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <p>© 2026 Łukasz Pszenny, Bydgoszcz, Polonia</p>
+        <address><a href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%94%20Apple%20Watch%2C%20Suunto%20o%20una%20idea&amp;body=Hola%20%C5%81ukasz%2C%0A%0A">lukasz.pszenny@gmail.com</a></address>
+      </div>
+      <p class="privacy">Cold Dip no recopila datos personales en ningún servidor. Tus sesiones se quedan en el reloj y en Garmin Connect. El tiempo atmosférico proviene del servicio meteorológico de Garmin en el teléfono, no de un servidor mío. Este sitio no usa rastreadores ni cookies de análisis; en el navegador solo se guarda el idioma elegido si lo cambias.</p>
+    </div>
+  </footer>
+  <script src="../assets/js/config.js"></script>
+  <script src="../assets/js/devices.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/lang.js"></script>
+</body>
+</html>

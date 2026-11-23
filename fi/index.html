@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cold Dip – avantouinti- ja kylmäuintisovellus Garmin-kelloille</title>
+  <meta name="description" content="Ilmainen Garmin-sovellus avantouintiin ja kylmään veteen. Vaiheet, ajastin, syke, veden lämpötila, GPS ja muuta. Toimii 130+ Garmin-kellossa.">
+  <meta name="author" content="Łukasz Pszenny">
+  <meta name="theme-color" content="#07111c">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Cold Dip">
+  <meta property="og:title" content="Cold Dip – avantouinti- ja kylmäuintisovellus Garmin-kelloille">
+  <meta property="og:description" content="Ilmainen Garmin-sovellus avantouintiin ja kylmään veteen. Vaiheet, ajastin, syke, veden lämpötila, GPS ja muuta. Toimii 130+ Garmin-kellossa.">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="../assets/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Cold Dip – avantouinti- ja kylmäuintisovellus Garmin-kelloille">
+  <meta property="og:locale" content="fi_FI">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="pl_PL">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="cs_CZ">
+  <meta property="og:locale:alternate" content="sk_SK">
+  <meta property="og:locale:alternate" content="nb_NO">
+  <meta property="og:locale:alternate" content="sv_SE">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="ru_RU">
+  <meta property="og:locale:alternate" content="uk_UA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cold Dip – avantouinti- ja kylmäuintisovellus Garmin-kelloille">
+  <meta name="twitter:description" content="Ilmainen Garmin-sovellus avantouintiin ja kylmään veteen. Vaiheet, ajastin, syke, veden lämpötila, GPS ja muuta. Toimii 130+ Garmin-kellossa.">
+  <meta name="twitter:image" content="../assets/img/og.jpg">
+  <meta name="twitter:image:alt" content="Cold Dip – avantouinti- ja kylmäuintisovellus Garmin-kelloille">
+  <link rel="canonical" href="../fi/">
+  <link rel="icon" href="../assets/img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="../assets/img/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <meta name="apple-mobile-web-app-title" content="Cold Dip">
+  <link rel="preload" as="image" type="image/webp" href="../assets/img/promo/fi/1.webp" fetchpriority="high">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="pl" href="../pl/">
+  <link rel="alternate" hreflang="de" href="../de/">
+  <link rel="alternate" hreflang="cs" href="../cs/">
+  <link rel="alternate" hreflang="sk" href="../sk/">
+  <link rel="alternate" hreflang="fi" href="../fi/">
+  <link rel="alternate" hreflang="nb" href="../nb/">
+  <link rel="alternate" hreflang="sv" href="../sv/">
+  <link rel="alternate" hreflang="es" href="../es/">
+  <link rel="alternate" hreflang="ru" href="../ru/">
+  <link rel="alternate" hreflang="uk" href="../uk/">
+  <link rel="alternate" hreflang="x-default" href="../">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+  (function () {
+    var LANGS = ["en","pl","de","cs","sk","fi","nb","sv","es","ru","uk"];
+    var parts = location.pathname.split("/").filter(Boolean);
+    if (parts.length && parts[parts.length - 1] === "index.html") parts.pop();
+    if (parts.length && LANGS.indexOf(parts[parts.length - 1]) !== -1) parts.pop();
+    var root = location.origin + "/" + (parts.length ? parts.join("/") + "/" : "");
+    function abs(lang) { return (!lang || lang === "en" || lang === "x-default") ? root : root + lang + "/"; }
+    var here = document.documentElement.lang || "en";
+    document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(function (l) {
+      l.href = abs(l.getAttribute("hreflang"));
+    });
+    var canon = document.querySelector('link[rel="canonical"]');
+    if (canon) canon.href = abs(here);
+    function setMeta(sel, val) {
+      var m = document.querySelector(sel);
+      if (m) m.setAttribute("content", val);
+    }
+    setMeta('meta[property="og:url"]', abs(here));
+    setMeta('meta[property="og:image"]', root + "assets/img/og.jpg");
+    setMeta('meta[name="twitter:image"]', root + "assets/img/og.jpg");
+  })();
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Cold Dip",
+  "alternateName": [
+    "Morsowanie",
+    "Eisbaden",
+    "Otužování",
+    "Otužovanie",
+    "Avanto",
+    "Isbading",
+    "Vinterbad",
+    "Baño frío",
+    "Моржевание",
+    "Моржування"
+  ],
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Garmin Connect IQ",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "url": "https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0",
+  "downloadUrl": "https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0",
+  "installUrl": "https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0",
+  "isAccessibleForFree": true,
+  "description": "Ilmainen Garmin-sovellus avantouintiin ja kylmään veteen. Vaiheet, ajastin, syke, veden lämpötila, GPS ja muuta. Toimii 130+ Garmin-kellossa.",
+  "author": {
+    "@type": "Person",
+    "name": "Łukasz Pszenny",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bydgoszcz",
+      "addressCountry": "PL"
+    }
+  },
+  "inLanguage": [
+    "en",
+    "pl",
+    "de",
+    "cs",
+    "sk",
+    "fi",
+    "nb",
+    "sv",
+    "es",
+    "ru",
+    "uk"
+  ],
+  "featureList": [
+    "Ennen / vedessä / jälkeen",
+    "Syke ja veden lämpötila",
+    "Sää puhelimesta",
+    "GPS-kartta uintipaikasta",
+    "Fiilis, 1–5",
+    "Oma aktiviteetti, ei uinti"
+  ]
+}
+  </script>
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true"></div>
+  <a class="skip" href="#main">Siirry sisältöön</a>
+  <header class="header">
+    <div class="wrap">
+      <a class="brand" href="../fi/" aria-label="Cold Dip">
+        <img src="../assets/img/logo.webp" width="36" height="36" alt="" decoding="async">
+        Cold Dip
+      </a>
+      <nav class="nav">
+        <a href="#features">Ominaisuudet</a>
+        <a href="#watches">Kellot</a>
+        <a href="#howto">Käyttö</a>
+        <a href="#contact">Yhteys</a>
+      </nav>
+      <a class="header-cta" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">Hae sovellus</a>
+      <details class="lang">
+        <summary aria-label="Kieli: Suomi"><span>Suomi</span></summary>
+        <ul class="lang-panel"><li><a href="../" hreflang="en" lang="en">English</a></li><li><a href="../pl/" hreflang="pl" lang="pl">Polski</a></li><li><a href="../de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="../cs/" hreflang="cs" lang="cs">Čeština</a></li><li><a href="../sk/" hreflang="sk" lang="sk">Slovenčina</a></li><li><a href="../fi/" hreflang="fi" lang="fi" aria-current="page">Suomi</a></li><li><a href="../nb/" hreflang="nb" lang="nb">Norsk</a></li><li><a href="../sv/" hreflang="sv" lang="sv">Svenska</a></li><li><a href="../es/" hreflang="es" lang="es">Español</a></li><li><a href="../ru/" hreflang="ru" lang="ru">Русский</a></li><li><a href="../uk/" hreflang="uk" lang="uk">Українська</a></li></ul>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <span class="badge">Ilmainen sovellus Garmin-kelloille</span>
+          <h1>Cold Dip</h1>
+          <p class="local-name">Kellossa sovelluksen nimi on Avanto.</p>
+          <p class="tagline">Avantouinti ja kylmät pulahdukset tallennettuna oikein — ei uintina.</p>
+          <div class="cta-row">
+            <a class="btn" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">Lataa ilmaiseksi Connect IQ:sta</a>
+          </div>
+          <p class="search-note">Tai hae puhelimen Connect IQ -sovelluksessa nimellä ”Cold Dip”.</p>
+          <p class="byline">Tekijä Łukasz Pszenny, avantouimari Bydgoszczista, Puolasta.</p>
+        </div>
+        <div class="gallery">
+          <figure>
+            <img src="../assets/img/promo/fi/1.webp" width="720" height="900" alt="Aloitusnäyttö: GPS, sää ja veden lämpötila ennen veteen menoa" fetchpriority="high" decoding="async">
+            <figcaption>Ennen veteen menoa</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/promo/fi/2.webp" width="720" height="900" alt="Vedessä: aika ja syke" loading="lazy" decoding="async">
+            <figcaption>Vedessä</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/promo/fi/3.webp" width="720" height="900" alt="Vedestä noustua: yhteenveto ja fiilis" loading="lazy" decoding="async">
+            <figcaption>Noustua vedestä</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="wrap">
+        <h2 class="sec-title">Mitä se tekee</h2>
+        <p class="sec-lead">Tehty avantoon, ei uimahalliin. Sinä päätät koko ajan.</p>
+        <div class="features">
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14"/><path d="M5 12h14"/><path d="M5 17h14"/><circle cx="9" cy="7" r="1.6" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"/><circle cx="15" cy="17" r="1.6" fill="currentColor" stroke="none"/></svg></div>
+            <h3>Ennen / vedessä / jälkeen</h3>
+            <p>Yläpainike vaihtaa vaihetta. Aika vedessä vain juoksee — sovellus ei koskaan käske nousemaan ylös. Se on sinun päätöksesi. Edellinen aika on vain viite, ei tavoite, joka pitäisi rikkoa.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.6-7 10-7 10z"/></svg></div>
+            <h3>Syke ja veden lämpötila</h3>
+            <p>Syke tallentuu koko ajan. Veden lämpötila syötetään käsin ja se tallentuu aktiviteettiin.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 16h10a4 4 0 0 0 0-8 6 6 0 0 0-11.5 1.5A3.5 3.5 0 0 0 7 16z"/><path d="M8 19v1M12 19v2M16 19v1"/></svg></div>
+            <h3>Sää puhelimesta</h3>
+            <p>Ilman lämpötila, tuntuma ja tuuli — Garminin säästä puhelimessasi.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.2"/></svg></div>
+            <h3>GPS-kartta uintipaikasta</h3>
+            <p>Uintipaikka tallentuu ja näkyy kartalla Garmin Connectissa.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 13.5s1.5 2.5 4 2.5 4-2.5 4-2.5"/><path d="M9 9.5h.01M15 9.5h.01"/></svg></div>
+            <h3>Fiilis, 1–5</h3>
+            <p>Jokaisen pulahduksen jälkeen nopea arvio olosta. Lisäksi sykkeen huippu ja palautuminen sekä Body Battery ja stressi ennen veteen menoa.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></div>
+            <h3>Oma aktiviteetti, ei uinti</h3>
+            <p>Kaikki tallentuu Garmin Connectiin omana aktiviteettinaan, ei uintina.</p>
+          </article>
+        </div>
+        <div class="compat">
+          <h3>11 kieltä</h3>
+          <p>Englanti, puola, saksa, tšekki, slovakki, suomi, norja, ruotsi, espanja, venäjä ja ukraina. Sovellus vaihtuu automaattisesti kellon kielelle.</p>
+          <div class="pill-row">
+<a class="pill" href="../" hreflang="en" lang="en">English</a><a class="pill" href="../pl/" hreflang="pl" lang="pl">Polski</a><a class="pill" href="../de/" hreflang="de" lang="de">Deutsch</a><a class="pill" href="../cs/" hreflang="cs" lang="cs">Čeština</a><a class="pill" href="../sk/" hreflang="sk" lang="sk">Slovenčina</a><a class="pill" href="../fi/" hreflang="fi" lang="fi">Suomi</a><a class="pill" href="../nb/" hreflang="nb" lang="nb">Norsk</a><a class="pill" href="../sv/" hreflang="sv" lang="sv">Svenska</a><a class="pill" href="../es/" hreflang="es" lang="es">Español</a><a class="pill" href="../ru/" hreflang="ru" lang="ru">Русский</a><a class="pill" href="../uk/" hreflang="uk" lang="uk">Українська</a>
+          </div>
+        </div>
+        <div class="compat">
+          <h3 data-compat-title data-compat-live="Toimii 130+ Garmin-kellossa">Toimii 130+ Garmin-kellossa</h3>
+          <p>Forerunner, Fenix, Epix, Enduro, Venu, Vivoactive, Instinct 2 / 3 / E / Crossover ja muut. Ei tueta hyvin vanhoja kelloja, kuten Forerunner 920XT (Connect IQ 1.x).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="watches"
+      data-i18n-supported="Tuettu"
+      data-i18n-pending="Tulossa versiossa 1.0.3"
+      data-i18n-pending-note="On jo sovelluksessa, odottaa Garmin-kaupan hyväksyntää."
+      data-i18n-more="Vielä {n} osumaa — kirjoita hieman lisää, niin lista tarkentuu."
+      data-i18n-not-found="Tätä mallia ei ole tuettujen listalla."
+      data-i18n-not-found-body="Cold Dip toimii vain Garmin-kelloissa, joissa on Connect IQ 3.0 tai uudempi."
+      data-i18n-legacy="Tämä on vanhempi kello, jossa on Connect IQ 1.x tai 2.x, joten Cold Dip ei voi toimia siinä. Siitä puuttuvat sovelluksen tarvitsemat ominaisuudet, eikä muistia ole tarpeeksi."
+      data-i18n-ask="Kysy, voidaanko mallisi lisätä"
+      data-i18n-ask-subject="Cold Dip – is this watch supported?"
+      data-i18n-empty="Ala kirjoittaa mallin nimeä, niin näet, onko se tuettu.">
+      <div class="wrap">
+        <h2 class="sec-title">Toimiiko se kellossasi?</h2>
+        <p class="sec-lead">Hae mallia. Lista vastaa Cold Dip 1.0.3:n 133 kelloa.</p>
+        <div class="checker">
+          <form role="search" action="#" method="get">
+            <div class="checker-field">
+              <label for="watch-q">Kellomalli</label>
+              <input id="watch-q" name="q" type="search" autocomplete="off" spellcheck="false" placeholder="esim. Venu 2 Plus tai Forerunner 265">
+            </div>
+          </form>
+          <div id="watch-results" class="watch-results" aria-live="polite"></div>
+          <p class="chk-note">Hyvin vanhoja Connect IQ 1.x -kelloja, kuten Forerunner 920XT, ei voida tukea.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="wrap">
+        <h2 class="sec-title">Kellossa</h2>
+        <p class="sec-lead">Näin Cold Dip näyttää eri Garmin-näytöillä.</p>
+        <div class="fam-block">
+          <h3>Venu / AMOLED (pyöreä)</h3>
+          <div class="shot-row">
+          <figure>
+            <img src="../assets/img/gallery/en/venu/start.webp" width="474" height="720" alt="Aloitusnäyttö: GPS, sää ja veden lämpötila ennen veteen menoa" loading="lazy" decoding="async">
+            <figcaption>Ennen veteen menoa</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/venu/water.webp" width="474" height="720" alt="Vedessä: aika ja syke" loading="lazy" decoding="async">
+            <figcaption>Vedessä</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/venu/after.webp" width="474" height="720" alt="Vedestä noustua: yhteenveto ja fiilis" loading="lazy" decoding="async">
+            <figcaption>Noustua vedestä</figcaption>
+          </figure>
+          </div>
+        </div>
+        <div class="fam-block">
+          <h3>Fenix / MIP (pyöreä)</h3>
+          <div class="shot-row">
+          <figure>
+            <img src="../assets/img/gallery/en/fenix/start.webp" width="560" height="560" alt="Aloitusnäyttö: GPS, sää ja veden lämpötila ennen veteen menoa" loading="lazy" decoding="async">
+            <figcaption>Ennen veteen menoa</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/fenix/water.webp" width="560" height="560" alt="Vedessä: aika ja syke" loading="lazy" decoding="async">
+            <figcaption>Vedessä</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/fenix/after.webp" width="560" height="560" alt="Vedestä noustua: yhteenveto ja fiilis" loading="lazy" decoding="async">
+            <figcaption>Noustua vedestä</figcaption>
+          </figure>
+          </div>
+        </div>
+        <div class="fam-block">
+          <h3>Instinct (mustavalkoinen)</h3>
+          <div class="shot-row">
+          <figure>
+            <img src="../assets/img/gallery/en/instinct/start.webp" width="408" height="408" alt="Aloitusnäyttö: GPS, sää ja veden lämpötila ennen veteen menoa" loading="lazy" decoding="async">
+            <figcaption>Ennen veteen menoa</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/instinct/water.webp" width="408" height="408" alt="Vedessä: aika ja syke" loading="lazy" decoding="async">
+            <figcaption>Vedessä</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/instinct/after.webp" width="408" height="408" alt="Vedestä noustua: yhteenveto ja fiilis" loading="lazy" decoding="async">
+            <figcaption>Noustua vedestä</figcaption>
+          </figure>
+          </div>
+        </div>
+        <div class="fam-block">
+          <h3>Venu Sq / Venu X1 (suorakaide)</h3>
+          <div class="shot-row">
+          <figure>
+            <img src="../assets/img/gallery/en/rect/start.webp" width="465" height="720" alt="Aloitusnäyttö: GPS, sää ja veden lämpötila ennen veteen menoa" loading="lazy" decoding="async">
+            <figcaption>Ennen veteen menoa</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/rect/water.webp" width="465" height="720" alt="Vedessä: aika ja syke" loading="lazy" decoding="async">
+            <figcaption>Vedessä</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/rect/after.webp" width="465" height="720" alt="Vedestä noustua: yhteenveto ja fiilis" loading="lazy" decoding="async">
+            <figcaption>Noustua vedestä</figcaption>
+          </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="changelog">
+      <div class="wrap">
+        <h2 class="sec-title">Mitä uutta</h2>
+        <p class="sec-lead">Cold Dipin viimeisimmät versiot.</p>
+        <ol class="changelog">
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.0.3</h3>
+              <span class="ch-flag">Odottaa kaupan hyväksyntää</span>
+            </div>
+            <p>133 kelloa, mukana Instinct 2, Instinct 2S, Instinct 2X, Instinct 3 Solar, Instinct E ja Instinct Crossover, sekä uusi mustavalkoinen asettelu MIP-näytöille.</p>
+          </li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.0.2</h3>
+              
+            </div>
+            <p>126 kelloa, mukana Forerunner 55.</p>
+          </li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.0.1</h3>
+              <span class="ch-date">17.11.2026</span>
+            </div>
+            <p>105 kelloa, mukana suorakaiteen muotoiset asettelut Venu X1:lle ja Venu Sq 2:lle.</p>
+          </li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.0.0</h3>
+              <span class="ch-date">14.11.2026</span>
+            </div>
+            <p>Ensimmäinen julkaisu.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="testimonials" hidden data-flag="showTestimonials">
+      <div class="wrap">
+        <h2 class="sec-title">Niiltä, jotka jo avantouivat tämän kanssa</h2>
+        <div class="quotes">
+          <blockquote class="quote">
+            <p>“Działa idealnie” <span class="tr">(Toimii täydellisesti)</span></p>
+            <footer>Radosław S., Facebook — Poznań, Jezioro Rusałka, 16 min</footer>
+          </blockquote>
+          <blockquote class="quote">
+            <p>Yli 10 minuuttia 5°C:ssa — veden lämpötila kellossa, ja kaikki tiedot tallentuivat Garmin Connectiin.</p>
+            <footer>Jadwiga</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="howto" class="howto">
+      <div class="wrap" id="faq">
+        <h2 class="sec-title">Käyttö</h2>
+        <p class="sec-lead">Muutama asia, jota asennuksen jälkeen kysytään usein.</p>
+        <div class="faq">
+          <details>
+            <summary><h3>Miten asennan sovelluksen?</h3></summary>
+            <p class="answer">Asenna se puhelimen Connect IQ Store -sovelluksesta — ei Google Playsta tai App Storesta. Kellosta löydät Cold Dipin (Avanto) aktiviteetti- / sovellusluettelosta.</p>
+          </details>
+          <details>
+            <summary><h3>Miten asetan veden lämpötilan?</h3></summary>
+            <p class="answer">Profiilissa „Avanto” säädät sen aloitusnäytön painikkeilla − / +. Muissa profiileissa se käy valikosta: „Veden lämpö käsin”. Jos näet vedessä merkin „--°C”, lämpötilaa ei ole vielä asetettu.</p>
+          </details>
+          <details>
+            <summary><h3>Missä tietoni ovat Garmin Connectissa?</h3></summary>
+            <p class="answer">Avaa aktiviteetti, siirry Tilastot-välilehdelle ja vieritä kohtaan „Connect IQ”. Siellä ovat syke, veden lämpötila, sää, fiilis ja vaiheiden ajat. Yleiskatsaus-näytön ruudut määrää Garmin — sovellus ei voi niitä muuttaa.</p>
+          </details>
+          <details>
+            <summary><h3>Mittaako kello ruumiinlämpöä?</h3></summary>
+            <p class="answer">Ei. Kello ei voi mitata ruumiinlämpöä. Anturi näyttää kellon oman lämpötilan, johon vaikuttavat iho ja ilma. Cold Dipissä veden lämpötila syötetään käsin.</p>
+          </details>
+          <details>
+            <summary><h3>Entä kalorit?</h3></summary>
+            <p class="answer">Kalorit arvioi kello sykkeen perusteella, Cold Dip ei laske niitä.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="safety" class="howto">
+      <div class="wrap">
+        <div class="safety">
+          <h2 class="sec-title">Turvallisuus</h2>
+          <p class="sec-lead">Kylmä vesi on vakava asia. Nämä ovat yleisiä turvallisuusmuistutuksia, eivät lääkärin neuvoja. Sinä päätät, milloin menet veteen ja milloin nouset pois.</p>
+          <div class="safety-list">
+            <article class="safety-item">
+              <h3>Älä koskaan mene yksin</h3>
+              <p>Mene aina jonkun kanssa, joka voi auttaa, jos jotain tapahtuu, tai varmista, että joku rannalla pitää sinua silmällä.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Anna keholle aikaa</h3>
+              <p>Jos kylmä vesi on sinulle uutta, totuttele siihen vähitellen sen sijaan, että jäisit heti pitkäksi aikaa hyvin kylmään veteen.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Pidä ensimmäiset kerrat lyhyinä</h3>
+              <p>Moni aloittaa vain lyhyellä ajalla vedessä ja pidentää sitä hitaasti. Ei ole aikaa, jonka “pitäisi” kestää.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Nouse pois, kun siltä tuntuu</h3>
+              <p>Poistu vedestä heti, kun tunnet, että on aika — voimakkaassa tärinässä, kivussa, puutumisessa, hämmennyksessä tai yksinkertaisesti kun se riittää. Cold Dip ei koskaan käske sinua pois vedestä eikä aseta tavoiteaikaa. Edellinen aika on vain viite.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Lämmittele jälkeenpäin</h3>
+              <p>Kuivaa itsesi ja lämmittele mahdollisimman pian vedestä noustuasi. Pidä lämpimät vaatteet valmiina jo ennen veteen menoa.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Afterdrop</h3>
+              <p>Vedestä noustuasi ydinlämpötila voi vielä laskea hetken, kun viileämpi veri palaa iholta ja raajoista. Tätä kutsutaan usein afterdropiksi. Jatka lämmittelyä, etene rauhassa ja odota, että olosi on oikeasti hyvä, ennen kuin ajat autoa tai pyöräilet.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Ei ole lääkinnällinen laite</h3>
+              <p>Cold Dip on tallennussovellus, ei lääkinnällinen laite, eikä se anna lääketieteellisiä neuvoja. Se ei voi kertoa, onko kylmään veteen meno sinulle turvallista. Jos sinulla on sairaus, olet raskaana tai olet epävarma, keskustele ensin alan ammattilaisen kanssa.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="video" hidden data-flag="showVideo">
+      <div class="wrap">
+        <h2 class="sec-title">Katso vedessä</h2>
+        <p class="sec-lead">Lyhyt katsaus yhteen avantoon: aloitusnäytöstä tallennukseen Garmin Connectissa.</p>
+        <button type="button" class="video-facade" data-youtube="" data-title="Katso vedessä" aria-label="Toista video">
+          <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></span>
+          <span class="play-label">Toista video</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="request" id="contact">
+      <div class="wrap">
+        <div class="request-box">
+          <h2 class="sec-title">Haluatko Cold Dipin Apple Watchille tai Suunnolle?</h2>
+          <p class="sec-lead">Onko sinulla idea Garmin-sovelluksesta tai kellotaulusta? Tehdään se yhdessä. Kirjoita minulle ja kerro, mitä kelloa käytät.</p>
+          <div class="interest-row">
+            <a class="btn" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20I%20want%20Apple%20Watch&amp;body=Hei%20%C5%81ukasz%2C%0A%0A">Haluan sen Apple Watchille</a>
+            <a class="btn btn-ghost" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20I%20want%20Suunto&amp;body=Hei%20%C5%81ukasz%2C%0A%0A">Haluan sen Suunnolle</a>
+            <a class="btn btn-ghost" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20I%20want%20other%20watch&amp;body=Hei%20%C5%81ukasz%2C%0A%0A">Käytän toista kelloa</a>
+          </div>
+          <div class="cta-row">
+            <a class="btn btn-ghost" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%94%20Apple%20Watch%2C%20Suunto%20tai%20idea&amp;body=Hei%20%C5%81ukasz%2C%0A%0A">Lähetä sähköpostia Łukaszille</a>
+            <a class="btn btn-ghost" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">Jätä arvostelu</a>
+          </div>
+          <p class="search-note">Jos käytät jo Cold Dipiä, arvostelu Connect IQ:ssa auttaa paljon — kiitos!</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="support" hidden data-flag="showSupport">
+      <div class="wrap">
+        <div class="support-box">
+          <h2 class="sec-title">Tarjoa kahvi</h2>
+          <p class="sec-lead">Cold Dip on ilmainen. Jos se auttaa avannoissasi, voit tukea sen taustalla olevaa työtä.</p>
+          <a class="btn" id="support-link" href="#">Tarjoa kahvi</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <p>© 2026 Łukasz Pszenny, Bydgoszcz, Puola</p>
+        <address><a href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%94%20Apple%20Watch%2C%20Suunto%20tai%20idea&amp;body=Hei%20%C5%81ukasz%2C%0A%0A">lukasz.pszenny@gmail.com</a></address>
+      </div>
+      <p class="privacy">Cold Dip ei kerää henkilötietoja millekään palvelimelle. Istuntosi jäävät kelloon ja Garmin Connectiin. Sää tulee Garminin omasta sääpalvelusta puhelimessasi, ei minun palvelimeltani. Tällä sivustolla ei ole seurantoja eikä analytiikkaevästeitä — selaimeen tallentuu vain kielivalinta, jos vaihdat kieltä.</p>
+    </div>
+  </footer>
+  <script src="../assets/js/config.js"></script>
+  <script src="../assets/js/devices.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/lang.js"></script>
+</body>
+</html>

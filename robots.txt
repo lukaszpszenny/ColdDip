@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /preview_desktop.png
+Disallow: /preview_mobile.png
+
+# After the site has a public domain, uncomment and set it:
+Sitemap: https://lukaszpszenny.github.io/ColdDip/sitemap.xml
