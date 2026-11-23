@@ -27,7 +27,7 @@ All feature toggles live in `window.COLDDIP_CONFIG` at the top of `assets/js/con
 
 | Flag | Default | What it does |
 |---|---|---|
-| `instinctPending` | `true` | Marks Instinct MIP models added in v1.0.3 as “Coming with v1.0.3”, and keeps the heading at “120+”. Set to `false` when Garmin has approved 1.0.3 in the store — the badge becomes “Supported” and the heading switches to “130+”. |
+| `instinctPending` | `false` | When `true`, models that are in the app but not yet in the Connect IQ store get a “coming soon” badge, and the heading stays at “120+”. It is `false` now because 1.0.3 is live — those models show as “Supported” and the heading is “130+”. |
 | `showTestimonials` | `false` | Shows the quotes section. Keep off until Radosław and Jadwiga have agreed to appear on the site by name. |
 | `showVideo` | `false` | Shows the video section. Also needs a YouTube id. |
 | `youtubeId` | `""` | YouTube video id only (the part after `v=`). The player is a click-to-load facade on `youtube-nocookie.com` — nothing is requested from YouTube until someone presses play. |
@@ -37,6 +37,11 @@ All feature toggles live in `window.COLDDIP_CONFIG` at the top of `assets/js/con
 The device list used by the watch checker is generated from the Connect IQ manifest (`assets/js/devices.js`). Regenerating it is only needed when supported watches change.
 
 Screenshot gallery: Polish pages use Polish watch screenshots where they exist; every other language uses English screenshots. Fenix and rectangular (Venu Sq / X1) shots currently have an English UI even on the Polish page, because no clean Polish sources were available for those families.
+
+
+## Flags
+
+Language-switcher flags in `assets/flags/` are the 4×3 SVG files from the [flag-icons](https://github.com/lipis/flag-icons) project (MIT license), copied locally so they work offline and on Windows (emoji flags often do not).
 
 ## After you have a public URL
 

@@ -88,7 +88,7 @@
   function badge(root, item) {
     var pending = !!(item.pending && cfg.instinctPending);
     var b = el("span", "badge-status " + (pending ? "is-pending" : "is-ok"),
-      pending ? t(root, "pending", "Coming with v1.0.3") : t(root, "supported", "Supported"));
+      pending ? t(root, "pending", "Coming soon") : t(root, "supported", "Supported"));
     if (pending) b.title = t(root, "pending-note", "");
     return b;
   }
@@ -143,6 +143,7 @@
       a.href = mailtoAsk(root, raw);
       box.appendChild(a);
       out.appendChild(box);
+      enhanceMailtos(out);
       return;
     }
 
@@ -153,6 +154,7 @@
     ask.href = mailtoAsk(root, raw);
     miss.appendChild(ask);
     out.appendChild(miss);
+    enhanceMailtos(out);
   }
 
   function initChecker() {
@@ -189,7 +191,117 @@
     });
   }
 
+  var EMAIL = "lukasz.pszenny@gmail.com";
+
+  function i18nMail(key, fallback) {
+    var nodes = [
+      document.getElementById("contact"),
+      document.getElementById("watches")
+    ];
+    for (var i = 0; i < nodes.length; i++) {
+      if (nodes[i]) {
+        var v = t(nodes[i], key, "");
+        if (v) return v;
+      }
+    }
+    return fallback;
+  }
+
+  function parseMailto(href) {
+    var raw = String(href || "").replace(/^mailto:/i, "");
+    var q = raw.indexOf("?");
+    var email = (q < 0 ? raw : raw.slice(0, q)).split(",")[0].trim();
+    try { email = decodeURIComponent(email); } catch (e) {}
+    var params = {};
+    if (q >= 0) {
+      raw.slice(q + 1).split("&").forEach(function (p) {
+        var i = p.indexOf("=");
+        var k = (i < 0 ? p : p.slice(0, i)).toLowerCase();
+        var v = i < 0 ? "" : p.slice(i + 1);
+        try { params[k] = decodeURIComponent(v.replace(/\+/g, " ")); } catch (err) { params[k] = v; }
+      });
+    }
+    return { email: email || EMAIL, subject: params.subject || "", body: params.body || "" };
+  }
+
+  function gmailCompose(info) {
+    var u = "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(info.email);
+    if (info.subject) u += "&su=" + encodeURIComponent(info.subject);
+    if (info.body) u += "&body=" + encodeURIComponent(info.body);
+    return u;
+  }
+
+  function copyText(value, btn, copiedLabel, copyLabel) {
+    var done = function () {
+      btn.textContent = copiedLabel;
+      btn.classList.add("is-copied");
+      window.setTimeout(function () {
+        btn.textContent = copyLabel;
+        btn.classList.remove("is-copied");
+      }, 1600);
+    };
+    var fallback = function () {
+      var ta = document.createElement("textarea");
+      ta.value = value;
+      ta.setAttribute("readonly", "");
+      ta.style.position = "fixed";
+      ta.style.left = "-9999px";
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      try { if (document.execCommand("copy")) done(); } catch (e) {}
+      document.body.removeChild(ta);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(value).then(done).catch(fallback);
+    } else {
+      fallback();
+    }
+  }
+
+  function enhanceMailto(anchor) {
+    if (!anchor || anchor.closest(".mail-alt") || anchor.parentNode && anchor.parentNode.classList.contains("mail-cluster")) {
+      return;
+    }
+    var href = anchor.getAttribute("href") || "";
+    if (!/^mailto:/i.test(href)) return;
+
+    var info = parseMailto(href);
+    var copyLabel = i18nMail("copy", "Copy");
+    var copiedLabel = i18nMail("copied", "Copied");
+    var gmailLabel = i18nMail("gmail", "Write via Gmail");
+    var showAddr = (anchor.textContent || "").replace(/\s+/g, " ").trim().toLowerCase() !== info.email.toLowerCase();
+
+    var cluster = el("div", "mail-cluster");
+    anchor.parentNode.insertBefore(cluster, anchor);
+    cluster.appendChild(anchor);
+
+    var alt = el("div", "mail-alt");
+    if (showAddr) {
+      var addr = el("span", "mail-addr", info.email);
+      alt.appendChild(addr);
+    }
+    var copyBtn = el("button", "mail-copy", copyLabel);
+    copyBtn.type = "button";
+    copyBtn.setAttribute("aria-label", copyLabel + " " + info.email);
+    copyBtn.addEventListener("click", function () {
+      copyText(info.email, copyBtn, copiedLabel, copyLabel);
+    });
+    var gmail = el("a", "mail-gmail", gmailLabel);
+    gmail.href = gmailCompose(info);
+    gmail.target = "_blank";
+    gmail.rel = "noopener noreferrer";
+    alt.appendChild(copyBtn);
+    alt.appendChild(gmail);
+    cluster.appendChild(alt);
+  }
+
+  function enhanceMailtos(root) {
+    (root || document).querySelectorAll('a[href^="mailto:"]').forEach(enhanceMailto);
+  }
+
   applyFlags();
   initChecker();
   initVideo();
+  enhanceMailtos(document);
 })();

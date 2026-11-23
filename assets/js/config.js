@@ -3,12 +3,14 @@
  * All feature toggles live in this one object. Other scripts read
  * window.COLDDIP_CONFIG. Leave hidden sections off until you are ready.
  *
- * instinctPending  true  → Instinct MIP models added in v1.0.3
- *                          (Instinct 2 / 2S / 2X, Instinct 3 Solar,
- *                          Instinct E, Instinct Crossover) are marked
- *                          “Coming with v1.0.3”. Set to false once
- *                          Garmin has approved 1.0.3 in the store.
- *                          The “120+” heading then switches to “130+”.
+ * instinctPending  true  → newly added watch models that are in the
+ *                          app build but not yet live in the Connect IQ
+ *                          store show a “coming soon” badge, and the
+ *                          heading stays at “120+”. Leave false while
+ *                          the current store release (1.0.3) is live —
+ *                          those models show as supported and the
+ *                          heading is “130+”. Flip it back on only for
+ *                          a later version that is still in review.
  *
  * showTestimonials true  → show the quotes section.
  *                          Keep false until Radosław and Jadwiga have

@@ -52,7 +52,7 @@
   <link rel="alternate" hreflang="ru" href="../ru/">
   <link rel="alternate" hreflang="uk" href="../uk/">
   <link rel="alternate" hreflang="x-default" href="../">
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261123">
   <script>
   (function () {
     var LANGS = ["en","pl","de","cs","sk","fi","nb","sv","es","ru","uk"];
@@ -156,8 +156,8 @@
       </nav>
       <a class="header-cta" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">Hämta appen</a>
       <details class="lang">
-        <summary aria-label="Språk: Svenska"><span>Svenska</span></summary>
-        <ul class="lang-panel"><li><a href="../" hreflang="en" lang="en">English</a></li><li><a href="../pl/" hreflang="pl" lang="pl">Polski</a></li><li><a href="../de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="../cs/" hreflang="cs" lang="cs">Čeština</a></li><li><a href="../sk/" hreflang="sk" lang="sk">Slovenčina</a></li><li><a href="../fi/" hreflang="fi" lang="fi">Suomi</a></li><li><a href="../nb/" hreflang="nb" lang="nb">Norsk</a></li><li><a href="../sv/" hreflang="sv" lang="sv" aria-current="page">Svenska</a></li><li><a href="../es/" hreflang="es" lang="es">Español</a></li><li><a href="../ru/" hreflang="ru" lang="ru">Русский</a></li><li><a href="../uk/" hreflang="uk" lang="uk">Українська</a></li></ul>
+        <summary aria-label="Språk: Svenska"><img class="lang-flag" src="../assets/flags/se.svg" alt="" width="18" height="13"><span>Svenska</span></summary>
+        <ul class="lang-panel"><li><a href="../" hreflang="en" lang="en"><img class="lang-flag" src="../assets/flags/gb.svg" alt="" width="18" height="13">English</a></li><li><a href="../pl/" hreflang="pl" lang="pl"><img class="lang-flag" src="../assets/flags/pl.svg" alt="" width="18" height="13">Polski</a></li><li><a href="../de/" hreflang="de" lang="de"><img class="lang-flag" src="../assets/flags/de.svg" alt="" width="18" height="13">Deutsch</a></li><li><a href="../cs/" hreflang="cs" lang="cs"><img class="lang-flag" src="../assets/flags/cz.svg" alt="" width="18" height="13">Čeština</a></li><li><a href="../sk/" hreflang="sk" lang="sk"><img class="lang-flag" src="../assets/flags/sk.svg" alt="" width="18" height="13">Slovenčina</a></li><li><a href="../fi/" hreflang="fi" lang="fi"><img class="lang-flag" src="../assets/flags/fi.svg" alt="" width="18" height="13">Suomi</a></li><li><a href="../nb/" hreflang="nb" lang="nb"><img class="lang-flag" src="../assets/flags/no.svg" alt="" width="18" height="13">Norsk</a></li><li><a href="../sv/" hreflang="sv" lang="sv" aria-current="page"><img class="lang-flag" src="../assets/flags/se.svg" alt="" width="18" height="13">Svenska</a></li><li><a href="../es/" hreflang="es" lang="es"><img class="lang-flag" src="../assets/flags/es.svg" alt="" width="18" height="13">Español</a></li><li><a href="../ru/" hreflang="ru" lang="ru"><img class="lang-flag" src="../assets/flags/ru.svg" alt="" width="18" height="13">Русский</a></li><li><a href="../uk/" hreflang="uk" lang="uk"><img class="lang-flag" src="../assets/flags/ua.svg" alt="" width="18" height="13">Українська</a></li></ul>
       </details>
     </div>
   </header>
@@ -245,8 +245,9 @@
 
     <section id="watches"
       data-i18n-supported="Stöds"
-      data-i18n-pending="Kommer med v1.0.3"
-      data-i18n-pending-note="Redan i appen, väntar på godkännande i Garmin-butiken."
+      data-i18n-copy="Kopiera"
+      data-i18n-copied="Kopierat"
+      data-i18n-gmail="Skriv via Gmail"
       data-i18n-more="{n} träffar till — skriv lite mer för att begränsa listan."
       data-i18n-not-found="Den här modellen finns inte på listan över stödda klockor."
       data-i18n-not-found-body="Cold Dip körs bara på Garmin-klockor med Connect IQ 3.0 eller senare."
@@ -353,7 +354,7 @@
           <li>
             <div class="ch-head">
               <h3 class="ch-ver">1.0.3</h3>
-              <span class="ch-flag">Väntar på godkännande i butiken</span>
+              <span class="ch-flag is-current">Aktuell version</span>
             </div>
             <p>133 klockor, inklusive Instinct 2, Instinct 2S, Instinct 2X, Instinct 3 Solar, Instinct E och Instinct Crossover, plus en ny svartvit layout för MIP-skärmar.</p>
           </li>
@@ -477,7 +478,10 @@
       </div>
     </section>
 
-    <section class="request" id="contact">
+    <section class="request" id="contact"
+      data-i18n-copy="Kopiera"
+      data-i18n-copied="Kopierat"
+      data-i18n-gmail="Skriv via Gmail">
       <div class="wrap">
         <div class="request-box">
           <h2 class="sec-title">Vill du ha Cold Dip på Apple Watch eller Suunto?</h2>
@@ -516,9 +520,9 @@
       <p class="privacy">Cold Dip samlar inte in personuppgifter på någon server. Dina pass stannar på klockan och i Garmin Connect. Vädret kommer från Garmins egen vädertjänst i telefonen, inte från en server som jag har. Den här webbplatsen använder inga spårare eller analyscookies — i webbläsaren sparas bara språkvalet om du ändrar det.</p>
     </div>
   </footer>
-  <script src="../assets/js/config.js"></script>
-  <script src="../assets/js/devices.js"></script>
-  <script src="../assets/js/app.js"></script>
-  <script src="../assets/js/lang.js"></script>
+  <script src="../assets/js/config.js?v=20261123"></script>
+  <script src="../assets/js/devices.js?v=20261123"></script>
+  <script src="../assets/js/app.js?v=20261123"></script>
+  <script src="../assets/js/lang.js?v=20261123"></script>
 </body>
 </html>
