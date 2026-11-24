@@ -1162,3 +1162,267 @@ h3 .pro-star, .sec-title .pro-star, .cmp th .pro-star {
 .chk-pro-note {
   display: none !important;
 }
+
+
+/* Combined watch-faces band */
+#faces {
+  scroll-margin-top: calc(var(--header-h) + 12px);
+  padding: 56px 0 64px;
+  background:
+    linear-gradient(180deg, rgba(126, 214, 240, 0.08), rgba(7, 17, 28, 0) 160px),
+    rgba(11, 26, 43, 0.55);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+@media (min-width: 800px) {
+  #faces { padding: 72px 0 80px; }
+}
+#faces #face,
+#faces #mors-level {
+  padding: 22px 0 0;
+  border-top: 0;
+}
+#faces #face > .wrap,
+#faces #mors-level > .wrap {
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 26px 20px 30px;
+  box-shadow: var(--shadow);
+}
+#faces #face > .wrap {
+  box-shadow: var(--shadow), inset 3px 0 0 #7ed6f0;
+}
+#faces #mors-level > .wrap {
+  background: linear-gradient(165deg, rgba(240, 201, 135, 0.1), var(--bg-elev) 38%);
+  border-color: rgba(240, 201, 135, 0.3);
+  box-shadow: var(--shadow), inset 3px 0 0 #e0b55a;
+}
+.faces-intro .sec-lead { max-width: 44rem; }
+.faces-cards {
+  display: grid;
+  gap: 16px;
+  margin-top: 22px;
+  margin-bottom: 8px;
+}
+@media (min-width: 800px) {
+  .faces-cards { grid-template-columns: 1fr 1fr; }
+}
+.faces-card {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 4px 16px;
+  align-items: start;
+  margin: 0;
+  padding: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  position: relative;
+}
+.faces-card-tarcza { box-shadow: var(--shadow), inset 3px 0 0 #7ed6f0; }
+.faces-card-level {
+  background: linear-gradient(160deg, rgba(240, 201, 135, 0.12), var(--bg-card) 48%);
+  border-color: rgba(240, 201, 135, 0.3);
+  box-shadow: var(--shadow), inset 3px 0 0 #e0b55a;
+}
+.faces-card-media {
+  margin: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #050b12;
+  border: 1px solid var(--line);
+}
+.faces-card-media img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  display: block;
+  background: #050b12;
+}
+.faces-card h3 {
+  margin: 0 0 6px;
+  font-size: 1.12rem;
+  letter-spacing: -0.02em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.faces-card-lead {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+.faces-card-price {
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.faces-card-price small {
+  display: block;
+  margin-top: 2px;
+  font-weight: 550;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.faces-card-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+.faces-card-actions .btn { width: auto; padding: 8px 14px; font-size: 0.88rem; }
+.faces-card .badge { margin: 0; }
+.badge-new {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(240, 201, 135, 0.28), rgba(224, 181, 90, 0.16));
+  color: #f4deaa;
+  border: 1px solid rgba(240, 201, 135, 0.5);
+  border-radius: 999px;
+  padding: 3px 9px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.sec-title .badge-new {
+  margin-left: 8px;
+  transform: translateY(-2px);
+}
+
+/* Mors Level stage demo on a watch-style dial */
+.ml-demo-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  background: #050b12;
+  display: grid;
+  place-items: center;
+}
+.ml-demo-dial {
+  width: 86%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  background:
+    radial-gradient(120% 70% at 50% 100%, #1b4560 0%, #0a1a28 40%, #05070c 68%);
+  box-shadow:
+    inset 0 0 0 2px rgba(126, 214, 240, 0.14),
+    0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+.ml-demo-hud {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 13%;
+  text-align: center;
+  z-index: 2;
+  pointer-events: none;
+}
+.ml-demo-time {
+  margin: 0;
+  font-size: clamp(1.7rem, 8vw, 3.25rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.ml-demo-level {
+  margin: 8px 0 0;
+  color: #5ec8e6;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  font-size: clamp(0.68rem, 2.3vw, 1.02rem);
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.ml-demo-bar-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+.ml-demo-bar {
+  width: 38%;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(126, 214, 240, 0.18);
+  overflow: hidden;
+}
+.ml-demo-bar > i {
+  display: block;
+  height: 100%;
+  width: 12%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #3aa0c0, #7ed6f0);
+  transition: width 0.7s ease;
+}
+.ml-demo-dial.is-max .ml-demo-bar > i {
+  background: linear-gradient(90deg, #7ed6f0, #f0d18f);
+}
+.ml-demo-crown {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: #f0d18f;
+  opacity: 0;
+  transform: scale(0.6);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+.ml-demo-dial.is-max .ml-demo-crown {
+  opacity: 1;
+  transform: scale(1);
+}
+.ml-demo-chars {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 44%;
+  bottom: 2%;
+}
+.ml-demo-chars img,
+.face-hero-clip .ml-demo-chars img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: transparent !important;
+  aspect-ratio: auto !important;
+  opacity: 0;
+  transition: opacity 0.55s ease;
+  pointer-events: none;
+}
+.ml-demo-chars img.is-on { opacity: 1; }
+.morslevel-levels li {
+  transition: border-color 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+}
+.morslevel-levels li.is-on {
+  border-color: rgba(126, 214, 240, 0.55);
+  background: #152a42;
+  box-shadow: 0 0 0 1px rgba(126, 214, 240, 0.2), var(--shadow);
+}
+@media (prefers-reduced-motion: reduce) {
+  .ml-demo-chars img,
+  .ml-demo-bar > i,
+  .ml-demo-crown,
+  .morslevel-levels li { transition: none; }
+}
+
+@media (max-width: 419px) {
+  .faces-card {
+    grid-template-columns: 76px minmax(0, 1fr);
+    padding: 14px;
+    gap: 4px 12px;
+  }
+}

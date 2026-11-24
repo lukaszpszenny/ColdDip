@@ -63,8 +63,8 @@ Pro marketing is stripped from the published HTML (nav, hero teaser, `#pro` band
 
 `faceStoreUrl` is the Connect IQ listing for Mors – tarcza. `morsLevelStoreUrl` stays empty until Mors Level is approved in the store; the section then shows a “coming soon” badge and the KiezelPay unlock link (`morsLevelUnlockUrl`, default `https://kzl.io/morslevel`).
 
-## Mors Level section
+## Watch faces
 
-Mors Level is a second watch-face section (`#mors-level`), after the existing Mors – tarcza block (`#face`). Keep `morsLevelStoreUrl` empty in `assets/js/config.js` until the face is live in the Connect IQ Store, so the section shows a “coming soon” badge instead of a store button. Do not push, deploy or publish this folder without an explicit OK.
+Both faces live in a combined `#faces` band (nav label is the localized plural: Watch faces / Tarcze / Zifferblätter / …). `#face` is Mors – tarcza; `#mors-level` is Mors Level, with a “New” badge and a lightweight 5-stage level-up demo (no extra libraries; respects `prefers-reduced-motion`). Keep `morsLevelStoreUrl` empty in `assets/js/config.js` until the face is live in the Connect IQ Store, so the section shows a “coming soon” badge instead of a store button.
 
 The Cold Dip Pro section stays gated the same way: `proStoreUrl` remains empty, and the Pro band must not go live until Cold Dip 1.1.0 is in the Connect IQ Store.

@@ -150,8 +150,7 @@
       </a>
       <nav class="nav">
         <a href="#features">Funktionen</a>
-        <a href="#face">Zifferblatt</a>
-        <a href="#mors-level">Mors Level</a>
+        <a href="#faces">Zifferblätter</a>
         <a href="#watches">Uhren</a>
         <a href="#howto">So geht’s</a>
         <a href="#contact">Kontakt</a>
@@ -174,7 +173,7 @@
           <p class="tagline">Kaltbaden und Eisschwimmen richtig aufzeichnen — nicht als Schwimmen.</p>
           <div class="cta-row">
             <a class="btn" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">Kostenlos im Connect IQ Store</a>
-            <a class="btn btn-ghost" href="#face">Zum Zifferblatt</a>
+            <a class="btn btn-ghost" href="#faces">Zu den Zifferblättern</a>
           </div>
           <p class="search-note">Oder suche in der Connect IQ App auf dem Handy nach „Cold Dip“.</p>
           <p class="byline">Von Łukasz Pszenny, Eisschwimmer aus Bydgoszcz in Polen.</p>
@@ -197,7 +196,46 @@
     </section>
 
 
-    <section id="face">
+    <section id="faces" class="faces-band">
+      <div class="wrap faces-intro">
+        <p class="morslevel-kicker">Zifferblätter</p>
+        <h2 class="sec-title">Zifferblätter</h2>
+        <p class="sec-lead">Zwei Walross-Zifferblätter fürs Eisbaden. Mors – tarcza reagiert auf das Wetter. Mors Level steigt mit deinen Saisonminuten.</p>
+        <div class="faces-cards">
+          <article class="faces-card faces-card-tarcza">
+            <figure class="faces-card-media">
+              <img src="../assets/img/face/frost.webp" width="360" height="360" alt="" decoding="async">
+            </figure>
+            <div>
+              <h3>Mors – tarcza</h3>
+              <p class="faces-card-lead">Animiertes Walross-Zifferblatt fürs Eisbaden</p>
+              <p class="faces-card-price">3,99 USD <small>24 Stunden kostenlos testen</small></p>
+            </div>
+            <p class="faces-card-actions">
+              <span class="badge" data-face-soon>Demnächst im Connect IQ Store</span>
+              <a class="btn" data-face-store hidden href="#">Im Connect IQ Store öffnen</a>
+              <a class="btn btn-ghost" href="#face">Mehr dazu</a>
+            </p>
+          </article>
+          <article class="faces-card faces-card-level">
+            <figure class="faces-card-media">
+              <img src="../assets/img/mors-level/en/winter.webp" width="720" height="720" alt="" decoding="async">
+            </figure>
+            <div>
+              <h3>Mors Level <span class="badge-new">Neu</span></h3>
+              <p class="faces-card-lead">Gamifiziertes Walross-Zifferblatt fürs Eisbaden</p>
+              <p class="faces-card-price">2,99 USD <small>7 Tage kostenlos testen</small></p>
+            </div>
+            <p class="faces-card-actions">
+              <span class="badge" data-morslevel-soon>Demnächst im Connect IQ Store</span>
+              <a class="btn" data-morslevel-store hidden href="#">Im Connect IQ Store öffnen</a>
+              <a class="btn btn-ghost" href="#mors-level">Mehr dazu</a>
+            </p>
+          </article>
+        </div>
+      </div>
+
+    <section id="face" class="face-panel">
       <div class="wrap">
         <div class="face-grid">
           <div class="face-copy">
@@ -273,12 +311,12 @@
       </div>
     </section>
 
-    <section id="mors-level">
+    <section id="mors-level" class="face-panel face-panel-level">
       <div class="wrap">
         <div class="face-grid">
           <div class="face-copy">
             <span class="badge" data-morslevel-soon>Demnächst im Connect IQ Store</span>
-            <h2 class="sec-title">Mors Level</h2>
+            <h2 class="sec-title">Mors Level <span class="badge-new">Neu</span></h2>
             <p class="local-name">Gamifiziertes Walross-Zifferblatt fürs Eisbaden</p>
             <p class="sec-lead">Dein Walross-Begleiter steigt über 5 Stufen auf, während deine Eisbademinuten in der Saison wachsen — live aus der kostenlosen App Cold Dip. Im Winter ein dampfendes Eisloch, im Sommer ein Strand, dazu ein Serienabzeichen, Wassertemperatur, Herzfrequenz, Akku und ein reduziertes Always-on-Display. Die Aufwach-Animation läuft beim Aufwachen der Uhr — nie im Always-on-Modus.</p>
             <p class="face-price">2,99 USD <small>einmalig, zuzüglich MwSt., wo sie anfällt · 7 Tage kostenlos testen</small></p>
@@ -292,9 +330,27 @@
               <a class="btn" data-morslevel-store hidden href="#">Im Connect IQ Store öffnen</a>
             </p>
           </div>
-          <figure class="face-hero-clip">
-            <img src="../assets/img/mors-level/en/winter.webp" width="720" height="720" alt="Mors-Level-Zifferblatt im Winter: das Walross am dampfenden Eisloch" decoding="async">
-            <figcaption>Eisloch im Winter</figcaption>
+          <figure class="face-hero-clip ml-demo">
+            <div class="ml-demo-frame" data-ml-demo role="img" aria-label="Demonstration: das Walross steigt über fünf Stufen auf, wenn deine Saisonminuten wachsen">
+              <div class="ml-demo-dial">
+                <div class="ml-demo-hud">
+                  <p class="ml-demo-time" aria-hidden="true">07:42</p>
+                  <p class="ml-demo-level"><span data-ml-name>NEULING</span> <span data-ml-frac>1/5</span></p>
+                  <div class="ml-demo-bar-row">
+                    <div class="ml-demo-bar" aria-hidden="true"><i data-ml-bar></i></div>
+                    <svg class="ml-demo-crown" data-ml-crown viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.5 18h17l-1.2-9.2-4.3 3.4L12 7.5 8.9 12.2 4.7 8.8zM5 19.5h14V21H5z"/></svg>
+                  </div>
+                </div>
+                <div class="ml-demo-chars">
+              <img src="../assets/img/mors-level/stage-1.webp" width="424" height="400" alt="" class="is-on" decoding="async">
+              <img src="../assets/img/mors-level/stage-2.webp" width="424" height="400" alt="" decoding="async">
+              <img src="../assets/img/mors-level/stage-3.webp" width="424" height="400" alt="" decoding="async">
+              <img src="../assets/img/mors-level/stage-4.webp" width="424" height="400" alt="" decoding="async">
+              <img src="../assets/img/mors-level/stage-5.webp" width="424" height="400" alt="" decoding="async">
+                </div>
+              </div>
+            </div>
+            <figcaption>Das Walross steigt auf, wenn deine Saisonminuten wachsen.</figcaption>
           </figure>
         </div>
         <p class="morslevel-kicker">5 Stufen</p>
@@ -364,6 +420,9 @@
         </div>
       </div>
     </section>
+
+    </section>
+
 
     <section id="features">
       <div class="wrap">

@@ -150,8 +150,7 @@
       </a>
       <nav class="nav">
         <a href="#features">Funkcie</a>
-        <a href="#face">Ciferník</a>
-        <a href="#mors-level">Mors Level</a>
+        <a href="#faces">Ciferníky</a>
         <a href="#watches">Hodinky</a>
         <a href="#howto">Ako na to</a>
         <a href="#contact">Kontakt</a>
@@ -174,7 +173,7 @@
           <p class="tagline">Otužovanie a zimné plávanie zaznamenané poriadne — nie ako plávanie.</p>
           <div class="cta-row">
             <a class="btn" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">Zadarmo v Connect IQ</a>
-            <a class="btn btn-ghost" href="#face">Zobraziť ciferník</a>
+            <a class="btn btn-ghost" href="#faces">Zobraziť ciferníky</a>
           </div>
           <p class="search-note">Alebo v aplikácii Connect IQ v telefóne vyhľadajte „Cold Dip“.</p>
           <p class="byline">Vytvoril Łukasz Pszenny, otužilec z Bydhošti v Poľsku.</p>
@@ -197,7 +196,46 @@
     </section>
 
 
-    <section id="face">
+    <section id="faces" class="faces-band">
+      <div class="wrap faces-intro">
+        <p class="morslevel-kicker">Ciferníky</p>
+        <h2 class="sec-title">Ciferníky</h2>
+        <p class="sec-lead">Dva ciferníky s moržom pre otužovanie. Mors – tarcza sa mení podľa počasia. Mors Level rastie s minútami v sezóne.</p>
+        <div class="faces-cards">
+          <article class="faces-card faces-card-tarcza">
+            <figure class="faces-card-media">
+              <img src="../assets/img/face/frost.webp" width="360" height="360" alt="" decoding="async">
+            </figure>
+            <div>
+              <h3>Mors – tarcza</h3>
+              <p class="faces-card-lead">Animovaný ciferník s mrožom pre otužilcov</p>
+              <p class="faces-card-price">3,99 USD <small>24 hodín zadarmo</small></p>
+            </div>
+            <p class="faces-card-actions">
+              <span class="badge" data-face-soon>Čoskoro v obchode Connect IQ</span>
+              <a class="btn" data-face-store hidden href="#">Stiahnuť v Connect IQ</a>
+              <a class="btn btn-ghost" href="#face">Viac</a>
+            </p>
+          </article>
+          <article class="faces-card faces-card-level">
+            <figure class="faces-card-media">
+              <img src="../assets/img/mors-level/en/winter.webp" width="720" height="720" alt="" decoding="async">
+            </figure>
+            <div>
+              <h3>Mors Level <span class="badge-new">Novinka</span></h3>
+              <p class="faces-card-lead">Herný ciferník s mrožom na otužovanie</p>
+              <p class="faces-card-price">2,99 USD <small>7 dní skúšobnej verzie zadarmo</small></p>
+            </div>
+            <p class="faces-card-actions">
+              <span class="badge" data-morslevel-soon>Čoskoro v obchode Connect IQ</span>
+              <a class="btn" data-morslevel-store hidden href="#">Stiahnuť v Connect IQ</a>
+              <a class="btn btn-ghost" href="#mors-level">Viac</a>
+            </p>
+          </article>
+        </div>
+      </div>
+
+    <section id="face" class="face-panel">
       <div class="wrap">
         <div class="face-grid">
           <div class="face-copy">
@@ -273,12 +311,12 @@
       </div>
     </section>
 
-    <section id="mors-level">
+    <section id="mors-level" class="face-panel face-panel-level">
       <div class="wrap">
         <div class="face-grid">
           <div class="face-copy">
             <span class="badge" data-morslevel-soon>Čoskoro v obchode Connect IQ</span>
-            <h2 class="sec-title">Mors Level</h2>
+            <h2 class="sec-title">Mors Level <span class="badge-new">Novinka</span></h2>
             <p class="local-name">Herný ciferník s mrožom na otužovanie</p>
             <p class="sec-lead">Váš mrož postupuje cez 5 úrovní spolu s minútami v studenej vode v sezóne — naživo z bezplatnej aplikácie Cold Dip. V zime para nad dierou v ľade, v lete pláž, odznak série dní, teplota vody, tep, batéria a úsporný režim vždy zapnuté. Animácia prebudenia sa spustí po prebudení hodiniek — nikdy v režime vždy zapnuté.</p>
             <p class="face-price">2,99 USD <small>jednorazovo, plus DPH, ak sa uplatňuje · 7 dní skúšobnej verzie zadarmo</small></p>
@@ -292,9 +330,27 @@
               <a class="btn" data-morslevel-store hidden href="#">Stiahnuť v Connect IQ</a>
             </p>
           </div>
-          <figure class="face-hero-clip">
-            <img src="../assets/img/mors-level/en/winter.webp" width="720" height="720" alt="Ciferník Mors Level v zime: mrož pri diere v ľade s parou" decoding="async">
-            <figcaption>Zimná diera v ľade</figcaption>
+          <figure class="face-hero-clip ml-demo">
+            <div class="ml-demo-frame" data-ml-demo role="img" aria-label="Ukážka: morž stúpa cez päť úrovní, ako pribúdajú minúty v sezóne">
+              <div class="ml-demo-dial">
+                <div class="ml-demo-hud">
+                  <p class="ml-demo-time" aria-hidden="true">07:42</p>
+                  <p class="ml-demo-level"><span data-ml-name>NOVÁČIK</span> <span data-ml-frac>1/5</span></p>
+                  <div class="ml-demo-bar-row">
+                    <div class="ml-demo-bar" aria-hidden="true"><i data-ml-bar></i></div>
+                    <svg class="ml-demo-crown" data-ml-crown viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.5 18h17l-1.2-9.2-4.3 3.4L12 7.5 8.9 12.2 4.7 8.8zM5 19.5h14V21H5z"/></svg>
+                  </div>
+                </div>
+                <div class="ml-demo-chars">
+              <img src="../assets/img/mors-level/stage-1.webp" width="424" height="400" alt="" class="is-on" decoding="async">
+              <img src="../assets/img/mors-level/stage-2.webp" width="424" height="400" alt="" decoding="async">
+              <img src="../assets/img/mors-level/stage-3.webp" width="424" height="400" alt="" decoding="async">
+              <img src="../assets/img/mors-level/stage-4.webp" width="424" height="400" alt="" decoding="async">
+              <img src="../assets/img/mors-level/stage-5.webp" width="424" height="400" alt="" decoding="async">
+                </div>
+              </div>
+            </div>
+            <figcaption>Morž stúpa na vyššiu úroveň, ako pribúdajú minúty v sezóne.</figcaption>
           </figure>
         </div>
         <p class="morslevel-kicker">5 úrovní</p>
@@ -364,6 +420,9 @@
         </div>
       </div>
     </section>
+
+    </section>
+
 
     <section id="features">
       <div class="wrap">

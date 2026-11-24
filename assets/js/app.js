@@ -422,11 +422,94 @@
     });
   }
 
+
+  function setupMlDemo() {
+    var root = document.querySelector("[data-ml-demo]");
+    if (!root) return;
+
+    var imgs = root.querySelectorAll(".ml-demo-chars img");
+    var nameEl = root.querySelector("[data-ml-name]");
+    var fracEl = root.querySelector("[data-ml-frac]");
+    var barEl = root.querySelector("[data-ml-bar]");
+    var crownEl = root.querySelector("[data-ml-crown]");
+    var dial = root.querySelector(".ml-demo-dial");
+    var items = document.querySelectorAll(".morslevel-levels li");
+    var n = imgs.length;
+    if (!n) return;
+
+    var names = [];
+    for (var i = 0; i < items.length; i++) {
+      var h = items[i].querySelector("h3");
+      names.push(h ? (h.textContent || "").trim() : "");
+    }
+    var fills = [0.12, 0.28, 0.48, 0.7, 1];
+    var hold = [2400, 2400, 2400, 2400, 3200];
+    var idx = 0;
+    var timer = null;
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    function show(i) {
+      idx = i;
+      for (var k = 0; k < n; k++) {
+        if (k === i) imgs[k].classList.add("is-on");
+        else imgs[k].classList.remove("is-on");
+      }
+      for (var j = 0; j < items.length; j++) {
+        if (j === i) items[j].classList.add("is-on");
+        else items[j].classList.remove("is-on");
+      }
+      var label = names[i] || "";
+      if (nameEl) nameEl.textContent = label;
+      if (fracEl) fracEl.textContent = (i + 1) + "/" + n;
+      if (barEl) barEl.style.width = Math.round((fills[i] || 0) * 100) + "%";
+      if (dial) {
+        if (i === n - 1) dial.classList.add("is-max");
+        else dial.classList.remove("is-max");
+      }
+      if (crownEl) crownEl.hidden = i !== n - 1;
+    }
+
+    function next() {
+      show((idx + 1) % n);
+      timer = window.setTimeout(next, hold[idx] || 2400);
+    }
+
+    function stop() {
+      if (timer) {
+        window.clearTimeout(timer);
+        timer = null;
+      }
+    }
+
+    function start() {
+      if (reduce || timer) return;
+      timer = window.setTimeout(next, hold[idx] || 2400);
+    }
+
+    root._mlStop = stop;
+    root._mlShow = show;
+    show(reduce ? n - 1 : 0);
+    if (reduce) return;
+
+    if (!("IntersectionObserver" in window)) {
+      start();
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) start();
+        else stop();
+      });
+    }, { threshold: 0.35 });
+    io.observe(root);
+  }
+
   applyFlags();
   applyFaceStore();
   applyProStore();
   applyMorsLevelStore();
   setupFaceClips();
+  setupMlDemo();
   initChecker();
   initVideo();
   enhanceMailtos(document);

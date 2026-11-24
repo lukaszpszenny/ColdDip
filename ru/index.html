@@ -150,8 +150,7 @@
       </a>
       <nav class="nav">
         <a href="#features">Возможности</a>
-        <a href="#face">Циферблат</a>
-        <a href="#mors-level">Mors Level</a>
+        <a href="#faces">Циферблаты</a>
         <a href="#watches">Часы</a>
         <a href="#howto">Как пользоваться</a>
         <a href="#contact">Контакт</a>
@@ -174,7 +173,7 @@
           <p class="tagline">Моржевание и холодные купания записаны как надо — не как плавание.</p>
           <div class="cta-row">
             <a class="btn" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">Скачать бесплатно в Connect IQ</a>
-            <a class="btn btn-ghost" href="#face">Смотреть циферблат</a>
+            <a class="btn btn-ghost" href="#faces">Смотреть циферблаты</a>
           </div>
           <p class="search-note">Или найдите «Cold Dip» в приложении Connect IQ на телефоне.</p>
           <p class="byline">Автор — Łukasz Pszenny, морж из Быдгоща, Польша.</p>
@@ -197,7 +196,46 @@
     </section>
 
 
-    <section id="face">
+    <section id="faces" class="faces-band">
+      <div class="wrap faces-intro">
+        <p class="morslevel-kicker">Циферблаты</p>
+        <h2 class="sec-title">Циферблаты</h2>
+        <p class="sec-lead">Два циферблата с моржом для моржевания. Mors – tarcza меняется вместе с погодой. Mors Level растёт вместе с минутами сезона.</p>
+        <div class="faces-cards">
+          <article class="faces-card faces-card-tarcza">
+            <figure class="faces-card-media">
+              <img src="../assets/img/face/frost.webp" width="360" height="360" alt="" decoding="async">
+            </figure>
+            <div>
+              <h3>Mors – tarcza</h3>
+              <p class="faces-card-lead">Анимированный циферблат с моржом для моржевания</p>
+              <p class="faces-card-price">3,99 USD <small>24 часа бесплатной пробы</small></p>
+            </div>
+            <p class="faces-card-actions">
+              <span class="badge" data-face-soon>Скоро в магазине Connect IQ</span>
+              <a class="btn" data-face-store hidden href="#">Скачать в Connect IQ</a>
+              <a class="btn btn-ghost" href="#face">Подробнее</a>
+            </p>
+          </article>
+          <article class="faces-card faces-card-level">
+            <figure class="faces-card-media">
+              <img src="../assets/img/mors-level/en/winter.webp" width="720" height="720" alt="" decoding="async">
+            </figure>
+            <div>
+              <h3>Mors Level <span class="badge-new">Новое</span></h3>
+              <p class="faces-card-lead">Игровой циферблат с моржом для моржевания</p>
+              <p class="faces-card-price">2,99 USD <small>7 дней бесплатной пробы</small></p>
+            </div>
+            <p class="faces-card-actions">
+              <span class="badge" data-morslevel-soon>Скоро в магазине Connect IQ</span>
+              <a class="btn" data-morslevel-store hidden href="#">Скачать в Connect IQ</a>
+              <a class="btn btn-ghost" href="#mors-level">Подробнее</a>
+            </p>
+          </article>
+        </div>
+      </div>
+
+    <section id="face" class="face-panel">
       <div class="wrap">
         <div class="face-grid">
           <div class="face-copy">
@@ -273,12 +311,12 @@
       </div>
     </section>
 
-    <section id="mors-level">
+    <section id="mors-level" class="face-panel face-panel-level">
       <div class="wrap">
         <div class="face-grid">
           <div class="face-copy">
             <span class="badge" data-morslevel-soon>Скоро в магазине Connect IQ</span>
-            <h2 class="sec-title">Mors Level</h2>
+            <h2 class="sec-title">Mors Level <span class="badge-new">Новое</span></h2>
             <p class="local-name">Игровой циферблат с моржом для моржевания</p>
             <p class="sec-lead">Ваш морж растёт через 5 уровней вместе с минутами в холодной воде за сезон — вживую из бесплатного приложения Cold Dip. Зимой пар над прорубью, летом пляж, значок серии дней, температура воды, пульс, батарея и чистый режим постоянного экрана. Анимация пробуждения запускается, когда вы будите часы — никогда в режиме постоянного экрана.</p>
             <p class="face-price">2,99 USD <small>разовый платёж, плюс НДС, если он начисляется · 7 дней бесплатной пробы</small></p>
@@ -292,9 +330,27 @@
               <a class="btn" data-morslevel-store hidden href="#">Скачать в Connect IQ</a>
             </p>
           </div>
-          <figure class="face-hero-clip">
-            <img src="../assets/img/mors-level/en/winter.webp" width="720" height="720" alt="Циферблат Mors Level зимой: морж у проруби с паром" decoding="async">
-            <figcaption>Зимняя прорубь</figcaption>
+          <figure class="face-hero-clip ml-demo">
+            <div class="ml-demo-frame" data-ml-demo role="img" aria-label="Демонстрация: морж проходит пять уровней, когда прибавляются минуты сезона">
+              <div class="ml-demo-dial">
+                <div class="ml-demo-hud">
+                  <p class="ml-demo-time" aria-hidden="true">07:42</p>
+                  <p class="ml-demo-level"><span data-ml-name>НОВИЧОК</span> <span data-ml-frac>1/5</span></p>
+                  <div class="ml-demo-bar-row">
+                    <div class="ml-demo-bar" aria-hidden="true"><i data-ml-bar></i></div>
+                    <svg class="ml-demo-crown" data-ml-crown viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.5 18h17l-1.2-9.2-4.3 3.4L12 7.5 8.9 12.2 4.7 8.8zM5 19.5h14V21H5z"/></svg>
+                  </div>
+                </div>
+                <div class="ml-demo-chars">
+              <img src="../assets/img/mors-level/stage-1.webp" width="424" height="400" alt="" class="is-on" decoding="async">
+              <img src="../assets/img/mors-level/stage-2.webp" width="424" height="400" alt="" decoding="async">
+              <img src="../assets/img/mors-level/stage-3.webp" width="424" height="400" alt="" decoding="async">
+              <img src="../assets/img/mors-level/stage-4.webp" width="424" height="400" alt="" decoding="async">
+              <img src="../assets/img/mors-level/stage-5.webp" width="424" height="400" alt="" decoding="async">
+                </div>
+              </div>
+            </div>
+            <figcaption>Морж повышается в уровне, когда прибавляются минуты сезона.</figcaption>
           </figure>
         </div>
         <p class="morslevel-kicker">5 уровней</p>
@@ -364,6 +420,9 @@
         </div>
       </div>
     </section>
+
+    </section>
+
 
     <section id="features">
       <div class="wrap">

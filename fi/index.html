@@ -150,8 +150,7 @@
       </a>
       <nav class="nav">
         <a href="#features">Ominaisuudet</a>
-        <a href="#face">Kellotaulu</a>
-        <a href="#mors-level">Mors Level</a>
+        <a href="#faces">Kellotaulut</a>
         <a href="#watches">Kellot</a>
         <a href="#howto">Käyttö</a>
         <a href="#contact">Yhteys</a>
@@ -174,7 +173,7 @@
           <p class="tagline">Avantouinti ja kylmät pulahdukset tallennettuna oikein — ei uintina.</p>
           <div class="cta-row">
             <a class="btn" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">Lataa ilmaiseksi Connect IQ:sta</a>
-            <a class="btn btn-ghost" href="#face">Katso kellotaulu</a>
+            <a class="btn btn-ghost" href="#faces">Katso kellotaulut</a>
           </div>
           <p class="search-note">Tai hae puhelimen Connect IQ -sovelluksessa nimellä ”Cold Dip”.</p>
           <p class="byline">Tekijä Łukasz Pszenny, avantouimari Bydgoszczista, Puolasta.</p>
@@ -197,7 +196,46 @@
     </section>
 
 
-    <section id="face">
+    <section id="faces" class="faces-band">
+      <div class="wrap faces-intro">
+        <p class="morslevel-kicker">Kellotaulut</p>
+        <h2 class="sec-title">Kellotaulut</h2>
+        <p class="sec-lead">Kaksi mursukellotaulua avantouintiin. Mors – tarcza muuttuu sään mukaan. Mors Level nousee kausiminuuttien myötä.</p>
+        <div class="faces-cards">
+          <article class="faces-card faces-card-tarcza">
+            <figure class="faces-card-media">
+              <img src="../assets/img/face/frost.webp" width="360" height="360" alt="" decoding="async">
+            </figure>
+            <div>
+              <h3>Mors – tarcza</h3>
+              <p class="faces-card-lead">Animoitu mursu-kellotaulu avantouintiin</p>
+              <p class="faces-card-price">3,99 USD <small>24 tunnin ilmainen kokeilu</small></p>
+            </div>
+            <p class="faces-card-actions">
+              <span class="badge" data-face-soon>Tulossa pian Connect IQ -kauppaan</span>
+              <a class="btn" data-face-store hidden href="#">Lataa Connect IQ:sta</a>
+              <a class="btn btn-ghost" href="#face">Lue lisää</a>
+            </p>
+          </article>
+          <article class="faces-card faces-card-level">
+            <figure class="faces-card-media">
+              <img src="../assets/img/mors-level/en/winter.webp" width="720" height="720" alt="" decoding="async">
+            </figure>
+            <div>
+              <h3>Mors Level <span class="badge-new">Uusi</span></h3>
+              <p class="faces-card-lead">Pelillistetty mursu-kellotaulu avantouintiin</p>
+              <p class="faces-card-price">2,99 USD <small>7 päivän ilmainen kokeilu</small></p>
+            </div>
+            <p class="faces-card-actions">
+              <span class="badge" data-morslevel-soon>Tulossa pian Connect IQ -kauppaan</span>
+              <a class="btn" data-morslevel-store hidden href="#">Lataa Connect IQ:sta</a>
+              <a class="btn btn-ghost" href="#mors-level">Lue lisää</a>
+            </p>
+          </article>
+        </div>
+      </div>
+
+    <section id="face" class="face-panel">
       <div class="wrap">
         <div class="face-grid">
           <div class="face-copy">
@@ -273,12 +311,12 @@
       </div>
     </section>
 
-    <section id="mors-level">
+    <section id="mors-level" class="face-panel face-panel-level">
       <div class="wrap">
         <div class="face-grid">
           <div class="face-copy">
             <span class="badge" data-morslevel-soon>Tulossa pian Connect IQ -kauppaan</span>
-            <h2 class="sec-title">Mors Level</h2>
+            <h2 class="sec-title">Mors Level <span class="badge-new">Uusi</span></h2>
             <p class="local-name">Pelillistetty mursu-kellotaulu avantouintiin</p>
             <p class="sec-lead">Mursukumppanisi nousee 5 tason läpi, kun kauden kylmävesiminuuttisi kasvavat — livenä ilmaisesta Cold Dip -sovelluksesta. Talvella höyryävä avanto, kesällä ranta, uintiputken merkki, veden lämpötila, syke, akku ja selkeä always-on-näyttö. Herätysanimaatio toistuu, kun herätät kellon — ei koskaan always-on-tilassa.</p>
             <p class="face-price">2,99 USD <small>kertaosto, plus ALV siellä missä se lisätään · 7 päivän ilmainen kokeilu</small></p>
@@ -292,9 +330,27 @@
               <a class="btn" data-morslevel-store hidden href="#">Lataa Connect IQ:sta</a>
             </p>
           </div>
-          <figure class="face-hero-clip">
-            <img src="../assets/img/mors-level/en/winter.webp" width="720" height="720" alt="Mors Level -kellotaulu talvella: mursu höyryävän avannon äärellä" decoding="async">
-            <figcaption>Talven avanto</figcaption>
+          <figure class="face-hero-clip ml-demo">
+            <div class="ml-demo-frame" data-ml-demo role="img" aria-label="Esittely: mursu nousee viiden tason läpi, kun kausiminuutit karttuvat">
+              <div class="ml-demo-dial">
+                <div class="ml-demo-hud">
+                  <p class="ml-demo-time" aria-hidden="true">07:42</p>
+                  <p class="ml-demo-level"><span data-ml-name>NOVIISI</span> <span data-ml-frac>1/5</span></p>
+                  <div class="ml-demo-bar-row">
+                    <div class="ml-demo-bar" aria-hidden="true"><i data-ml-bar></i></div>
+                    <svg class="ml-demo-crown" data-ml-crown viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.5 18h17l-1.2-9.2-4.3 3.4L12 7.5 8.9 12.2 4.7 8.8zM5 19.5h14V21H5z"/></svg>
+                  </div>
+                </div>
+                <div class="ml-demo-chars">
+              <img src="../assets/img/mors-level/stage-1.webp" width="424" height="400" alt="" class="is-on" decoding="async">
+              <img src="../assets/img/mors-level/stage-2.webp" width="424" height="400" alt="" decoding="async">
+              <img src="../assets/img/mors-level/stage-3.webp" width="424" height="400" alt="" decoding="async">
+              <img src="../assets/img/mors-level/stage-4.webp" width="424" height="400" alt="" decoding="async">
+              <img src="../assets/img/mors-level/stage-5.webp" width="424" height="400" alt="" decoding="async">
+                </div>
+              </div>
+            </div>
+            <figcaption>Mursu nousee tasolta toiselle, kun kausiminuutit karttuvat.</figcaption>
           </figure>
         </div>
         <p class="morslevel-kicker">5 tasoa</p>
@@ -364,6 +420,9 @@
         </div>
       </div>
     </section>
+
+    </section>
+
 
     <section id="features">
       <div class="wrap">
