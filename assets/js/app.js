@@ -124,6 +124,13 @@
         var li = el("li", "chk-item");
         li.appendChild(el("span", "chk-name", shown[i].item.name));
         li.appendChild(badge(root, shown[i].item));
+        if (cfg.showPro) {
+          if (shown[i].item.pro) {
+            li.appendChild(el("span", "badge-status is-pro", t(root, "pro-yes", "⭐ PRO")));
+          } else {
+            li.appendChild(el("span", "badge-status is-pro-no", t(root, "pro-no", "Free app only")));
+          }
+        }
         ul.appendChild(li);
       }
       out.appendChild(ul);
@@ -301,6 +308,34 @@
   }
 
 
+
+  function applyProStore() {
+    var url = String((cfg && cfg.proStoreUrl) || "").trim();
+    document.querySelectorAll("[data-pro-store]").forEach(function (el) {
+      if (url) {
+        el.hidden = false;
+        if (el.tagName === "A") {
+          el.href = url;
+          el.target = "_blank";
+          el.rel = "noopener";
+        }
+      } else {
+        el.hidden = true;
+      }
+    });
+    document.querySelectorAll("[data-pro-soon]").forEach(function (el) {
+      el.hidden = !!url;
+    });
+    var unlock = String((cfg && cfg.proUnlockUrl) || "").trim() || "https://kzl.io/cold-dip-pro";
+    document.querySelectorAll("[data-pro-unlock]").forEach(function (el) {
+      if (el.tagName === "A") {
+        el.href = unlock;
+        el.target = "_blank";
+        el.rel = "noopener";
+      }
+    });
+  }
+
   function applyFaceStore() {
     var url = String((cfg && cfg.faceStoreUrl) || "").trim();
     document.querySelectorAll("[data-face-store]").forEach(function (el) {
@@ -320,8 +355,36 @@
     });
   }
 
+
+  function applyMorsLevelStore() {
+    var url = String((cfg && cfg.morsLevelStoreUrl) || "").trim();
+    document.querySelectorAll("[data-morslevel-store]").forEach(function (el) {
+      if (url) {
+        el.hidden = false;
+        if (el.tagName === "A") {
+          el.href = url;
+          el.target = "_blank";
+          el.rel = "noopener";
+        }
+      } else {
+        el.hidden = true;
+      }
+    });
+    document.querySelectorAll("[data-morslevel-soon]").forEach(function (el) {
+      el.hidden = !!url;
+    });
+    var unlock = String((cfg && cfg.morsLevelUnlockUrl) || "").trim() || "https://kzl.io/morslevel";
+    document.querySelectorAll("[data-morslevel-unlock]").forEach(function (el) {
+      if (el.tagName === "A") {
+        el.href = unlock;
+        el.target = "_blank";
+        el.rel = "noopener";
+      }
+    });
+  }
+
   function setupFaceClips() {
-    var clips = document.querySelectorAll("#face video.face-clip");
+    var clips = document.querySelectorAll("#face video.face-clip, #mors-level video.face-clip");
     if (!clips.length) return;
     var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduce) {
@@ -361,6 +424,8 @@
 
   applyFlags();
   applyFaceStore();
+  applyProStore();
+  applyMorsLevelStore();
   setupFaceClips();
   initChecker();
   initVideo();
