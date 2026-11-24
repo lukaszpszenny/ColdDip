@@ -29,12 +29,12 @@ All feature toggles live in `window.COLDDIP_CONFIG` at the top of `assets/js/con
 |---|---|---|
 | `instinctPending` | `false` | When `true`, models that are in the app but not yet in the Connect IQ store get a “coming soon” badge, and the heading stays at “120+”. It is `false` now because 1.0.3 is live — those models show as “Supported” and the heading is “130+”. |
 | `showTestimonials` | `false` | Shows the quotes section. Keep off until Radosław and Jadwiga have agreed to appear on the site by name. |
-| `showPro` | `false` | Shows Cold Dip Pro marketing (nav, hero teaser, `#pro` band, checker badges). Keep false until 1.1.0 is live in the Connect IQ Store. |
+| `showPro` | `false` | Shows leftover Pro buy/teaser UI and watch-checker Pro badges. Keep false until 1.1.0 is live. The coming-soon Pro nav tab and `#pro` section stay visible with this flag off; they have no buy or unlock links. |
 | `showVideo` | `false` | Shows the video section. Also needs a YouTube id. |
 | `youtubeId` | `""` | YouTube video id only (the part after `v=`). The player is a click-to-load facade on `youtube-nocookie.com` — nothing is requested from YouTube until someone presses play. |
 | `showSupport` | `false` | Shows the “buy me a coffee” block. Also needs a payment URL. |
 | `supportUrl` | `""` | Full payment link (Buy Me a Coffee, PayPal, or similar). |
-| `faceStoreUrl` | `""` | Connect IQ URL for Mors – tarcza. Empty → “coming soon” badge instead of a store button. |
+| `faceStoreUrl` | Connect IQ listing for Mors – tarcza | Empty → “coming soon” badge instead of a store button. |
 | `proStoreUrl` | `""` | Connect IQ URL for the Cold Dip update that includes Pro. Empty until 1.1.0 is live. |
 | `proUnlockUrl` | `https://kzl.io/cold-dip-pro` | KiezelPay unlock page for Cold Dip Pro. |
 | `morsLevelStoreUrl` | `""` | Connect IQ URL for Mors Level. Empty → “coming soon” badge instead of a store button. |
@@ -59,12 +59,12 @@ The `preview_desktop.png` and `preview_mobile.png` files are design previews and
 
 ## Cold Dip Pro section
 
-Pro marketing is stripped from the published HTML (nav, hero teaser, `#pro` band, feature strip, 1.1.0 changelog, watch-checker badges) while `showPro` is `false`. Keep it false until Cold Dip 1.1.0 is live in the Connect IQ Store. `proStoreUrl` also stays empty until then. `proUnlockUrl` defaults to `https://kzl.io/cold-dip-pro`.
+The site shows a coming-soon Pro nav tab and a `#pro` band with the paid features from Cold Dip 1.1.0 What’s New. The price ($4.99, 7-day trial) is labelled as planned. There is no buy or unlock button and no `kzl.io/cold-dip-pro` link until 1.1.0 is live in the Connect IQ Store. Keep `showPro` false and `proStoreUrl` empty until then, so teaser/buy UI and watch-checker Pro badges stay off. `proUnlockUrl` defaults to `https://kzl.io/cold-dip-pro` for later use.
 
-`faceStoreUrl` is the Connect IQ listing for Mors – tarcza. `morsLevelStoreUrl` stays empty until Mors Level is approved in the store; the section then shows a “coming soon” badge and the KiezelPay unlock link (`morsLevelUnlockUrl`, default `https://kzl.io/morslevel`).
+`faceStoreUrl` is the Connect IQ listing for Mors – tarcza. Unlock instructions for that face use `kzl.io/code`. `morsLevelStoreUrl` stays empty until Mors Level is approved in the store; the section then shows a “coming soon” badge and the KiezelPay unlock link (`morsLevelUnlockUrl`, default `https://kzl.io/morslevel`).
 
 ## Watch faces
 
-Both faces live in a combined `#faces` band (nav label is the localized plural: Watch faces / Tarcze / Zifferblätter / …). `#face` is Mors – tarcza; `#mors-level` is Mors Level, with a “New” badge and a lightweight 5-stage level-up demo (no extra libraries; respects `prefers-reduced-motion`). Keep `morsLevelStoreUrl` empty in `assets/js/config.js` until the face is live in the Connect IQ Store, so the section shows a “coming soon” badge instead of a store button.
+Both faces live in a combined `#faces` band (nav label is the localized plural: Watch faces / Tarcze / Zifferblätter / …). `#face` is Mors – tarcza, with the real AMOLED frost wake clip (the walrus moves when you raise your wrist; never in always-on mode). `#mors-level` is Mors Level, with the real wake clip (bounce and bar fill on wrist raise, AMOLED only) and a lightweight 5-stage level-up demo (no extra libraries; respects `prefers-reduced-motion`). Keep `morsLevelStoreUrl` empty in `assets/js/config.js` until the face is live in the Connect IQ Store, so the section shows a “coming soon” badge instead of a store button.
 
-The Cold Dip Pro section stays gated the same way: `proStoreUrl` remains empty, and the Pro band must not go live until Cold Dip 1.1.0 is in the Connect IQ Store.
+Keep `proStoreUrl` empty until Cold Dip 1.1.0 is in the Connect IQ Store, so the Pro section keeps its “coming soon” badge and no store button.

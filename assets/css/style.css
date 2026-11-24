@@ -1149,14 +1149,13 @@ h3 .pro-star, .sec-title .pro-star, .cmp th .pro-star {
 }
 
 
-/* Cold Dip Pro stays off until 1.1.0 is live in the Connect IQ Store.
-   Marketing blocks are stripped from the HTML; this hides any leftover. */
-.nav-pro,
+/* Pro is shown as coming-soon only: no teaser/buy/unlock, no checker badges.
+   The #pro section and .nav-pro tab are visible with a Coming soon badge. */
 .pro-teaser,
 .pro-strip,
-#pro,
-.pro-band,
-.pro-star,
+.pro-unlock,
+#pro-unlock,
+[data-pro-store],
 .badge-status.is-pro,
 .badge-status.is-pro-no,
 .chk-pro-note {
@@ -1473,7 +1472,7 @@ h3 .pro-star, .sec-title .pro-star, .cmp th .pro-star {
     gap: 0;
     min-width: 0;
   }
-  .nav a:not(.nav-faces) { display: none; }
+  .nav a:not(.nav-faces):not(.nav-pro) { display: none; }
   .lang { margin-left: 8px; }
 }
 @media (min-width: 800px) and (max-width: 1099px) {
@@ -1487,4 +1486,58 @@ h3 .pro-star, .sec-title .pro-star, .cmp th .pro-star {
 }
 @media (max-width: 379px) {
   .brand { font-size: 0; gap: 0; }
+}
+
+
+/* Coming-soon Pro tab: same family as Tarcze, quieter, no pulse */
+.nav a.nav-pro {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #e8d4a4;
+  font-weight: 650;
+  background: rgba(240, 201, 135, 0.10);
+  border: 1px solid rgba(240, 201, 135, 0.32);
+  padding: 5px 9px 5px 11px;
+}
+.nav a.nav-pro:hover,
+.nav a.nav-pro:focus-visible {
+  color: #f8e7c0;
+  background: rgba(240, 201, 135, 0.18);
+  border-color: rgba(240, 201, 135, 0.5);
+}
+.nav a.nav-pro .badge-soon {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 6px;
+  font-size: 0.54rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: #f4deaa;
+  border: 1px solid rgba(240, 201, 135, 0.4);
+  border-radius: 999px;
+  background: rgba(240, 201, 135, 0.12);
+  white-space: nowrap;
+}
+@media (min-width: 800px) and (max-width: 1099px) {
+  .nav a.nav-pro { padding: 5px 7px 5px 8px; gap: 4px; font-size: 0.8rem; }
+}
+@media (max-width: 379px) {
+  .nav a.nav-pro .badge-soon { display: none; }
+}
+
+.anim-note {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  max-width: 40rem;
+}
+.faces-card-media video {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  display: block;
+  background: #050b12;
 }

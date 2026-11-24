@@ -21,10 +21,13 @@
  *                        uses youtube-nocookie and loads only after a click.
  *                        The section stays hidden if the id is empty.
  *
- * showPro          true  → show the Cold Dip Pro marketing (nav,
- *                          hero teaser, #pro band, checker badges).
- *                          Keep false until version 1.1.0 is live
- *                          in the Connect IQ Store.
+ * showPro          true  → show leftover Pro buy/teaser UI and
+ *                          watch-checker Pro badges. Keep false
+ *                          until version 1.1.0 is live in the
+ *                          Connect IQ Store. The coming-soon Pro
+ *                          nav tab and #pro section are in the
+ *                          HTML itself and stay visible with this
+ *                          flag off; they have no buy/unlock links.
  *
  * showSupport      true  → show the “buy me a coffee” block.
  * supportUrl             Full payment link (Buy Me a Coffee, PayPal, …).
