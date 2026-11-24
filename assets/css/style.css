@@ -1544,3 +1544,38 @@ h3 .pro-star, .sec-title .pro-star, .cmp th .pro-star {
   display: block;
   background: #050b12;
 }
+
+/* How-to video (self-hosted, no third-party requests) */
+.howto-link { margin: 10px 0 0; }
+.howto-link a { color: var(--ice); font-weight: 600; text-decoration: none; }
+.howto-link a:hover { text-decoration: underline; }
+.howto-video {
+  display: grid;
+  gap: 22px;
+  align-items: center;
+  margin: 8px 0 28px;
+  padding: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  scroll-margin-top: calc(var(--header-h) + 12px);
+}
+.howto-player { margin: 0; text-align: center; }
+.howto-player video {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 14px;
+  background: #000;
+}
+.howto-player figcaption { margin-top: 8px; color: var(--muted); font-size: 0.85rem; }
+.howto-steps h3 { margin: 0 0 10px; font-size: 1.15rem; color: var(--snow); }
+.howto-steps ol { margin: 0; padding-left: 1.3em; display: grid; gap: 8px; color: var(--snow); }
+.howto-steps li { line-height: 1.45; }
+.howto-steps li::marker { color: var(--ice); font-weight: 700; }
+.howto-steps b { color: var(--ice); font-weight: 600; }
+@media (min-width: 800px) {
+  .howto-video { grid-template-columns: minmax(260px, 340px) 1fr; padding: 26px; gap: 32px; }
+}

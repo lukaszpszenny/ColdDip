@@ -384,7 +384,7 @@
   }
 
   function setupFaceClips() {
-    var clips = document.querySelectorAll("#face video.face-clip, #mors-level video.face-clip, #faces video.face-clip");
+    var clips = document.querySelectorAll("#face video.face-clip, #mors-level video.face-clip, #faces video.face-clip, #how-to-video video");
     if (!clips.length) return;
     var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduce) {

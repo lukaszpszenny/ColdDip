@@ -68,3 +68,9 @@ The site shows a coming-soon Pro nav tab and a `#pro` band with the paid feature
 Both faces live in a combined `#faces` band (nav label is the localized plural: Watch faces / Tarcze / Zifferblätter / …). `#face` is Mors – tarcza, with the real AMOLED frost wake clip (the walrus moves when you raise your wrist; never in always-on mode). `#mors-level` is Mors Level, with the real wake clip (bounce and bar fill on wrist raise, AMOLED only) and a lightweight 5-stage level-up demo (no extra libraries; respects `prefers-reduced-motion`). Keep `morsLevelStoreUrl` empty in `assets/js/config.js` until the face is live in the Connect IQ Store, so the section shows a “coming soon” badge instead of a store button.
 
 Keep `proStoreUrl` empty until Cold Dip 1.1.0 is in the Connect IQ Store, so the Pro section keeps its “coming soon” badge and no store button.
+
+## How-to video
+
+`assets/video/howto-pl.mp4` (Polish watch UI, used on `/pl/`) and `assets/video/howto-en.mp4` (English watch UI, all other pages), with `.jpg` posters.
+Recorded in the Connect IQ simulator (Venu 2 Plus) from the live 1.0.3 app, time sped up, no audio. Self-hosted, so the page still makes no third-party requests.
+The step list next to the video is localized in each page (`<!-- howto-video:start -->` … `<!-- howto-video:end -->`).
