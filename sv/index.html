@@ -52,7 +52,7 @@
   <link rel="alternate" hreflang="ru" href="../ru/">
   <link rel="alternate" hreflang="uk" href="../uk/">
   <link rel="alternate" hreflang="x-default" href="../">
-  <link rel="stylesheet" href="../assets/css/style.css?v=20261124a">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261124p">
   <script>
   (function () {
     var LANGS = ["en","pl","de","cs","sk","fi","nb","sv","es","ru","uk"];
@@ -151,7 +151,7 @@
       <nav class="nav">
         <a href="#features">Funktioner</a>
         <a class="nav-faces" href="#faces">Urtavlor <span class="badge-new">Ny</span></a>
-        <a class="nav-pro" href="#pro">Pro <span class="badge-soon">Snart</span></a>
+        <a class="nav-pro" href="#pro">Pro</a>
         <a href="#watches">Klockor</a>
         <a href="#howto">Så använder du den</a>
         <a href="#contact">Kontakt</a>
@@ -495,11 +495,15 @@
     <section id="pro" class="pro-band">
       <div class="wrap">
         <div class="face-copy">
-          <span class="badge" data-pro-soon>Kommer snart till Connect IQ Store</span>
+          <span class="badge" data-pro-soon hidden>Kommer snart till Connect IQ Store</span>
           <h2 class="sec-title">Cold Dip Pro <span class="pro-star">⭐ PRO</span></h2>
           <p class="local-name">Valfria tillägg i den kostnadsfria appen — du betalar bara om du vill ha dem</p>
           <p class="sec-lead">Appen du redan använder förblir gratis. Pro är för dem som vill ha mer av säsongen: nya sätt att träna, en tydligare bild av framstegen och en enklare skärm i vattnet.</p>
-          <p class="face-price">4,99 USD <small>planerat engångsköp, plus moms där den tillkommer · 7 dagars gratis provperiod planerad</small></p>
+          <p class="face-price">4,99 USD <small>engångsköp, plus moms där den tillkommer · 7 dagars gratis provperiod</small></p>
+          <p class="cta-row">
+            <a class="btn btn-pro" href="#pro-unlock">Prova Pro gratis i 7 dagar — sedan 4,99 USD</a>
+            <a class="btn" data-pro-store hidden href="#">Uppdatera i Connect IQ</a>
+          </p>
         </div>
         <div class="pro-features">
           <article class="card">
@@ -630,14 +634,22 @@
             <tr>
               <th scope="row">Pris</th>
               <td>Gratis</td>
-              <td class="pro-col">Planerat: 7 dagars provperiod, sedan 4,99 USD en gång</td>
+              <td class="pro-col">7 dagars provperiod, sedan 4,99 USD en gång</td>
             </tr>
             </tbody>
           </table>
         </div>
-        <div class="pro-compat">
+        <div class="pro-unlock" id="pro-unlock">
+          <h3>Så låser du upp</h3>
+          <ol class="face-steps">
+            <li>Uppdatera Cold Dip till 1.1.0. Appen visar nyheterna och startar en 7 dagars gratis provperiod av Pro.</li>
+            <li>När du vill behålla Pro visas en 6-siffrig kod på klockan. Ange den på <a href="https://kzl.io/cold-dip-pro" data-pro-unlock rel="noopener" target="_blank">kzl.io/cold-dip-pro</a> — ett engångsköp på 4,99 USD via KiezelPay.</li>
+            <li>Håll telefonen i närheten, med Garmin Connect igång och Bluetooth på. Klockan behöver den anslutningen, vanligtvis inom 5 minuter.</li>
+          </ol>
+        </div>
+                <div class="pro-compat">
           <h3>Vilka klockor kör Pro?</h3>
-          <p>När version 1.1.0 kommer kommer Pro att köras på nyare Garmin-klockor med Connect IQ 4 eller senare, bland annat Venu 2 / 3 / 4, Venu Sq 2, Venu X1, vívoactive 5 / 6, Forerunner 165 / 170 / 255 / 265 / 570 / 955 / 965 / 970, fēnix 7 / 8 / 9, epix (Gen 2), Instinct 3 AMOLED, Descent Mk3, Enduro 3 / 4, Approach S50 / S70 / S72 och MARQ (Gen 2) / (Gen 3). Den körs inte på äldre eller mer minnesknappa modeller som fēnix 5 / 6, den första Venu, vívoactive 3 / 4, Forerunner 55 / 245 / 645 / 945, Instinct 2, Instinct 3 Solar eller Instinct E — den kostnadsfria appen fungerar där fortfarande. <a href="#watches">Kontrollera din modell i listan</a>.</p>
+          <p>Pro körs på nyare Garmin-klockor med Connect IQ 4 eller senare, bland annat Venu 2 / 3 / 4, Venu Sq 2, Venu X1, vívoactive 5 / 6, Forerunner 165 / 170 / 255 / 265 / 570 / 955 / 965 / 970, fēnix 7 / 8 / 9, epix (Gen 2), Instinct 3 AMOLED, Descent Mk3, Enduro 3 / 4, Approach S50 / S70 / S72 och MARQ (Gen 2) / (Gen 3). Den körs inte på äldre eller mer minnesknappa modeller som fēnix 5 / 6, den första Venu, vívoactive 3 / 4, Forerunner 55 / 245 / 645 / 945, Instinct 2, Instinct 3 Solar eller Instinct E — den kostnadsfria appen fungerar där fortfarande. <a href="#watches">Kontrollera din modell i listan</a>.</p>
         </div>
         <p class="pro-note">I Garmin Connect sparas ett bastupass som träning eller meditation, eftersom Garmin inte har aktivitetstypen ”bastu”.</p>
         <p class="pro-disclaimer">Tidstipset är inte ett medicinskt råd och betyder inte att ett pass är säkert. Kallt vatten och bastu innebär risker. Rådfråga en läkare, gå aldrig ensam och använd ditt eget omdöme. Du har kontrollen hela tiden.</p>
@@ -754,10 +766,17 @@
         <h2 class="sec-title">Vad är nytt</h2>
         <p class="sec-lead">De senaste versionerna av Cold Dip.</p>
         <ol class="changelog">
-          <li>
+                    <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.1.0</h3>
+              <span class="ch-flag is-current">Aktuell version</span>
+              </div>
+            <p>Cold Dip Pro är här. Allt från 1.0.3 förblir gratis. Pro är valfritt: 4,99 USD en gång, med 7 dagars gratis provperiod. Nya lägen: bastu, kall dusch, guidat kontrastbad och andningsförberedelse; egna larm och namngivna etapper i vattnet; säsongsstatistik, märken och dagssviter (7 / 14 / 30); extra skärmar, färgteman och enkelt läge.</p>
+          </li>
+<li>
             <div class="ch-head">
               <h3 class="ch-ver">1.0.3</h3>
-              <span class="ch-flag is-current">Aktuell version</span>
+              
               </div>
             <p>133 klockor, inklusive Instinct 2, Instinct 2S, Instinct 2X, Instinct 3 Solar, Instinct E och Instinct Crossover, plus en ny svartvit layout för MIP-skärmar.</p>
           </li>
@@ -944,9 +963,9 @@
       <p class="privacy">Cold Dip samlar inte in personuppgifter på någon server. Dina pass stannar på klockan och i Garmin Connect. Vädret kommer från Garmins egen vädertjänst i telefonen, inte från en server som jag har. Den här webbplatsen använder inga spårare eller analyscookies — i webbläsaren sparas bara språkvalet om du ändrar det.</p>
     </div>
   </footer>
-  <script src="../assets/js/config.js?v=20261123d"></script>
-  <script src="../assets/js/devices.js?v=20261123d"></script>
-  <script src="../assets/js/app.js?v=20261123d"></script>
-  <script src="../assets/js/lang.js?v=20261123d"></script>
+  <script src="../assets/js/config.js?v=20261124p"></script>
+  <script src="../assets/js/devices.js?v=20261124p"></script>
+  <script src="../assets/js/app.js?v=20261124p"></script>
+  <script src="../assets/js/lang.js?v=20261124p"></script>
 </body>
 </html>

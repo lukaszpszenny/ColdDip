@@ -52,7 +52,7 @@
   <link rel="alternate" hreflang="ru" href="../ru/">
   <link rel="alternate" hreflang="uk" href="../uk/">
   <link rel="alternate" hreflang="x-default" href="../">
-  <link rel="stylesheet" href="../assets/css/style.css?v=20261124a">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261124p">
   <script>
   (function () {
     var LANGS = ["en","pl","de","cs","sk","fi","nb","sv","es","ru","uk"];
@@ -151,7 +151,7 @@
       <nav class="nav">
         <a href="#features">Funkcie</a>
         <a class="nav-faces" href="#faces">Ciferníky <span class="badge-new">Novinka</span></a>
-        <a class="nav-pro" href="#pro">Pro <span class="badge-soon">Čoskoro</span></a>
+        <a class="nav-pro" href="#pro">Pro</a>
         <a href="#watches">Hodinky</a>
         <a href="#howto">Ako na to</a>
         <a href="#contact">Kontakt</a>
@@ -495,11 +495,15 @@
     <section id="pro" class="pro-band">
       <div class="wrap">
         <div class="face-copy">
-          <span class="badge" data-pro-soon>Čoskoro v obchode Connect IQ</span>
+          <span class="badge" data-pro-soon hidden>Čoskoro v obchode Connect IQ</span>
           <h2 class="sec-title">Cold Dip Pro <span class="pro-star">⭐ PRO</span></h2>
           <p class="local-name">Voliteľné doplnky k bezplatnej aplikácii — platíš len vtedy, keď ich chceš</p>
           <p class="sec-lead">Aplikácia, ktorú už používaš, ostáva zadarmo. Pro je pre tých, ktorí chcú zo sezóny viac: nové spôsoby tréningu, jasnejší prehľad o pokroku a jednoduchšiu obrazovku vo vode.</p>
-          <p class="face-price">4,99 USD <small>plánovaná jednorazová cena, plus DPH, ak sa uplatňuje · plánovaných 7 dní skúšobnej verzie zadarmo</small></p>
+          <p class="face-price">4,99 USD <small>jednorazovo, plus DPH, ak sa uplatňuje · 7 dní skúšobnej verzie zadarmo</small></p>
+          <p class="cta-row">
+            <a class="btn btn-pro" href="#pro-unlock">Vyskúšaj Pro 7 dní zadarmo — potom 4,99 USD</a>
+            <a class="btn" data-pro-store hidden href="#">Aktualizovať v Connect IQ</a>
+          </p>
         </div>
         <div class="pro-features">
           <article class="card">
@@ -630,14 +634,22 @@
             <tr>
               <th scope="row">Cena</th>
               <td>Zadarmo</td>
-              <td class="pro-col">Plánované: 7 dní skúšky, potom jednorazovo 4,99 USD</td>
+              <td class="pro-col">7 dní skúšky, potom jednorazovo 4,99 USD</td>
             </tr>
             </tbody>
           </table>
         </div>
-        <div class="pro-compat">
+        <div class="pro-unlock" id="pro-unlock">
+          <h3>Ako odomknúť</h3>
+          <ol class="face-steps">
+            <li>Aktualizuj Cold Dip na 1.1.0. Aplikácia ukáže novinky a spustí 7-dňovú skúšobnú verziu Pro zadarmo.</li>
+            <li>Keď si budeš chcieť Pro nechať, na hodinkách sa objaví 6-miestny kód. Zadaj ho na <a href="https://kzl.io/cold-dip-pro" data-pro-unlock rel="noopener" target="_blank">kzl.io/cold-dip-pro</a> — jednorazovo 4,99 USD cez KiezelPay.</li>
+            <li>Maj telefón nablízku, so spusteným Garmin Connect a zapnutým Bluetooth. Hodinky potrebujú toto pripojenie, zvyčajne do 5 minút.</li>
+          </ol>
+        </div>
+                <div class="pro-compat">
           <h3>Na ktorých hodinkách Pro beží?</h3>
-          <p>Keď vyjde verzia 1.1.0, bude Pro bežať na novších hodinkách Garmin s Connect IQ 4 alebo novším, vrátane Venu 2 / 3 / 4, Venu Sq 2, Venu X1, vívoactive 5 / 6, Forerunner 165 / 170 / 255 / 265 / 570 / 955 / 965 / 970, fēnix 7 / 8 / 9, epix (Gen 2), Instinct 3 AMOLED, Descent Mk3, Enduro 3 / 4, Approach S50 / S70 / S72 a MARQ (Gen 2) / (Gen 3). Nebeží na starších alebo pamäťovo obmedzenejších modeloch, ako sú fēnix 5 / 6, prvý Venu, vívoactive 3 / 4, Forerunner 55 / 245 / 645 / 945, Instinct 2, Instinct 3 Solar alebo Instinct E — bezplatná aplikácia na nich funguje ďalej. <a href="#watches">Over si svoj model v zozname</a>.</p>
+          <p>Pro beží na novších hodinkách Garmin s Connect IQ 4 alebo novším, vrátane Venu 2 / 3 / 4, Venu Sq 2, Venu X1, vívoactive 5 / 6, Forerunner 165 / 170 / 255 / 265 / 570 / 955 / 965 / 970, fēnix 7 / 8 / 9, epix (Gen 2), Instinct 3 AMOLED, Descent Mk3, Enduro 3 / 4, Approach S50 / S70 / S72 a MARQ (Gen 2) / (Gen 3). Nebeží na starších alebo pamäťovo obmedzenejších modeloch, ako sú fēnix 5 / 6, prvý Venu, vívoactive 3 / 4, Forerunner 55 / 245 / 645 / 945, Instinct 2, Instinct 3 Solar alebo Instinct E — bezplatná aplikácia na nich funguje ďalej. <a href="#watches">Over si svoj model v zozname</a>.</p>
         </div>
         <p class="pro-note">V Garmin Connect sa sauna uloží ako tréning alebo meditácia, pretože Garmin nemá typ aktivity „sauna“.</p>
         <p class="pro-disclaimer">Tip na čas nie je lekárska rada a neznamená, že je sedenie bezpečné. Studená voda a sauna nesú riziko. Poraď sa s lekárom, nikdy nechoď sám a riaď sa vlastným úsudkom. Celý čas rozhoduješ ty.</p>
@@ -754,10 +766,17 @@
         <h2 class="sec-title">Čo je nové</h2>
         <p class="sec-lead">Posledné verzie Cold Dip.</p>
         <ol class="changelog">
-          <li>
+                    <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.1.0</h3>
+              <span class="ch-flag is-current">Aktuálna verzia</span>
+              </div>
+            <p>Prichádza Cold Dip Pro. Všetko z 1.0.3 ostáva zadarmo. Pro je voliteľné: jednorazovo 4,99 USD, so 7 dňami skúšobnej verzie zadarmo. Nové režimy: sauna, studená sprcha, vedený kontrast a príprava dychom; vlastné alarmy a pomenované etapy vo vode; štatistiky sezóny, odznaky a denná séria (7 / 14 / 30); ďalšie obrazovky, farebné motívy a jednoduchý režim.</p>
+          </li>
+<li>
             <div class="ch-head">
               <h3 class="ch-ver">1.0.3</h3>
-              <span class="ch-flag is-current">Aktuálna verzia</span>
+              
               </div>
             <p>133 hodiniek, vrátane Instinct 2, Instinct 2S, Instinct 2X, Instinct 3 Solar, Instinct E a Instinct Crossover, a nové čiernobiele rozloženie pre MIP displeje.</p>
           </li>
@@ -944,9 +963,9 @@
       <p class="privacy">Cold Dip nezhromažďuje osobné údaje na žiadnom serveri. Vaše tréningy ostávajú na hodinkách a v Garmin Connect. Počasie pochádza z vstavanej meteorologickej služby Garmin v telefóne, nie z môjho servera. Táto stránka nepoužíva trackery ani analytické cookies — v prehliadači sa uloží len zvolený jazyk, ak ho zmeníte.</p>
     </div>
   </footer>
-  <script src="../assets/js/config.js?v=20261123d"></script>
-  <script src="../assets/js/devices.js?v=20261123d"></script>
-  <script src="../assets/js/app.js?v=20261123d"></script>
-  <script src="../assets/js/lang.js?v=20261123d"></script>
+  <script src="../assets/js/config.js?v=20261124p"></script>
+  <script src="../assets/js/devices.js?v=20261124p"></script>
+  <script src="../assets/js/app.js?v=20261124p"></script>
+  <script src="../assets/js/lang.js?v=20261124p"></script>
 </body>
 </html>

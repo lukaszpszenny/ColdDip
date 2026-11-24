@@ -1149,18 +1149,8 @@ h3 .pro-star, .sec-title .pro-star, .cmp th .pro-star {
 }
 
 
-/* Pro is shown as coming-soon only: no teaser/buy/unlock, no checker badges.
-   The #pro section and .nav-pro tab are visible with a Coming soon badge. */
-.pro-teaser,
-.pro-strip,
-.pro-unlock,
-#pro-unlock,
-[data-pro-store],
-.badge-status.is-pro,
-.badge-status.is-pro-no,
-.chk-pro-note {
-  display: none !important;
-}
+/* Pro is live: buy/unlock and checker badges are visible. */
+
 
 
 /* Combined watch-faces band */

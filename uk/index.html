@@ -52,7 +52,7 @@
   <link rel="alternate" hreflang="ru" href="../ru/">
   <link rel="alternate" hreflang="uk" href="../uk/">
   <link rel="alternate" hreflang="x-default" href="../">
-  <link rel="stylesheet" href="../assets/css/style.css?v=20261124a">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261124p">
   <script>
   (function () {
     var LANGS = ["en","pl","de","cs","sk","fi","nb","sv","es","ru","uk"];
@@ -151,7 +151,7 @@
       <nav class="nav">
         <a href="#features">Можливості</a>
         <a class="nav-faces" href="#faces">Циферблати <span class="badge-new">Нове</span></a>
-        <a class="nav-pro" href="#pro">Pro <span class="badge-soon">Незабаром</span></a>
+        <a class="nav-pro" href="#pro">Pro</a>
         <a href="#watches">Годинники</a>
         <a href="#howto">Як користуватися</a>
         <a href="#contact">Контакт</a>
@@ -495,11 +495,15 @@
     <section id="pro" class="pro-band">
       <div class="wrap">
         <div class="face-copy">
-          <span class="badge" data-pro-soon>Незабаром у магазині Connect IQ</span>
+          <span class="badge" data-pro-soon hidden>Незабаром у магазині Connect IQ</span>
           <h2 class="sec-title">Cold Dip Pro <span class="pro-star">⭐ PRO</span></h2>
           <p class="local-name">Необов’язкові доповнення до безкоштовного застосунку — платите, лише якщо вони вам потрібні</p>
           <p class="sec-lead">Застосунок, яким ви вже користуєтеся, лишається безкоштовним. Pro — для тих, хто хоче більше від сезону: нові способи тренування, яснішу картину прогресу і простіший екран у воді.</p>
-          <p class="face-price">4,99 USD <small>запланована одноразова ціна, плюс ПДВ, якщо він нараховується · заплановано 7 днів безкоштовної спроби</small></p>
+          <p class="face-price">4,99 USD <small>одноразовий платіж, плюс ПДВ, якщо він нараховується · 7 днів безкоштовної спроби</small></p>
+          <p class="cta-row">
+            <a class="btn btn-pro" href="#pro-unlock">Спробуйте Pro безкоштовно 7 днів — потім 4,99 USD</a>
+            <a class="btn" data-pro-store hidden href="#">Оновити в Connect IQ</a>
+          </p>
         </div>
         <div class="pro-features">
           <article class="card">
@@ -630,14 +634,22 @@
             <tr>
               <th scope="row">Ціна</th>
               <td>Безкоштовно</td>
-              <td class="pro-col">Заплановано: 7 днів спроби, потім 4,99 USD одноразово</td>
+              <td class="pro-col">7 днів спроби, потім 4,99 USD одноразово</td>
             </tr>
             </tbody>
           </table>
         </div>
-        <div class="pro-compat">
+        <div class="pro-unlock" id="pro-unlock">
+          <h3>Як розблокувати</h3>
+          <ol class="face-steps">
+            <li>Оновіть Cold Dip до 1.1.0. Застосунок покаже новини й почне 7-денну безкоштовну спробу Pro.</li>
+            <li>Коли захочете залишити Pro, на годиннику з’явиться 6-значний код. Введіть його на <a href="https://kzl.io/cold-dip-pro" data-pro-unlock rel="noopener" target="_blank">kzl.io/cold-dip-pro</a> — одноразовий платіж 4,99 USD через KiezelPay.</li>
+            <li>Тримайте телефон поряд, із запущеним Garmin Connect і ввімкненим Bluetooth. Годиннику потрібне це з’єднання, зазвичай протягом 5 хвилин.</li>
+          </ol>
+        </div>
+                <div class="pro-compat">
           <h3>На яких годинниках працює Pro?</h3>
-          <p>Коли вийде версія 1.1.0, Pro працюватиме на новіших годинниках Garmin із Connect IQ 4 або новішим, зокрема Venu 2 / 3 / 4, Venu Sq 2, Venu X1, vívoactive 5 / 6, Forerunner 165 / 170 / 255 / 265 / 570 / 955 / 965 / 970, fēnix 7 / 8 / 9, epix (Gen 2), Instinct 3 AMOLED, Descent Mk3, Enduro 3 / 4, Approach S50 / S70 / S72 і MARQ (Gen 2) / (Gen 3). Він не працює на старіших або обмеженіших за пам’яттю моделях, як-от fēnix 5 / 6, перші Venu, vívoactive 3 / 4, Forerunner 55 / 245 / 645 / 945, Instinct 2, Instinct 3 Solar або Instinct E — безкоштовний застосунок на них і надалі працює. <a href="#watches">Перевірте свою модель у списку</a>.</p>
+          <p>Pro працює на новіших годинниках Garmin із Connect IQ 4 або новішим, зокрема Venu 2 / 3 / 4, Venu Sq 2, Venu X1, vívoactive 5 / 6, Forerunner 165 / 170 / 255 / 265 / 570 / 955 / 965 / 970, fēnix 7 / 8 / 9, epix (Gen 2), Instinct 3 AMOLED, Descent Mk3, Enduro 3 / 4, Approach S50 / S70 / S72 і MARQ (Gen 2) / (Gen 3). Він не працює на старіших або обмеженіших за пам’яттю моделях, як-от fēnix 5 / 6, перші Venu, vívoactive 3 / 4, Forerunner 55 / 245 / 645 / 945, Instinct 2, Instinct 3 Solar або Instinct E — безкоштовний застосунок на них і надалі працює. <a href="#watches">Перевірте свою модель у списку</a>.</p>
         </div>
         <p class="pro-note">У Garmin Connect сесія сауни зберігається як тренування або медитація, бо в Garmin немає типу активності «сауна».</p>
         <p class="pro-disclaimer">Підказка часу — не медична порада і не означає, що сесія безпечна. Холодна вода і сауна пов’язані з ризиком. Проконсультуйтеся з лікарем, ніколи не заходьте у воду наодинці й покладайтеся на власне судження. Рішення завжди за вами.</p>
@@ -754,10 +766,17 @@
         <h2 class="sec-title">Що нового</h2>
         <p class="sec-lead">Останні версії Cold Dip.</p>
         <ol class="changelog">
-          <li>
+                    <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.1.0</h3>
+              <span class="ch-flag is-current">Поточна версія</span>
+              </div>
+            <p>З’явився Cold Dip Pro. Усе з 1.0.3 лишається безкоштовним. Pro не обов’язковий: одноразово 4,99 USD і 7 днів безкоштовної спроби. Нові режими: сауна, холодний душ, керований контраст і підготовка диханням; власні сигнали та названі етапи у воді; статистика сезону, відзнаки та денні серії (7 / 14 / 30); додаткові екрани, колірні теми та спрощений режим.</p>
+          </li>
+<li>
             <div class="ch-head">
               <h3 class="ch-ver">1.0.3</h3>
-              <span class="ch-flag is-current">Поточна версія</span>
+              
               </div>
             <p>133 моделі, зокрема Instinct 2, Instinct 2S, Instinct 2X, Instinct 3 Solar, Instinct E та Instinct Crossover, а також новий чорно-білий макет для екранів MIP.</p>
           </li>
@@ -944,9 +963,9 @@
       <p class="privacy">Cold Dip не збирає персональні дані на жодному сервері. Ваші тренування залишаються на годиннику та в Garmin Connect. Погода береться з вбудованої служби погоди Garmin на телефоні, а не з мого сервера. На цьому сайті немає трекерів і аналітичних cookie — у браузері зберігається лише обрана мова, якщо ви її зміните.</p>
     </div>
   </footer>
-  <script src="../assets/js/config.js?v=20261123d"></script>
-  <script src="../assets/js/devices.js?v=20261123d"></script>
-  <script src="../assets/js/app.js?v=20261123d"></script>
-  <script src="../assets/js/lang.js?v=20261123d"></script>
+  <script src="../assets/js/config.js?v=20261124p"></script>
+  <script src="../assets/js/devices.js?v=20261124p"></script>
+  <script src="../assets/js/app.js?v=20261124p"></script>
+  <script src="../assets/js/lang.js?v=20261124p"></script>
 </body>
 </html>

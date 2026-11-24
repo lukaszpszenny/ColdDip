@@ -52,7 +52,7 @@
   <link rel="alternate" hreflang="ru" href="ru/">
   <link rel="alternate" hreflang="uk" href="uk/">
   <link rel="alternate" hreflang="x-default" href="./">
-  <link rel="stylesheet" href="assets/css/style.css?v=20261124a">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261124p">
   <script>
   (function () {
     var LANGS = ["en","pl","de","cs","sk","fi","nb","sv","es","ru","uk"];
@@ -151,7 +151,7 @@
       <nav class="nav">
         <a href="#features">Features</a>
         <a class="nav-faces" href="#faces">Watch faces <span class="badge-new">New</span></a>
-        <a class="nav-pro" href="#pro">Pro <span class="badge-soon">Soon</span></a>
+        <a class="nav-pro" href="#pro">Pro</a>
         <a href="#watches">Watches</a>
         <a href="#howto">How to use</a>
         <a href="#contact">Contact</a>
@@ -495,11 +495,15 @@
     <section id="pro" class="pro-band">
       <div class="wrap">
         <div class="face-copy">
-          <span class="badge" data-pro-soon>Coming soon to Connect IQ Store</span>
+          <span class="badge" data-pro-soon hidden>Coming soon to Connect IQ Store</span>
           <h2 class="sec-title">Cold Dip Pro <span class="pro-star">⭐ PRO</span></h2>
           <p class="local-name">Optional extras for the free app — you only pay if you want them</p>
           <p class="sec-lead">The app you already use stays free. Pro is for people who want a little more from the season: new ways to train, a clearer picture of their progress, and a simpler screen in the water.</p>
-          <p class="face-price">$4.99 <small>planned one-time price, plus VAT where it applies · 7-day free trial planned</small></p>
+          <p class="face-price">$4.99 <small>one-time, plus VAT where it applies · 7-day free trial</small></p>
+          <p class="cta-row">
+            <a class="btn btn-pro" href="#pro-unlock">Try Pro free for 7 days — then $4.99</a>
+            <a class="btn" data-pro-store hidden href="#">Get the update in Connect IQ</a>
+          </p>
         </div>
         <div class="pro-features">
           <article class="card">
@@ -630,14 +634,22 @@
             <tr>
               <th scope="row">Price</th>
               <td>Free</td>
-              <td class="pro-col">Planned: 7-day trial, then $4.99 once</td>
+              <td class="pro-col">7-day trial, then $4.99 once</td>
             </tr>
             </tbody>
           </table>
         </div>
-        <div class="pro-compat">
+        <div class="pro-unlock" id="pro-unlock">
+          <h3>How to unlock</h3>
+          <ol class="face-steps">
+            <li>Update Cold Dip to 1.1.0. The app shows what’s new and starts a 7-day free trial of Pro.</li>
+            <li>When you want to keep Pro, a 6-digit code appears on the watch. Enter it at <a href="https://kzl.io/cold-dip-pro" data-pro-unlock rel="noopener" target="_blank">kzl.io/cold-dip-pro</a> — a one-time $4.99 payment through KiezelPay.</li>
+            <li>Keep your phone nearby, with Garmin Connect running and Bluetooth on. The watch needs that connection to unlock, usually within 5 minutes.</li>
+          </ol>
+        </div>
+                <div class="pro-compat">
           <h3>Which watches run Pro?</h3>
-          <p>When version 1.1.0 is out, Pro will run on newer Garmin watches with Connect IQ 4 or later, including Venu 2 / 3 / 4, Venu Sq 2, Venu X1, vívoactive 5 / 6, Forerunner 165 / 170 / 255 / 265 / 570 / 955 / 965 / 970, fēnix 7 / 8 / 9, epix (Gen 2), Instinct 3 AMOLED, Descent Mk3, Enduro 3 / 4, Approach S50 / S70 / S72 and MARQ (Gen 2) / (Gen 3). It does not run on older or tighter-memory models such as fēnix 5 / 6, the first Venu, vívoactive 3 / 4, Forerunner 55 / 245 / 645 / 945, Instinct 2, Instinct 3 Solar or Instinct E — the free app still works on those. <a href="#watches">Check your model in the list</a>.</p>
+          <p>Pro runs on newer Garmin watches with Connect IQ 4 or later, including Venu 2 / 3 / 4, Venu Sq 2, Venu X1, vívoactive 5 / 6, Forerunner 165 / 170 / 255 / 265 / 570 / 955 / 965 / 970, fēnix 7 / 8 / 9, epix (Gen 2), Instinct 3 AMOLED, Descent Mk3, Enduro 3 / 4, Approach S50 / S70 / S72 and MARQ (Gen 2) / (Gen 3). It does not run on older or tighter-memory models such as fēnix 5 / 6, the first Venu, vívoactive 3 / 4, Forerunner 55 / 245 / 645 / 945, Instinct 2, Instinct 3 Solar or Instinct E — the free app still works on those. <a href="#watches">Check your model in the list</a>.</p>
         </div>
         <p class="pro-note">In Garmin Connect, a sauna session is saved as training or meditation, because Garmin has no sauna activity type.</p>
         <p class="pro-disclaimer">The time hint is not medical advice and does not mean a session is safe. Cold water and sauna carry risk. Consult a doctor, never go alone, and use your own judgement. You stay in control the whole time.</p>
@@ -754,10 +766,17 @@
         <h2 class="sec-title">What’s new</h2>
         <p class="sec-lead">Recent versions of Cold Dip.</p>
         <ol class="changelog">
-          <li>
+                    <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.1.0</h3>
+              <span class="ch-flag is-current">Current version</span>
+              </div>
+            <p>Cold Dip Pro is here. Everything from 1.0.3 stays free. Pro is optional: a one-time $4.99 unlock, with a 7-day free trial. New modes: sauna, cold shower, guided contrast and breathing prep; custom alarms and named water stages; season stats, badges and daily streaks (7 / 14 / 30); extra screens, colour themes and simple mode.</p>
+          </li>
+<li>
             <div class="ch-head">
               <h3 class="ch-ver">1.0.3</h3>
-              <span class="ch-flag is-current">Current version</span>
+              
               </div>
             <p>133 watches, including Instinct 2, Instinct 2S, Instinct 2X, Instinct 3 Solar, Instinct E and Instinct Crossover, plus a new black-and-white layout for MIP screens.</p>
           </li>
@@ -944,9 +963,9 @@
       <p class="privacy">Cold Dip does not collect personal data on any server. Your sessions stay on the watch and in Garmin Connect. Weather comes from Garmin’s own weather service on your phone, not from a server of mine. This website uses no trackers or analytics cookies — only a language preference stored in your browser if you change it.</p>
     </div>
   </footer>
-  <script src="assets/js/config.js?v=20261123d"></script>
-  <script src="assets/js/devices.js?v=20261123d"></script>
-  <script src="assets/js/app.js?v=20261123d"></script>
-  <script src="assets/js/lang.js?v=20261123d"></script>
+  <script src="assets/js/config.js?v=20261124p"></script>
+  <script src="assets/js/devices.js?v=20261124p"></script>
+  <script src="assets/js/app.js?v=20261124p"></script>
+  <script src="assets/js/lang.js?v=20261124p"></script>
 </body>
 </html>

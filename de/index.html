@@ -52,7 +52,7 @@
   <link rel="alternate" hreflang="ru" href="../ru/">
   <link rel="alternate" hreflang="uk" href="../uk/">
   <link rel="alternate" hreflang="x-default" href="../">
-  <link rel="stylesheet" href="../assets/css/style.css?v=20261124a">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261124p">
   <script>
   (function () {
     var LANGS = ["en","pl","de","cs","sk","fi","nb","sv","es","ru","uk"];
@@ -151,7 +151,7 @@
       <nav class="nav">
         <a href="#features">Funktionen</a>
         <a class="nav-faces" href="#faces">Zifferblätter <span class="badge-new">Neu</span></a>
-        <a class="nav-pro" href="#pro">Pro <span class="badge-soon">Bald</span></a>
+        <a class="nav-pro" href="#pro">Pro</a>
         <a href="#watches">Uhren</a>
         <a href="#howto">So geht’s</a>
         <a href="#contact">Kontakt</a>
@@ -495,11 +495,15 @@
     <section id="pro" class="pro-band">
       <div class="wrap">
         <div class="face-copy">
-          <span class="badge" data-pro-soon>Demnächst im Connect IQ Store</span>
+          <span class="badge" data-pro-soon hidden>Demnächst im Connect IQ Store</span>
           <h2 class="sec-title">Cold Dip Pro <span class="pro-star">⭐ PRO</span></h2>
           <p class="local-name">Optionale Extras zur kostenlosen App — du zahlst nur, wenn du sie willst</p>
           <p class="sec-lead">Die App, die du schon nutzt, bleibt kostenlos. Pro ist für alle, die aus der Saison mehr herausholen wollen: neue Trainingswege, einen klareren Blick auf den Fortschritt und einen einfacheren Bildschirm im Wasser.</p>
-          <p class="face-price">4,99 USD <small>geplanter einmaliger Preis, zuzüglich MwSt., wo sie anfällt · 7 Tage Test geplant</small></p>
+          <p class="face-price">4,99 USD <small>einmalig, zuzüglich MwSt., wo sie anfällt · 7 Tage kostenlos testen</small></p>
+          <p class="cta-row">
+            <a class="btn btn-pro" href="#pro-unlock">Pro 7 Tage kostenlos testen — dann 4,99 USD</a>
+            <a class="btn" data-pro-store hidden href="#">Update im Connect IQ Store</a>
+          </p>
         </div>
         <div class="pro-features">
           <article class="card">
@@ -630,14 +634,22 @@
             <tr>
               <th scope="row">Preis</th>
               <td>Kostenlos</td>
-              <td class="pro-col">Geplant: 7 Tage testen, dann einmalig 4,99 USD</td>
+              <td class="pro-col">7 Tage testen, dann einmalig 4,99 USD</td>
             </tr>
             </tbody>
           </table>
         </div>
-        <div class="pro-compat">
+        <div class="pro-unlock" id="pro-unlock">
+          <h3>So schaltest du frei</h3>
+          <ol class="face-steps">
+            <li>Aktualisiere Cold Dip auf 1.1.0. Die App zeigt die Neuheiten und startet eine 7-tägige kostenlose Testphase von Pro.</li>
+            <li>Wenn du Pro behalten willst, erscheint ein 6-stelliger Code auf der Uhr. Gib ihn auf <a href="https://kzl.io/cold-dip-pro" data-pro-unlock rel="noopener" target="_blank">kzl.io/cold-dip-pro</a> ein — einmalig 4,99 USD über KiezelPay.</li>
+            <li>Halte dein Telefon in der Nähe, mit laufendem Garmin Connect und eingeschaltetem Bluetooth. Die Uhr braucht diese Verbindung, meist innerhalb von 5 Minuten.</li>
+          </ol>
+        </div>
+                <div class="pro-compat">
           <h3>Auf welchen Uhren läuft Pro?</h3>
-          <p>Sobald Version 1.1.0 erscheint, läuft Pro auf neueren Garmin-Uhren mit Connect IQ 4 oder höher, darunter Venu 2 / 3 / 4, Venu Sq 2, Venu X1, vívoactive 5 / 6, Forerunner 165 / 170 / 255 / 265 / 570 / 955 / 965 / 970, fēnix 7 / 8 / 9, epix (Gen 2), Instinct 3 AMOLED, Descent Mk3, Enduro 3 / 4, Approach S50 / S70 / S72 und MARQ (Gen 2) / (Gen 3). Es läuft nicht auf älteren oder speicherärmeren Modellen wie fēnix 5 / 6, der ersten Venu, vívoactive 3 / 4, Forerunner 55 / 245 / 645 / 945, Instinct 2, Instinct 3 Solar oder Instinct E — die kostenlose App läuft dort weiter. <a href="#watches">Prüfe dein Modell in der Liste</a>.</p>
+          <p>Pro läuft auf neueren Garmin-Uhren mit Connect IQ 4 oder höher, darunter Venu 2 / 3 / 4, Venu Sq 2, Venu X1, vívoactive 5 / 6, Forerunner 165 / 170 / 255 / 265 / 570 / 955 / 965 / 970, fēnix 7 / 8 / 9, epix (Gen 2), Instinct 3 AMOLED, Descent Mk3, Enduro 3 / 4, Approach S50 / S70 / S72 und MARQ (Gen 2) / (Gen 3). Es läuft nicht auf älteren oder speicherärmeren Modellen wie fēnix 5 / 6, der ersten Venu, vívoactive 3 / 4, Forerunner 55 / 245 / 645 / 945, Instinct 2, Instinct 3 Solar oder Instinct E — die kostenlose App läuft dort weiter. <a href="#watches">Prüfe dein Modell in der Liste</a>.</p>
         </div>
         <p class="pro-note">In Garmin Connect wird eine Sauna-Sitzung als Training oder Meditation gespeichert, weil Garmin keinen Aktivitätstyp „Sauna“ hat.</p>
         <p class="pro-disclaimer">Der Zeit-Hinweis ist keine medizinische Beratung und bedeutet nicht, dass eine Sitzung sicher ist. Kaltes Wasser und Sauna bergen Risiken. Sprich mit einem Arzt, gehe nie allein und verlasse dich auf dein eigenes Urteil. Du bleibst die ganze Zeit in der Kontrolle.</p>
@@ -754,10 +766,17 @@
         <h2 class="sec-title">Was ist neu</h2>
         <p class="sec-lead">Die letzten Versionen von Cold Dip.</p>
         <ol class="changelog">
-          <li>
+                    <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.1.0</h3>
+              <span class="ch-flag is-current">Aktuelle Version</span>
+              </div>
+            <p>Cold Dip Pro ist da. Alles aus 1.0.3 bleibt kostenlos. Pro ist optional: einmalig 4,99 USD, mit 7 Tagen zum Testen. Neue Modi: Sauna, kalte Dusche, geführter Kontrast und Atemvorbereitung; eigene Alarme und benannte Phasen im Wasser; Saisonstatistiken, Abzeichen und Tages-Serien (7 / 14 / 30); zusätzliche Bildschirme, Farbthemes und einfacher Modus.</p>
+          </li>
+<li>
             <div class="ch-head">
               <h3 class="ch-ver">1.0.3</h3>
-              <span class="ch-flag is-current">Aktuelle Version</span>
+              
               </div>
             <p>133 Uhren, darunter Instinct 2, Instinct 2S, Instinct 2X, Instinct 3 Solar, Instinct E und Instinct Crossover, plus ein neues Schwarz-Weiß-Layout für MIP-Displays.</p>
           </li>
@@ -944,9 +963,9 @@
       <p class="privacy">Cold Dip sammelt keine personenbezogenen Daten auf einem Server. Deine Einheiten bleiben auf der Uhr und in Garmin Connect. Das Wetter kommt vom Garmin-Wetterdienst auf deinem Handy, nicht von einem Server von mir. Diese Website verwendet keine Tracker und keine Analyse-Cookies — in deinem Browser wird nur die Sprachwahl gespeichert, wenn du sie änderst.</p>
     </div>
   </footer>
-  <script src="../assets/js/config.js?v=20261123d"></script>
-  <script src="../assets/js/devices.js?v=20261123d"></script>
-  <script src="../assets/js/app.js?v=20261123d"></script>
-  <script src="../assets/js/lang.js?v=20261123d"></script>
+  <script src="../assets/js/config.js?v=20261124p"></script>
+  <script src="../assets/js/devices.js?v=20261124p"></script>
+  <script src="../assets/js/app.js?v=20261124p"></script>
+  <script src="../assets/js/lang.js?v=20261124p"></script>
 </body>
 </html>

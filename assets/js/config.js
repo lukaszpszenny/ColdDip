@@ -21,13 +21,10 @@
  *                        uses youtube-nocookie and loads only after a click.
  *                        The section stays hidden if the id is empty.
  *
- * showPro          true  → show leftover Pro buy/teaser UI and
- *                          watch-checker Pro badges. Keep false
- *                          until version 1.1.0 is live in the
- *                          Connect IQ Store. The coming-soon Pro
- *                          nav tab and #pro section are in the
- *                          HTML itself and stay visible with this
- *                          flag off; they have no buy/unlock links.
+ * showPro          true  → show Pro buy/unlock UI and
+ *                          watch-checker Pro badges. It is true
+ *                          now that version 1.1.0 is live in the
+ *                          Connect IQ Store.
  *
  * showSupport      true  → show the “buy me a coffee” block.
  * supportUrl             Full payment link (Buy Me a Coffee, PayPal, …).
@@ -42,11 +39,10 @@
  *
  * proStoreUrl           Connect IQ store URL for the Cold Dip app
  *                        update that includes Pro (same listing as
- *                        the free app). Leave empty until 1.1.0 is
- *                        published: the Pro section then shows a
- *                        localized “Coming soon” badge instead of a
- *                        store button. When 1.1.0 is live, paste the
- *                        app store URL here and republish.
+ *                        the free app). Set to the live Connect IQ
+ *                        listing when 1.1.0 is in the store, so the
+ *                        Pro section shows a store button instead of
+ *                        a “Coming soon” badge.
  *
  * proUnlockUrl          KiezelPay unlock page. Default is
  *                        https://kzl.io/cold-dip-pro — change only if the
@@ -66,13 +62,13 @@
 window.COLDDIP_CONFIG = {
   instinctPending: false,
   showTestimonials: false,
-  showPro: false,
+  showPro: true,
   showVideo: false,
   youtubeId: "",
   showSupport: false,
   supportUrl: "",
   faceStoreUrl: "https://apps.garmin.com/apps/fb505708-8386-4fbe-9d02-ecb85294f434",
-  proStoreUrl: "",
+  proStoreUrl: "https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0",
   proUnlockUrl: "https://kzl.io/cold-dip-pro",
   morsLevelStoreUrl: "",
   morsLevelUnlockUrl: "https://kzl.io/morslevel"
