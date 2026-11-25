@@ -37,7 +37,7 @@ All feature toggles live in `window.COLDDIP_CONFIG` at the top of `assets/js/con
 | `faceStoreUrl` | Connect IQ listing for Mors – tarcza | Empty → “coming soon” badge instead of a store button. |
 | `proStoreUrl` | Cold Dip Connect IQ listing | Store button for the update that includes Pro. Empty → “coming soon” badge instead of a store button. |
 | `proUnlockUrl` | `https://kzl.io/cold-dip-pro` | KiezelPay unlock page for Cold Dip Pro. |
-| `morsLevelStoreUrl` | `""` | Connect IQ URL for Mors Level. Empty → “coming soon” badge instead of a store button. |
+| `morsLevelStoreUrl` | Mors Level Connect IQ listing | Store button for Mors Level. Empty → “coming soon” badge instead of a store button. |
 | `morsLevelUnlockUrl` | `https://kzl.io/morslevel` | KiezelPay unlock page for Mors Level. |
 
 The device list used by the watch checker is generated from the Connect IQ manifest (`assets/js/devices.js`). Regenerating it is only needed when supported watches change.
@@ -61,13 +61,17 @@ The `preview_desktop.png` and `preview_mobile.png` files are design previews and
 
 Cold Dip 1.1.0 is live, so the Pro nav tab and `#pro` band include a store button and a KiezelPay unlock link (`https://kzl.io/cold-dip-pro`). The price is a one-time $4.99 with a 7-day free trial. Everything from 1.0.3 stays free. `showPro` is true and `proStoreUrl` points at the Cold Dip Connect IQ listing. `proUnlockUrl` is `https://kzl.io/cold-dip-pro`.
 
-`faceStoreUrl` is the Connect IQ listing for Mors – tarcza. Unlock instructions for that face use `kzl.io/code`. `morsLevelStoreUrl` stays empty until Mors Level is approved in the store; the section then shows a “coming soon” badge and the KiezelPay unlock link (`morsLevelUnlockUrl`, default `https://kzl.io/morslevel`).
+`faceStoreUrl` is the Connect IQ listing for Mors – tarcza. Unlock instructions for that face use `kzl.io/code`. `morsLevelStoreUrl` is the live Mors Level listing; the section shows a store button and the KiezelPay unlock link (`morsLevelUnlockUrl`, default `https://kzl.io/morslevel`).
+
+## Platforms
+
+A slim `#platforms` band sits under the hero. Garmin is marked “available now” and links to the live Cold Dip Connect IQ listing. Amazfit, Huawei and Wear OS (Samsung Galaxy Watch, Pixel Watch) are marked “coming soon”, with no dates or prices. Apple is not listed.
 
 ## Watch faces
 
-Both faces live in a combined `#faces` band (nav label is the localized plural: Watch faces / Tarcze / Zifferblätter / …). `#face` is Mors – tarcza, with the real AMOLED frost wake clip (the walrus moves when you raise your wrist; never in always-on mode). `#mors-level` is Mors Level, with the real wake clip (bounce and bar fill on wrist raise, AMOLED only) and a lightweight 5-stage level-up demo (no extra libraries; respects `prefers-reduced-motion`). Keep `morsLevelStoreUrl` empty in `assets/js/config.js` until the face is live in the Connect IQ Store, so the section shows a “coming soon” badge instead of a store button.
+Both faces live in a combined `#faces` band (nav label is the localized plural: Watch faces / Tarcze / Zifferblätter / …). `#face` is Mors – tarcza, with the real AMOLED frost wake clip (the walrus moves when you raise your wrist; never in always-on mode). `#mors-level` is Mors Level, with the real wake clip (bounce and bar fill on wrist raise, AMOLED only) and a lightweight 5-stage level-up demo (no extra libraries; respects `prefers-reduced-motion`). `morsLevelStoreUrl` is the live Mors Level listing, so the section shows a store button.
 
-`proStoreUrl` is the live Cold Dip listing, so the Pro section shows a store button. Leave `morsLevelStoreUrl` empty until Mors Level is approved.
+`proStoreUrl` is the live Cold Dip listing, so the Pro section shows a store button. `morsLevelStoreUrl` is the live Mors Level listing.
 
 ## How-to video
 

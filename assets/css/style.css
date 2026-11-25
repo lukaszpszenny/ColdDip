@@ -1569,3 +1569,93 @@ h3 .pro-star, .sec-title .pro-star, .cmp th .pro-star {
 @media (min-width: 800px) {
   .howto-video { grid-template-columns: minmax(260px, 340px) 1fr; padding: 26px; gap: 32px; }
 }
+
+
+/* Platforms ribbon: Garmin is live; other systems are coming soon */
+.platforms-band {
+  scroll-margin-top: calc(var(--header-h) + 12px);
+  padding: 22px 0 24px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: rgba(16, 32, 51, 0.45);
+}
+.platforms-band .morslevel-kicker { margin: 0 0 8px; }
+.platforms-lead {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  max-width: 44rem;
+}
+.platforms-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@media (min-width: 800px) {
+  .platforms-list { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+.platforms-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 100%;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+}
+.platforms-item.is-live {
+  border-color: rgba(126, 214, 240, 0.4);
+  background: linear-gradient(160deg, rgba(126, 214, 240, 0.12), var(--bg-card) 60%);
+  box-shadow: inset 3px 0 0 var(--ice);
+}
+.platforms-item a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  flex: 1;
+  color: inherit;
+  text-decoration: none;
+}
+.platforms-item a:hover { color: inherit; }
+.platforms-item a:hover .platforms-name { color: #c5f1ff; }
+.platforms-name {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--snow);
+}
+.platforms-note {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--muted);
+  line-height: 1.35;
+}
+.platforms-status {
+  display: inline-flex;
+  align-self: flex-start;
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.platforms-item.is-live .platforms-status {
+  background: rgba(126, 214, 240, 0.16);
+  color: var(--ice);
+}
+.platforms-item.is-soon .platforms-status {
+  background: rgba(240, 201, 135, 0.14);
+  color: var(--warn);
+}
+@media (max-width: 379px) {
+  .platforms-list { grid-template-columns: 1fr; }
+}

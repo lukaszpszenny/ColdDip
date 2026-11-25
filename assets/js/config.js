@@ -49,11 +49,10 @@
  *                        product uses a different link.
  *
  * morsLevelStoreUrl     Connect IQ store URL for the Mors Level
- *                        watch face. Leave empty until the face is
- *                        published: the site then shows a localized
- *                        “Coming soon to Connect IQ Store” badge
- *                        instead of a store button. When you have
- *                        the link, paste it here and republish.
+ *                        watch face. Set to the live listing when
+ *                        the face is in the store, so the section
+ *                        shows a store button instead of a
+ *                        “Coming soon” badge. Leave empty until then.
  *
  * morsLevelUnlockUrl    KiezelPay unlock page for Mors Level.
  *                        Default is https://kzl.io/morslevel — change
@@ -70,6 +69,6 @@ window.COLDDIP_CONFIG = {
   faceStoreUrl: "https://apps.garmin.com/apps/fb505708-8386-4fbe-9d02-ecb85294f434",
   proStoreUrl: "https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0",
   proUnlockUrl: "https://kzl.io/cold-dip-pro",
-  morsLevelStoreUrl: "",
+  morsLevelStoreUrl: "https://apps.garmin.com/en-US/apps/fe325c7e-b38d-4a9a-b43e-f5b09780f3a8",
   morsLevelUnlockUrl: "https://kzl.io/morslevel"
 };
