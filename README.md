@@ -65,7 +65,7 @@ Cold Dip 1.1.0 is live, so the Pro nav tab and `#pro` band include a store butto
 
 ## Platforms
 
-A slim `#platforms` band sits under the hero. Garmin is marked “available now” and links to the live Cold Dip Connect IQ listing. Amazfit, Huawei and Wear OS (Samsung Galaxy Watch, Pixel Watch) are marked “coming soon”, with no dates or prices. Apple is not listed.
+A slim `#platforms` band sits under the hero. Garmin is marked “available now” and links to the live Cold Dip Connect IQ listing. Amazfit, Huawei, Wear OS (Samsung Galaxy Watch, Pixel Watch) and Apple Watch are marked “coming soon”, with no dates or prices. The existing Apple Watch interest form further down the page is unchanged.
 
 ## Watch faces
 

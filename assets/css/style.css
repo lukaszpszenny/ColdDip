@@ -1594,8 +1594,11 @@ h3 .pro-star, .sec-title .pro-star, .cmp th .pro-star {
   padding: 0;
   list-style: none;
 }
-@media (min-width: 800px) {
-  .platforms-list { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (min-width: 640px) {
+  .platforms-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (min-width: 1040px) {
+  .platforms-list { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 }
 .platforms-item {
   display: flex;
