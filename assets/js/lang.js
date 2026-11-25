@@ -29,10 +29,17 @@
     return "en";
   }
 
+  function currentFile() {
+    var parts = location.pathname.split("/").filter(Boolean);
+    var last = parts.length ? parts[parts.length - 1] : "";
+    if (!last || last === "index.html" || LANGS.indexOf(last.toLowerCase()) !== -1) return "index.html";
+    return last;
+  }
+
   function hrefFor(lang) {
     var here = pathLang();
     if (lang === here) return null;
-    var file = "index.html";
+    var file = currentFile();
     var hash = location.hash || "";
     var search = location.search || "";
     if (here === "en") {

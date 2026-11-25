@@ -1571,7 +1571,7 @@ h3 .pro-star, .sec-title .pro-star, .cmp th .pro-star {
 }
 
 
-/* Platforms ribbon: Garmin is live; other systems are coming soon */
+/* Platforms ribbon: Garmin is live; Amazfit is in store review; others coming soon */
 .platforms-band {
   scroll-margin-top: calc(var(--header-h) + 12px);
   padding: 22px 0 24px;
@@ -1662,3 +1662,102 @@ h3 .pro-star, .sec-title .pro-star, .cmp th .pro-star {
 @media (max-width: 379px) {
   .platforms-list { grid-template-columns: 1fr; }
 }
+
+.platforms-item.is-review .platforms-status {
+  white-space: normal;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+}
+
+/* Amazfit details page */
+.amazfit-hero-grid {
+  display: grid;
+  gap: 28px;
+  align-items: center;
+  padding: 28px 0 12px;
+}
+@media (min-width: 860px) {
+  .amazfit-hero-grid { grid-template-columns: minmax(0, 1.1fr) minmax(260px, 400px); gap: 40px; }
+}
+.amazfit-demo-hero { margin: 0; text-align: center; }
+.amazfit-demo-hero video,
+.amazfit-demo-hero img {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto;
+  background: #050c14;
+  border-radius: 50%;
+}
+.amazfit-demo-hero figcaption { margin-top: 10px; color: var(--muted); font-size: 0.85rem; }
+.amazfit-price-line {
+  margin: 14px 0 0;
+  color: var(--ice);
+  font-weight: 600;
+  max-width: 38rem;
+}
+.amazfit-section { padding: 28px 0 8px; scroll-margin-top: calc(var(--header-h) + 12px); }
+.amazfit-section .sec-lead { margin: 0 0 18px; color: var(--muted); max-width: 44rem; }
+.amazfit-shot-block { margin: 0 0 28px; }
+.amazfit-shot-block h3 {
+  margin: 0 0 12px;
+  font-size: 1.05rem;
+  color: var(--snow);
+}
+.amazfit-shot-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@media (min-width: 640px) {
+  .amazfit-shot-row { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+}
+@media (min-width: 1040px) {
+  .amazfit-shot-row { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+}
+.amazfit-shot-row figure {
+  margin: 0;
+  padding: 10px 10px 8px;
+  background: #050c14;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.amazfit-shot-row img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  background: #050c14;
+}
+.amazfit-shot-row figcaption {
+  margin-top: 8px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+.amazfit-card {
+  margin: 0 0 22px;
+  padding: 20px 22px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.amazfit-card.is-price {
+  border-color: rgba(126, 214, 240, 0.4);
+  background: linear-gradient(160deg, rgba(126, 214, 240, 0.12), var(--bg-card) 60%);
+}
+.amazfit-price-points { margin: 0; padding-left: 1.2em; display: grid; gap: 10px; }
+.amazfit-price-points b { color: var(--ice); font-weight: 600; }
+.amazfit-devices { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.amazfit-devices li { padding: 0; color: var(--snow); }
+.amazfit-devices b { color: var(--ice); font-weight: 600; margin-right: 6px; }
+.amazfit-note { color: var(--muted); font-size: 0.92rem; margin: 12px 0 0; }
+a.btn[aria-disabled="true"] {
+  opacity: 0.78;
+  cursor: default;
+}
+a.btn[aria-disabled="true"]:hover { color: var(--cta-text); }
