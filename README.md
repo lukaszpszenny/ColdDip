@@ -81,7 +81,7 @@ The step list next to the video is localized in each page (`<!-- howto-video:sta
 
 ## Reviews, notify, clubs, guides (added 26 Nov 2026)
 
-- **Hero CTA:** big “Download free” button plus a rating line (5.0 ★ in Connect IQ · 400+ downloads) that links to `#reviews`.
+- **Hero CTA:** big “Download free” button plus a rating line (5.0 ★ in Connect IQ · 1000+ downloads) that links to `#reviews`.
 - **`#reviews`:** four real 5★ reviews copied word for word from the public Connect IQ Store listing (Monika, Radek, Pawel, Justyna). Originals are Polish; other languages show a marked translation under each quote. Do not add invented quotes. The older `#testimonials` block (Facebook quotes) stays hidden behind `showTestimonials`.
 - **`#gallery`:** slimmed to one row (Venu / AMOLED: before entry, in water, after exit) plus a short looping clip `assets/video/dip-loop-{pl,en}.mp4` cut from the real simulator how-to recordings (no retouching). The clip is paused for `prefers-reduced-motion`.
 - **FAQ:** six more questions in the existing `#howto` accordion (phone, water temperature, Pro, KiezelPay code, supported watches, other platforms).
