@@ -1188,6 +1188,31 @@ h3 .pro-star, .sec-title .pro-star, .cmp th .pro-star {
   box-shadow: var(--shadow), inset 3px 0 0 #e0b55a;
 }
 .faces-intro .sec-lead { max-width: 44rem; }
+.faces-promo {
+  margin: 22px 0 0;
+}
+.faces-promo-gallery {
+  display: grid;
+  gap: 12px;
+}
+.faces-promo-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #050b12;
+  border: 1px solid rgba(63, 169, 245, 0.3);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.faces-promo figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
 .faces-cards {
   display: grid;
   gap: 16px;
