@@ -4,5 +4,4 @@ Disallow: /preview_desktop.png
 Disallow: /preview_mobile.png
 Disallow: /_preview/
 
-# After the site has a public domain, uncomment and set it:
 Sitemap: https://lukaszpszenny.github.io/ColdDip/sitemap.xml
