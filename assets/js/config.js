@@ -87,6 +87,6 @@ window.COLDDIP_CONFIG = {
   morsLevelStoreUrl: "https://apps.garmin.com/en-US/apps/fe325c7e-b38d-4a9a-b43e-f5b09780f3a8",
   morsLevelUnlockUrl: "https://kzl.io/morslevel",
   goatcounterCode: "colddip",
-  notifyUrl: "https://endmdqcupoypnibvrzmx.supabase.co/rest/v1/colddip_notify",
-  notifyKey: "sb_publishable_hkGgZ46PqsktO6Jtzh5A_A_7dXoOqaZ"
+  notifyUrl: "https://xbvzdvfndsyqxglgjgjn.supabase.co/rest/v1/colddip_notify",
+  notifyKey: "sb_publishable_HBa9PG6CcAlF445vLponpw_jFswl5ez"
 };

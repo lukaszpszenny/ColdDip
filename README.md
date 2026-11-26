@@ -117,7 +117,7 @@ The step list next to the video is localized in each page (`<!-- howto-video:sta
 
 - "Notify me" (Apple Watch, Wear OS, Huawei, Amazfit, Suunto, other) and the
   club contact are in-page forms. They POST one row to the Supabase table
-  `public.colddip_notify` (project `formacja-dev`, ref endmdqcupoypnibvrzmx)
+  `public.colddip_notify` (own free project `colddip`, ref xbvzdvfndsyqxglgjgjn, eu-central-1)
   with the public publishable key from `config.js`. The table allows INSERT
   only for `anon` (RLS on, column grants, check constraints); nobody can read
   it through the API. See signups in Supabase → Table Editor → colddip_notify.
