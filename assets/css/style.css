@@ -1220,33 +1220,14 @@ h3 .pro-star, .sec-title .pro-star, .cmp th .pro-star {
   box-shadow: var(--shadow), inset 3px 0 0 #e0b55a;
 }
 .faces-card-goals {
-  grid-template-columns: 1fr;
   background: linear-gradient(160deg, rgba(63, 169, 245, 0.12), var(--bg-card) 48%);
   border-color: rgba(63, 169, 245, 0.3);
   box-shadow: var(--shadow), inset 3px 0 0 #3fa9f5;
 }
-.faces-card-goals .faces-card-media {
-  grid-column: 1 / -1;
-}
-.faces-card-goals .faces-card-media img,
-.faces-card-afterdrop .faces-card-media img {
-  aspect-ratio: 16 / 9;
-}
 .faces-card-afterdrop {
-  grid-template-columns: 1fr;
   background: linear-gradient(160deg, rgba(110, 168, 210, 0.12), var(--bg-card) 48%);
   border-color: rgba(110, 168, 210, 0.3);
   box-shadow: var(--shadow), inset 3px 0 0 #6ea8d2;
-}
-.faces-card-afterdrop .faces-card-media {
-  grid-column: 1 / -1;
-}
-@media (min-width: 1100px) {
-  .faces-card-goals,
-  .faces-card-afterdrop {
-    grid-template-columns: 1fr;
-    align-content: start;
-  }
 }
 .faces-card-media {
   margin: 0;
@@ -1448,11 +1429,8 @@ h3 .pro-star, .sec-title .pro-star, .cmp th .pro-star {
     padding: 14px;
     gap: 4px 12px;
   }
-  .faces-card-goals,
-  .faces-card-afterdrop {
-    grid-template-columns: 1fr;
-  }
 }
+
 
 
 /* Highlight the Watch faces / Tarcze nav tab */
