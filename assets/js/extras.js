@@ -116,4 +116,61 @@
       if (span) span.textContent = p.getAttribute("data-counter-text");
     });
   }
+
+  // Click events for GoatCounter (only sent when the counter is on).
+  function slug(v) {
+    return String(v || "").toLowerCase().replace(/\(.*?\)/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || "inny";
+  }
+  function mailEvent(href) {
+    var subject = "";
+    var m = /[?&]subject=([^&]*)/i.exec(href || "");
+    if (m) { try { subject = decodeURIComponent(m[1].replace(/\+/g, " ")); } catch (e) { subject = m[1]; } }
+    var n = /notify me:\s*(.+)$/i.exec(subject);
+    if (n) return "klik-dajznac-" + slug(n[1]);
+    n = /I want\s+(.+)$/i.exec(subject);
+    if (n) return "klik-chce-" + slug(n[1]);
+    if (/club/i.test(subject)) return "klik-mail-klub";
+    return "klik-mail-kontakt";
+  }
+  function clickEvent(el) {
+    if (el.closest(".mail-copy")) return "klik-kopiuj-mail";
+    if (el.closest("[data-copy-target]")) return "klik-kopiuj-tekst-klub";
+    if (el.closest(".mfold-btn")) return null;
+    var a = el.closest("a[href]");
+    if (!a) return null;
+    var href = a.getAttribute("href") || "";
+    var guide = !!a.closest(".guide-cta, .guide-page .header-cta");
+    if (/apps\.garmin\.com/i.test(href)) {
+      if (/b386c269/i.test(href)) return guide ? "klik-poradnik-garmin-colddip" : "klik-garmin-colddip";
+      if (/fb505708/i.test(href)) return "klik-garmin-tarcza-mors";
+      if (/fe325c7e/i.test(href)) return "klik-garmin-morslevel";
+      return "klik-garmin-inne";
+    }
+    if (/kzl\.io\/cold-dip-pro/i.test(href)) return "klik-pro";
+    if (/kzl\.io\/morslevel/i.test(href)) return "klik-morslevel-odblokuj";
+    if (/kzl\.io\/code/i.test(href)) return "klik-kiezelpay-kod";
+    if (a.classList.contains("js-zepp-store") || /zepp\.com/i.test(href)) return "klik-zepp-store";
+    if (/^mailto:/i.test(href)) {
+      if (a.closest("#watch-results")) return "klik-mail-zegarek";
+      return mailEvent(href);
+    }
+    if (a.classList.contains("mail-gmail")) {
+      var cl = a.closest(".mail-cluster");
+      var orig = cl && cl.querySelector("a[href^='mailto:']");
+      return (orig ? mailEvent(orig.getAttribute("href")) : "klik-mail-kontakt") + "-gmail";
+    }
+    if (/(^|\/)amazfit\.html/i.test(href) && !a.closest(".lang-panel")) return "klik-amazfit";
+    if (a.hasAttribute("download")) return "klik-pobierz-grafike";
+    return null;
+  }
+  document.addEventListener("click", function (ev) {
+    var name = ev.target && ev.target.closest ? clickEvent(ev.target) : null;
+    if (!name || !window.goatcounter || typeof window.goatcounter.count !== "function") return;
+    var sec = ev.target.closest("section[id], header, footer, aside");
+    var where = sec ? (sec.id ? "#" + sec.id : sec.tagName.toLowerCase()) : "";
+    try {
+      window.goatcounter.count({ path: name, title: location.pathname + (where ? " " + where : ""), event: true });
+    } catch (e) {}
+  }, true);
 })();
+

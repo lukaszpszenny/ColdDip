@@ -32,7 +32,8 @@
   function currentFile() {
     var parts = location.pathname.split("/").filter(Boolean);
     var last = parts.length ? parts[parts.length - 1] : "";
-    if (!last || last === "index.html" || LANGS.indexOf(last.toLowerCase()) !== -1) return "index.html";
+    // Only a real file name counts; "/ColdDip/" ends with the repo folder, not a file.
+    if (!/\.html?$/i.test(last) || last === "index.html") return "";
     return last;
   }
 

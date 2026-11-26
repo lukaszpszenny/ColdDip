@@ -9,6 +9,13 @@
   <meta name="theme-color" content="#07111c">
   <link rel="icon" href="assets/img/favicon.ico">
   <link rel="stylesheet" href="assets/css/style.css?v=20261123d">
+  <script>
+  (function () {
+    // Old bug sent first-time visitors to /ColdDip/<lang>/ColdDip. Send them to the language home page.
+    var m = location.pathname.match(/^\/ColdDip\/(?:(en|pl|de|cs|sk|fi|nb|sv|es|ru|uk)\/)?ColdDip(?:\/.*)?$/i);
+    if (m) location.replace("/ColdDip/" + (m[1] && m[1].toLowerCase() !== "en" ? m[1].toLowerCase() + "/" : "") + location.search + location.hash);
+  })();
+  </script>
 </head>
 <body>
   <div class="atmosphere" aria-hidden="true"></div>
@@ -20,6 +27,6 @@
     </div>
   </main>
   <script src="/ColdDip/assets/js/config.js?v=20261126c"></script>
-  <script src="/ColdDip/assets/js/extras.js?v=20261126c"></script>
+  <script src="/ColdDip/assets/js/extras.js?v=20261126e"></script>
 </body>
 </html>
