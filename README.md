@@ -69,7 +69,7 @@ A slim `#platforms` band sits under the hero. Garmin is marked “available now�
 
 ## Watch faces
 
-Both faces live in a combined `#faces` band (nav label is the localized plural: Watch faces / Tarcze / Zifferblätter / …). `#face` is Mors – tarcza, with the real AMOLED frost wake clip (the walrus moves when you raise your wrist; never in always-on mode). `#mors-level` is Mors Level, with the real wake clip (bounce and bar fill on wrist raise, AMOLED only) and a lightweight 5-stage level-up demo (no extra libraries; respects `prefers-reduced-motion`). `morsLevelStoreUrl` is the live Mors Level listing, so the section shows a store button.
+The `#faces` band (nav label is the localized plural: Watch faces / Tarcze / Zifferblätter / …) has three cards. `#face` is Mors – tarcza, with the real AMOLED frost wake clip (the walrus moves when you raise your wrist; never in always-on mode). `#mors-level` is Mors Level, with the real wake clip (bounce and bar fill on wrist raise, AMOLED only) and a lightweight 5-stage level-up demo (no extra libraries; respects `prefers-reduced-motion`). `morsLevelStoreUrl` is the live Mors Level listing, so the section shows a store button. A third card, Dip Goals / Cele Morsa, is marked Coming soon / Wkrótce / Demnächst (and the matching label in every language), with a short description and a promo image; it has no store button or price until the Connect IQ listing is live.
 
 `proStoreUrl` is the live Cold Dip listing, so the Pro section shows a store button. `morsLevelStoreUrl` is the live Mors Level listing.
 
