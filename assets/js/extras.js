@@ -108,7 +108,7 @@
   if (/^[a-z0-9-]+$/.test(code)) {
     var gc = document.createElement("script");
     gc.async = true;
-    gc.src = "https://gc.zgo.at/count.js";
+    gc.src = "//gc.zgo.at/count.js";
     gc.setAttribute("data-goatcounter", "https://" + code + ".goatcounter.com/count");
     document.body.appendChild(gc);
     document.querySelectorAll("[data-counter-text]").forEach(function (p) {

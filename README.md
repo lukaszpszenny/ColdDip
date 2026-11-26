@@ -104,7 +104,8 @@ The step list next to the video is localized in each page (`<!-- howto-video:sta
 - GoatCounter: set `goatcounterCode` in `assets/js/config.js` (for
   example `"colddip"`) once that account exists. Empty = no counter.
   When set, the footer privacy note switches to the text in
-  `data-counter-text`.
+  `data-counter-text`. Active since 26 Nov 2026 with code `colddip`
+  (dashboard: https://colddip.goatcounter.com).
 - Guides exist in all 11 languages: `guides/` (en), `pl/poradnik/`,
   `de/ratgeber/`, `cs/pruvodce/`, `sk/sprievodca/`, `fi/oppaat/`,
   `nb/guider/`, `sv/guider/`, `es/guias/`, `ru/sovety/`, `uk/porady/`.
