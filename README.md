@@ -112,3 +112,23 @@ The step list next to the video is localized in each page (`<!-- howto-video:sta
 - On phones (under 600 px) long sections (Pro, watch faces, steps,
   safety, What's new) show a short part and a "show more" button.
 
+
+## Forms, clubs, mobile hero (added 26 Nov 2026, round 3)
+
+- "Notify me" (Apple Watch, Wear OS, Huawei, Amazfit, Suunto, other) and the
+  club contact are in-page forms. They POST one row to the Supabase table
+  `public.colddip_notify` (project `formacja-dev`, ref endmdqcupoypnibvrzmx)
+  with the public publishable key from `config.js`. The table allows INSERT
+  only for `anon` (RLS on, column grants, check constraints); nobody can read
+  it through the API. See signups in Supabase → Table Editor → colddip_notify.
+- Clubs: three offers (club code for Pro — codes are made by hand in
+  KiezelPay —, A4 poster with QR, club-logo watch face on request) plus the
+  club form. Posters: `assets/posters/colddip-plakat-<lang>.{pdf,png}`, QR to
+  `/<lang>/?utm_source=plakat&utm_campaign=klub`.
+- Phones: the first screen shows title + "free" badge, rating line, one big
+  Garmin button and a short muted loop (`.hero-media`, now
+  `assets/video/dip-loop-*.mp4`; swap in a real dip video later).
+- GoatCounter events: `klik-garmin-colddip-<lang>`, `klik-poradnik-garmin-colddip-<lang>`,
+  `klik-twarz-{mors,mors-level,dip-goals,afterdrop}`, `klik-pro`,
+  `klik-powiadom-<platform>` (form sent), `klik-klub-plakat`, `klik-klub-kontakt`,
+  `klik-chce-<platform>`, plus the older mail/copy events.

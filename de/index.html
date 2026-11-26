@@ -53,7 +53,7 @@
   <link rel="alternate" hreflang="ru" href="https://lukaszpszenny.github.io/ColdDip/ru/">
   <link rel="alternate" hreflang="uk" href="https://lukaszpszenny.github.io/ColdDip/uk/">
   <link rel="alternate" hreflang="x-default" href="https://lukaszpszenny.github.io/ColdDip/">
-  <link rel="stylesheet" href="../assets/css/style.css?v=20261126b">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261126f">
   <script>
   (function () {
     var LANGS = ["en","pl","de","cs","sk","fi","nb","sv","es","ru","uk"];
@@ -154,6 +154,7 @@
         <a class="nav-faces" href="#faces">Zifferblätter <span class="badge-new">Neu</span></a>
         <a href="#howto">So geht’s</a>
         <a class="nav-changelog" href="#changelog">Was ist neu</a>
+        <a class="nav-clubs" href="#clubs">Für Vereine</a>
         <a href="#contact">Kontakt</a>
       </nav>
       <a class="header-cta" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">App holen</a>
@@ -169,13 +170,16 @@
       <div class="wrap hero-grid">
         <div class="hero-copy">
           <span class="badge">Kostenlose App für Garmin-Uhren</span>
-          <h1>Cold Dip</h1>
+          <div class="hero-title"><h1>Cold Dip</h1><span class="hero-free">KOSTENLOS</span></div>
           <p class="local-name">Auf der Uhr heißt die App Eisbaden.</p>
           <p class="tagline">Kaltbaden und Eisschwimmen richtig aufzeichnen — nicht als Schwimmen.</p>
           <div class="cta-row">
             <a class="btn btn-xl" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank"><span class="btn-main">Kostenlos laden</span><small class="btn-sub">Connect IQ Store · Garmin</small></a>
             <a class="btn btn-ghost" href="#faces">Zu den Zifferblättern</a>
           </div>
+          <figure class="hero-media" data-hero-loop>
+            <video class="loop-video" src="../assets/video/dip-loop-en.mp4" poster="../assets/video/dip-loop-en.jpg" width="300" height="386" autoplay muted loop playsinline preload="metadata" aria-label="Animation: Cold Dip auf einer Garmin-Uhr — am Ufer, im Wasser, nach dem Ausstieg, Befinden und Speichern"></video>
+          </figure>
           <p class="hero-proof"><a href="#reviews"><span class="stars" aria-hidden="true">★★★★★</span> <b>5,0</b> in Connect IQ · <b>1000+</b> Downloads</a></p>
           <p class="search-note">Oder suche in der Connect IQ App auf dem Handy nach „Cold Dip“.</p>
           <p class="howto-link"><a href="#how-to-video">▶ Video: so geht’s (1 Min.)</a></p>
@@ -1030,14 +1034,26 @@
       <div class="wrap">
         <div class="request-box">
           <h2 class="sec-title">Sag mir Bescheid, wenn es für meine Uhr kommt</h2>
-          <p class="sec-lead">Cold Dip kommt auf weitere Uhren. Wähle deine: Dein E-Mail-Programm öffnet sich mit fertigem Betreff, du musst nur auf Senden tippen. Ich schreibe dir einmal, sobald die Version fertig ist.</p>
-          <div class="interest-row notify-row">
-            <a class="btn" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20notify%20me%3A%20Huawei&amp;body=Hallo%20%C5%81ukasz%2C%0A%0ABitte%20gib%20mir%20Bescheid%2C%20wenn%20Cold%20Dip%20f%C3%BCr%20meine%20Uhr%20verf%C3%BCgbar%20ist.%20Mein%20Modell%3A%20%0A">Huawei</a>
-            <a class="btn btn-ghost" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20notify%20me%3A%20Amazfit%20%28Zepp%20App%20Store%29&amp;body=Hallo%20%C5%81ukasz%2C%0A%0ABitte%20gib%20mir%20Bescheid%2C%20wenn%20Cold%20Dip%20f%C3%BCr%20meine%20Uhr%20verf%C3%BCgbar%20ist.%20Mein%20Modell%3A%20%0A">Amazfit (Zepp App Store)</a>
-            <a class="btn btn-ghost" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20notify%20me%3A%20Wear%20OS&amp;body=Hallo%20%C5%81ukasz%2C%0A%0ABitte%20gib%20mir%20Bescheid%2C%20wenn%20Cold%20Dip%20f%C3%BCr%20meine%20Uhr%20verf%C3%BCgbar%20ist.%20Mein%20Modell%3A%20%0A">Wear OS</a>
-            <a class="btn btn-ghost" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20notify%20me%3A%20Apple%20Watch&amp;body=Hallo%20%C5%81ukasz%2C%0A%0ABitte%20gib%20mir%20Bescheid%2C%20wenn%20Cold%20Dip%20f%C3%BCr%20meine%20Uhr%20verf%C3%BCgbar%20ist.%20Mein%20Modell%3A%20%0A">Apple Watch</a>
-          </div>
-          <p class="search-note">Kein Newsletter, keine Tracker — nur eine E-Mail von mir. · <span class="notify-mail">lukasz.pszenny@gmail.com</span></p>
+          <p class="sec-lead">Cold Dip kommt auf weitere Uhren. Hinterlasse deine E-Mail und wähle deine Uhr — ich schreibe einmal, wenn diese Version fertig ist.</p>
+          <form class="cd-form notify-form" data-cd-form="notify" novalidate data-msg-ok="Danke! Ich schreibe dir, sobald die Version für {p} fertig ist." data-msg-err="Senden fehlgeschlagen. Versuch es noch einmal oder schreib an lukasz.pszenny@gmail.com." data-msg-email="Bitte gib eine gültige E-Mail-Adresse ein." data-msg-pick="Bitte wähle eine Uhr." data-msg-sending="Wird gesendet…">
+            <fieldset class="nf-platforms">
+              <legend>Welche Uhr?</legend>
+              <label class="nf-chip"><input type="radio" name="platform" value="apple" data-label="Apple Watch"><span>Apple Watch</span></label>
+              <label class="nf-chip"><input type="radio" name="platform" value="wearos" data-label="Wear OS"><span>Wear OS</span></label>
+              <label class="nf-chip"><input type="radio" name="platform" value="huawei" data-label="Huawei"><span>Huawei</span></label>
+              <label class="nf-chip"><input type="radio" name="platform" value="amazfit" data-label="Amazfit"><span>Amazfit</span></label>
+              <label class="nf-chip"><input type="radio" name="platform" value="suunto" data-label="Suunto"><span>Suunto</span></label>
+              <label class="nf-chip"><input type="radio" name="platform" value="inny" data-label="Andere"><span>Andere</span></label>
+            </fieldset>
+            <div class="nf-fields">
+              <label class="nf-field"><span>E-Mail</span><input type="email" name="email" required autocomplete="email" inputmode="email" maxlength="254"></label>
+              <label class="nf-field"><span>Uhrenmodell (optional)</span><input type="text" name="model" maxlength="120" autocomplete="off"></label>
+            </div>
+            <input class="nf-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <button type="submit" class="btn nf-submit">Benachrichtige mich</button>
+            <p class="nf-status" role="status" aria-live="polite"></p>
+          </form>
+          <p class="search-note nf-privacy">Ich speichere deine Adresse nur für diese eine Nachricht. Kein Newsletter. Schreib mir, dann lösche ich sie. Lieber eine normale E-Mail? <a class="nf-mail" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20notify%20me">lukasz.pszenny@gmail.com</a></p>
         </div>
       </div>
     </section>
@@ -1066,6 +1082,36 @@
             </a>
           </div>
         </div>
+        <div class="clubs-offers">
+          <article class="card clubs-offer">
+            <h3>🏷️ Vereinscode für Cold Dip Pro</h3>
+            <p>Schreib mir, und euer Verein bekommt einen eigenen Rabattcode für Pro für eure Mitglieder.</p>
+          </article>
+          <article class="card clubs-offer">
+            <h3>🖨️ A4-Plakat mit QR-Code</h3>
+            <p>Für die Umkleide, die Sauna oder das schwarze Brett. Der QR-Code führt auf diese Website.</p>
+            <p class="clubs-poster-links">
+              <a class="btn btn-sm" href="../assets/posters/colddip-plakat-de.pdf" download data-gc-event="klik-klub-plakat">⬇ PDF herunterladen</a>
+              <a class="btn btn-ghost btn-sm" href="../assets/posters/colddip-plakat-de.png" download data-gc-event="klik-klub-plakat">⬇ PNG herunterladen</a>
+            </p>
+          </article>
+          <article class="card clubs-offer">
+            <h3>⌚ Zifferblatt mit eurem Vereinslogo</h3>
+            <p>Ein Garmin-Zifferblatt mit dem Logo eures Vereins, auf Anfrage. Schreib mir, was euch vorschwebt.</p>
+          </article>
+        </div>
+        <form class="cd-form club-form" data-cd-form="klub" novalidate data-msg-ok="Danke! Ich antworte an die angegebene Adresse." data-msg-err="Senden fehlgeschlagen. Versuch es noch einmal oder schreib an lukasz.pszenny@gmail.com." data-msg-email="Bitte gib eine gültige E-Mail-Adresse ein." data-msg-pick="" data-msg-sending="Wird gesendet…">
+          <h3>Schreib mir über euren Verein</h3>
+          <input type="hidden" name="platform" value="klub">
+          <div class="nf-fields">
+            <label class="nf-field"><span>E-Mail</span><input type="email" name="email" required autocomplete="email" inputmode="email" maxlength="254"></label>
+            <label class="nf-field"><span>Name des Vereins</span><input type="text" name="model" maxlength="120" autocomplete="organization"></label>
+          </div>
+          <label class="nf-field nf-field-wide"><span>Nachricht (z. B. Pro-Code, Plakate, Zifferblatt mit Logo)</span><textarea name="message" rows="3" maxlength="2000"></textarea></label>
+          <input class="nf-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit" class="btn nf-submit">Senden</button>
+          <p class="nf-status" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
 
@@ -1078,9 +1124,9 @@
           <h2 class="sec-title">Möchtest du Cold Dip auf der Apple Watch oder Suunto?</h2>
           <p class="sec-lead">Hast du eine Idee für eine Garmin-App oder ein Zifferblatt? Dann lass uns das zusammen machen. Schreib mir und verrate, welche Uhr du nutzt.</p>
           <div class="interest-row">
-            <a class="btn" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20I%20want%20Apple%20Watch&amp;body=Hallo%20%C5%81ukasz%2C%0A%0A">Ich möchte sie auf der Apple Watch</a>
-            <a class="btn btn-ghost" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20I%20want%20Suunto&amp;body=Hallo%20%C5%81ukasz%2C%0A%0A">Ich möchte sie auf Suunto</a>
-            <a class="btn btn-ghost" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20I%20want%20other%20watch&amp;body=Hallo%20%C5%81ukasz%2C%0A%0A">Ich trage eine andere Uhr</a>
+            <a class="btn" href="#notify" data-notify-platform="apple" data-gc-event="klik-chce-apple">Ich möchte sie auf der Apple Watch</a>
+            <a class="btn btn-ghost" href="#notify" data-notify-platform="suunto" data-gc-event="klik-chce-suunto">Ich möchte sie auf Suunto</a>
+            <a class="btn btn-ghost" href="#notify" data-notify-platform="inny" data-gc-event="klik-chce-inny">Ich trage eine andere Uhr</a>
           </div>
           <div class="cta-row">
             <a class="btn btn-ghost" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%94%20Apple%20Watch%2C%20Suunto%20oder%20eine%20Idee&amp;body=Hallo%20%C5%81ukasz%2C%0A%0A">E-Mail an Łukasz</a>
@@ -1112,10 +1158,10 @@
       <p class="privacy" data-counter-text="Diese Website zählt Besuche anonym mit GoatCounter, ohne Cookies und ohne personenbezogene Daten — im Browser wird nur die gewählte Sprache gespeichert, wenn du sie änderst.">Cold Dip sammelt keine personenbezogenen Daten auf einem Server. Deine Einheiten bleiben auf der Uhr (und auf Garmin auch in Garmin Connect). Das Wetter kommt auf Garmin vom Garmin-Wetterdienst auf deinem Handy; auf Amazfit von MET Norway (CC BY 4.0). <span data-privacy-site>Diese Website verwendet keine Tracker und keine Analyse-Cookies — in deinem Browser wird nur die Sprachwahl gespeichert, wenn du sie änderst.</span></p>
     </div>
   </footer>
-  <script src="../assets/js/config.js?v=20261126c"></script>
+  <script src="../assets/js/config.js?v=20261126f"></script>
   <script src="../assets/js/devices.js?v=20261124p"></script>
   <script src="../assets/js/app.js?v=20261124p"></script>
   <script src="../assets/js/lang.js?v=20261126e"></script>
-  <script src="../assets/js/extras.js?v=20261126e"></script>
+  <script src="../assets/js/extras.js?v=20261126f"></script>
 </body>
 </html>

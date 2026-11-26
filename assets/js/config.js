@@ -65,6 +65,13 @@
  *                        privacy note in the footer switches to the
  *                        sentence that mentions it. Fill it in only
  *                        after the account with that code exists.
+ *
+ * notifyUrl / notifyKey  Where the "notify me" and club forms send their
+ *                        rows: Supabase REST endpoint of the table
+ *                        colddip_notify and the project's PUBLIC
+ *                        publishable key (safe in the browser: the table
+ *                        allows INSERT only, nobody can read it through
+ *                        the API). Empty = forms fall back to e-mail.
  */
 window.COLDDIP_CONFIG = {
   instinctPending: false,
@@ -79,5 +86,7 @@ window.COLDDIP_CONFIG = {
   proUnlockUrl: "https://kzl.io/cold-dip-pro",
   morsLevelStoreUrl: "https://apps.garmin.com/en-US/apps/fe325c7e-b38d-4a9a-b43e-f5b09780f3a8",
   morsLevelUnlockUrl: "https://kzl.io/morslevel",
-  goatcounterCode: "colddip"
+  goatcounterCode: "colddip",
+  notifyUrl: "https://endmdqcupoypnibvrzmx.supabase.co/rest/v1/colddip_notify",
+  notifyKey: "sb_publishable_hkGgZ46PqsktO6Jtzh5A_A_7dXoOqaZ"
 };

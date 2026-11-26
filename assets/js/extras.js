@@ -118,6 +118,11 @@
   }
 
   // Click events for GoatCounter (only sent when the counter is on).
+  var LANG = (document.documentElement.getAttribute("lang") || "en").slice(0, 2).toLowerCase();
+  function gcEvent(name, where) {
+    if (!window.goatcounter || typeof window.goatcounter.count !== "function") return;
+    try { window.goatcounter.count({ path: name, title: location.pathname + (where ? " " + where : ""), event: true }); } catch (e) {}
+  }
   function slug(v) {
     return String(v || "").toLowerCase().replace(/\(.*?\)/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || "inny";
   }
@@ -129,21 +134,26 @@
     if (n) return "klik-dajznac-" + slug(n[1]);
     n = /I want\s+(.+)$/i.exec(subject);
     if (n) return "klik-chce-" + slug(n[1]);
-    if (/club/i.test(subject)) return "klik-mail-klub";
+    if (/club/i.test(subject)) return "klik-klub-kontakt";
+    if (/notify me$/i.test(subject)) return "klik-mail-powiadom";
     return "klik-mail-kontakt";
   }
   function clickEvent(el) {
     if (el.closest(".mail-copy")) return "klik-kopiuj-mail";
     if (el.closest("[data-copy-target]")) return "klik-kopiuj-tekst-klub";
     if (el.closest(".mfold-btn")) return null;
+    var tagged = el.closest("[data-gc-event]");
+    if (tagged) return tagged.getAttribute("data-gc-event");
     var a = el.closest("a[href]");
     if (!a) return null;
     var href = a.getAttribute("href") || "";
     var guide = !!a.closest(".guide-cta, .guide-page .header-cta");
     if (/apps\.garmin\.com/i.test(href)) {
-      if (/b386c269/i.test(href)) return guide ? "klik-poradnik-garmin-colddip" : "klik-garmin-colddip";
-      if (/fb505708/i.test(href)) return "klik-garmin-tarcza-mors";
-      if (/fe325c7e/i.test(href)) return "klik-garmin-morslevel";
+      if (/b386c269/i.test(href)) return (guide ? "klik-poradnik-garmin-colddip-" : "klik-garmin-colddip-") + LANG;
+      if (/fb505708/i.test(href)) return "klik-twarz-mors";
+      if (/fe325c7e/i.test(href)) return "klik-twarz-mors-level";
+      if (a.closest(".faces-card-goals, #dip-goals")) return "klik-twarz-dip-goals";
+      if (a.closest(".faces-card-afterdrop, #afterdrop")) return "klik-twarz-afterdrop";
       return "klik-garmin-inne";
     }
     if (/kzl\.io\/cold-dip-pro/i.test(href)) return "klik-pro";
@@ -167,10 +177,78 @@
     var name = ev.target && ev.target.closest ? clickEvent(ev.target) : null;
     if (!name || !window.goatcounter || typeof window.goatcounter.count !== "function") return;
     var sec = ev.target.closest("section[id], header, footer, aside");
-    var where = sec ? (sec.id ? "#" + sec.id : sec.tagName.toLowerCase()) : "";
-    try {
-      window.goatcounter.count({ path: name, title: location.pathname + (where ? " " + where : ""), event: true });
-    } catch (e) {}
+    gcEvent(name, sec ? (sec.id ? "#" + sec.id : sec.tagName.toLowerCase()) : "");
   }, true);
+
+  // "Notify me" and club forms: one row into the insert-only table, no account needed.
+  var UTM_KEY = "colddip-utm";
+  (function keepUtm() {
+    var q = location.search.replace(/^\?/, "").split("&").filter(function (p) { return /^utm_[a-z]+=/i.test(p); }).join("&");
+    try { if (q) sessionStorage.setItem(UTM_KEY, q); } catch (e) {}
+  })();
+  function utm() {
+    try { return sessionStorage.getItem(UTM_KEY) || ""; } catch (e) { return ""; }
+  }
+  document.querySelectorAll("[data-notify-platform]").forEach(function (a) {
+    a.addEventListener("click", function () {
+      var v = a.getAttribute("data-notify-platform");
+      var r = document.querySelector('.notify-form input[name="platform"][value="' + v + '"]');
+      if (r) r.checked = true;
+      var sec = document.getElementById("notify");
+      if (sec && sec.classList.contains("mfold-on")) sec.classList.remove("mfold-on");
+      setTimeout(function () {
+        var em = document.querySelector('.notify-form input[name="email"]');
+        if (em) { try { em.focus({ preventScroll: true }); } catch (e) { em.focus(); } }
+      }, 350);
+    });
+  });
+  document.querySelectorAll("form[data-cd-form]").forEach(function (form) {
+    var status = form.querySelector(".nf-status");
+    var btn = form.querySelector(".nf-submit");
+    var kind = form.getAttribute("data-cd-form");
+    function say(msg, ok) {
+      status.textContent = msg;
+      status.classList.toggle("is-ok", !!ok);
+      status.classList.toggle("is-err", !ok);
+    }
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var cfg = window.COLDDIP_CONFIG || {};
+      var email = (form.email.value || "").trim();
+      var pick = form.querySelector('input[name="platform"]:checked') || form.querySelector('input[name="platform"][type="hidden"]');
+      if (!pick) { say(form.getAttribute("data-msg-pick"), false); return; }
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email) || email.length > 254) {
+        say(form.getAttribute("data-msg-email"), false); form.email.focus(); return;
+      }
+      var platform = pick.value;
+      var label = pick.getAttribute("data-label") || platform;
+      var okMsg = (form.getAttribute("data-msg-ok") || "").replace("{p}", label);
+      if (form.website && form.website.value) { say(okMsg, true); form.reset(); return; } // bots
+      if (!cfg.notifyUrl || !cfg.notifyKey || !window.fetch) { say(form.getAttribute("data-msg-err"), false); return; }
+      var body = {
+        email: email,
+        platform: platform,
+        model: form.model && form.model.value.trim() ? form.model.value.trim().slice(0, 120) : null,
+        message: form.message && form.message.value.trim() ? form.message.value.trim().slice(0, 2000) : null,
+        lang: LANG,
+        utm: utm().slice(0, 300) || null,
+        page: location.pathname.slice(0, 200)
+      };
+      btn.disabled = true;
+      say(form.getAttribute("data-msg-sending"), true);
+      fetch(cfg.notifyUrl, {
+        method: "POST",
+        headers: { "apikey": cfg.notifyKey, "Content-Type": "application/json", "Prefer": "return=minimal" },
+        body: JSON.stringify(body)
+      }).then(function (res) {
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        say(okMsg, true);
+        form.reset();
+        gcEvent(kind === "klub" ? "klik-klub-kontakt" : "klik-powiadom-" + platform, kind === "klub" ? "#clubs form" : "#notify form");
+      }).catch(function () {
+        say(form.getAttribute("data-msg-err"), false);
+      }).then(function () { btn.disabled = false; });
+    });
+  });
 })();
 

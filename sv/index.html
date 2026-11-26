@@ -53,7 +53,7 @@
   <link rel="alternate" hreflang="ru" href="https://lukaszpszenny.github.io/ColdDip/ru/">
   <link rel="alternate" hreflang="uk" href="https://lukaszpszenny.github.io/ColdDip/uk/">
   <link rel="alternate" hreflang="x-default" href="https://lukaszpszenny.github.io/ColdDip/">
-  <link rel="stylesheet" href="../assets/css/style.css?v=20261126b">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261126f">
   <script>
   (function () {
     var LANGS = ["en","pl","de","cs","sk","fi","nb","sv","es","ru","uk"];
@@ -154,6 +154,7 @@
         <a class="nav-faces" href="#faces">Urtavlor <span class="badge-new">Ny</span></a>
         <a href="#howto">Så använder du den</a>
         <a class="nav-changelog" href="#changelog">Vad är nytt</a>
+        <a class="nav-clubs" href="#clubs">För klubbar</a>
         <a href="#contact">Kontakt</a>
       </nav>
       <a class="header-cta" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">Hämta appen</a>
@@ -169,13 +170,16 @@
       <div class="wrap hero-grid">
         <div class="hero-copy">
           <span class="badge">Gratis app för Garmin-klockor</span>
-          <h1>Cold Dip</h1>
+          <div class="hero-title"><h1>Cold Dip</h1><span class="hero-free">GRATIS</span></div>
           <p class="local-name">På klockan heter appen Vinterbad.</p>
           <p class="tagline">Vinterbad och kallbad sparade på riktigt — inte som simning.</p>
           <div class="cta-row">
             <a class="btn btn-xl" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank"><span class="btn-main">Ladda ner gratis</span><small class="btn-sub">Connect IQ Store · Garmin</small></a>
             <a class="btn btn-ghost" href="#faces">Se urtavlorna</a>
           </div>
+          <figure class="hero-media" data-hero-loop>
+            <video class="loop-video" src="../assets/video/dip-loop-en.mp4" poster="../assets/video/dip-loop-en.jpg" width="300" height="386" autoplay muted loop playsinline preload="metadata" aria-label="Animering: Cold Dip på en Garmin-klocka — på land, i vattnet, efter doppet, välmående och sparat"></video>
+          </figure>
           <p class="hero-proof"><a href="#reviews"><span class="stars" aria-hidden="true">★★★★★</span> <b>5,0</b> i Connect IQ · <b>1000+</b> nedladdningar</a></p>
           <p class="search-note">Eller sök efter ”Cold Dip” i Connect IQ-appen i telefonen.</p>
           <p class="howto-link"><a href="#how-to-video">▶ Video: så använder du den (1 min)</a></p>
@@ -1030,14 +1034,26 @@
       <div class="wrap">
         <div class="request-box">
           <h2 class="sec-title">Säg till när den kommer till min klocka</h2>
-          <p class="sec-lead">Cold Dip kommer till fler klockor. Välj din: e-postappen öppnas med färdigt ämne, du trycker bara på skicka. Jag svarar en gång när den versionen är klar.</p>
-          <div class="interest-row notify-row">
-            <a class="btn" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20notify%20me%3A%20Huawei&amp;body=Hej%20%C5%81ukasz%2C%0A%0AH%C3%B6r%20av%20dig%20n%C3%A4r%20Cold%20Dip%20finns%20f%C3%B6r%20min%20klocka.%20Min%20modell%3A%20%0A">Huawei</a>
-            <a class="btn btn-ghost" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20notify%20me%3A%20Amazfit%20%28Zepp%20App%20Store%29&amp;body=Hej%20%C5%81ukasz%2C%0A%0AH%C3%B6r%20av%20dig%20n%C3%A4r%20Cold%20Dip%20finns%20f%C3%B6r%20min%20klocka.%20Min%20modell%3A%20%0A">Amazfit (Zepp App Store)</a>
-            <a class="btn btn-ghost" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20notify%20me%3A%20Wear%20OS&amp;body=Hej%20%C5%81ukasz%2C%0A%0AH%C3%B6r%20av%20dig%20n%C3%A4r%20Cold%20Dip%20finns%20f%C3%B6r%20min%20klocka.%20Min%20modell%3A%20%0A">Wear OS</a>
-            <a class="btn btn-ghost" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20notify%20me%3A%20Apple%20Watch&amp;body=Hej%20%C5%81ukasz%2C%0A%0AH%C3%B6r%20av%20dig%20n%C3%A4r%20Cold%20Dip%20finns%20f%C3%B6r%20min%20klocka.%20Min%20modell%3A%20%0A">Apple Watch</a>
-          </div>
-          <p class="search-note">Inget nyhetsbrev och ingen spårning — bara ett mejl från mig. · <span class="notify-mail">lukasz.pszenny@gmail.com</span></p>
+          <p class="sec-lead">Cold Dip kommer till fler klockor. Lämna din e-post och välj klocka — jag skriver en gång, när den versionen är klar.</p>
+          <form class="cd-form notify-form" data-cd-form="notify" novalidate data-msg-ok="Tack! Jag mejlar dig när versionen för {p} är klar." data-msg-err="Det gick inte att skicka. Försök igen eller skriv till lukasz.pszenny@gmail.com." data-msg-email="Ange en giltig e-postadress." data-msg-pick="Välj en klocka." data-msg-sending="Skickar…">
+            <fieldset class="nf-platforms">
+              <legend>Vilken klocka?</legend>
+              <label class="nf-chip"><input type="radio" name="platform" value="apple" data-label="Apple Watch"><span>Apple Watch</span></label>
+              <label class="nf-chip"><input type="radio" name="platform" value="wearos" data-label="Wear OS"><span>Wear OS</span></label>
+              <label class="nf-chip"><input type="radio" name="platform" value="huawei" data-label="Huawei"><span>Huawei</span></label>
+              <label class="nf-chip"><input type="radio" name="platform" value="amazfit" data-label="Amazfit"><span>Amazfit</span></label>
+              <label class="nf-chip"><input type="radio" name="platform" value="suunto" data-label="Suunto"><span>Suunto</span></label>
+              <label class="nf-chip"><input type="radio" name="platform" value="inny" data-label="Annan"><span>Annan</span></label>
+            </fieldset>
+            <div class="nf-fields">
+              <label class="nf-field"><span>E-post</span><input type="email" name="email" required autocomplete="email" inputmode="email" maxlength="254"></label>
+              <label class="nf-field"><span>Klockmodell (valfritt)</span><input type="text" name="model" maxlength="120" autocomplete="off"></label>
+            </div>
+            <input class="nf-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <button type="submit" class="btn nf-submit">Meddela mig</button>
+            <p class="nf-status" role="status" aria-live="polite"></p>
+          </form>
+          <p class="search-note nf-privacy">Jag sparar adressen bara för att skicka dig detta enda meddelande. Inget nyhetsbrev. Skriv till mig så raderar jag den. Hellre vanlig e-post? <a class="nf-mail" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20notify%20me">lukasz.pszenny@gmail.com</a></p>
         </div>
       </div>
     </section>
@@ -1066,6 +1082,36 @@
             </a>
           </div>
         </div>
+        <div class="clubs-offers">
+          <article class="card clubs-offer">
+            <h3>🏷️ Klubbkod för Cold Dip Pro</h3>
+            <p>Skriv till mig så får er klubb en egen rabattkod på Pro för medlemmarna.</p>
+          </article>
+          <article class="card clubs-offer">
+            <h3>🖨️ A4-affisch med QR-kod</h3>
+            <p>Till omklädningsrummet, bastun eller klubbens anslagstavla. QR-koden leder till den här webbplatsen.</p>
+            <p class="clubs-poster-links">
+              <a class="btn btn-sm" href="../assets/posters/colddip-plakat-sv.pdf" download data-gc-event="klik-klub-plakat">⬇ Ladda ner PDF</a>
+              <a class="btn btn-ghost btn-sm" href="../assets/posters/colddip-plakat-sv.png" download data-gc-event="klik-klub-plakat">⬇ Ladda ner PNG</a>
+            </p>
+          </article>
+          <article class="card clubs-offer">
+            <h3>⌚ Urtavla med klubbens logga</h3>
+            <p>En Garmin-urtavla med er klubbs logga, på beställning. Berätta vad ni tänker er.</p>
+          </article>
+        </div>
+        <form class="cd-form club-form" data-cd-form="klub" novalidate data-msg-ok="Tack! Jag svarar till adressen du angav." data-msg-err="Det gick inte att skicka. Försök igen eller skriv till lukasz.pszenny@gmail.com." data-msg-email="Ange en giltig e-postadress." data-msg-pick="" data-msg-sending="Skickar…">
+          <h3>Skriv till mig om din klubb</h3>
+          <input type="hidden" name="platform" value="klub">
+          <div class="nf-fields">
+            <label class="nf-field"><span>E-post</span><input type="email" name="email" required autocomplete="email" inputmode="email" maxlength="254"></label>
+            <label class="nf-field"><span>Klubbens namn</span><input type="text" name="model" maxlength="120" autocomplete="organization"></label>
+          </div>
+          <label class="nf-field nf-field-wide"><span>Meddelande (t.ex. Pro-kod, affischer, urtavla med logga)</span><textarea name="message" rows="3" maxlength="2000"></textarea></label>
+          <input class="nf-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit" class="btn nf-submit">Skicka</button>
+          <p class="nf-status" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
 
@@ -1078,9 +1124,9 @@
           <h2 class="sec-title">Vill du ha Cold Dip på Apple Watch eller Suunto?</h2>
           <p class="sec-lead">Har du en idé till en Garmin-app eller en urtavla? Då gör vi den tillsammans. Skriv till mig och berätta vilken klocka du använder.</p>
           <div class="interest-row">
-            <a class="btn" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20I%20want%20Apple%20Watch&amp;body=Hej%20%C5%81ukasz%2C%0A%0A">Jag vill ha den på Apple Watch</a>
-            <a class="btn btn-ghost" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20I%20want%20Suunto&amp;body=Hej%20%C5%81ukasz%2C%0A%0A">Jag vill ha den på Suunto</a>
-            <a class="btn btn-ghost" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20I%20want%20other%20watch&amp;body=Hej%20%C5%81ukasz%2C%0A%0A">Jag använder en annan klocka</a>
+            <a class="btn" href="#notify" data-notify-platform="apple" data-gc-event="klik-chce-apple">Jag vill ha den på Apple Watch</a>
+            <a class="btn btn-ghost" href="#notify" data-notify-platform="suunto" data-gc-event="klik-chce-suunto">Jag vill ha den på Suunto</a>
+            <a class="btn btn-ghost" href="#notify" data-notify-platform="inny" data-gc-event="klik-chce-inny">Jag använder en annan klocka</a>
           </div>
           <div class="cta-row">
             <a class="btn btn-ghost" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%94%20Apple%20Watch%2C%20Suunto%20eller%20en%20id%C3%A9&amp;body=Hej%20%C5%81ukasz%2C%0A%0A">Mejla Łukasz</a>
@@ -1112,10 +1158,10 @@
       <p class="privacy" data-counter-text="Den här webbplatsen räknar besök anonymt med GoatCounter, utan kakor och utan personuppgifter — bara valt språk sparas i webbläsaren om du ändrar det.">Cold Dip samlar inte in personuppgifter på någon server. Dina pass stannar på klockan (och på Garmin även i Garmin Connect). På Garmin kommer vädret från Garmins egen vädertjänst i telefonen; på Amazfit från MET Norway (CC BY 4.0). <span data-privacy-site>Den här webbplatsen använder inga spårare eller analyscookies — i webbläsaren sparas bara språkvalet om du ändrar det.</span></p>
     </div>
   </footer>
-  <script src="../assets/js/config.js?v=20261126c"></script>
+  <script src="../assets/js/config.js?v=20261126f"></script>
   <script src="../assets/js/devices.js?v=20261124p"></script>
   <script src="../assets/js/app.js?v=20261124p"></script>
   <script src="../assets/js/lang.js?v=20261126e"></script>
-  <script src="../assets/js/extras.js?v=20261126e"></script>
+  <script src="../assets/js/extras.js?v=20261126f"></script>
 </body>
 </html>

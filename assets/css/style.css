@@ -1954,3 +1954,73 @@ a.btn[aria-disabled="true"]:hover { color: var(--cta-text); }
 @media (min-width: 800px) and (max-width: 1279px) {
   .nav a.nav-changelog { display: none; }
 }
+
+/* 2026-11-26f: notify + club forms, club offers */
+.cd-form { display: grid; gap: 14px; margin-top: 18px; text-align: left; }
+.nf-platforms { border: 0; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.nf-platforms legend { font-weight: 700; margin-bottom: 8px; color: var(--snow); }
+.nf-chip { position: relative; }
+.nf-chip input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.nf-chip span {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 8px 16px;
+  border: 1px solid var(--line); border-radius: 999px; background: var(--bg-card);
+  color: var(--snow); cursor: pointer; font-weight: 600; font-size: 0.95rem;
+}
+.nf-chip input:checked + span { background: var(--ice); color: var(--cta-text); border-color: var(--ice); }
+.nf-chip input:focus-visible + span { outline: 2px solid var(--ice); outline-offset: 2px; }
+.nf-fields { display: grid; gap: 12px; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .nf-fields { grid-template-columns: 1fr 1fr; } }
+.nf-field { display: grid; gap: 6px; font-size: 0.9rem; color: var(--muted); }
+.nf-field input, .nf-field textarea {
+  width: 100%; min-height: 48px; padding: 12px 14px; font: inherit; font-size: 1rem;
+  color: var(--snow); background: var(--bg); border: 1px solid var(--line); border-radius: 12px;
+}
+.nf-field textarea { min-height: 96px; resize: vertical; }
+.nf-field input:focus, .nf-field textarea:focus { outline: 2px solid var(--ice); outline-offset: 1px; border-color: var(--ice); }
+.nf-hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; opacity: 0; }
+.cd-form .nf-submit { justify-self: start; min-height: 48px; }
+.cd-form .nf-submit:disabled { opacity: 0.6; cursor: progress; }
+.nf-status { margin: 0; min-height: 1.4em; font-weight: 600; }
+.nf-status.is-ok { color: var(--ice); }
+.nf-status.is-err { color: var(--warn); }
+.nf-privacy { margin-top: 12px; }
+@media (max-width: 599px) { .cd-form .nf-submit { justify-self: stretch; width: 100%; } }
+.clubs-offers { display: grid; gap: 14px; margin-top: 22px; grid-template-columns: 1fr; }
+@media (min-width: 800px) { .clubs-offers { grid-template-columns: repeat(3, 1fr); } }
+.clubs-offer h3 { margin: 0 0 6px; font-size: 1.05rem; }
+.clubs-offer p { margin: 0; color: var(--muted); }
+.clubs-poster-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px !important; }
+.btn-sm { min-height: 44px; padding: 8px 16px; font-size: 0.92rem; }
+.club-form { margin-top: 22px; padding: 20px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-elev); }
+.club-form h3 { margin: 0; }
+@media (min-width: 800px) and (max-width: 1279px) { .nav a.nav-clubs { display: none; } }
+
+/* 2026-11-26f: mobile-first hero */
+.hero-title { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 14px; }
+.hero-title h1 { margin-bottom: 12px; }
+.hero-free {
+  display: inline-flex; align-items: center; padding: 6px 14px; border-radius: 999px;
+  background: var(--cta-bg); color: var(--cta-text); font-weight: 800; font-size: 0.9rem; letter-spacing: 0.04em;
+}
+.hero-media { display: none; }
+@media (max-width: 599px) {
+  .hero { padding: 14px 0 28px; }
+  .hero-copy { display: flex; flex-direction: column; }
+  .hero-copy > .badge { display: none; }
+  .hero-title { order: 1; }
+  .hero-title h1 { font-size: 2.6rem; margin: 0; }
+  .hero-copy .local-name { order: 2; font-size: 0.95rem; margin: 6px 0 4px; }
+  .hero-copy .tagline { order: 3; font-size: 1.05rem; margin: 4px 0 8px; }
+  .hero-copy .hero-proof { order: 4; margin: 0 0 12px; font-size: 1rem; }
+  .hero-copy .cta-row { order: 5; margin: 0; }
+  .hero-copy .cta-row .btn-xl { width: 100%; justify-content: center; text-align: center; }
+  .hero-copy .cta-row .btn-ghost { display: none; }
+  .hero-media {
+    order: 6; display: flex; justify-content: center; margin: 14px 0 0;
+    border-radius: var(--radius); overflow: hidden; background: #000;
+  }
+  .hero-media video { display: block; width: auto; max-width: 100%; height: min(38vh, 330px); object-fit: contain; }
+  .hero-copy .search-note { order: 7; margin-top: 14px; }
+  .hero-copy .howto-link { order: 8; }
+  .hero-copy .byline { order: 9; }
+}
