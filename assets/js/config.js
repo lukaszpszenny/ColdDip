@@ -57,6 +57,14 @@
  * morsLevelUnlockUrl    KiezelPay unlock page for Mors Level.
  *                        Default is https://kzl.io/morslevel — change
  *                        only if the product uses a different link.
+ *
+ * goatcounterCode       GoatCounter site code (only the part before
+ *                        .goatcounter.com, e.g. "colddip"). Empty = no
+ *                        counter at all. When set, every page loads
+ *                        GoatCounter's cookieless counter and the
+ *                        privacy note in the footer switches to the
+ *                        sentence that mentions it. Fill it in only
+ *                        after the account with that code exists.
  */
 window.COLDDIP_CONFIG = {
   instinctPending: false,
@@ -70,5 +78,6 @@ window.COLDDIP_CONFIG = {
   proStoreUrl: "https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0",
   proUnlockUrl: "https://kzl.io/cold-dip-pro",
   morsLevelStoreUrl: "https://apps.garmin.com/en-US/apps/fe325c7e-b38d-4a9a-b43e-f5b09780f3a8",
-  morsLevelUnlockUrl: "https://kzl.io/morslevel"
+  morsLevelUnlockUrl: "https://kzl.io/morslevel",
+  goatcounterCode: ""
 };

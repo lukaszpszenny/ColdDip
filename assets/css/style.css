@@ -1932,3 +1932,25 @@ a.btn[aria-disabled="true"]:hover { color: var(--cta-text); }
 .guide-related { margin-top: 26px; }
 .notify-row { flex-direction: row !important; flex-wrap: wrap; gap: 12px; }
 .notify-mail { color: var(--snow); white-space: nowrap; }
+
+/* 2026-11-26b: mobile folds, shorter mobile texts, tap targets */
+.mfold-btn { display: none; }
+@media (max-width: 599px) {
+  .mfold-on .mfold-item { display: none !important; }
+  .mfold-btn {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+    margin: 14px 0 6px;
+  }
+  .hero .search-note,
+  .anim-note { display: none; }
+  .mail-copy, .mail-gmail { min-height: 36px; min-width: 36px; }
+  .footer a, .footer-guides a { display: inline-block; padding: 6px 0; }
+  .faq summary { min-height: 48px; }
+  .lang-panel a { min-height: 44px; display: flex; align-items: center; }
+}
+@media (min-width: 800px) and (max-width: 1279px) {
+  .nav a.nav-changelog { display: none; }
+}

@@ -89,3 +89,25 @@ The step list next to the video is localized in each page (`<!-- howto-video:sta
 - **`#clubs`:** copy-paste text and downloadable graphics in `assets/img/share/` (`colddip-1200x630.jpg` = og image, `colddip-post-<lang>.jpg` = promo 1 per language).
 - **Guides:** `guides/*.html` (English) and `pl/poradnik/*.html` (Polish), linked from `#guides` and the footer on every language page; other languages link to the English guides. Listed in `sitemap.xml`.
 - `assets/js/extras.js` holds the copy button and the reduced-motion pause. No network requests.
+
+## Sharing, Search Console, counter, mobile (added 26 Nov 2026)
+
+- Every page has absolute Open Graph / Twitter tags. Share images
+  (1200×630) are `assets/img/share/og-<lang>.jpg` (Garmin pages and
+  guides) and `og-amazfit-<lang>.jpg` (Amazfit pages).
+- `sitemap.xml` lists all languages, Amazfit pages, privacy pages and
+  all 33 guide pages with hreflang alternates. Submit it in Google
+  Search Console after the site is verified.
+- Search Console: verification uses an HTML meta tag. Paste the real
+  `<meta name="google-site-verification" content="…">` line into the
+  `<head>` of `index.html` only when Google gives it to you.
+- GoatCounter: set `goatcounterCode` in `assets/js/config.js` (for
+  example `"colddip"`) once that account exists. Empty = no counter.
+  When set, the footer privacy note switches to the text in
+  `data-counter-text`.
+- Guides exist in all 11 languages: `guides/` (en), `pl/poradnik/`,
+  `de/ratgeber/`, `cs/pruvodce/`, `sk/sprievodca/`, `fi/oppaat/`,
+  `nb/guider/`, `sv/guider/`, `es/guias/`, `ru/sovety/`, `uk/porady/`.
+- On phones (under 600 px) long sections (Pro, watch faces, steps,
+  safety, What's new) show a short part and a "show more" button.
+
