@@ -78,3 +78,14 @@ The `#faces` band (nav label is the localized plural: Watch faces / Tarcze / Zif
 `assets/video/howto-pl.mp4` (Polish watch UI, used on `/pl/`) and `assets/video/howto-en.mp4` (English watch UI, all other pages), with `.jpg` posters.
 Recorded in the Connect IQ simulator (Venu 2 Plus) from the live 1.0.3 app, time sped up, no audio. Self-hosted, so the page still makes no third-party requests.
 The step list next to the video is localized in each page (`<!-- howto-video:start -->` … `<!-- howto-video:end -->`).
+
+## Reviews, notify, clubs, guides (added 26 Nov 2026)
+
+- **Hero CTA:** big “Download free” button plus a rating line (5.0 ★ in Connect IQ · 400+ downloads) that links to `#reviews`.
+- **`#reviews`:** four real 5★ reviews copied word for word from the public Connect IQ Store listing (Monika, Radek, Pawel, Justyna). Originals are Polish; other languages show a marked translation under each quote. Do not add invented quotes. The older `#testimonials` block (Facebook quotes) stays hidden behind `showTestimonials`.
+- **`#gallery`:** slimmed to one row (Venu / AMOLED: before entry, in water, after exit) plus a short looping clip `assets/video/dip-loop-{pl,en}.mp4` cut from the real simulator how-to recordings (no retouching). The clip is paused for `prefers-reduced-motion`.
+- **FAQ:** six more questions in the existing `#howto` accordion (phone, water temperature, Pro, KiezelPay code, supported watches, other platforms).
+- **`#notify`:** prefilled `mailto:` buttons per platform (Huawei, Amazfit / Zepp App Store, Wear OS, Apple Watch). No backend, no third-party form.
+- **`#clubs`:** copy-paste text and downloadable graphics in `assets/img/share/` (`colddip-1200x630.jpg` = og image, `colddip-post-<lang>.jpg` = promo 1 per language).
+- **Guides:** `guides/*.html` (English) and `pl/poradnik/*.html` (Polish), linked from `#guides` and the footer on every language page; other languages link to the English guides. Listed in `sitemap.xml`.
+- `assets/js/extras.js` holds the copy button and the reduced-motion pause. No network requests.
