@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cold Dip – app voor winterzwemmen en ijsbaden op Garmin-horloges</title>
+  <meta name="description" content="Gratis Garmin-app voor koude dips en winterzwemmen. Fases, timer, hartslag, watertemperatuur, GPS en meer. Werkt op 130+ Garmin-horloges.">
+  <meta name="author" content="Łukasz Pszenny">
+  <meta name="theme-color" content="#07111c">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Cold Dip">
+  <meta property="og:title" content="Cold Dip – app voor winterzwemmen en ijsbaden op Garmin-horloges">
+  <meta property="og:description" content="Gratis Garmin-app voor koude dips en winterzwemmen. Fases, timer, hartslag, watertemperatuur, GPS en meer. Werkt op 130+ Garmin-horloges.">
+  <meta property="og:url" content="https://lukaszpszenny.github.io/ColdDip/nl/">
+  <meta property="og:image" content="https://lukaszpszenny.github.io/ColdDip/assets/img/share/og-en.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Cold Dip – app voor winterzwemmen en ijsbaden op Garmin-horloges">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="pl_PL">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="cs_CZ">
+  <meta property="og:locale:alternate" content="sk_SK">
+  <meta property="og:locale:alternate" content="fi_FI">
+  <meta property="og:locale:alternate" content="nb_NO">
+  <meta property="og:locale:alternate" content="sv_SE">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="ru_RU">
+  <meta property="og:locale:alternate" content="uk_UA">
+  <meta property="og:locale:alternate" content="da_DK">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta property="og:locale:alternate" content="hu_HU">
+  <meta property="og:locale:alternate" content="it_IT">
+  <meta property="og:locale:alternate" content="lt_LT">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cold Dip – app voor winterzwemmen en ijsbaden op Garmin-horloges">
+  <meta name="twitter:description" content="Gratis Garmin-app voor koude dips en winterzwemmen. Fases, timer, hartslag, watertemperatuur, GPS en meer. Werkt op 130+ Garmin-horloges.">
+  <meta name="twitter:image" content="https://lukaszpszenny.github.io/ColdDip/assets/img/share/og-en.jpg">
+  <meta name="twitter:image:alt" content="Cold Dip – app voor winterzwemmen en ijsbaden op Garmin-horloges">
+  <link rel="canonical" href="https://lukaszpszenny.github.io/ColdDip/nl/">
+  <link rel="icon" href="../assets/img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="../assets/img/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <meta name="apple-mobile-web-app-title" content="Cold Dip">
+  <link rel="preload" as="image" type="image/webp" href="../assets/img/promo/en/1.webp" fetchpriority="high">
+  <link rel="alternate" hreflang="en" href="https://lukaszpszenny.github.io/ColdDip/">
+  <link rel="alternate" hreflang="pl" href="https://lukaszpszenny.github.io/ColdDip/pl/">
+  <link rel="alternate" hreflang="de" href="https://lukaszpszenny.github.io/ColdDip/de/">
+  <link rel="alternate" hreflang="cs" href="https://lukaszpszenny.github.io/ColdDip/cs/">
+  <link rel="alternate" hreflang="sk" href="https://lukaszpszenny.github.io/ColdDip/sk/">
+  <link rel="alternate" hreflang="fi" href="https://lukaszpszenny.github.io/ColdDip/fi/">
+  <link rel="alternate" hreflang="nb" href="https://lukaszpszenny.github.io/ColdDip/nb/">
+  <link rel="alternate" hreflang="sv" href="https://lukaszpszenny.github.io/ColdDip/sv/">
+  <link rel="alternate" hreflang="es" href="https://lukaszpszenny.github.io/ColdDip/es/">
+  <link rel="alternate" hreflang="ru" href="https://lukaszpszenny.github.io/ColdDip/ru/">
+  <link rel="alternate" hreflang="uk" href="https://lukaszpszenny.github.io/ColdDip/uk/">
+  <link rel="alternate" hreflang="da" href="https://lukaszpszenny.github.io/ColdDip/da/">
+  <link rel="alternate" hreflang="fr" href="https://lukaszpszenny.github.io/ColdDip/fr/">
+  <link rel="alternate" hreflang="nl" href="https://lukaszpszenny.github.io/ColdDip/nl/">
+  <link rel="alternate" hreflang="hu" href="https://lukaszpszenny.github.io/ColdDip/hu/">
+  <link rel="alternate" hreflang="it" href="https://lukaszpszenny.github.io/ColdDip/it/">
+  <link rel="alternate" hreflang="lt" href="https://lukaszpszenny.github.io/ColdDip/lt/">
+  <link rel="alternate" hreflang="x-default" href="https://lukaszpszenny.github.io/ColdDip/">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261127a">
+  <script>
+  (function () {
+    var LANGS = ["en","pl","de","cs","sk","fi","nb","sv","es","ru","uk","da","fr","nl","hu","it","lt"];
+    var parts = location.pathname.split("/").filter(Boolean);
+    if (parts.length && parts[parts.length - 1] === "index.html") parts.pop();
+    if (parts.length && LANGS.indexOf(parts[parts.length - 1]) !== -1) parts.pop();
+    var root = location.origin + "/" + (parts.length ? parts.join("/") + "/" : "");
+    function abs(lang) { return (!lang || lang === "en" || lang === "x-default") ? root : root + lang + "/"; }
+    var here = document.documentElement.lang || "en";
+    document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(function (l) {
+      l.href = abs(l.getAttribute("hreflang"));
+    });
+    var canon = document.querySelector('link[rel="canonical"]');
+    if (canon) canon.href = abs(here);
+    function setMeta(sel, val) {
+      var m = document.querySelector(sel);
+      if (m) m.setAttribute("content", val);
+    }
+    setMeta('meta[property="og:url"]', abs(here));
+  })();
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Cold Dip",
+  "alternateName": [
+    "Morsowanie",
+    "Eisbaden",
+    "Otužování",
+    "Otužovanie",
+    "Avanto",
+    "Isbading",
+    "Vinterbad",
+    "Baño frío",
+    "Моржевание",
+    "Моржування",
+    "Vinterbadning",
+    "Bain froid",
+    "IJsbaden",
+    "Jeges fürdés",
+    "Bagno freddo",
+    "Žiemos maudynės"
+  ],
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Garmin Connect IQ",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "url": "https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0",
+  "downloadUrl": "https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0",
+  "installUrl": "https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0",
+  "isAccessibleForGratis": true,
+  "description": "Gratis Garmin-app voor koude dips en winterzwemmen. Fases, timer, hartslag, watertemperatuur, GPS en meer. Werkt op 130+ Garmin-horloges.",
+  "author": {
+    "@type": "Person",
+    "name": "Łukasz Pszenny",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bydgoszcz",
+      "addressCountry": "PL"
+    }
+  },
+  "inLanguage": [
+    "en",
+    "pl",
+    "de",
+    "cs",
+    "sk",
+    "fi",
+    "nb",
+    "sv",
+    "es",
+    "ru",
+    "uk",
+    "da",
+    "fr",
+    "nl",
+    "hu",
+    "it",
+    "lt"
+  ],
+  "featureList": [
+    "Voor / in het water / erna",
+    "Hartslag en watertemperatuur",
+    "Weer vanaf je telefoon",
+    "GPS-kaart van je dip",
+    "Hoe je je voelde, 1–5",
+    "Opgeslagen als een eigen activiteit"
+  ]
+}
+  </script>
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true"></div>
+  <a class="skip" href="#main">Ga naar inhoud</a>
+  <header class="header">
+    <div class="wrap">
+      <a class="brand" href="./" aria-label="Cold Dip">
+        <img src="../assets/img/logo.webp" width="36" height="36" alt="" decoding="async">
+        Cold Dip
+      </a>
+      <nav class="nav">
+        <a href="#features">Functies</a>
+        <a class="nav-pro" href="#pro">Pro</a>
+        <a href="#watches">Horloges</a>
+        <a class="nav-faces" href="#faces">Wijzerplaten <span class="badge-new">New</span></a>
+        <a href="#howto">Hoe het werkt</a>
+        <a class="nav-changelog" href="#changelog">Wat is nieuw</a>
+        <a class="nav-clubs" href="#clubs">Voor clubs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="header-cta" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">Download de app</a>
+      <details class="lang">
+        <summary aria-label="Taal: Nederlands"><img class="lang-flag" src="../assets/flags/gb.png?v=20261127l" alt="" width="18" height="13"><span>Nederlands</span></summary>
+        <ul class="lang-panel"><li><a href="../" hreflang="en" lang="en"><img class="lang-flag" src="../assets/flags/gb.png?v=20261127l" alt="" width="18" height="13">English</a></li><li><a href="../pl/" hreflang="pl" lang="pl"><img class="lang-flag" src="../assets/flags/pl.png?v=20261127l" alt="" width="18" height="13">Polski</a></li><li><a href="../de/" hreflang="de" lang="de"><img class="lang-flag" src="../assets/flags/de.png?v=20261127l" alt="" width="18" height="13">Deutsch</a></li><li><a href="../cs/" hreflang="cs" lang="cs"><img class="lang-flag" src="../assets/flags/cz.png?v=20261127l" alt="" width="18" height="13">Čeština</a></li><li><a href="../sk/" hreflang="sk" lang="sk"><img class="lang-flag" src="../assets/flags/sk.png?v=20261127l" alt="" width="18" height="13">Slovenčina</a></li><li><a href="../fi/" hreflang="fi" lang="fi"><img class="lang-flag" src="../assets/flags/fi.png?v=20261127l" alt="" width="18" height="13">Suomi</a></li><li><a href="../nb/" hreflang="nb" lang="nb"><img class="lang-flag" src="../assets/flags/no.png?v=20261127l" alt="" width="18" height="13">Norsk</a></li><li><a href="../sv/" hreflang="sv" lang="sv"><img class="lang-flag" src="../assets/flags/se.png?v=20261127l" alt="" width="18" height="13">Svenska</a></li><li><a href="../es/" hreflang="es" lang="es"><img class="lang-flag" src="../assets/flags/es.png?v=20261127l" alt="" width="18" height="13">Español</a></li><li><a href="../ru/" hreflang="ru" lang="ru"><img class="lang-flag" src="../assets/flags/ru.png?v=20261127l" alt="" width="18" height="13">Русский</a></li><li><a href="../uk/" hreflang="uk" lang="uk"><img class="lang-flag" src="../assets/flags/ua.png?v=20261127l" alt="" width="18" height="13">Українська</a></li><li><a href="../da/" hreflang="da" lang="da"><img class="lang-flag" src="../assets/flags/dk.png?v=20261127l" alt="" width="18" height="13">Dansk</a></li><li><a href="../fr/" hreflang="fr" lang="fr"><img class="lang-flag" src="../assets/flags/fr.png?v=20261127l" alt="" width="18" height="13">Français</a></li><li><a href="./" hreflang="nl" lang="nl" aria-current="page"><img class="lang-flag" src="../assets/flags/nl.png?v=20261127l" alt="" width="18" height="13">Nederlands</a></li><li><a href="../hu/" hreflang="hu" lang="hu"><img class="lang-flag" src="../assets/flags/hu.png?v=20261127l" alt="" width="18" height="13">Magyar</a></li><li><a href="../it/" hreflang="it" lang="it"><img class="lang-flag" src="../assets/flags/it.png?v=20261127l" alt="" width="18" height="13">Italiano</a></li><li><a href="../lt/" hreflang="lt" lang="lt"><img class="lang-flag" src="../assets/flags/lt.png?v=20261127l" alt="" width="18" height="13">Lietuvių</a></li></ul>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <span class="badge">Gratis app voor Garmin-horloges</span>
+          <div class="hero-title"><h1>Cold Dip</h1><span class="hero-free">GRATIS</span></div>
+          
+          <p class="tagline">Koude dips en winterzwemmen, juist vastgelegd — niet als een zwemronde.</p>
+          <div class="cta-row">
+            <a class="btn btn-xl" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank"><span class="btn-main">Gratis downloaden</span><small class="btn-sub">Connect IQ Store · Garmin</small></a>
+            <a class="btn btn-ghost" href="#faces">Bekijk de wijzerplaten</a>
+          </div>
+          <figure class="hero-media" data-hero-loop>
+            <video class="loop-video" src="../assets/video/dip-loop-en.mp4" poster="assets/video/dip-loop-en.jpg" width="300" height="386" autoplay muted loop playsinline preload="metadata" aria-label="Animatie: Cold Dip op een Garmin-horloge — aan de wal, in het water, na het uitstappen, hoe je je voelt en opslaan"></video>
+          </figure>
+          <p class="hero-proof"><a href="#reviews"><span class="stars" aria-hidden="true">★★★★★</span> <b>5.0</b> in Connect IQ · <b>1000+</b> downloads</a></p>
+          <p class="search-note">Of zoek op “Cold Dip” in de Connect IQ-app op je telefoon.</p>
+          <p class="howto-link"><a href="#how-to-video">▶ Bekijk: hoe je het gebruikt (1 min)</a></p>
+          <p class="byline">Gemaakt door Łukasz Pszenny, winterzwemmer uit Bydgoszcz, Polen.</p>
+        </div>
+        <div class="gallery">
+          <figure>
+            <img src="../assets/img/promo/en/1.webp" width="720" height="900" alt="Startscherm: GPS, weer en watertemperatuur voordat je erin gaat" fetchpriority="high" decoding="async">
+            <figcaption>Voordat je erin gaat</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/promo/en/2.webp" width="720" height="900" alt="In het water: tijd en hartslag" loading="lazy" decoding="async">
+            <figcaption>In het water</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/promo/en/3.webp" width="720" height="900" alt="Nadat je eruit stapt: overzicht en hoe je je voelt" loading="lazy" decoding="async">
+            <figcaption>Nadat je eruit stapt</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="platforms" class="platforms-band" aria-labelledby="platforms-title">
+      <div class="wrap">
+        <p class="morslevel-kicker" id="platforms-title">Platforms</p>
+        <p class="platforms-lead">Cold Dip is vandaag beschikbaar op Garmin-horloges. De Amazfit-versie (Zepp OS) is in beoordeling in de Zepp App Store. Versies voor Huawei, Wear OS en Apple Watch zijn onderweg.</p>
+        <ul class="platforms-list">
+          <li class="platforms-item is-live">
+            <a href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">
+              <span class="platforms-name">Garmin</span>
+              <span class="platforms-status">Nu beschikbaar</span>
+            </a>
+          </li>
+          <li class="platforms-item is-live is-review">
+            <a href="amazfit.html">
+              <span class="platforms-name">Amazfit <span class="platforms-note">Zepp OS</span></span>
+              <span class="platforms-status">Beschikbaar / binnenkort in de Zepp App Store</span>
+            </a>
+          </li>
+          <li class="platforms-item is-soon">
+            <span class="platforms-name">Huawei</span>
+            <span class="platforms-status">Binnenkort</span>
+          </li>
+          <li class="platforms-item is-soon">
+            <span class="platforms-name">Wear OS <span class="platforms-note">Samsung Galaxy Watch, Pixel Watch</span></span>
+            <span class="platforms-status">Binnenkort</span>
+          </li>
+          <li class="platforms-item is-soon">
+            <span class="platforms-name">Apple Watch</span>
+            <span class="platforms-status">Binnenkort</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="wrap">
+        <h2 class="sec-title">Wat hij doet</h2>
+        <p class="sec-lead">Gemaakt voor een dip, niet voor een zwembeurt in het bad. Jij houdt de hele tijd de controle.</p>
+        <div class="features">
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14"/><path d="M5 12h14"/><path d="M5 17h14"/><circle cx="9" cy="7" r="1.6" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"/><circle cx="15" cy="17" r="1.6" fill="currentColor" stroke="none"/></svg></div>
+            <h3>Voor / in het water / erna</h3>
+            <p>De bovenste knop wisselt van fase. De tijd in het water blijft gewoon lopen — de app zegt nooit dat je eruit moet. Dat bepaal jij. Je laatste tijd is alleen een referentiepunt, geen doel om te verbreken.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.6-7 10-7 10z"/></svg></div>
+            <h3>Hartslag en watertemperatuur</h3>
+            <p>De hartslag wordt de hele tijd vastgelegd. De watertemperatuur voer je handmatig in en die wordt bij de activiteit opgeslagen.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 16h10a4 4 0 0 0 0-8 6 6 0 0 0-11.5 1.5A3.5 3.5 0 0 0 7 16z"/><path d="M8 19v1M12 19v2M16 19v1"/></svg></div>
+            <h3>Weer vanaf je telefoon</h3>
+            <p>Luchttemperatuur, gevoelstemperatuur en wind — uit het Garmin-weer op je telefoon.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.2"/></svg></div>
+            <h3>GPS-kaart van je dip</h3>
+            <p>De plek van je dip wordt opgeslagen en op een kaart in Garmin Connect getoond.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 13.5s1.5 2.5 4 2.5 4-2.5 4-2.5"/><path d="M9 9.5h.01M15 9.5h.01"/></svg></div>
+            <h3>Hoe je je voelde, 1–5</h3>
+            <p>Na elke dip een snelle beoordeling van hoe je je voelt. Ook hartslagpiek en herstel, plus Body Battery en stress voordat je erin ging.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></div>
+            <h3>Opgeslagen als een eigen activiteit</h3>
+            <p>Alles wordt in Garmin Connect opgeslagen als een eigen activiteit, niet als een zwemronde.</p>
+          </article>
+        </div>
+        <div class="compat">
+          <h3>17 talen</h3>
+          <p>Engels, Pools, Duits, Tsjechisch, Slowaaks, Fins, Noors, Zweeds, Spaans, Russisch, Oekraïens, Deens, Frans, Nederlands, Hongaars, Italiaans en Litouws. De app volgt automatisch de taal van het horloge.</p>
+          <div class="pill-row">
+<a class="pill" href="../" hreflang="en" lang="en"><img class="lang-flag" src="../assets/flags/gb.png?v=20261127l" alt="" width="18" height="13">English</a><a class="pill" href="../pl/" hreflang="pl" lang="pl"><img class="lang-flag" src="../assets/flags/pl.png?v=20261127l" alt="" width="18" height="13">Polski</a><a class="pill" href="../de/" hreflang="de" lang="de"><img class="lang-flag" src="../assets/flags/de.png?v=20261127l" alt="" width="18" height="13">Deutsch</a><a class="pill" href="../cs/" hreflang="cs" lang="cs"><img class="lang-flag" src="../assets/flags/cz.png?v=20261127l" alt="" width="18" height="13">Čeština</a><a class="pill" href="../sk/" hreflang="sk" lang="sk"><img class="lang-flag" src="../assets/flags/sk.png?v=20261127l" alt="" width="18" height="13">Slovenčina</a><a class="pill" href="../fi/" hreflang="fi" lang="fi"><img class="lang-flag" src="../assets/flags/fi.png?v=20261127l" alt="" width="18" height="13">Suomi</a><a class="pill" href="../nb/" hreflang="nb" lang="nb"><img class="lang-flag" src="../assets/flags/no.png?v=20261127l" alt="" width="18" height="13">Norsk</a><a class="pill" href="../sv/" hreflang="sv" lang="sv"><img class="lang-flag" src="../assets/flags/se.png?v=20261127l" alt="" width="18" height="13">Svenska</a><a class="pill" href="../es/" hreflang="es" lang="es"><img class="lang-flag" src="../assets/flags/es.png?v=20261127l" alt="" width="18" height="13">Español</a><a class="pill" href="../ru/" hreflang="ru" lang="ru"><img class="lang-flag" src="../assets/flags/ru.png?v=20261127l" alt="" width="18" height="13">Русский</a><a class="pill" href="../uk/" hreflang="uk" lang="uk"><img class="lang-flag" src="../assets/flags/ua.png?v=20261127l" alt="" width="18" height="13">Українська</a><a class="pill" href="../da/" hreflang="da" lang="da"><img class="lang-flag" src="../assets/flags/dk.png?v=20261127l" alt="" width="18" height="13">Dansk</a><a class="pill" href="../fr/" hreflang="fr" lang="fr"><img class="lang-flag" src="../assets/flags/fr.png?v=20261127l" alt="" width="18" height="13">Français</a><a class="pill" href="./" hreflang="nl" lang="nl"><img class="lang-flag" src="../assets/flags/nl.png?v=20261127l" alt="" width="18" height="13">Nederlands</a><a class="pill" href="../hu/" hreflang="hu" lang="hu"><img class="lang-flag" src="../assets/flags/hu.png?v=20261127l" alt="" width="18" height="13">Magyar</a><a class="pill" href="../it/" hreflang="it" lang="it"><img class="lang-flag" src="../assets/flags/it.png?v=20261127l" alt="" width="18" height="13">Italiano</a><a class="pill" href="../lt/" hreflang="lt" lang="lt"><img class="lang-flag" src="../assets/flags/lt.png?v=20261127l" alt="" width="18" height="13">Lietuvių</a>
+          </div>
+        </div>
+        <div class="compat">
+          <h3 data-compat-title data-compat-live="Werkt op 130+ Garmin-horloges">Werkt op 130+ Garmin-horloges</h3>
+          <p>Forerunner, Fenix, Epix, Enduro, Venu, Vivoactive, Instinct 2 / 3 / E / Crossover en meer. Niet ondersteund: zeer oude horloges zoals de Forerunner 920XT (Connect IQ 1.x).</p>
+        </div>
+      
+      </div>
+    </section>
+
+    <section id="pro" class="pro-band" data-mfold="Show all Pro features and comparison">
+      <div class="wrap">
+        <div class="face-copy">
+          <span class="badge" data-pro-soon hidden>Binnenkort in de Connect IQ Store</span>
+          <h2 class="sec-title">Cold Dip Pro <span class="pro-star">⭐ PRO</span></h2>
+          <p class="local-name">Optionele extra's voor de gratis app — je betaalt alleen als je ze wilt</p>
+          <p class="sec-lead">De app die je al gebruikt blijft gratis. Pro is voor mensen die wat meer uit het seizoen willen: nieuwe manieren om te trainen, een duidelijker beeld van hun voortgang, en een eenvoudiger scherm in het water.</p>
+          <p class="face-price">$4.99 <small>eenmalig, plus btw waar dat verplicht is · 7 dagen gratis proef</small></p>
+          <p class="cta-row">
+            <a class="btn btn-pro" href="#pro-unlock">Probeer Pro 7 dagen gratis — daarna $4.99</a>
+            <a class="btn" data-pro-store hidden href="#">Haal de update in Connect IQ</a>
+          </p>
+        </div>
+        <div class="pro-features">
+          <article class="card">
+            <h3>Sauna, contrast en nieuwe modi <span class="pro-star">⭐ PRO</span></h3>
+            <p>Doe een sauna met het horloge om je pols, neem een koude douche, volg een begeleid contrast van sauna en water, of doe een korte ademvoorbereiding voordat je erin gaat. Een fasewissel bevestig je altijd met de knop.</p>
+          </article>
+          <article class="card">
+            <h3>Je eigen meldingen in het water <span class="pro-star">⭐ PRO</span></h3>
+            <p>Benoemde fases en meldingen op de tijden die jij kiest, bovenop de gratis minuut-, halverwege- en 3-2-1-meldingen die blijven zoals ze zijn.</p>
+          </article>
+          <article class="card">
+            <h3>Zie je hele seizoen <span class="pro-star">⭐ PRO</span></h3>
+            <p>Totale tijd in het water en in de sauna, records aller tijden en dit seizoen (koudste water, langste dip), en geschiedenis tot 200 sessies. De gratis lijst toont nog steeds de laatste 30.</p>
+          </article>
+          <article class="card">
+            <h3>Badges en dagelijkse reeksen <span class="pro-star">⭐ PRO</span></h3>
+            <p>Houd een reeks van 7, 14 of 30 dagen vol, en verdien badges voor 10, 25, 50 en 100 sessies, een eerste dip onder 5°C, een contrastsessie, en een sauna plus dip in één keer.</p>
+          </article>
+          <article class="card">
+            <h3>Extra schermen en kleurthema's <span class="pro-star">⭐ PRO</span></h3>
+            <p>Een grote timer, een pagina voor hartslag en rondes, en thema's (ijs, donker, hoog contrast, sauna). Wissel van pagina met Omhoog en Omlaag.</p>
+          </article>
+          <article class="card">
+            <h3>Eenvoudige modus, gemaakt voor handschoenen <span class="pro-star">⭐ PRO</span></h3>
+            <p>Een enorme timer in het water, watertemperatuur en hartslag. Eén knop om te starten en te stoppen. Geen extra menu's of schermen. Zet hem aan in de instellingen nadat je Pro hebt ontgrendeld.</p>
+          </article>
+          <article class="card">
+            <h3>Een tijdhint — geen limiet <span class="pro-star">⭐ PRO</span></h3>
+            <p>Een voorgestelde tijd op basis van de watertemperatuur, volgens een gangbare clubregel (ongeveer evenveel minuten als het water °C is, tussen 0:30 en 5:00). Het is alleen een hint: de app beëindigt nooit je sessie en zegt nooit dat een tijd veilig is.</p>
+          </article>
+          <article class="card">
+            <h3>Glance- en wijzerplaatcomplicaties</h3>
+            <p>Op nieuwere horloges kun je een glance en complicaties vastmaken: je dagelijkse reeks, laatste diptijd en seizoensminuten. De glance is gratis op die horloges. Complicaties vragen een wijzerplaat die app-complicaties ondersteunt.</p>
+          </article>
+          <article class="card">
+            <h3>Een sessiekaart die je kunt fotograferen <span class="pro-star">⭐ PRO</span></h3>
+            <p>Als je een dip opslaat, toont een eenvoudige kaart tijd, temperatuur, hoe je je voelde en je reeks. Fotografeer het scherm om het te delen. Een geschiedenislijst blijft op het horloge, en Garmin Connect krijgt nog steeds de FIT-activiteit. Er is geen cloudexport of Instagram-afbeelding — Connect IQ kan zelf geen foto's versturen.</p>
+          </article>
+          <article class="card">
+            <h3>Hartslag- en herstelgrafiek <span class="pro-star">⭐ PRO</span></h3>
+            <p>Na een dip zie je een eenvoudige hartslagcurve, je piek en 1- en 2-minutenherstelswaarden. Het is alleen een hint, geen medisch advies.</p>
+          </article>
+          <article class="card">
+            <h3>Opgeslagen plekken, voordat je van huis gaat <span class="pro-star">⭐ PRO</span></h3>
+            <p>Sla een dipplek op met de laatste watertemperatuur die je daar vastlegde. Als je in de buurt bent, kan het startscherm dat laatste bezoek tonen. Dit is geen live meertemperatuur — Connect IQ heeft geen API voor watertemperatuur.</p>
+          </article>
+          <article class="card">
+            <h3>Horloge buiten de sauna, plus opwarming <span class="pro-star">⭐ PRO</span></h3>
+            <p>Als je het horloge buiten laat zodat het niet oververhit, zet de optie aan: de app verwacht geen polshartslag in de sauna en kan daarna een opwarmfase starten. Je kunt opwarming na een dip ook vanuit het menu starten.</p>
+          </article>
+        </div>
+        <div class="cmp-wrap">
+          <h3 class="sec-title" style="font-size:1.35rem;margin-bottom:16px;">Gratis en Pro, naast elkaar</h3>
+          <table class="cmp">
+            <thead>
+              <tr>
+                <th scope="col">Wat erbij zit</th>
+                <th scope="col">Gratis</th>
+                <th class="pro-col" scope="col">Pro <span class="pro-star">⭐ PRO</span></th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">Alles wat al in Cold Dip 1.0.3 zit — vier profielen, geschiedenis van 30, begeleide ademhaling, GPS en meer</th>
+              <td class="is-yes">✓ Ja</td>
+              <td class="is-yes">✓ Ja</td>
+            </tr>
+            <tr>
+              <th scope="row">Sauna, contrast en nieuwe modi <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Ja</td>
+            </tr>
+            <tr>
+              <th scope="row">Je eigen meldingen in het water <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Ja</td>
+            </tr>
+            <tr>
+              <th scope="row">Zie je hele seizoen <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Ja</td>
+            </tr>
+            <tr>
+              <th scope="row">Records aller tijden en dit seizoen — koudste water, langste dip <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Ja</td>
+            </tr>
+            <tr>
+              <th scope="row">Badges en dagelijkse reeksen <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Ja</td>
+            </tr>
+            <tr>
+              <th scope="row">Extra schermen en kleurthema's <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Ja</td>
+            </tr>
+            <tr>
+              <th scope="row">Eenvoudige modus, gemaakt voor handschoenen <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Ja</td>
+            </tr>
+            <tr>
+              <th scope="row">Een tijdhint — geen limiet <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Ja</td>
+            </tr>
+            <tr>
+              <th scope="row">Glance- en wijzerplaatcomplicaties (nieuwere horloges)</th>
+              <td class="is-yes">Op nieuwere horloges</td>
+              <td class="is-yes">Op nieuwere horloges</td>
+            </tr>
+            <tr>
+              <th scope="row">Sessiekaart en geschiedenislijst <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Ja</td>
+            </tr>
+            <tr>
+              <th scope="row">Hartslag- en herstelgrafiek <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Ja</td>
+            </tr>
+            <tr>
+              <th scope="row">Opgeslagen plekken met de laatste watertemperatuur <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Ja</td>
+            </tr>
+            <tr>
+              <th scope="row">Horloge buiten de sauna en opwarming <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Ja</td>
+            </tr>
+            <tr>
+              <th scope="row">Prijs</th>
+              <td>Gratis</td>
+              <td class="pro-col">7 dagen proef, daarna eenmalig $4.99</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pro-unlock" id="pro-unlock">
+          <h3>Hoe ontgrendelen</h3>
+          <ol class="face-steps">
+            <li>Werk Cold Dip bij naar 1.2.0. De app toont wat er nieuw is en start een gratis proef van 7 dagen van Pro.</li>
+            <li>Als je Pro wilt houden, verschijnt er een 6-cijferige code op het horloge. Voer die in op <a href="https://kzl.io/cold-dip-pro" data-pro-unlock rel="noopener" target="_blank">kzl.io/cold-dip-pro</a> — een eenmalige betaling van $4.99 via KiezelPay.</li>
+            <li>Houd je telefoon in de buurt, met Garmin Connect actief en Bluetooth aan. Het horloge heeft die verbinding nodig om te ontgrendelen, meestal binnen 5 minuten.</li>
+          </ol>
+        </div>
+                <div class="pro-compat">
+          <h3>Op welke horloges draait Pro?</h3>
+          <p>Pro draait op nieuwere Garmin-horloges met Connect IQ 4 of later, waaronder Venu 2 / 3 / 4, Venu Sq 2, Venu X1, vívoactive 5 / 6, Forerunner 165 / 170 / 255 / 265 / 570 / 955 / 965 / 970, fēnix 7 / 8 / 9, epix (Gen 2), Instinct 3 AMOLED, Descent Mk3, Enduro 3 / 4, Approach S50 / S70 / S72 en MARQ (Gen 2) / (Gen 3). Het draait niet op oudere of geheugenarme modellen zoals fēnix 5 / 6, de eerste Venu, vívoactive 3 / 4, Forerunner 55 / 245 / 645 / 945, Instinct 2, Instinct 3 Solar of Instinct E — de gratis app werkt daar nog steeds. <a href="#watches">Controleer je model in de lijst</a>.</p>
+        </div>
+        <p class="pro-note">In Garmin Connect wordt een saunasessie opgeslagen als training of meditatie, omdat Garmin geen activiteitstype sauna heeft.</p>
+        <p class="pro-disclaimer">De tijdhint is geen medisch advies en betekent niet dat een sessie veilig is. Koud water en sauna zijn riskant. Raadpleeg een arts, ga nooit alleen, en gebruik je eigen oordeel. Jij houdt de hele tijd de controle.</p>
+      </div>
+    </section>
+
+<section id="watches"
+      data-i18n-supported="Supported"
+      data-i18n-copy="Copy"
+      data-i18n-copied="Copied"
+      data-i18n-gmail="Write via Gmail"
+      data-i18n-more="{n} more matches — type a little more to narrow the list."
+      data-i18n-not-found="This model is not on the supported list."
+      data-i18n-not-found-body="Cold Dip only runs on Garmin watches with Connect IQ 3.0 or later."
+      data-i18n-legacy="This is an older watch with Connect IQ 1.x or 2.x, so Cold Dip cannot run on it. It does not have the features the app needs, and there is not enough memory."
+      data-i18n-ask="Ask if your model can be added"
+      data-i18n-ask-subject="Cold Dip – is this watch supported?"
+      data-i18n-empty="Start typing a model name to see if it is supported."
+      data-i18n-pro-yes=\"⭐ PRO\"
+      data-i18n-pro-no=\"Gratis app only\">
+      <div class="wrap">
+        <h2 class="sec-title">Werkt hij op jouw horloge?</h2>
+        <p class="sec-lead">Zoek je model. De lijst komt overeen met de 133 horloges in Cold Dip.</p>
+        <div class="checker">
+          <form role="search" action="#" method="get">
+            <div class="checker-field">
+              <label for="watch-q">Horlogemodel</label>
+              <input id="watch-q" name="q" type="search" autocomplete="off" spellcheck="false" placeholder="bijv. Venu 2 Plus of Forerunner 265">
+            </div>
+          </form>
+          <div id="watch-results" class="watch-results" aria-live="polite"></div>
+          <p class="chk-note">Zeer oude Connect IQ 1.x-horloges, zoals de Forerunner 920XT, kunnen niet worden ondersteund. Pro heeft een nieuwer horloge nodig — zoek je model om te zien of het erbij zit.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faces" class="faces-band">
+      <div class="wrap faces-intro">
+        <p class="morslevel-kicker">Wijzerplaten</p>
+        <h2 class="sec-title">Wijzerplaten</h2>
+        <p class="sec-lead">Wijzerplaten voor winterzwemmen, inclusief seizoenswijzerplaten die je verdient met dips in Cold Dip. Mors – tarcza verandert met het weer. Mors Level groeit met je seizoensminuten. Dip Goals en Afterdrop komen binnenkort.</p>
+        <div class="faces-ranks">
+          <div class="faces-ranks-head">
+            <p class="morslevel-kicker">Seizoen 2026/2027</p>
+            <h3>Wijzerplaten die je verdient met dips <span class="badge">Binnenkort in de Connect IQ Store</span></h3>
+            <p class="faces-ranks-intro">Ze zijn gratis — je kunt ze niet kopen. Je ontgrendelt ze alleen met dips in de gratis Cold Dip-app.</p>
+          </div>
+          <div class="faces-ranks-grid">
+            <article class="faces-ranks-card faces-ranks-komandos">
+              <figure class="faces-ranks-solo">
+                <div class="faces-ranks-media">
+                <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/faces/rank/komandos.webp" width="360" height="360" aria-label="Animatie van de wijzerplaat Mors Komandos 2026/2027">
+                  <source src="../assets/img/faces/rank/komandos.webm" type="video/webm">
+                  <source src="../assets/img/faces/rank/komandos.mp4" type="video/mp4">
+                </video>
+                <span class="faces-ranks-lock"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6 1.2A2.6 2.6 0 0 0 3.4 3.8V5H2.6A.6.6 0 0 0 2 5.6v5.2c0 .33.27.6.6.6h6.8a.6.6 0 0 0 .6-.6V5.6a.6.6 0 0 0-.6-.6H8.6V3.8A2.6 2.6 0 0 0 6 1.2Zm-1.4 2.6A1.4 1.4 0 0 1 7.4 3.8V5H4.6V3.8Z"/></svg>15 dips</span>
+              </div>
+              </figure>
+              <h4>Mors Komandos 2026/2027</h4>
+              <p>15 dips in een seizoen. Code MK.</p>
+            </article>
+            <article class="faces-ranks-card faces-ranks-legenda">
+              <div class="faces-ranks-pair">
+                <figure class="faces-ranks-watch">
+                  <div class="faces-ranks-media">
+                <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/faces/rank/krol.webp" width="360" height="360" aria-label="Animatie van de wijzerplaat Mors Legenda Król 2026/2027">
+                  <source src="../assets/img/faces/rank/krol.webm" type="video/webm">
+                  <source src="../assets/img/faces/rank/krol.mp4" type="video/mp4">
+                </video>
+                <span class="faces-ranks-lock"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6 1.2A2.6 2.6 0 0 0 3.4 3.8V5H2.6A.6.6 0 0 0 2 5.6v5.2c0 .33.27.6.6.6h6.8a.6.6 0 0 0 .6-.6V5.6a.6.6 0 0 0-.6-.6H8.6V3.8A2.6 2.6 0 0 0 6 1.2Zm-1.4 2.6A1.4 1.4 0 0 1 7.4 3.8V5H4.6V3.8Z"/></svg>50 dips</span>
+              </div>
+                  <figcaption>Król</figcaption>
+                </figure>
+                <figure class="faces-ranks-watch">
+                  <div class="faces-ranks-media">
+                <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/faces/rank/posejdon.webp" width="360" height="360" aria-label="Animatie van de wijzerplaat Mors Legenda Posejdon 2026/2027">
+                  <source src="../assets/img/faces/rank/posejdon.webm" type="video/webm">
+                  <source src="../assets/img/faces/rank/posejdon.mp4" type="video/mp4">
+                </video>
+                <span class="faces-ranks-lock"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6 1.2A2.6 2.6 0 0 0 3.4 3.8V5H2.6A.6.6 0 0 0 2 5.6v5.2c0 .33.27.6.6.6h6.8a.6.6 0 0 0 .6-.6V5.6a.6.6 0 0 0-.6-.6H8.6V3.8A2.6 2.6 0 0 0 6 1.2Zm-1.4 2.6A1.4 1.4 0 0 1 7.4 3.8V5H4.6V3.8Z"/></svg>50 dips</span>
+              </div>
+                  <figcaption>Posejdon</figcaption>
+                </figure>
+              </div>
+              <h4>Mors Legenda 2026/2027</h4>
+              <p>50 dips in een seizoen. Code MZ. Kies Król of Posejdon.</p>
+            </article>
+          </div>
+          <p class="faces-ranks-note">Zonder de rang toont de wijzerplaat alleen de tijd en de datum. De code werkt alleen op jouw horloge.</p>
+          <p class="faces-ranks-steps-title">Hoe ontgrendelen</p>
+          <ol class="faces-ranks-steps">
+            <li>Installeer de wijzerplaat (binnenkort in de Connect IQ-winkel).</li>
+            <li>Open in Cold Dip Rangen.</li>
+            <li>Voer de wijzerplaat-ID in.</li>
+            <li>Voer de code in bij de wijzerplaatinstellingen.</li>
+          </ol>
+        </div>
+
+        <figure class="faces-promo">
+          <div class="faces-promo-gallery">
+            <img src="../assets/img/faces/dip-goals-banner.webp" width="1024" height="687" alt="Dip Goals-wijzerplaat voor Garmin-smartwatches: drie kleurthema's bij een bevroren meer" loading="lazy" decoding="async">
+            <img src="../assets/img/faces/dip-goals-designs.webp" width="1024" height="687" alt="Dip Goals-indelingen en kleurthema's voor Garmin-wijzerplaten, inclusief de batterijvriendelijke Always-on-look" loading="lazy" decoding="async">
+          </div>
+          <figcaption>Dip Goals <span class="badge faces-card-soon">Binnenkort</span></figcaption>
+        </figure>
+        <div class="faces-cards">
+          <article class="faces-card faces-card-tarcza">
+            <figure class="faces-card-media">
+              <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/face/frost.webp" width="360" height="360" aria-label="Mors – tarcza bij vorst: de walrus zet een muts op als je je pols optilt">
+                <source src="../assets/img/face/frost.webm" type="video/webm">
+                <source src="../assets/img/face/frost.mp4" type="video/mp4">
+              </video>
+            </figure>
+            <div>
+              <h3>Mors – tarcza</h3>
+              <p class="faces-card-lead">Geanimeerde walruswijzerplaat voor winterzwemmers</p>
+              <p class="faces-card-price">$3.99 <small>24 uur gratis proef</small></p>
+            </div>
+            <p class="faces-card-actions">
+              <span class="badge" data-face-soon>Binnenkort in de Connect IQ Store</span>
+              <a class="btn" data-face-store hidden href="#">Haal hem in Connect IQ</a>
+              <a class="btn btn-ghost" href="#face">Meer zien</a>
+            </p>
+          </article>
+          <article class="faces-card faces-card-level">
+            <figure class="faces-card-media">
+              <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/mors-level/wake.webp" width="720" height="720" aria-label="Mors Level wake-animatie: de walrus stuitert en de voortgangsbalk vult zich als je je pols optilt">
+                <source src="../assets/img/mors-level/wake.webm" type="video/webm">
+                <source src="../assets/img/mors-level/wake.mp4" type="video/mp4">
+              </video>
+            </figure>
+            <div>
+              <h3>Mors Level <span class="badge-new">New</span></h3>
+              <p class="faces-card-lead">Speelse walruswijzerplaat voor ijsbaden</p>
+              <p class="faces-card-price">$2.99 <small>7 dagen gratis proef</small></p>
+            </div>
+            <p class="faces-card-actions">
+              <span class="badge" data-morslevel-soon hidden>Binnenkort in de Connect IQ Store</span>
+              <a class="btn" data-morslevel-store href="https://apps.garmin.com/en-US/apps/fe325c7e-b38d-4a9a-b43e-f5b09780f3a8" rel="noopener" target="_blank">Haal hem in Connect IQ</a>
+              <a class="btn btn-ghost" href="#mors-level">Meer zien</a>
+            </p>
+          </article>
+          <article class="faces-card faces-card-goals">
+            <figure class="faces-card-media">
+              <img src="../assets/img/faces/dip-goals.webp" width="360" height="360" alt="Dip Goals-wijzerplaat in de thema's Ice, Aurora en Gold, met wekelijkse dipringen, seizoensminuten en reeks" loading="lazy" decoding="async">
+            </figure>
+            <div>
+              <h3>Dip Goals <span class="badge faces-card-soon">Binnenkort</span></h3>
+              <p class="faces-card-lead">Doelringen voor wekelijkse dips, seizoensminuten en je reeks, plus water- en luchttemperatuur, Body Battery en hartslag. Vier thema's.</p>
+            </div>
+          </article>
+          <article class="faces-card faces-card-afterdrop">
+            <figure class="faces-card-media">
+              <img src="../assets/img/faces/afterdrop.webp" width="360" height="360" alt="Afterdrop-wijzerplaat met een grote tijd en drie gegevensvelden, in meerdere kleurthema's" loading="lazy" decoding="async">
+            </figure>
+            <div>
+              <h3>Afterdrop <span class="badge faces-card-soon">Binnenkort</span></h3>
+              <p class="faces-card-lead">Een gratis Garmin-wijzerplaat met een grote tijd en 3 gegevensvelden. Hij vergrendelt nooit. Optionele Afterdrop Pro ontgrendelt Cold Dip-velden, luchttemperatuur, zonsopkomst en zonsondergang, en 4 extra thema's.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+    <section id="face" class="face-panel" data-mfold="More about this watch face">
+      <div class="wrap">
+        <div class="face-grid">
+          <div class="face-copy">
+            <span class="badge" data-face-soon>Binnenkort in de Connect IQ Store</span>
+            <h2 class="sec-title">Mors – tarcza</h2>
+            <p class="local-name">Geanimeerde walruswijzerplaat voor winterzwemmers</p>
+            <p class="sec-lead">De walrus reageert op het weer: golven bij mooi weer, een muts bij vorst, sneeuw afschudden en in het wak springen als het diptijd is. Tijd, datum, luchttemperatuur, weer, hartslag, stappen en batterij. De animatie speelt als je het horloge wekt — nooit in always-on-modus.</p>
+            <p class="face-price">$3.99 <small>eenmalig, plus btw waar dat verplicht is</small></p>
+            <ol class="face-steps">
+              <li>24 uur gratis proef nadat je de wijzerplaat hebt geïnstalleerd.</li>
+              <li>Daarna verschijnt er een 6-cijferige code op het horloge. Voer die in op <a href="https://kzl.io/code" rel="noopener" target="_blank">kzl.io/code</a> om te ontgrendelen — een eenmalige betaling van $3.99 via KiezelPay.</li>
+              <li>Houd je telefoon in de buurt, met Garmin Connect actief en Bluetooth aan. Het horloge heeft die telefoonverbinding nodig om te ontgrendelen, meestal binnen 5 minuten.</li>
+            </ol>
+            <p class="cta-row">
+              <a class="btn" data-face-store hidden href="#">Haal hem in Connect IQ</a>
+            </p>
+          </div>
+          <figure class="face-hero-clip">
+            <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/face/frost.webp" width="360" height="360" aria-label="Wijzerplaat bij vorst: de walrus draagt een blauwe muts">
+              <source src="../assets/img/face/frost.webm" type="video/webm">
+              <source src="../assets/img/face/frost.mp4" type="video/mp4">
+            </video>
+            <figcaption>Bij vorst zet de walrus een muts op.</figcaption>
+          </figure>
+        </div>
+        <p class="anim-note">Op AMOLED-horloges beweegt de walrus als je je pols optilt — nooit in always-on-modus.</p>
+        <div class="face-scenes">
+          <figure>
+            <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/face/wave.webp" width="360" height="360" aria-label="Wijzerplaat bij mooi weer: de walrus met golven">
+              <source src="../assets/img/face/wave.webm" type="video/webm">
+              <source src="../assets/img/face/wave.mp4" type="video/mp4">
+            </video>
+            <figcaption>Good weather</figcaption>
+          </figure>
+          <figure>
+            <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/face/frost.webp" width="360" height="360" aria-label="Wijzerplaat bij vorst: de walrus draagt een blauwe muts">
+              <source src="../assets/img/face/frost.webm" type="video/webm">
+              <source src="../assets/img/face/frost.mp4" type="video/mp4">
+            </video>
+            <figcaption>Frost</figcaption>
+          </figure>
+          <figure>
+            <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/face/snow.webp" width="360" height="360" aria-label="Wijzerplaat in de sneeuw: de walrus schudt sneeuw af">
+              <source src="../assets/img/face/snow.webm" type="video/webm">
+              <source src="../assets/img/face/snow.mp4" type="video/mp4">
+            </video>
+            <figcaption>Snow</figcaption>
+          </figure>
+          <figure>
+            <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/face/dip.webp" width="360" height="360" aria-label="Wijzerplaat bij dipweer: de walrus bij het wak">
+              <source src="../assets/img/face/dip.webm" type="video/webm">
+              <source src="../assets/img/face/dip.mp4" type="video/mp4">
+            </video>
+            <figcaption>Dip weather</figcaption>
+          </figure>
+          <figure>
+            <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/face/rain.webp" width="360" height="360" aria-label="Wijzerplaat in de regen">
+              <source src="../assets/img/face/rain.webm" type="video/webm">
+              <source src="../assets/img/face/rain.mp4" type="video/mp4">
+            </video>
+            <figcaption>Rain</figcaption>
+          </figure>
+        </div>
+        <div class="face-families">
+          <article class="card">
+            <h3>AMOLED — volledige animatie</h3>
+            <p>Kleuranimatie op AMOLED-horloges zoals Venu 2, 2 Plus, 3 en 4, vívoactive 5 en 6, Forerunner 165, 170, 265, 570, 965 en 970, Fenix 8 en 9 (AMOLED), Epix 2, Descent Mk3, D2 Mach, Approach S70 en S72, Instinct 3 AMOLED en MARQ 2 en 3.</p>
+          </article>
+          <article class="card">
+            <h3>Niet op MIP-horloges</h3>
+            <p>Deze wijzerplaat is niet beschikbaar op MIP- of geheugenarme horloges zoals Fenix 5 Plus, Fenix 6 en 7, Fenix Solar, Forerunner 245, 255, 745, 945 en 955, Enduro, Descent Mk2, vívoactive 4, Venu 1 en MARQ van de eerste generatie. Die schermen kunnen de kleuranimatie niet tonen.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="mors-level" class="face-panel face-panel-level" data-mfold="More about this watch face">
+      <div class="wrap">
+        <div class="face-grid">
+          <div class="face-copy">
+            <span class="badge" data-morslevel-soon hidden>Binnenkort in de Connect IQ Store</span>
+            <h2 class="sec-title">Mors Level <span class="badge-new">New</span></h2>
+            <p class="local-name">Speelse walruswijzerplaat voor ijsbaden</p>
+            <p class="sec-lead">Je walrusvriendje gaat omhoog over 5 stappen naarmate je seizoensminuten in koud water groeien — live gesynchroniseerd vanuit de gratis Cold Dip-app. Een dampend wak in de winter, een strand in de zomer, een reeksbadge, watertemperatuur, hartslag, batterij en een strak always-on-scherm. De wake-animatie speelt als je het horloge wekt — nooit in always-on-modus.</p>
+            <p class="face-price">$2.99 <small>eenmalig, plus btw waar dat verplicht is · 7 dagen gratis proef</small></p>
+            <ol class="face-steps">
+              <li>7 dagen gratis proef nadat je de wijzerplaat hebt geïnstalleerd.</li>
+              <li>Daarna verschijnt er een 6-cijferige code op het horloge. Voer die in op <a href="https://kzl.io/morslevel" data-morslevel-unlock rel="noopener" target="_blank">kzl.io/morslevel</a> om te ontgrendelen — een eenmalige betaling van $2.99 via KiezelPay.</li>
+              <li>Houd je telefoon in de buurt, met Garmin Connect actief en Bluetooth aan. Het horloge heeft die telefoonverbinding nodig om te ontgrendelen, meestal binnen 5 minuten.</li>
+            </ol>
+            <p class="face-note">Om omhoog te gaan met live minuten, reeks en watertemperatuur, installeer de gratis <a href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">Cold Dip</a> app. Zonder die app tonen die velden gewoon gegevens van het horloge.</p>
+            <p class="cta-row">
+              <a class="btn" data-morslevel-store href="https://apps.garmin.com/en-US/apps/fe325c7e-b38d-4a9a-b43e-f5b09780f3a8" rel="noopener" target="_blank">Haal hem in Connect IQ</a>
+            </p>
+          </div>
+          <figure class="face-hero-clip">
+            <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/mors-level/wake.webp" width="720" height="720" aria-label="Mors Level wake-animatie: de walrus stuitert en de voortgangsbalk vult zich als je je pols optilt">
+              <source src="../assets/img/mors-level/wake.webm" type="video/webm">
+              <source src="../assets/img/mors-level/wake.mp4" type="video/mp4">
+            </video>
+            <figcaption>Wake-animatie: de walrus stuitert en de balk vult zich als je je pols optilt (~1 s, AMOLED). MIP blijft stil; nooit in always-on-modus.</figcaption>
+          </figure>
+        </div>
+
+          <figure class="face-hero-clip ml-demo">
+            <div class="ml-demo-frame" data-ml-demo role="img" aria-label="Demonstratie: de walrus gaat omhoog over vijf stappen naarmate je seizoensminuten groeien">
+              <div class="ml-demo-dial">
+                <div class="ml-demo-hud">
+                  <p class="ml-demo-time" aria-hidden="true">07:42</p>
+                  <p class="ml-demo-level"><span data-ml-name>NOVICE</span> <span data-ml-frac>1/5</span></p>
+                  <div class="ml-demo-bar-row">
+                    <div class="ml-demo-bar" aria-hidden="true"><i data-ml-bar></i></div>
+                    <svg class="ml-demo-crown" data-ml-crown viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.5 18h17l-1.2-9.2-4.3 3.4L12 7.5 8.9 12.2 4.7 8.8zM5 19.5h14V21H5z"/></svg>
+                  </div>
+                </div>
+                <div class="ml-demo-chars">
+              <img src="../assets/img/mors-level/stage-1.webp" width="424" height="400" alt="Mors Level, fase 1: NOVICE" class="is-on" decoding="async">
+              <img src="../assets/img/mors-level/stage-2.webp" width="424" height="400" alt="Mors Level, fase 2: TAMER" decoding="async">
+              <img src="../assets/img/mors-level/stage-3.webp" width="424" height="400" alt="Mors Level, fase 3: ICE WARRIOR" decoding="async">
+              <img src="../assets/img/mors-level/stage-4.webp" width="424" height="400" alt="Mors Level, fase 4: VETERAN" decoding="async">
+              <img src="../assets/img/mors-level/stage-5.webp" width="424" height="400" alt="Mors Level, fase 5: ICE KING" decoding="async">
+                </div>
+              </div>
+            </div>
+            <figcaption>De walrus gaat omhoog naarmate je seizoensminuten groeien.</figcaption>
+          </figure>
+        <p class="morslevel-kicker">5 levels</p>
+        <ol class="morslevel-levels">
+          <li>
+            <img src="../assets/img/mors-level/stage-1.webp" width="424" height="400" alt="Mors Level, fase 1: NOVICE" loading="lazy" decoding="async">
+            <p class="lvl">1/5</p>
+            <h3>NOVICE</h3>
+            <p>0–29 min dit seizoen</p>
+          </li>
+          <li>
+            <img src="../assets/img/mors-level/stage-2.webp" width="424" height="400" alt="Mors Level, fase 2: TAMER" loading="lazy" decoding="async">
+            <p class="lvl">2/5</p>
+            <h3>TAMER</h3>
+            <p>30–119 min dit seizoen</p>
+          </li>
+          <li>
+            <img src="../assets/img/mors-level/stage-3.webp" width="424" height="400" alt="Mors Level, fase 3: ICE WARRIOR" loading="lazy" decoding="async">
+            <p class="lvl">3/5</p>
+            <h3>ICE WARRIOR</h3>
+            <p>120–299 min dit seizoen</p>
+          </li>
+          <li>
+            <img src="../assets/img/mors-level/stage-4.webp" width="424" height="400" alt="Mors Level, fase 4: VETERAN" loading="lazy" decoding="async">
+            <p class="lvl">4/5</p>
+            <h3>VETERAN</h3>
+            <p>300–599 min dit seizoen</p>
+          </li>
+          <li>
+            <img src="../assets/img/mors-level/stage-5.webp" width="424" height="400" alt="Mors Level, fase 5: ICE KING" loading="lazy" decoding="async">
+            <p class="lvl">5/5</p>
+            <h3>ICE KING</h3>
+            <p>600+ min dit seizoen</p>
+          </li>
+        </ol>
+        <div class="face-scenes">
+          <figure>
+            <img src="../assets/img/mors-level/en/winter.webp" width="720" height="720" alt="Mors Level in de winter: dampend wak en reeks dipdagen" loading="lazy" decoding="async">
+            <figcaption>Winter ice hole</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/mors-level/en/summer.webp" width="720" height="720" alt="Mors Level in de zomer: de walrus op het strand" loading="lazy" decoding="async">
+            <figcaption>Summer beach</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/mors-level/en/aod.webp" width="720" height="720" alt="Mors Level always-on-scherm: tijd, datum en niveau, met heel weinig verlichte pixels" loading="lazy" decoding="async">
+            <figcaption>Always-on</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/mors-level/en/mip.webp" width="520" height="520" alt="Mors Level op een MIP-horloge: een statische, batterijvriendelijke wijzerplaat" loading="lazy" decoding="async">
+            <figcaption>MIP watches</figcaption>
+          </figure>
+          <figure class="morslevel-watch">
+            <img src="../assets/img/mors-level/watch.webp" width="900" height="1238" alt="Mors Level op een Garmin-horloge" loading="lazy" decoding="async">
+            <figcaption>Op een Garmin-horloge</figcaption>
+          </figure>
+        </div>
+        <div class="face-families">
+          <article class="card">
+            <h3>AMOLED — volledige animatie</h3>
+            <p>Kleuranimatie op 51 AMOLED-horloges zoals Venu 2, 2 Plus, 3 en 4, vívoactive 5 en 6, Forerunner 165, 170, 265, 570, 965 en 970, Fenix 8 en 9 (AMOLED), Epix 2, Descent Mk3, D2 Mach, Approach S70 en S72, Instinct 3 AMOLED en MARQ 2 en 3. Always-on gebruikt heel weinig verlichte pixels.</p>
+          </article>
+          <article class="card">
+            <h3>MIP — statisch en batterijvriendelijk</h3>
+            <p>Een duidelijke, statische wijzerplaat op 19 MIP-horloges zoals Fenix 7, Fenix 8 Solar, Forerunner 255 en 955, en Enduro 3 en 4. In totaal ondersteunt Mors Level 70 Garmin-horloges, in 11 talen.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    </section>
+
+
+    <section id="reviews" class="reviews">
+      <div class="wrap">
+        <h2 class="sec-title">Wat winterzwemmers zeggen</h2>
+        <p class="sec-lead">Gemiddelde beoordeling 5,0 ★ in de Connect IQ Store en 1000+ downloads.</p>
+        <div class="quotes quotes-4">
+          <blockquote class="quote" cite="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0">
+            <p class="quote-stars" aria-label="5/5">★★★★★</p>
+            <p lang="pl">„Super, pierwsze morsowanie z apką za mną, działa! Tego mi było trzeba! Dzięki”</p>
+            <p class="tr">Super, mijn eerste ijsbad met de app zit erop, het werkt! Precies wat ik nodig had! Dank je <small>(Vertaald uit het Pools)</small></p>
+            <footer>Monika · Connect IQ Store</footer>
+          </blockquote>
+          <blockquote class="quote" cite="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0">
+            <p class="quote-stars" aria-label="5/5">★★★★★</p>
+            <p lang="pl">„Rewelacyjna apka. Przetestowana podczas morsowania. Wszystko działa dobrze”</p>
+            <p class="tr">Geweldige app. Getest tijdens het winterzwemmen. Alles werkt goed <small>(Vertaald uit het Pools)</small></p>
+            <footer>Radek · Connect IQ Store</footer>
+          </blockquote>
+          <blockquote class="quote" cite="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0">
+            <p class="quote-stars" aria-label="5/5">★★★★★</p>
+            <p lang="pl">„Działa nawet na starszym Garminie za co duże brawa dla autora”</p>
+            <p class="tr">Werkt zelfs op een oudere Garmin — groot applaus voor de maker <small>(Vertaald uit het Pools)</small></p>
+            <footer>Pawel · Connect IQ Store</footer>
+          </blockquote>
+          <blockquote class="quote" cite="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0">
+            <p class="quote-stars" aria-label="5/5">★★★★★</p>
+            <p lang="pl">„Świetna sprawa!💙”</p>
+            <p class="tr">Top spul!💙 <small>(Vertaald uit het Pools)</small></p>
+            <footer>Justyna · Connect IQ Store</footer>
+          </blockquote>
+        </div>
+        <p class="cta-row reviews-more"><a class="btn btn-ghost" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">Lees alle beoordelingen in Connect IQ</a></p>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="wrap">
+        <h2 class="sec-title">Op het horloge</h2>
+        <p class="sec-lead">Eén dip van start tot opslaan — echte schermen uit de Garmin-simulator.</p>
+        <div class="gallery-show">
+          <figure class="loop-figure">
+            <video class="loop-video" src="../assets/video/dip-loop-en.mp4" poster="assets/video/dip-loop-en.jpg" width="300" height="386" autoplay muted loop playsinline preload="metadata" aria-label="Animatie: Cold Dip op een Garmin-horloge — aan de wal, in het water, na het uitstappen, hoe je je voelt en opslaan"></video>
+            <figcaption>Echte opname uit de Garmin-simulator (Venu 2 Plus), tijd versneld.</figcaption>
+          </figure>
+          <div class="shot-row">
+          <figure>
+            <img src="../assets/img/gallery/en/venu/start.webp" width="474" height="720" alt="Startscherm: GPS, weer en watertemperatuur voordat je erin gaat" loading="lazy" decoding="async">
+            <figcaption>Voordat je erin gaat</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/venu/water.webp" width="474" height="720" alt="In het water: tijd en hartslag" loading="lazy" decoding="async">
+            <figcaption>In het water</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/venu/after.webp" width="474" height="720" alt="Nadat je eruit stapt: overzicht en hoe je je voelt" loading="lazy" decoding="async">
+            <figcaption>Nadat je eruit stapt</figcaption>
+          </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="changelog" data-mfold="Older versions">
+      <div class="wrap">
+        <h2 class="sec-title">Wat is nieuw</h2>
+        <p class="sec-lead">Recente versies van Cold Dip.</p>
+        <ol class="changelog">
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.2.0</h3>
+              <span class="ch-flag is-current">Huidige versie</span>
+            </div>
+            <p>Rangen zijn gratis en alleen voor de pret — niemand racet tegen iemand: Pinguïn (1), Zeehond (5, 7 dagen Pro gratis), Guerrilla-walrus (15, een code voor de wijzerplaat Mors Komandos 2026/2027), Veteraan-walrus (30, −30% op Mors Level / Dip Goals, codes komen binnenkort) en Legende-walrus (50, een code voor een gouden wijzerplaat naar keuze: Mors Legenda Król 2026/2027 of Mors Legenda Posejdon 2026/2027). Hoogstens één dip per dag telt (seizoen 1 oktober – 30 april), en een sessie alleen in de sauna telt niet. Dit zijn drie aparte seizoenswijzerplaten, binnenkort in de Connect IQ-winkel, gratis te installeren: verdien ze met een rang in Cold Dip. Ze zitten niet in de bundels van $5.99 / $7.99, en elke seizoen komen er nieuwe wijzerplaten.</p>
+            <p>Alle records — koudste water en langste dip, aller tijden en dit seizoen — horen nu bij Pro. Ze worden nog steeds voor iedereen opgeslagen, en de gratis app toont “Nieuw record! Bekijk het in Pro”. Een eenmalige vraag om een beoordeling verschijnt na je derde dip. Tijdmeting, hartslag en opslaan naar Garmin Connect blijven gratis. Op oudere en zwart-withorloges zonder Pro blijven records gratis.</p>
+            <p>De watertemperatuur kan nu onder 0°C worden gezet.</p>
+          </li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.1.2</h3>
+            </div>
+            <p>De watertemperatuur die je invoert na het uitstappen geldt nu alleen voor die sessie. De vraag negeert een per ongeluk indrukken vlak na het uitstappen. Robuuster: een vol geheugen of een opslagfout laat de app niet meer vastlopen, en een niet-ondersteund veld of sport op een ouder horloge stopt de start niet meer. Poolse en Russische opwarmtips hersteld.</p>
+          </li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.1.1</h3>
+            </div>
+            <p>Crash hersteld ongeveer 20 seconden na het opslaan van een sessie (gemeld op Venu 3S). Nadat je eruit stapt, vraagt het horloge de watertemperatuur; dat is gratis en kan in de instellingen worden uitgezet.</p>
+          </li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.1.0</h3>
+              </div>
+            <p>Cold Dip Pro is er. Alles uit 1.0.3 blijft gratis. Pro is optioneel: een eenmalige ontgrendeling van $4.99, met 7 dagen gratis proef. Nieuwe modi: sauna, koude douche, begeleid contrast en ademvoorbereiding; eigen meldingen en benoemde fases in het water; seizoensstatistieken, badges en dagelijkse reeksen (7 / 14 / 30); extra schermen, kleurthema's en eenvoudige modus.</p>
+          </li>
+<li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.0.3</h3>
+              
+              </div>
+            <p>133 horloges, waaronder Instinct 2, Instinct 2S, Instinct 2X, Instinct 3 Solar, Instinct E en Instinct Crossover, plus een nieuwe zwart-witindeling voor MIP-schermen.</p>
+          </li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.0.2</h3>
+              
+            </div>
+            <p>126 horloges, waaronder de Forerunner 55.</p>
+          </li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.0.1</h3>
+              <span class="ch-date">17 Nov 2026</span>
+            </div>
+            <p>105 horloges, waaronder rechthoekige indelingen voor Venu X1 en Venu Sq 2.</p>
+          </li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.0.0</h3>
+              <span class="ch-date">14 Nov 2026</span>
+            </div>
+            <p>Eerste uitgave.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="testimonials" hidden data-flag="showTestimonials">
+      <div class="wrap">
+        <h2 class="sec-title">Van mensen die er al mee dippen</h2>
+        <div class="quotes">
+          <blockquote class="quote">
+            <p>“Działa idealnie” <span class="tr">(Werkt perfect)</span></p>
+            <footer>Radosław S., Facebook — Poznań, Jezioro Rusałka, 16 min</footer>
+          </blockquote>
+          <blockquote class="quote">
+            <p>Een dip van meer dan 10 minuten bij 5°C — watertemperatuur op het horloge, en alle gegevens opgeslagen in Garmin Connect.</p>
+            <footer>Jadwiga</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="howto" class="howto" data-mfold="Show all steps">
+      <div class="wrap" id="faq">
+        <h2 class="sec-title">Hoe het werkt</h2>
+        <p class="sec-lead">Een paar dingen die mensen vaak vragen na het installeren.</p>
+        <!-- howto-video:start -->
+        <div class="howto-video" id="how-to-video">
+          <figure class="howto-player">
+            <video src="../assets/video/howto-en.mp4" poster="assets/video/howto-en.jpg" width="480" height="616" autoplay muted loop playsinline controls preload="metadata" aria-label="Video: Cold Dip op een Garmin-horloge van start tot opgeslagen activiteit"></video>
+            <figcaption>Opgenomen in de Garmin-simulator (Venu 2 Plus), tijd versneld.</figcaption>
+          </figure>
+          <div class="howto-steps">
+            <h3>Bekijk het in 1 minuut</h3>
+            <ol>
+            <li>Open Cold Dip aan de wal. Stel de watertemperatuur in met − / + en druk op START (bovenste knop).</li>
+            <li><b>Aan de wal</b>: de timer loopt terwijl je je klaarmaakt. Druk op de bovenste knop als je het water in gaat.</li>
+            <li><b>In het water</b>: tijd in het water, tijd tot het referentiepunt, hartslag en watertemperatuur. Druk op de bovenste knop als je eruit stapt.</li>
+            <li>De Terug-knop tijdens de sessie opent <b>Afronden?</b> — Hervatten / Opslaan / Wissen.</li>
+            <li><b>Na het uitstappen</b>: tijd sinds je eruit stapte en de afterdrop-aftelling (opwarming). Bovenste knop → <b>Afronden</b>.</li>
+            <li><b>Gevoel</b>: de bovenste knop verandert de beoordeling, de onderste knop = OK.</li>
+            <li><b>Overzicht</b> → <b>Opslaan</b>. De activiteit gaat naar Garmin Connect.</li>
+            <li>Opties: op het startscherm tik je boven op het scherm of houd je de menuknop ingedrukt → <b>Menu</b>: Profiel, Checklist, Trilling en geluid, Doelinstellingen.</li>
+            </ol>
+          </div>
+        </div>
+        <!-- howto-video:end -->
+                        <div class="faq">
+          <details>
+            <summary><h3>Hoe installeer ik hem?</h3></summary>
+            <p class="answer">Installeer hem via de Connect IQ Store-app op je telefoon — niet via Google Play of de App Store. Op het horloge vind je Cold Dip in de lijst met activiteiten / apps.</p>
+          </details>
+          <details>
+            <summary><h3>Hoe stel ik de watertemperatuur in?</h3></summary>
+            <p class="answer">In het profiel “Wak” gebruik je de knoppen − / + op het startscherm. In andere profielen stel je het in via het menu: “Handmatige watertemp.” Als je “--°C” in het water ziet, is de temperatuur nog niet ingesteld.</p>
+          </details>
+          <details>
+            <summary><h3>Waar staan mijn gegevens in Garmin Connect?</h3></summary>
+            <p class="answer">Open de activiteit, ga naar het tabblad Statistieken en scroll naar het gedeelte “Connect IQ”. Hartslag, watertemperatuur, weer, hoe je je voelde en de fasetijden staan daar allemaal. De tegels op het overzichtsscherm stelt Garmin in — de app kan ze niet wijzigen.</p>
+          </details>
+          <details>
+            <summary><h3>Meet het horloge de lichaamstemperatuur?</h3></summary>
+            <p class="answer">Nee. Het horloge kan de lichaamstemperatuur niet meten. De sensor leest de temperatuur van het horloge zelf, beïnvloed door je huid en de lucht. De watertemperatuur in Cold Dip voer je handmatig in.</p>
+          </details>
+          <details>
+            <summary><h3>En calorieën?</h3></summary>
+            <p class="answer">Calorieën worden door het horloge geschat op basis van de hartslag, niet berekend door Cold Dip.</p>
+          </details>
+          <details>
+            <summary><h3>Werkt hij zonder mijn telefoon?</h3></summary>
+            <p class="answer">Ja. De registratie draait op het horloge, dus je telefoon kan in je tas blijven. Zonder telefoon mis je alleen het weer, omdat dat van het Garmin-weer op de telefoon komt. De activiteit synchroniseert met Garmin Connect de volgende keer dat het horloge met je telefoon verbindt. Je hebt de telefoon nodig om de app te installeren en om Pro te ontgrendelen.</p>
+          </details>
+          <details>
+            <summary><h3>Hoe wordt de watertemperatuur gemeten?</h3></summary>
+            <p class="answer">Het horloge kan de watertemperatuur niet zelf meten — de ingebouwde sensor leest het horloge, opgewarmd door je huid en de lucht. In Cold Dip stel je de watertemperatuur in met − / + (of in het menu), en nadat je eruit stapt vraagt de app ernaar. Als je een gekoppelde Garmin Tempe-sensor hebt, gebruikt de app die meting. De horlogesensor en de luchttemperatuur worden nooit als watertemperatuur voorgesteld.</p>
+          </details>
+          <details>
+            <summary><h3>Wat levert Pro me op?</h3></summary>
+            <p class="answer">Pro is optioneel en de app blijft gratis. Pro voegt sauna, koude douche, begeleid contrast en ademvoorbereiding toe, eigen meldingen, seizoensstatistieken, records aller tijden en dit seizoen (koudste water, langste dip), badges en dagelijkse reeksen, extra schermen en thema's, een handschoenvriendelijke eenvoudige modus, een tijdhint op basis van de watertemperatuur (een hint, nooit een limiet) en een hartslaggrafiek. Het kost eenmalig $4.99 na een gratis proef van 7 dagen. <a href="#pro">Bekijk alle Pro-functies</a>.</p>
+          </details>
+          <details>
+            <summary><h3>Hoe werkt de KiezelPay-ontgrendelcode?</h3></summary>
+            <p class="answer">Betalingen lopen via KiezelPay. Als je Pro wilt houden, toont het horloge een 6-cijferige code. Voer die in op <a href="https://kzl.io/cold-dip-pro" rel="noopener" target="_blank">kzl.io/cold-dip-pro</a> (voor de betaalde wijzerplaten: <a href="https://kzl.io/code" rel="noopener" target="_blank">kzl.io/code</a>) en betaal één keer. Houd je telefoon in de buurt met Garmin Connect en Bluetooth aan — het horloge ontgrendelt via die verbinding, meestal binnen 5 minuten.</p>
+          </details>
+          <details>
+            <summary><h3>Welke horloges worden ondersteund?</h3></summary>
+            <p class="answer">Meer dan 130 Garmin-horloges met Connect IQ: Forerunner, fēnix, epix, Enduro, Venu, vívoactive, Instinct 2 / 3 / E / Crossover en meer. Pro heeft Connect IQ 4 of nieuwer nodig. Zeer oude modellen zoals de Forerunner 920XT worden niet ondersteund. <a href="#watches">Controleer je model</a>.</p>
+          </details>
+          <details>
+            <summary><h3>En Amazfit, Huawei, Wear OS en Apple Watch?</h3></summary>
+            <p class="answer">Een versie voor Amazfit (Zepp OS) is klaar en wacht op beoordeling in de Zepp App Store. Versies voor Huawei, Wear OS (Samsung Galaxy Watch, Pixel Watch) en Apple Watch zijn in voorbereiding — nog geen data. <a href="#notify">Ontvang een seintje</a>.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="safety" class="howto" data-mfold="More safety tips">
+      <div class="wrap">
+        <div class="safety">
+          <h2 class="sec-title">Blijf veilig</h2>
+          <p class="sec-lead">Koud water is serieus. Dit zijn algemene veiligheidsherinneringen, geen medisch advies. Jij bepaalt wanneer je erin gaat en wanneer je eruit stapt.</p>
+          <div class="safety-list">
+            <article class="safety-item">
+              <h3>Ga nooit alleen</h3>
+              <p>Ga altijd met iemand mee die kan helpen als je in de problemen komt, of zorg dat iemand aan de wal op je let.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Geef je lichaam de tijd</h3>
+              <p>Als je nieuw bent in koud water, wen er dan geleidelijk aan in plaats van te beginnen met een lange dip in heel koud water.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Houd de eerste dips kort</h3>
+              <p>Veel mensen beginnen met maar een korte tijd in het water en bouwen langzaam op. Er is geen tijd die je “moet” volhouden.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Stap eruit wanneer je het voelt</h3>
+              <p>Verlaat het water zodra je voelt dat het moet — hevig rillen, pijn, verdoving, verwarring, of gewoon het gevoel dat het genoeg is. Cold Dip zegt nooit dat je eruit moet, en zet nooit een doeltijd om te verbreken. Je laatste tijd is alleen een referentie.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Warm daarna op</h3>
+              <p>Word zo snel mogelijk droog en warm nadat je eruit stapt. Zorg dat warme kleren klaarliggen voordat je erin gaat.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Afterdrop</h3>
+              <p>Nadat je eruit stapt, kan je kerntemperatuur nog een tijd dalen terwijl koeler bloed terugkomt uit huid en ledematen. Dat heet vaak afterdrop. Blijf opwarmen, doe het rustig aan, en wacht tot je je goed voelt voordat je gaat rijden of fietsen.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Geen medisch hulpmiddel</h3>
+              <p>Cold Dip is een registratie-app, geen medisch hulpmiddel, en geeft geen medisch advies. Hij kan je niet vertellen of het veilig is om koud water in te gaan. Bij een gezondheidsklacht, zwangerschap of twijfel: praat eerst met een bevoegd professional.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="guides" class="guides">
+      <div class="wrap">
+        <h2 class="sec-title">Gidsen voor winterzwemmen</h2>
+        <p class="sec-lead">Korte, praktische stukken van een winterzwemmer. Algemene tips, geen medisch advies.</p>
+        <div class="features guides-grid">
+          <article class="card guide-card">
+            <h3><a href="gidsen/hoe-lang-in-koud-water.html">Hoe lang blijf je in koud water?</a></h3>
+            <p>Een populaire clubvuistregel per watertemperatuur — en waarom het geen veilige limiet is.</p>
+            <p class="guide-more"><a href="gidsen/hoe-lang-in-koud-water.html">Lees de gids →</a></p>
+          </article>
+          <article class="card guide-card">
+            <h3><a href="gidsen/afterdrop.html">Wat is afterdrop?</a></h3>
+            <p>Waarom je kouder kunt zijn nadat je eruit stapt, en hoe je rustig opwarmt.</p>
+            <p class="guide-more"><a href="gidsen/afterdrop.html">Lees de gids →</a></p>
+          </article>
+          <article class="card guide-card">
+            <h3><a href="gidsen/zo-begin-je-met-winterzwemmen.html">Zo begin je veilig met winterzwemmen</a></h3>
+            <p>Eerste dips stap voor stap: gezelschap, korte tijden, warme kleren klaar.</p>
+            <p class="guide-more"><a href="gidsen/zo-begin-je-met-winterzwemmen.html">Lees de gids →</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="video" hidden data-flag="showVideo">
+      <div class="wrap">
+        <h2 class="sec-title">Zie het in het water</h2>
+        <p class="sec-lead">Een korte blik op één dip, van het startscherm tot het opslaan in Garmin Connect.</p>
+        <button type="button" class="video-facade" data-youtube="" data-title="Zie het in het water" aria-label="Video afspelen">
+          <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></span>
+          <span class="play-label">Video afspelen</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="notify" class="request notify">
+      <div class="wrap">
+        <div class="request-box">
+          <h2 class="sec-title">Zeg het me als hij op mijn horloge komt</h2>
+          <p class="sec-lead">Cold Dip komt naar meer horloges. Laat je e-mail achter en kies je horloge — ik schrijf één keer, als die versie klaar is.</p>
+          <form class="cd-form notify-form" data-cd-form="notify" novalidate data-msg-ok="Dank je! Ik mail je als de {p}-versie klaar is." data-msg-err="Verzenden mislukt. Probeer opnieuw of schrijf naar lukasz.pszenny@gmail.com." data-msg-email="Vul een geldig e-mailadres in." data-msg-pick="Kies een horloge." data-msg-sending="Bezig met verzenden…">
+            <fieldset class="nf-platforms">
+              <legend>Welk horloge?</legend>
+              <label class="nf-chip"><input type="radio" name="platform" value="apple" data-label="Apple Watch"><span>Apple Watch</span></label>
+              <label class="nf-chip"><input type="radio" name="platform" value="wearos" data-label="Wear OS"><span>Wear OS</span></label>
+              <label class="nf-chip"><input type="radio" name="platform" value="huawei" data-label="Huawei"><span>Huawei</span></label>
+              <label class="nf-chip"><input type="radio" name="platform" value="amazfit" data-label="Amazfit"><span>Amazfit</span></label>
+              <label class="nf-chip"><input type="radio" name="platform" value="suunto" data-label="Suunto"><span>Suunto</span></label>
+              <label class="nf-chip"><input type="radio" name="platform" value="inny" data-label="Other"><span>Other</span></label>
+            </fieldset>
+            <div class="nf-fields">
+              <label class="nf-field"><span>E-mail</span><input type="email" name="email" required autocomplete="email" inputmode="email" maxlength="254"></label>
+              <label class="nf-field"><span>Horlogemodel (optioneel)</span><input type="text" name="model" maxlength="120" autocomplete="off"></label>
+            </div>
+            <input class="nf-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <button type="submit" class="btn nf-submit">Houd me op de hoogte</button>
+            <p class="nf-status" role="status" aria-live="polite"></p>
+          </form>
+          <p class="search-note nf-privacy">Ik bewaar je adres alleen om je dit ene bericht te sturen. Geen nieuwsbrief. Schrijf me en ik verwijder het. Liever een gewone e-mail? <a class="nf-mail" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20notify%20me">lukasz.pszenny@gmail.com</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="clubs" class="clubs">
+      <div class="wrap">
+        <div class="clubs-box">
+          <div class="clubs-copy">
+            <h2 class="sec-title">Voor winterzwemclubs</h2>
+            <p class="sec-lead">Beheer je een winterzwemgroep, club of fanpagina? Deel Cold Dip gerust met je leden. Het is gratis, en de afbeeldingen en de tekst hieronder staan klaar om te plaatsen.</p>
+            <label class="share-label" for="club-text">Tekst om te kopiëren</label>
+            <textarea id="club-text" class="share-text" rows="6" readonly>❄️ Winterzwemmen met een Garmin-horloge? Cold Dip is een gratis app voor koude dips: fases (aan de wal, in het water, na het uitstappen), tijd in het water, hartslag, watertemperatuur, en de sessie wordt in Garmin Connect opgeslagen als een eigen activiteit, niet als een zwemronde. Werkt op 130+ Garmin-horloges. Gemaakt door een winterzwemmer uit Bydgoszcz, Polen. 👉 https://lukaszpszenny.github.io/ColdDip/nl/</textarea>
+            <p class="cta-row clubs-actions">
+              <button type="button" class="btn" data-copy-target="club-text">Tekst kopiëren</button>
+              <a class="btn btn-ghost" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20ice%20swimming%20club&amp;body=Hi%20%C5%81ukasz%2C%0A%0A">Schrijf me over je club</a>
+            </p>
+          </div>
+          <div class="clubs-media">
+            <a class="share-dl" href="../assets/img/share/og-en.jpg" download="colddip-en-1200x630.jpg">
+              <img src="../assets/img/share/og-en.jpg" width="1200" height="630" alt="" loading="lazy" decoding="async">
+              <span>⬇ Download afbeelding 1200×630 (linkpost)</span>
+            </a>
+            <a class="share-dl share-dl-post" href="../assets/img/share/colddip-post-en.jpg" download="colddip-post-en.jpg">
+              <img src="../assets/img/share/colddip-post-en.jpg" width="720" height="900" alt="" loading="lazy" decoding="async">
+              <span>⬇ Download afbeelding 4:5 (feedpost)</span>
+            </a>
+          </div>
+        </div>
+        <div class="clubs-offers">
+          <article class="card clubs-offer">
+            <h3>🏷️ Clubcode voor Cold Dip Pro</h3>
+            <p>Schrijf me en je club krijgt een eigen kortingscode voor Pro voor je leden.</p>
+          </article>
+          <article class="card clubs-offer">
+            <h3>🖨️ A4-poster met QR-code</h3>
+            <p>Voor de kleedkamer, de sauna of het clubbord. De QR-code leidt naar deze website.</p>
+            <p class="clubs-poster-links">
+              <a class="btn btn-sm" href="../assets/posters/colddip-plakat-en.pdf" download data-gc-event="klik-klub-plakat">⬇ Download PDF</a>
+              <a class="btn btn-ghost btn-sm" href="../assets/posters/colddip-plakat-en.png" download data-gc-event="klik-klub-plakat">⬇ Download PNG</a>
+            </p>
+          </article>
+          <article class="card clubs-offer">
+            <h3>⌚ Wijzerplaat met het logo van je club</h3>
+            <p>Een Garmin-wijzerplaat met het logo van je club, op aanvraag gemaakt. Vertel me wat je in gedachten hebt.</p>
+          </article>
+        </div>
+        <form class="cd-form club-form" data-cd-form="klub" novalidate data-msg-ok="Dank je! Ik antwoord op het adres dat je hebt opgegeven." data-msg-err="Verzenden mislukt. Probeer opnieuw of schrijf naar lukasz.pszenny@gmail.com." data-msg-email="Vul een geldig e-mailadres in." data-msg-pick="" data-msg-sending="Bezig met verzenden…">
+          <h3>Schrijf me over je club</h3>
+          <input type="hidden" name="platform" value="klub">
+          <div class="nf-fields">
+            <label class="nf-field"><span>E-mail</span><input type="email" name="email" required autocomplete="email" inputmode="email" maxlength="254"></label>
+            <label class="nf-field"><span>Clubnaam</span><input type="text" name="model" maxlength="120" autocomplete="organization"></label>
+          </div>
+          <label class="nf-field nf-field-wide"><span>Bericht (bijv. Pro-code, posters, logowijzerplaat)</span><textarea name="message" rows="3" maxlength="2000"></textarea></label>
+          <input class="nf-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit" class="btn nf-submit">Versturen</button>
+          <p class="nf-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="request" id="contact"
+      data-i18n-copy="Copy"
+      data-i18n-copied="Copied"
+      data-i18n-gmail="Write via Gmail">
+      <div class="wrap">
+        <div class="request-box">
+          <h2 class="sec-title">Wil je Cold Dip op Apple Watch of Suunto?</h2>
+          <p class="sec-lead">Heb je een idee voor een Garmin-app of wijzerplaat? Schrijf me en vertel welk horloge je gebruikt.</p>
+          <div class="interest-row">
+            <a class="btn" href="#notify" data-notify-platform="apple" data-gc-event="klik-chce-apple">Ik wil hem op Apple Watch</a>
+            <a class="btn btn-ghost" href="#notify" data-notify-platform="suunto" data-gc-event="klik-chce-suunto">Ik wil hem op Suunto</a>
+            <a class="btn btn-ghost" href="#notify" data-notify-platform="inny" data-gc-event="klik-chce-inny">Ik gebruik een ander horloge</a>
+          </div>
+          <div class="cta-row">
+            <a class="btn btn-ghost" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%94%20Apple%20Watch%2C%20Suunto%20or%20an%20idea&amp;body=Hi%20%C5%81ukasz%2C%0A%0A">Mail Łukasz</a>
+            <a class="btn btn-ghost" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">Laat een beoordeling achter</a>
+          </div>
+          <p class="search-note">Als je Cold Dip al gebruikt, helpt een beoordeling in Connect IQ enorm — dank je!</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="support" hidden data-flag="showSupport">
+      <div class="wrap">
+        <div class="support-box">
+          <h2 class="sec-title">Doe me een koffie</h2>
+          <p class="sec-lead">Cold Dip is gratis. Als hij je dips helpt, kun je het werk erachter steunen.</p>
+          <a class="btn" id="support-link" href="#">Doe me een koffie</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <p>© 2026 Łukasz Pszenny, Bydgoszcz, Polen</p>
+        <address><a href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%94%20Apple%20Watch%2C%20Suunto%20or%20an%20idea&amp;body=Hi%20%C5%81ukasz%2C%0A%0A">lukasz.pszenny@gmail.com</a></address>
+      </div>
+      <p class="footer-guides">Gidsen voor winterzwemmen: <a href="gidsen/hoe-lang-in-koud-water.html">Hoe lang blijf je in koud water?</a> · <a href="gidsen/afterdrop.html">Wat is afterdrop?</a> · <a href="gidsen/zo-begin-je-met-winterzwemmen.html">Zo begin je veilig met winterzwemmen</a></p>
+      <p class="privacy" data-counter-text="Deze website telt bezoeken anoniem met GoatCounter, zonder cookies of persoonsgegevens — alleen een taalvoorkeur wordt in je browser bewaard als je die wijzigt.">Cold Dip verzamelt geen persoonsgegevens op een server. Je sessies blijven op het horloge (en, op Garmin, in Garmin Connect). Het weer op Garmin komt van Garmins eigen weerdienst op je telefoon; op Amazfit komt het van MET Norway (CC BY 4.0). <span data-privacy-site>Deze website gebruikt geen trackers of analysecookies — alleen een taalvoorkeur wordt in je browser bewaard als je die wijzigt.</span></p>
+    </div>
+  </footer>
+  <script src="../assets/js/config.js?v=20261126g"></script>
+  <script src="../assets/js/devices.js?v=20261124p"></script>
+  <script src="../assets/js/app.js?v=20261124p"></script>
+  <script src="../assets/js/lang.js?v=20261127l"></script>
+  <script src="../assets/js/extras.js?v=20261126f"></script>
+</body>
+</html>

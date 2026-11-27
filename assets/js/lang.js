@@ -1,7 +1,7 @@
 /* First-visit language detection. No tracking — preference stays in this browser only. */
 (function () {
-  var LANGS = ["en", "pl", "de", "cs", "sk", "fi", "nb", "sv", "es", "ru", "uk"];
-  var ALIAS = { no: "nb", nn: "nb", "nb-no": "nb", "nn-no": "nb", "pt-br": "en" };
+  var LANGS = ["en","pl","de","cs","sk","fi","nb","sv","es","ru","uk","da","fr","nl","hu","it","lt"];
+  var ALIAS = { no: "nb", nn: "nb", "nb-no": "nb", "nn-no": "nb", "pt-br": "en", "nl-be": "nl", "fr-be": "fr", "fr-ca": "fr" };
   var KEY = "colddip-lang";
 
   function pathLang() {

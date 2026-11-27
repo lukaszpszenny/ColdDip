@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cold Dip – app per nuoto invernale e bagni freddi su orologi Garmin</title>
+  <meta name="description" content="App Garmin gratuita per bagni freddi e nuoto invernale. Fasi, timer, frequenza cardiaca, temperatura dell'acqua, GPS e altro. Funziona su oltre 130 orologi Garmin.">
+  <meta name="author" content="Łukasz Pszenny">
+  <meta name="theme-color" content="#07111c">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Cold Dip">
+  <meta property="og:title" content="Cold Dip – app per nuoto invernale e bagni freddi su orologi Garmin">
+  <meta property="og:description" content="App Garmin gratuita per bagni freddi e nuoto invernale. Fasi, timer, frequenza cardiaca, temperatura dell'acqua, GPS e altro. Funziona su oltre 130 orologi Garmin.">
+  <meta property="og:url" content="https://lukaszpszenny.github.io/ColdDip/it/">
+  <meta property="og:image" content="https://lukaszpszenny.github.io/ColdDip/assets/img/share/og-en.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Cold Dip – app per nuoto invernale e bagni freddi su orologi Garmin">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="pl_PL">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="cs_CZ">
+  <meta property="og:locale:alternate" content="sk_SK">
+  <meta property="og:locale:alternate" content="fi_FI">
+  <meta property="og:locale:alternate" content="nb_NO">
+  <meta property="og:locale:alternate" content="sv_SE">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="ru_RU">
+  <meta property="og:locale:alternate" content="uk_UA">
+  <meta property="og:locale:alternate" content="da_DK">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta property="og:locale:alternate" content="nl_NL">
+  <meta property="og:locale:alternate" content="hu_HU">
+  <meta property="og:locale:alternate" content="lt_LT">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cold Dip – app per nuoto invernale e bagni freddi su orologi Garmin">
+  <meta name="twitter:description" content="App Garmin gratuita per bagni freddi e nuoto invernale. Fasi, timer, frequenza cardiaca, temperatura dell'acqua, GPS e altro. Funziona su oltre 130 orologi Garmin.">
+  <meta name="twitter:image" content="https://lukaszpszenny.github.io/ColdDip/assets/img/share/og-en.jpg">
+  <meta name="twitter:image:alt" content="Cold Dip – app per nuoto invernale e bagni freddi su orologi Garmin">
+  <link rel="canonical" href="https://lukaszpszenny.github.io/ColdDip/it/">
+  <link rel="icon" href="../assets/img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="../assets/img/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <meta name="apple-mobile-web-app-title" content="Cold Dip">
+  <link rel="preload" as="image" type="image/webp" href="../assets/img/promo/en/1.webp" fetchpriority="high">
+  <link rel="alternate" hreflang="en" href="https://lukaszpszenny.github.io/ColdDip/">
+  <link rel="alternate" hreflang="pl" href="https://lukaszpszenny.github.io/ColdDip/pl/">
+  <link rel="alternate" hreflang="de" href="https://lukaszpszenny.github.io/ColdDip/de/">
+  <link rel="alternate" hreflang="cs" href="https://lukaszpszenny.github.io/ColdDip/cs/">
+  <link rel="alternate" hreflang="sk" href="https://lukaszpszenny.github.io/ColdDip/sk/">
+  <link rel="alternate" hreflang="fi" href="https://lukaszpszenny.github.io/ColdDip/fi/">
+  <link rel="alternate" hreflang="nb" href="https://lukaszpszenny.github.io/ColdDip/nb/">
+  <link rel="alternate" hreflang="sv" href="https://lukaszpszenny.github.io/ColdDip/sv/">
+  <link rel="alternate" hreflang="es" href="https://lukaszpszenny.github.io/ColdDip/es/">
+  <link rel="alternate" hreflang="ru" href="https://lukaszpszenny.github.io/ColdDip/ru/">
+  <link rel="alternate" hreflang="uk" href="https://lukaszpszenny.github.io/ColdDip/uk/">
+  <link rel="alternate" hreflang="da" href="https://lukaszpszenny.github.io/ColdDip/da/">
+  <link rel="alternate" hreflang="fr" href="https://lukaszpszenny.github.io/ColdDip/fr/">
+  <link rel="alternate" hreflang="nl" href="https://lukaszpszenny.github.io/ColdDip/nl/">
+  <link rel="alternate" hreflang="hu" href="https://lukaszpszenny.github.io/ColdDip/hu/">
+  <link rel="alternate" hreflang="it" href="https://lukaszpszenny.github.io/ColdDip/it/">
+  <link rel="alternate" hreflang="lt" href="https://lukaszpszenny.github.io/ColdDip/lt/">
+  <link rel="alternate" hreflang="x-default" href="https://lukaszpszenny.github.io/ColdDip/">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261127a">
+  <script>
+  (function () {
+    var LANGS = ["en","pl","de","cs","sk","fi","nb","sv","es","ru","uk","da","fr","nl","hu","it","lt"];
+    var parts = location.pathname.split("/").filter(Boolean);
+    if (parts.length && parts[parts.length - 1] === "index.html") parts.pop();
+    if (parts.length && LANGS.indexOf(parts[parts.length - 1]) !== -1) parts.pop();
+    var root = location.origin + "/" + (parts.length ? parts.join("/") + "/" : "");
+    function abs(lang) { return (!lang || lang === "en" || lang === "x-default") ? root : root + lang + "/"; }
+    var here = document.documentElement.lang || "en";
+    document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(function (l) {
+      l.href = abs(l.getAttribute("hreflang"));
+    });
+    var canon = document.querySelector('link[rel="canonical"]');
+    if (canon) canon.href = abs(here);
+    function setMeta(sel, val) {
+      var m = document.querySelector(sel);
+      if (m) m.setAttribute("content", val);
+    }
+    setMeta('meta[property="og:url"]', abs(here));
+  })();
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Cold Dip",
+  "alternateName": [
+    "Morsowanie",
+    "Eisbaden",
+    "Otužování",
+    "Otužovanie",
+    "Avanto",
+    "Isbading",
+    "Vinterbad",
+    "Baño frío",
+    "Моржевание",
+    "Моржування",
+    "Vinterbadning",
+    "Bain froid",
+    "IJsbaden",
+    "Jeges fürdés",
+    "Bagno freddo",
+    "Žiemos maudynės"
+  ],
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Garmin Connect IQ",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "url": "https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0",
+  "downloadUrl": "https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0",
+  "installUrl": "https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0",
+  "isAccessibleForGratis": true,
+  "description": "App Garmin gratuita per bagni freddi e nuoto invernale. Fasi, timer, frequenza cardiaca, temperatura dell'acqua, GPS e altro. Funziona su oltre 130 orologi Garmin.",
+  "author": {
+    "@type": "Person",
+    "name": "Łukasz Pszenny",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bydgoszcz",
+      "addressCountry": "PL"
+    }
+  },
+  "inLanguage": [
+    "en",
+    "pl",
+    "de",
+    "cs",
+    "sk",
+    "fi",
+    "nb",
+    "sv",
+    "es",
+    "ru",
+    "uk",
+    "da",
+    "fr",
+    "nl",
+    "hu",
+    "it",
+    "lt"
+  ],
+  "featureList": [
+    "Prima / in acqua / dopo",
+    "Frequenza cardiaca e temperatura dell'acqua",
+    "Meteo dal telefono",
+    "Mappa GPS del tuo ingresso",
+    "Come ti sei sentito, 1–5",
+    "Salvato come attività a sé"
+  ]
+}
+  </script>
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true"></div>
+  <a class="skip" href="#main">Vai al contenuto</a>
+  <header class="header">
+    <div class="wrap">
+      <a class="brand" href="./" aria-label="Cold Dip">
+        <img src="../assets/img/logo.webp" width="36" height="36" alt="" decoding="async">
+        Cold Dip
+      </a>
+      <nav class="nav">
+        <a href="#features">Funzioni</a>
+        <a class="nav-pro" href="#pro">Pro</a>
+        <a href="#watches">Orologi</a>
+        <a class="nav-faces" href="#faces">Quadranti <span class="badge-new">New</span></a>
+        <a href="#howto">Come si usa</a>
+        <a class="nav-changelog" href="#changelog">Novità</a>
+        <a class="nav-clubs" href="#clubs">Per i club</a>
+        <a href="#contact">Contatti</a>
+      </nav>
+      <a class="header-cta" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">Scarica l'app</a>
+      <details class="lang">
+        <summary aria-label="Lingua: Italiano"><img class="lang-flag" src="../assets/flags/gb.png?v=20261127l" alt="" width="18" height="13"><span>Italiano</span></summary>
+        <ul class="lang-panel"><li><a href="../" hreflang="en" lang="en"><img class="lang-flag" src="../assets/flags/gb.png?v=20261127l" alt="" width="18" height="13">English</a></li><li><a href="../pl/" hreflang="pl" lang="pl"><img class="lang-flag" src="../assets/flags/pl.png?v=20261127l" alt="" width="18" height="13">Polski</a></li><li><a href="../de/" hreflang="de" lang="de"><img class="lang-flag" src="../assets/flags/de.png?v=20261127l" alt="" width="18" height="13">Deutsch</a></li><li><a href="../cs/" hreflang="cs" lang="cs"><img class="lang-flag" src="../assets/flags/cz.png?v=20261127l" alt="" width="18" height="13">Čeština</a></li><li><a href="../sk/" hreflang="sk" lang="sk"><img class="lang-flag" src="../assets/flags/sk.png?v=20261127l" alt="" width="18" height="13">Slovenčina</a></li><li><a href="../fi/" hreflang="fi" lang="fi"><img class="lang-flag" src="../assets/flags/fi.png?v=20261127l" alt="" width="18" height="13">Suomi</a></li><li><a href="../nb/" hreflang="nb" lang="nb"><img class="lang-flag" src="../assets/flags/no.png?v=20261127l" alt="" width="18" height="13">Norsk</a></li><li><a href="../sv/" hreflang="sv" lang="sv"><img class="lang-flag" src="../assets/flags/se.png?v=20261127l" alt="" width="18" height="13">Svenska</a></li><li><a href="../es/" hreflang="es" lang="es"><img class="lang-flag" src="../assets/flags/es.png?v=20261127l" alt="" width="18" height="13">Español</a></li><li><a href="../ru/" hreflang="ru" lang="ru"><img class="lang-flag" src="../assets/flags/ru.png?v=20261127l" alt="" width="18" height="13">Русский</a></li><li><a href="../uk/" hreflang="uk" lang="uk"><img class="lang-flag" src="../assets/flags/ua.png?v=20261127l" alt="" width="18" height="13">Українська</a></li><li><a href="../da/" hreflang="da" lang="da"><img class="lang-flag" src="../assets/flags/dk.png?v=20261127l" alt="" width="18" height="13">Dansk</a></li><li><a href="../fr/" hreflang="fr" lang="fr"><img class="lang-flag" src="../assets/flags/fr.png?v=20261127l" alt="" width="18" height="13">Français</a></li><li><a href="../nl/" hreflang="nl" lang="nl"><img class="lang-flag" src="../assets/flags/nl.png?v=20261127l" alt="" width="18" height="13">Nederlands</a></li><li><a href="../hu/" hreflang="hu" lang="hu"><img class="lang-flag" src="../assets/flags/hu.png?v=20261127l" alt="" width="18" height="13">Magyar</a></li><li><a href="./" hreflang="it" lang="it" aria-current="page"><img class="lang-flag" src="../assets/flags/it.png?v=20261127l" alt="" width="18" height="13">Italiano</a></li><li><a href="../lt/" hreflang="lt" lang="lt"><img class="lang-flag" src="../assets/flags/lt.png?v=20261127l" alt="" width="18" height="13">Lietuvių</a></li></ul>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <span class="badge">App gratuita per orologi Garmin</span>
+          <div class="hero-title"><h1>Cold Dip</h1><span class="hero-free">GRATIS</span></div>
+          
+          <p class="tagline">Bagni freddi e nuoto invernale, registrati come si deve — non come un nuoto.</p>
+          <div class="cta-row">
+            <a class="btn btn-xl" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank"><span class="btn-main">Scarica gratis</span><small class="btn-sub">Connect IQ Store · Garmin</small></a>
+            <a class="btn btn-ghost" href="#faces">Vedi i quadranti</a>
+          </div>
+          <figure class="hero-media" data-hero-loop>
+            <video class="loop-video" src="../assets/video/dip-loop-en.mp4" poster="assets/video/dip-loop-en.jpg" width="300" height="386" autoplay muted loop playsinline preload="metadata" aria-label="Animazione: Cold Dip su un orologio Garmin — sulla riva, in acqua, dopo l'uscita, sensazione e salvataggio"></video>
+          </figure>
+          <p class="hero-proof"><a href="#reviews"><span class="stars" aria-hidden="true">★★★★★</span> <b>5.0</b> in Connect IQ · <b>1000+</b> download</a></p>
+          <p class="search-note">Oppure cerca “Cold Dip” nell'app Connect IQ sul telefono.</p>
+          <p class="howto-link"><a href="#how-to-video">▶ Guarda: come si usa (1 min)</a></p>
+          <p class="byline">Realizzato da Łukasz Pszenny, nuotatore invernale di Bydgoszcz, Polonia.</p>
+        </div>
+        <div class="gallery">
+          <figure>
+            <img src="../assets/img/promo/en/1.webp" width="720" height="900" alt="Schermata iniziale: GPS, meteo e temperatura dell'acqua prima di entrare" fetchpriority="high" decoding="async">
+            <figcaption>Prima di entrare</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/promo/en/2.webp" width="720" height="900" alt="In acqua: tempo e frequenza cardiaca" loading="lazy" decoding="async">
+            <figcaption>In acqua</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/promo/en/3.webp" width="720" height="900" alt="Dopo essere uscito: riepilogo e come ti senti" loading="lazy" decoding="async">
+            <figcaption>Dopo essere uscito</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="platforms" class="platforms-band" aria-labelledby="platforms-title">
+      <div class="wrap">
+        <p class="morslevel-kicker" id="platforms-title">Piattaforme</p>
+        <p class="platforms-lead">Cold Dip è già disponibile sugli orologi Garmin. La versione Amazfit (Zepp OS) è in revisione nello Zepp App Store. Le versioni per Huawei, Wear OS e Apple Watch sono in preparazione.</p>
+        <ul class="platforms-list">
+          <li class="platforms-item is-live">
+            <a href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">
+              <span class="platforms-name">Garmin</span>
+              <span class="platforms-status">Disponibile ora</span>
+            </a>
+          </li>
+          <li class="platforms-item is-live is-review">
+            <a href="amazfit.html">
+              <span class="platforms-name">Amazfit <span class="platforms-note">Zepp OS</span></span>
+              <span class="platforms-status">Disponibile / presto nello Zepp App Store</span>
+            </a>
+          </li>
+          <li class="platforms-item is-soon">
+            <span class="platforms-name">Huawei</span>
+            <span class="platforms-status">Presto</span>
+          </li>
+          <li class="platforms-item is-soon">
+            <span class="platforms-name">Wear OS <span class="platforms-note">Samsung Galaxy Watch, Pixel Watch</span></span>
+            <span class="platforms-status">Presto</span>
+          </li>
+          <li class="platforms-item is-soon">
+            <span class="platforms-name">Apple Watch</span>
+            <span class="platforms-status">Presto</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="wrap">
+        <h2 class="sec-title">Che cosa fa</h2>
+        <p class="sec-lead">Pensata per un bagno freddo, non per una sessione in piscina. Resti tu al comando per tutto il tempo.</p>
+        <div class="features">
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14"/><path d="M5 12h14"/><path d="M5 17h14"/><circle cx="9" cy="7" r="1.6" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"/><circle cx="15" cy="17" r="1.6" fill="currentColor" stroke="none"/></svg></div>
+            <h3>Prima / in acqua / dopo</h3>
+            <p>Il tasto in alto cambia fase. Il tempo in acqua continua semplicemente a scorrere — l'app non ti dice mai di uscire. Lo decidi tu. Il tuo ultimo tempo è solo un punto di riferimento, non un traguardo da battere.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.6-7 10-7 10z"/></svg></div>
+            <h3>Frequenza cardiaca e temperatura dell'acqua</h3>
+            <p>La frequenza cardiaca viene registrata per tutta la sessione. La temperatura dell'acqua si inserisce a mano e viene salvata con l'attività.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 16h10a4 4 0 0 0 0-8 6 6 0 0 0-11.5 1.5A3.5 3.5 0 0 0 7 16z"/><path d="M8 19v1M12 19v2M16 19v1"/></svg></div>
+            <h3>Meteo dal telefono</h3>
+            <p>Temperatura dell'aria, percepita e vento — dalla meteo Garmin sul telefono.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.2"/></svg></div>
+            <h3>Mappa GPS del tuo ingresso</h3>
+            <p>Il luogo dell'ingresso viene salvato e mostrato su una mappa in Garmin Connect.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 13.5s1.5 2.5 4 2.5 4-2.5 4-2.5"/><path d="M9 9.5h.01M15 9.5h.01"/></svg></div>
+            <h3>Come ti sei sentito, 1–5</h3>
+            <p>Dopo ogni ingresso, una valutazione rapida di come ti senti. Anche picco e recupero della frequenza, più Body Battery e stress prima di entrare.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></div>
+            <h3>Salvato come attività a sé</h3>
+            <p>Tutto viene salvato in Garmin Connect come attività a sé, non come un nuoto.</p>
+          </article>
+        </div>
+        <div class="compat">
+          <h3>17 lingue</h3>
+          <p>Inglese, polacco, tedesco, ceco, slovacco, finlandese, norvegese, svedese, spagnolo, russo, ucraino, danese, francese, olandese, ungherese, italiano e lituano. L'app segue automaticamente la lingua dell'orologio.</p>
+          <div class="pill-row">
+<a class="pill" href="../" hreflang="en" lang="en"><img class="lang-flag" src="../assets/flags/gb.png?v=20261127l" alt="" width="18" height="13">English</a><a class="pill" href="../pl/" hreflang="pl" lang="pl"><img class="lang-flag" src="../assets/flags/pl.png?v=20261127l" alt="" width="18" height="13">Polski</a><a class="pill" href="../de/" hreflang="de" lang="de"><img class="lang-flag" src="../assets/flags/de.png?v=20261127l" alt="" width="18" height="13">Deutsch</a><a class="pill" href="../cs/" hreflang="cs" lang="cs"><img class="lang-flag" src="../assets/flags/cz.png?v=20261127l" alt="" width="18" height="13">Čeština</a><a class="pill" href="../sk/" hreflang="sk" lang="sk"><img class="lang-flag" src="../assets/flags/sk.png?v=20261127l" alt="" width="18" height="13">Slovenčina</a><a class="pill" href="../fi/" hreflang="fi" lang="fi"><img class="lang-flag" src="../assets/flags/fi.png?v=20261127l" alt="" width="18" height="13">Suomi</a><a class="pill" href="../nb/" hreflang="nb" lang="nb"><img class="lang-flag" src="../assets/flags/no.png?v=20261127l" alt="" width="18" height="13">Norsk</a><a class="pill" href="../sv/" hreflang="sv" lang="sv"><img class="lang-flag" src="../assets/flags/se.png?v=20261127l" alt="" width="18" height="13">Svenska</a><a class="pill" href="../es/" hreflang="es" lang="es"><img class="lang-flag" src="../assets/flags/es.png?v=20261127l" alt="" width="18" height="13">Español</a><a class="pill" href="../ru/" hreflang="ru" lang="ru"><img class="lang-flag" src="../assets/flags/ru.png?v=20261127l" alt="" width="18" height="13">Русский</a><a class="pill" href="../uk/" hreflang="uk" lang="uk"><img class="lang-flag" src="../assets/flags/ua.png?v=20261127l" alt="" width="18" height="13">Українська</a><a class="pill" href="../da/" hreflang="da" lang="da"><img class="lang-flag" src="../assets/flags/dk.png?v=20261127l" alt="" width="18" height="13">Dansk</a><a class="pill" href="../fr/" hreflang="fr" lang="fr"><img class="lang-flag" src="../assets/flags/fr.png?v=20261127l" alt="" width="18" height="13">Français</a><a class="pill" href="../nl/" hreflang="nl" lang="nl"><img class="lang-flag" src="../assets/flags/nl.png?v=20261127l" alt="" width="18" height="13">Nederlands</a><a class="pill" href="../hu/" hreflang="hu" lang="hu"><img class="lang-flag" src="../assets/flags/hu.png?v=20261127l" alt="" width="18" height="13">Magyar</a><a class="pill" href="./" hreflang="it" lang="it"><img class="lang-flag" src="../assets/flags/it.png?v=20261127l" alt="" width="18" height="13">Italiano</a><a class="pill" href="../lt/" hreflang="lt" lang="lt"><img class="lang-flag" src="../assets/flags/lt.png?v=20261127l" alt="" width="18" height="13">Lietuvių</a>
+          </div>
+        </div>
+        <div class="compat">
+          <h3 data-compat-title data-compat-live="Funziona su oltre 130 orologi Garmin">Funziona su oltre 130 orologi Garmin</h3>
+          <p>Forerunner, Fenix, Epix, Enduro, Venu, Vivoactive, Instinct 2 / 3 / E / Crossover e altri. Non supportati: orologi molto vecchi come il Forerunner 920XT (Connect IQ 1.x).</p>
+        </div>
+      
+      </div>
+    </section>
+
+    <section id="pro" class="pro-band" data-mfold="Show all Pro features and comparison">
+      <div class="wrap">
+        <div class="face-copy">
+          <span class="badge" data-pro-soon hidden>Presto nel Connect IQ Store</span>
+          <h2 class="sec-title">Cold Dip Pro <span class="pro-star">⭐ PRO</span></h2>
+          <p class="local-name">Extra facoltativi per l'app gratuita — paghi solo se li vuoi</p>
+          <p class="sec-lead">L'app che usi già resta gratis. Pro è per chi vuole un po' di più dalla stagione: nuovi modi di allenarsi, un quadro più chiaro dei progressi e uno schermo più semplice in acqua.</p>
+          <p class="face-price">$4.99 <small>una tantum, IVA aggiuntiva dove prevista · prova gratuita di 7 giorni</small></p>
+          <p class="cta-row">
+            <a class="btn btn-pro" href="#pro-unlock">Prova Pro gratis per 7 giorni — poi 4,99 $</a>
+            <a class="btn" data-pro-store hidden href="#">Prendi l'aggiornamento in Connect IQ</a>
+          </p>
+        </div>
+        <div class="pro-features">
+          <article class="card">
+            <h3>Sauna, contrasto e nuove modalità <span class="pro-star">⭐ PRO</span></h3>
+            <p>Fai una sauna con l'orologio al polso, fai una doccia fredda, segui un contrasto guidato di sauna e acqua, o fai una breve preparazione del respiro prima di entrare. Confermi sempre un cambio di fase con il tasto.</p>
+          </article>
+          <article class="card">
+            <h3>I tuoi avvisi in acqua <span class="pro-star">⭐ PRO</span></h3>
+            <p>Fasi nominate e avvisi agli orari che scegli, in aggiunta agli avvisi gratuiti al minuto, a metà e 3-2-1, che restano com'è.</p>
+          </article>
+          <article class="card">
+            <h3>Vedi tutta la stagione <span class="pro-star">⭐ PRO</span></h3>
+            <p>Tempo totale in acqua e in sauna, record di sempre e di stagione (acqua più fredda, ingresso più lungo) e cronologia fino a 200 sessioni. L'elenco gratuito mostra ancora le ultime 30.</p>
+          </article>
+          <article class="card">
+            <h3>Badge e serie giornaliere <span class="pro-star">⭐ PRO</span></h3>
+            <p>Tieni una serie di 7, 14 o 30 giorni e ottieni badge per 10, 25, 50 e 100 sessioni, un primo ingresso sotto i 5°C, una sessione di contrasto e una sauna più un ingresso di fila.</p>
+          </article>
+          <article class="card">
+            <h3>Schermate extra e temi colore <span class="pro-star">⭐ PRO</span></h3>
+            <p>Un grande timer, una pagina di frequenza e giri, e temi (ghiaccio, scuro, alto contrasto, sauna). Cambia pagina con Su e Giù.</p>
+          </article>
+          <article class="card">
+            <h3>Modalità semplice, pensata per i guanti <span class="pro-star">⭐ PRO</span></h3>
+            <p>Un enorme timer in acqua, temperatura dell'acqua e frequenza cardiaca. Un tasto per avviare e fermare. Niente menu o schermate in più. Attivalo nelle impostazioni dopo aver sbloccato Pro.</p>
+          </article>
+          <article class="card">
+            <h3>Un suggerimento di tempo — non un limite <span class="pro-star">⭐ PRO</span></h3>
+            <p>Un tempo suggerito in base alla temperatura dell'acqua, secondo una regola di club comune (circa tanti minuti quanti sono i °C dell'acqua, tra 0:30 e 5:00). È solo un suggerimento: l'app non termina mai la sessione e non afferma mai che un tempo è sicuro.</p>
+          </article>
+          <article class="card">
+            <h3>Glance e complicazioni del quadrante</h3>
+            <p>Sui modelli più recenti puoi fissare un glance e delle complicazioni: la serie quotidiana, il tempo dell'ultimo ingresso e i minuti di stagione. Il glance è gratis su quei modelli. Le complicazioni richiedono un quadrante che supporta le complicazioni delle app.</p>
+          </article>
+          <article class="card">
+            <h3>Una scheda sessione che puoi fotografare <span class="pro-star">⭐ PRO</span></h3>
+            <p>Quando salvi un ingresso, una scheda semplice mostra tempo, temperatura, come ti sei sentito e la serie. Fotografa lo schermo per condividerla. Un elenco cronologico resta sull'orologio, e Garmin Connect riceve comunque l'attività FIT. Non c'è export nel cloud né immagine Instagram — Connect IQ non può inviare foto da solo.</p>
+          </article>
+          <article class="card">
+            <h3>Grafico di frequenza e recupero <span class="pro-star">⭐ PRO</span></h3>
+            <p>Dopo un ingresso vedi una curva semplice della frequenza, il picco e i valori di recupero a 1 e 2 minuti. È solo un suggerimento, non un parere medico.</p>
+          </article>
+          <article class="card">
+            <h3>Luoghi salvati, prima di uscire di casa <span class="pro-star">⭐ PRO</span></h3>
+            <p>Salva un luogo di ingresso con l'ultima temperatura dell'acqua che ci hai registrato. Quando sei nei paraggi, la schermata iniziale può mostrare quell'ultima visita. Non è una temperatura del lago in tempo reale — Connect IQ non ha un'API per la temperatura dell'acqua.</p>
+          </article>
+          <article class="card">
+            <h3>Orologio lasciato fuori dalla sauna, più riscaldamento <span class="pro-star">⭐ PRO</span></h3>
+            <p>Se lasci l'orologio fuori perché non si surriscaldi, attiva l'opzione: l'app non aspetterà la frequenza al polso in sauna e potrà avviare una fase di riscaldamento dopo. Puoi anche avviare il riscaldamento dopo un ingresso dal menu.</p>
+          </article>
+        </div>
+        <div class="cmp-wrap">
+          <h3 class="sec-title" style="font-size:1.35rem;margin-bottom:16px;">Gratis e Pro, uno accanto all'altro</h3>
+          <table class="cmp">
+            <thead>
+              <tr>
+                <th scope="col">Cosa è incluso</th>
+                <th scope="col">Gratis</th>
+                <th class="pro-col" scope="col">Pro <span class="pro-star">⭐ PRO</span></th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">Tutto ciò che è già in Cold Dip 1.0.3 — quattro profili, cronologia di 30, respiro guidato, GPS e altro</th>
+              <td class="is-yes">✓ Sì</td>
+              <td class="is-yes">✓ Sì</td>
+            </tr>
+            <tr>
+              <th scope="row">Sauna, contrasto e nuove modalità <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Sì</td>
+            </tr>
+            <tr>
+              <th scope="row">I tuoi avvisi in acqua <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Sì</td>
+            </tr>
+            <tr>
+              <th scope="row">Vedi tutta la stagione <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Sì</td>
+            </tr>
+            <tr>
+              <th scope="row">Record di sempre e di stagione — acqua più fredda, ingresso più lungo <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Sì</td>
+            </tr>
+            <tr>
+              <th scope="row">Badge e serie giornaliere <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Sì</td>
+            </tr>
+            <tr>
+              <th scope="row">Schermate extra e temi colore <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Sì</td>
+            </tr>
+            <tr>
+              <th scope="row">Modalità semplice, pensata per i guanti <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Sì</td>
+            </tr>
+            <tr>
+              <th scope="row">Un suggerimento di tempo — non un limite <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Sì</td>
+            </tr>
+            <tr>
+              <th scope="row">Complicazioni Glance e quadrante (orologi più recenti)</th>
+              <td class="is-yes">Sui modelli più recenti</td>
+              <td class="is-yes">Sui modelli più recenti</td>
+            </tr>
+            <tr>
+              <th scope="row">Scheda sessione ed elenco cronologia <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Sì</td>
+            </tr>
+            <tr>
+              <th scope="row">Grafico di frequenza e recupero <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Sì</td>
+            </tr>
+            <tr>
+              <th scope="row">Luoghi salvati con l'ultima temperatura dell'acqua <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Sì</td>
+            </tr>
+            <tr>
+              <th scope="row">Orologio fuori dalla sauna e riscaldamento <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Sì</td>
+            </tr>
+            <tr>
+              <th scope="row">Prezzo</th>
+              <td>Gratis</td>
+              <td class="pro-col">Prova di 7 giorni, poi 4,99 $ una tantum</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pro-unlock" id="pro-unlock">
+          <h3>Come sbloccare</h3>
+          <ol class="face-steps">
+            <li>Aggiorna Cold Dip alla 1.2.0. L'app mostra le novità e avvia una prova gratuita di 7 giorni di Pro.</li>
+            <li>Quando vuoi tenere Pro, sull'orologio compare un codice a 6 cifre. Inseriscilo su <a href="https://kzl.io/cold-dip-pro" data-pro-unlock rel="noopener" target="_blank">kzl.io/cold-dip-pro</a>  — un pagamento una tantum di 4,99 $ tramite KiezelPay.</li>
+            <li>Tieni il telefono vicino, con Garmin Connect aperto e il Bluetooth acceso. L'orologio ha bisogno di quella connessione per sbloccarsi, di solito entro 5 minuti.</li>
+          </ol>
+        </div>
+                <div class="pro-compat">
+          <h3>Su quali orologi gira Pro?</h3>
+          <p>Pro gira sugli orologi Garmin più recenti con Connect IQ 4 o successivo, tra cui Venu 2 / 3 / 4, Venu Sq 2, Venu X1, vívoactive 5 / 6, Forerunner 165 / 170 / 255 / 265 / 570 / 955 / 965 / 970, fēnix 7 / 8 / 9, epix (Gen 2), Instinct 3 AMOLED, Descent Mk3, Enduro 3 / 4, Approach S50 / S70 / S72 e MARQ (Gen 2) / (Gen 3). Non gira su modelli più vecchi o con poca memoria come fēnix 5 / 6, la prima Venu, vívoactive 3 / 4, Forerunner 55 / 245 / 645 / 945, Instinct 2, Instinct 3 Solar o Instinct E — l'app gratuita continua a funzionare su quelli. <a href="#watches">Controlla il tuo modello nell'elenco</a>.</p>
+        </div>
+        <p class="pro-note">In Garmin Connect una sessione in sauna viene salvata come allenamento o meditazione, perché Garmin non ha un tipo di attività «sauna».</p>
+        <p class="pro-disclaimer">Il suggerimento di tempo non è un parere medico e non significa che una sessione sia sicura. Acqua fredda e sauna comportano dei rischi. Consulta un medico, non entrare mai da solo e usa il tuo giudizio. Resti tu al comando per tutto il tempo.</p>
+      </div>
+    </section>
+
+<section id="watches"
+      data-i18n-supported="Supported"
+      data-i18n-copy="Copy"
+      data-i18n-copied="Copied"
+      data-i18n-gmail="Write via Gmail"
+      data-i18n-more="{n} more matches — type a little more to narrow the list."
+      data-i18n-not-found="This model is not on the supported list."
+      data-i18n-not-found-body="Cold Dip only runs on Garmin watches with Connect IQ 3.0 or later."
+      data-i18n-legacy="This is an older watch with Connect IQ 1.x or 2.x, so Cold Dip cannot run on it. It does not have the features the app needs, and there is not enough memory."
+      data-i18n-ask="Ask if your model can be added"
+      data-i18n-ask-subject="Cold Dip – is this watch supported?"
+      data-i18n-empty="Avvio typing a model name to see if it is supported."
+      data-i18n-pro-yes=\"⭐ PRO\"
+      data-i18n-pro-no=\"Gratis app only\">
+      <div class="wrap">
+        <h2 class="sec-title">Funziona sul tuo orologio?</h2>
+        <p class="sec-lead">Cerca il tuo modello. L'elenco corrisponde ai 133 orologi di Cold Dip.</p>
+        <div class="checker">
+          <form role="search" action="#" method="get">
+            <div class="checker-field">
+              <label for="watch-q">Modello di orologio</label>
+              <input id="watch-q" name="q" type="search" autocomplete="off" spellcheck="false" placeholder="es. Venu 2 Plus o Forerunner 265">
+            </div>
+          </form>
+          <div id="watch-results" class="watch-results" aria-live="polite"></div>
+          <p class="chk-note">Gli orologi Connect IQ 1.x molto vecchi, come il Forerunner 920XT, non possono essere supportati. Pro richiede un orologio più recente — cerca il tuo modello per vedere se è incluso.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faces" class="faces-band">
+      <div class="wrap faces-intro">
+        <p class="morslevel-kicker">Quadranti</p>
+        <h2 class="sec-title">Quadranti</h2>
+        <p class="sec-lead">Quadranti per il nuoto invernale, compresi i quadranti di stagione che ottieni con gli ingressi in Cold Dip. Mors – tarcza cambia con il meteo. Mors Level cresce con i minuti di stagione. Dip Goals e Afterdrop arrivano presto.</p>
+        <div class="faces-ranks">
+          <div class="faces-ranks-head">
+            <p class="morslevel-kicker">Stagione 2026/2027</p>
+            <h3>Quadranti che ottieni con gli ingressi <span class="badge">Presto nel Connect IQ Store</span></h3>
+            <p class="faces-ranks-intro">Sono gratis — non puoi comprarli. Li sblocchi solo con gli ingressi nell'app gratuita Cold Dip.</p>
+          </div>
+          <div class="faces-ranks-grid">
+            <article class="faces-ranks-card faces-ranks-komandos">
+              <figure class="faces-ranks-solo">
+                <div class="faces-ranks-media">
+                <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/faces/rank/komandos.webp" width="360" height="360" aria-label="Animazione del quadrante Mors Komandos 2026/2027">
+                  <source src="../assets/img/faces/rank/komandos.webm" type="video/webm">
+                  <source src="../assets/img/faces/rank/komandos.mp4" type="video/mp4">
+                </video>
+                <span class="faces-ranks-lock"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6 1.2A2.6 2.6 0 0 0 3.4 3.8V5H2.6A.6.6 0 0 0 2 5.6v5.2c0 .33.27.6.6.6h6.8a.6.6 0 0 0 .6-.6V5.6a.6.6 0 0 0-.6-.6H8.6V3.8A2.6 2.6 0 0 0 6 1.2Zm-1.4 2.6A1.4 1.4 0 0 1 7.4 3.8V5H4.6V3.8Z"/></svg>15 dips</span>
+              </div>
+              </figure>
+              <h4>Mors Komandos 2026/2027</h4>
+              <p>15 ingressi in una stagione. Codice MK.</p>
+            </article>
+            <article class="faces-ranks-card faces-ranks-legenda">
+              <div class="faces-ranks-pair">
+                <figure class="faces-ranks-watch">
+                  <div class="faces-ranks-media">
+                <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/faces/rank/krol.webp" width="360" height="360" aria-label="Animazione del quadrante Mors Legenda Król 2026/2027">
+                  <source src="../assets/img/faces/rank/krol.webm" type="video/webm">
+                  <source src="../assets/img/faces/rank/krol.mp4" type="video/mp4">
+                </video>
+                <span class="faces-ranks-lock"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6 1.2A2.6 2.6 0 0 0 3.4 3.8V5H2.6A.6.6 0 0 0 2 5.6v5.2c0 .33.27.6.6.6h6.8a.6.6 0 0 0 .6-.6V5.6a.6.6 0 0 0-.6-.6H8.6V3.8A2.6 2.6 0 0 0 6 1.2Zm-1.4 2.6A1.4 1.4 0 0 1 7.4 3.8V5H4.6V3.8Z"/></svg>50 dips</span>
+              </div>
+                  <figcaption>Król</figcaption>
+                </figure>
+                <figure class="faces-ranks-watch">
+                  <div class="faces-ranks-media">
+                <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/faces/rank/posejdon.webp" width="360" height="360" aria-label="Animazione del quadrante Mors Legenda Posejdon 2026/2027">
+                  <source src="../assets/img/faces/rank/posejdon.webm" type="video/webm">
+                  <source src="../assets/img/faces/rank/posejdon.mp4" type="video/mp4">
+                </video>
+                <span class="faces-ranks-lock"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6 1.2A2.6 2.6 0 0 0 3.4 3.8V5H2.6A.6.6 0 0 0 2 5.6v5.2c0 .33.27.6.6.6h6.8a.6.6 0 0 0 .6-.6V5.6a.6.6 0 0 0-.6-.6H8.6V3.8A2.6 2.6 0 0 0 6 1.2Zm-1.4 2.6A1.4 1.4 0 0 1 7.4 3.8V5H4.6V3.8Z"/></svg>50 dips</span>
+              </div>
+                  <figcaption>Posejdon</figcaption>
+                </figure>
+              </div>
+              <h4>Mors Legenda 2026/2027</h4>
+              <p>50 ingressi in una stagione. Codice MZ. Scegli Król o Posejdon.</p>
+            </article>
+          </div>
+          <p class="faces-ranks-note">Senza il rango, il quadrante mostra solo l'ora e la data. Il codice funziona solo sul tuo orologio.</p>
+          <p class="faces-ranks-steps-title">Come sbloccare</p>
+          <ol class="faces-ranks-steps">
+            <li>Installa il quadrante (presto nel Connect IQ Store).</li>
+            <li>In Cold Dip apri Ranghi.</li>
+            <li>Inserisci l'ID del quadrante.</li>
+            <li>Inserisci il codice nelle impostazioni del quadrante.</li>
+          </ol>
+        </div>
+
+        <figure class="faces-promo">
+          <div class="faces-promo-gallery">
+            <img src="../assets/img/faces/dip-goals-banner.webp" width="1024" height="687" alt="Quadrante Dip Goals per smartwatch Garmin: tre temi colore su un lago ghiacciato" loading="lazy" decoding="async">
+            <img src="../assets/img/faces/dip-goals-designs.webp" width="1024" height="687" alt="Layout e temi colore Dip Goals per quadranti Garmin, compreso il look Always-on che risparmia batteria" loading="lazy" decoding="async">
+          </div>
+          <figcaption>Dip Goals <span class="badge faces-card-soon">Presto</span></figcaption>
+        </figure>
+        <div class="faces-cards">
+          <article class="faces-card faces-card-tarcza">
+            <figure class="faces-card-media">
+              <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/face/frost.webp" width="360" height="360" aria-label="Mors – tarcza col gelo: il tricheco si mette il berretto quando alzi il polso">
+                <source src="../assets/img/face/frost.webm" type="video/webm">
+                <source src="../assets/img/face/frost.mp4" type="video/mp4">
+              </video>
+            </figure>
+            <div>
+              <h3>Mors – tarcza</h3>
+              <p class="faces-card-lead">Quadrante animato con tricheco per nuotatori invernali</p>
+              <p class="faces-card-price">$3.99 <small>Prova gratuita di 24 ore</small></p>
+            </div>
+            <p class="faces-card-actions">
+              <span class="badge" data-face-soon>Presto nel Connect IQ Store</span>
+              <a class="btn" data-face-store hidden href="#">Prendilo in Connect IQ</a>
+              <a class="btn btn-ghost" href="#face">Vedi di più</a>
+            </p>
+          </article>
+          <article class="faces-card faces-card-level">
+            <figure class="faces-card-media">
+              <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/mors-level/wake.webp" width="720" height="720" aria-label="Animazione al risveglio di Mors Level: il tricheco salta e la barra di avanzamento si riempie quando alzi il polso">
+                <source src="../assets/img/mors-level/wake.webm" type="video/webm">
+                <source src="../assets/img/mors-level/wake.mp4" type="video/mp4">
+              </video>
+            </figure>
+            <div>
+              <h3>Mors Level <span class="badge-new">New</span></h3>
+              <p class="faces-card-lead">Quadrante ludico con tricheco per i bagni freddi</p>
+              <p class="faces-card-price">$2.99 <small>Prova gratuita di 7 giorni</small></p>
+            </div>
+            <p class="faces-card-actions">
+              <span class="badge" data-morslevel-soon hidden>Presto nel Connect IQ Store</span>
+              <a class="btn" data-morslevel-store href="https://apps.garmin.com/en-US/apps/fe325c7e-b38d-4a9a-b43e-f5b09780f3a8" rel="noopener" target="_blank">Prendilo in Connect IQ</a>
+              <a class="btn btn-ghost" href="#mors-level">Vedi di più</a>
+            </p>
+          </article>
+          <article class="faces-card faces-card-goals">
+            <figure class="faces-card-media">
+              <img src="../assets/img/faces/dip-goals.webp" width="360" height="360" alt="Quadrante Dip Goals nei temi Ice, Aurora e Gold, con anelli settimanali, minuti di stagione e serie" loading="lazy" decoding="async">
+            </figure>
+            <div>
+              <h3>Dip Goals <span class="badge faces-card-soon">Presto</span></h3>
+              <p class="faces-card-lead">Anelli obiettivo per gli ingressi settimanali, i minuti di stagione e la serie, più temperatura dell'acqua e dell'aria, Body Battery e frequenza cardiaca. Quattro temi.</p>
+            </div>
+          </article>
+          <article class="faces-card faces-card-afterdrop">
+            <figure class="faces-card-media">
+              <img src="../assets/img/faces/afterdrop.webp" width="360" height="360" alt="Quadrante Afterdrop con un'ora grande e tre campi dati, in diversi temi colore" loading="lazy" decoding="async">
+            </figure>
+            <div>
+              <h3>Afterdrop <span class="badge faces-card-soon">Presto</span></h3>
+              <p class="faces-card-lead">Un quadrante Garmin gratuito con un'ora grande e 3 campi dati. Non si blocca mai. Afterdrop Pro, facoltativo, sblocca i campi Cold Dip, la temperatura dell'aria, alba e tramonto, e 4 temi in più.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+    <section id="face" class="face-panel" data-mfold="More about this watch face">
+      <div class="wrap">
+        <div class="face-grid">
+          <div class="face-copy">
+            <span class="badge" data-face-soon>Presto nel Connect IQ Store</span>
+            <h2 class="sec-title">Mors – tarcza</h2>
+            <p class="local-name">Quadrante animato con tricheco per nuotatori invernali</p>
+            <p class="sec-lead">Il tricheco reagisce al meteo: onde con bel tempo, si mette il berretto col gelo, scuote la neve e salta nel buco nel ghiaccio quando è ora di entrare. Ora, data, temperatura dell'aria, meteo, frequenza cardiaca, passi e batteria. L'animazione si riproduce quando svegli l'orologio — mai in modalità always-on.</p>
+            <p class="face-price">$3.99 <small>una tantum, IVA aggiuntiva dove prevista</small></p>
+            <ol class="face-steps">
+              <li>Prova gratuita di 24 ore dopo aver installato il quadrante.</li>
+              <li>Poi sull'orologio compare un codice a 6 cifre. Inseriscilo su <a href="https://kzl.io/code" rel="noopener" target="_blank">kzl.io/code</a> per sbloccare — un pagamento una tantum di 3,99 $ tramite KiezelPay.</li>
+              <li>Tieni il telefono vicino, con Garmin Connect aperto e il Bluetooth acceso. L'orologio ha bisogno di quella connessione al telefono per sbloccarsi, di solito entro 5 minuti.</li>
+            </ol>
+            <p class="cta-row">
+              <a class="btn" data-face-store hidden href="#">Prendilo in Connect IQ</a>
+            </p>
+          </div>
+          <figure class="face-hero-clip">
+            <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/face/frost.webp" width="360" height="360" aria-label="Quadrante col gelo: il tricheco indossa un berretto blu">
+              <source src="../assets/img/face/frost.webm" type="video/webm">
+              <source src="../assets/img/face/frost.mp4" type="video/mp4">
+            </video>
+            <figcaption>Col gelo, il tricheco si mette il berretto.</figcaption>
+          </figure>
+        </div>
+        <p class="anim-note">Sugli orologi AMOLED il tricheco si muove quando alzi il polso — mai in modalità always-on.</p>
+        <div class="face-scenes">
+          <figure>
+            <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/face/wave.webp" width="360" height="360" aria-label="Quadrante con bel tempo: il tricheco con le onde">
+              <source src="../assets/img/face/wave.webm" type="video/webm">
+              <source src="../assets/img/face/wave.mp4" type="video/mp4">
+            </video>
+            <figcaption>Good weather</figcaption>
+          </figure>
+          <figure>
+            <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/face/frost.webp" width="360" height="360" aria-label="Quadrante col gelo: il tricheco indossa un berretto blu">
+              <source src="../assets/img/face/frost.webm" type="video/webm">
+              <source src="../assets/img/face/frost.mp4" type="video/mp4">
+            </video>
+            <figcaption>Frost</figcaption>
+          </figure>
+          <figure>
+            <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/face/snow.webp" width="360" height="360" aria-label="Quadrante sotto la neve: il tricheco scuote la neve">
+              <source src="../assets/img/face/snow.webm" type="video/webm">
+              <source src="../assets/img/face/snow.mp4" type="video/mp4">
+            </video>
+            <figcaption>Snow</figcaption>
+          </figure>
+          <figure>
+            <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/face/dip.webp" width="360" height="360" aria-label="Quadrante da bagno: il tricheco al buco nel ghiaccio">
+              <source src="../assets/img/face/dip.webm" type="video/webm">
+              <source src="../assets/img/face/dip.mp4" type="video/mp4">
+            </video>
+            <figcaption>Dip weather</figcaption>
+          </figure>
+          <figure>
+            <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/face/rain.webp" width="360" height="360" aria-label="Quadrante sotto la pioggia">
+              <source src="../assets/img/face/rain.webm" type="video/webm">
+              <source src="../assets/img/face/rain.mp4" type="video/mp4">
+            </video>
+            <figcaption>Rain</figcaption>
+          </figure>
+        </div>
+        <div class="face-families">
+          <article class="card">
+            <h3>AMOLED — animazione completa</h3>
+            <p>Animazione a colori su orologi AMOLED come Venu 2, 2 Plus, 3 e 4, vívoactive 5 e 6, Forerunner 165, 170, 265, 570, 965 e 970, Fenix 8 e 9 (AMOLED), Epix 2, Descent Mk3, D2 Mach, Approach S70 e S72, Instinct 3 AMOLED e MARQ 2 e 3.</p>
+          </article>
+          <article class="card">
+            <h3>Non su orologi MIP</h3>
+            <p>Questo quadrante non è disponibile su orologi MIP o con poca memoria come Fenix 5 Plus, Fenix 6 e 7, Fenix Solar, Forerunner 245, 255, 745, 945 e 955, Enduro, Descent Mk2, vívoactive 4, Venu 1 e MARQ di prima generazione. Quegli schermi non possono mostrare l'animazione a colori.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="mors-level" class="face-panel face-panel-level" data-mfold="More about this watch face">
+      <div class="wrap">
+        <div class="face-grid">
+          <div class="face-copy">
+            <span class="badge" data-morslevel-soon hidden>Presto nel Connect IQ Store</span>
+            <h2 class="sec-title">Mors Level <span class="badge-new">New</span></h2>
+            <p class="local-name">Quadrante ludico con tricheco per i bagni freddi</p>
+            <p class="sec-lead">Il tuo tricheco compagno sale di livello in 5 tappe man mano che crescono i minuti in acqua fredda della stagione — sincronizzato in diretta dall'app gratuita Cold Dip. Un buco nel ghiaccio fumante in inverno, una spiaggia in estate, un badge di serie di giorni, temperatura dell'acqua, frequenza cardiaca, batteria e un display always-on pulito. L'animazione al risveglio si riproduce quando svegli l'orologio — mai in modalità always-on.</p>
+            <p class="face-price">$2.99 <small>una tantum, IVA aggiuntiva dove prevista · prova gratuita di 7 giorni</small></p>
+            <ol class="face-steps">
+              <li>Prova gratuita di 7 giorni dopo aver installato il quadrante.</li>
+              <li>Poi sull'orologio compare un codice a 6 cifre. Inseriscilo su <a href="https://kzl.io/morslevel" data-morslevel-unlock rel="noopener" target="_blank">kzl.io/morslevel</a> per sbloccare — un pagamento una tantum di 2,99 $ tramite KiezelPay.</li>
+              <li>Tieni il telefono vicino, con Garmin Connect aperto e il Bluetooth acceso. L'orologio ha bisogno di quella connessione al telefono per sbloccarsi, di solito entro 5 minuti.</li>
+            </ol>
+            <p class="face-note">Per salire di livello con minuti in diretta, serie e temperatura dell'acqua, installa la <a href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">Cold Dip</a> app gratuita. Senza di essa, quei campi mostrano semplicemente i dati dell'orologio.</p>
+            <p class="cta-row">
+              <a class="btn" data-morslevel-store href="https://apps.garmin.com/en-US/apps/fe325c7e-b38d-4a9a-b43e-f5b09780f3a8" rel="noopener" target="_blank">Prendilo in Connect IQ</a>
+            </p>
+          </div>
+          <figure class="face-hero-clip">
+            <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/mors-level/wake.webp" width="720" height="720" aria-label="Animazione al risveglio di Mors Level: il tricheco salta e la barra di avanzamento si riempie quando alzi il polso">
+              <source src="../assets/img/mors-level/wake.webm" type="video/webm">
+              <source src="../assets/img/mors-level/wake.mp4" type="video/mp4">
+            </video>
+            <figcaption>Animazione al risveglio: il tricheco salta e la barra si riempie quando alzi il polso (~1 s, AMOLED). MIP resta fermo; mai in modalità always-on.</figcaption>
+          </figure>
+        </div>
+
+          <figure class="face-hero-clip ml-demo">
+            <div class="ml-demo-frame" data-ml-demo role="img" aria-label="Dimostrazione: il tricheco sale di livello in cinque tappe man mano che crescono i minuti di stagione">
+              <div class="ml-demo-dial">
+                <div class="ml-demo-hud">
+                  <p class="ml-demo-time" aria-hidden="true">07:42</p>
+                  <p class="ml-demo-level"><span data-ml-name>NOVICE</span> <span data-ml-frac>1/5</span></p>
+                  <div class="ml-demo-bar-row">
+                    <div class="ml-demo-bar" aria-hidden="true"><i data-ml-bar></i></div>
+                    <svg class="ml-demo-crown" data-ml-crown viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.5 18h17l-1.2-9.2-4.3 3.4L12 7.5 8.9 12.2 4.7 8.8zM5 19.5h14V21H5z"/></svg>
+                  </div>
+                </div>
+                <div class="ml-demo-chars">
+              <img src="../assets/img/mors-level/stage-1.webp" width="424" height="400" alt="Mors Level, tappa 1: NOVICE" class="is-on" decoding="async">
+              <img src="../assets/img/mors-level/stage-2.webp" width="424" height="400" alt="Mors Level, tappa 2: TAMER" decoding="async">
+              <img src="../assets/img/mors-level/stage-3.webp" width="424" height="400" alt="Mors Level, tappa 3: ICE WARRIOR" decoding="async">
+              <img src="../assets/img/mors-level/stage-4.webp" width="424" height="400" alt="Mors Level, tappa 4: VETERAN" decoding="async">
+              <img src="../assets/img/mors-level/stage-5.webp" width="424" height="400" alt="Mors Level, tappa 5: ICE KING" decoding="async">
+                </div>
+              </div>
+            </div>
+            <figcaption>Il tricheco sale di livello man mano che crescono i minuti di stagione.</figcaption>
+          </figure>
+        <p class="morslevel-kicker">5 levels</p>
+        <ol class="morslevel-levels">
+          <li>
+            <img src="../assets/img/mors-level/stage-1.webp" width="424" height="400" alt="Mors Level, tappa 1: NOVICE" loading="lazy" decoding="async">
+            <p class="lvl">1/5</p>
+            <h3>NOVICE</h3>
+            <p>0–29 min in questa stagione</p>
+          </li>
+          <li>
+            <img src="../assets/img/mors-level/stage-2.webp" width="424" height="400" alt="Mors Level, tappa 2: TAMER" loading="lazy" decoding="async">
+            <p class="lvl">2/5</p>
+            <h3>TAMER</h3>
+            <p>30–119 min in questa stagione</p>
+          </li>
+          <li>
+            <img src="../assets/img/mors-level/stage-3.webp" width="424" height="400" alt="Mors Level, tappa 3: ICE WARRIOR" loading="lazy" decoding="async">
+            <p class="lvl">3/5</p>
+            <h3>ICE WARRIOR</h3>
+            <p>120–299 min in questa stagione</p>
+          </li>
+          <li>
+            <img src="../assets/img/mors-level/stage-4.webp" width="424" height="400" alt="Mors Level, tappa 4: VETERAN" loading="lazy" decoding="async">
+            <p class="lvl">4/5</p>
+            <h3>VETERAN</h3>
+            <p>300–599 min in questa stagione</p>
+          </li>
+          <li>
+            <img src="../assets/img/mors-level/stage-5.webp" width="424" height="400" alt="Mors Level, tappa 5: ICE KING" loading="lazy" decoding="async">
+            <p class="lvl">5/5</p>
+            <h3>ICE KING</h3>
+            <p>600+ min in questa stagione</p>
+          </li>
+        </ol>
+        <div class="face-scenes">
+          <figure>
+            <img src="../assets/img/mors-level/en/winter.webp" width="720" height="720" alt="Mors Level in inverno: buco nel ghiaccio fumante e serie di giorni di ingresso" loading="lazy" decoding="async">
+            <figcaption>Winter ice hole</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/mors-level/en/summer.webp" width="720" height="720" alt="Mors Level in estate: il tricheco in spiaggia" loading="lazy" decoding="async">
+            <figcaption>Summer beach</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/mors-level/en/aod.webp" width="720" height="720" alt="Display always-on di Mors Level: ora, data e livello, con pochissimi pixel accesi" loading="lazy" decoding="async">
+            <figcaption>Always-on</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/mors-level/en/mip.webp" width="520" height="520" alt="Mors Level su un orologio MIP: un quadrante statico e parco di batteria" loading="lazy" decoding="async">
+            <figcaption>MIP watches</figcaption>
+          </figure>
+          <figure class="morslevel-watch">
+            <img src="../assets/img/mors-level/watch.webp" width="900" height="1238" alt="Mors Level su un orologio Garmin" loading="lazy" decoding="async">
+            <figcaption>Su un orologio Garmin</figcaption>
+          </figure>
+        </div>
+        <div class="face-families">
+          <article class="card">
+            <h3>AMOLED — animazione completa</h3>
+            <p>Animazione a colori su 51 orologi AMOLED come Venu 2, 2 Plus, 3 e 4, vívoactive 5 e 6, Forerunner 165, 170, 265, 570, 965 e 970, Fenix 8 e 9 (AMOLED), Epix 2, Descent Mk3, D2 Mach, Approach S70 e S72, Instinct 3 AMOLED e MARQ 2 e 3. L'always-on accende pochissimi pixel.</p>
+          </article>
+          <article class="card">
+            <h3>MIP — statico e parco di batteria</h3>
+            <p>Un quadrante chiaro e statico su 19 orologi MIP come Fenix 7, Fenix 8 Solar, Forerunner 255 e 955, e Enduro 3 e 4. In totale Mors Level supporta 70 orologi Garmin, in 11 lingue.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    </section>
+
+
+    <section id="reviews" class="reviews">
+      <div class="wrap">
+        <h2 class="sec-title">Cosa dicono i nuotatori invernali</h2>
+        <p class="sec-lead">Valutazione media 5,0 ★ nel Connect IQ Store e oltre 1000 download.</p>
+        <div class="quotes quotes-4">
+          <blockquote class="quote" cite="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0">
+            <p class="quote-stars" aria-label="5/5">★★★★★</p>
+            <p lang="pl">„Super, pierwsze morsowanie z apką za mną, działa! Tego mi było trzeba! Dzięki”</p>
+            <p class="tr">Super, il mio primo bagno con l'app è fatto, funziona! Proprio quello che mi serviva! Grazie <small>(Tradotto dal polacco)</small></p>
+            <footer>Monika · Connect IQ Store</footer>
+          </blockquote>
+          <blockquote class="quote" cite="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0">
+            <p class="quote-stars" aria-label="5/5">★★★★★</p>
+            <p lang="pl">„Rewelacyjna apka. Przetestowana podczas morsowania. Wszystko działa dobrze”</p>
+            <p class="tr">App eccezionale. Provata durante un bagno invernale. Tutto funziona bene <small>(Tradotto dal polacco)</small></p>
+            <footer>Radek · Connect IQ Store</footer>
+          </blockquote>
+          <blockquote class="quote" cite="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0">
+            <p class="quote-stars" aria-label="5/5">★★★★★</p>
+            <p lang="pl">„Działa nawet na starszym Garminie za co duże brawa dla autora”</p>
+            <p class="tr">Funziona anche su un Garmin più vecchio — un grande applauso all'autore <small>(Tradotto dal polacco)</small></p>
+            <footer>Pawel · Connect IQ Store</footer>
+          </blockquote>
+          <blockquote class="quote" cite="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0">
+            <p class="quote-stars" aria-label="5/5">★★★★★</p>
+            <p lang="pl">„Świetna sprawa!💙”</p>
+            <p class="tr">Ottima cosa!💙 <small>(Tradotto dal polacco)</small></p>
+            <footer>Justyna · Connect IQ Store</footer>
+          </blockquote>
+        </div>
+        <p class="cta-row reviews-more"><a class="btn btn-ghost" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">Leggi tutte le recensioni in Connect IQ</a></p>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="wrap">
+        <h2 class="sec-title">Sull'orologio</h2>
+        <p class="sec-lead">Un ingresso dall'avvio al salvataggio — schermi veri del simulatore Garmin.</p>
+        <div class="gallery-show">
+          <figure class="loop-figure">
+            <video class="loop-video" src="../assets/video/dip-loop-en.mp4" poster="assets/video/dip-loop-en.jpg" width="300" height="386" autoplay muted loop playsinline preload="metadata" aria-label="Animazione: Cold Dip su un orologio Garmin — sulla riva, in acqua, dopo l'uscita, sensazione e salvataggio"></video>
+            <figcaption>Registrazione reale del simulatore Garmin (Venu 2 Plus), tempo accelerato.</figcaption>
+          </figure>
+          <div class="shot-row">
+          <figure>
+            <img src="../assets/img/gallery/en/venu/start.webp" width="474" height="720" alt="Schermata iniziale: GPS, meteo e temperatura dell'acqua prima di entrare" loading="lazy" decoding="async">
+            <figcaption>Prima di entrare</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/venu/water.webp" width="474" height="720" alt="In acqua: tempo e frequenza cardiaca" loading="lazy" decoding="async">
+            <figcaption>In acqua</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/venu/after.webp" width="474" height="720" alt="Dopo essere uscito: riepilogo e come ti senti" loading="lazy" decoding="async">
+            <figcaption>Dopo essere uscito</figcaption>
+          </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="changelog" data-mfold="Older versions">
+      <div class="wrap">
+        <h2 class="sec-title">Novità</h2>
+        <p class="sec-lead">Versioni recenti di Cold Dip.</p>
+        <ol class="changelog">
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.2.0</h3>
+              <span class="ch-flag is-current">Versione attuale</span>
+            </div>
+            <p>I ranghi sono gratis e solo per divertimento — nessuno gareggia con nessuno: Pinguino (1), Foca (5, 7 giorni di Pro gratis), Tricheco guerrigliero (15, un codice per il quadrante Mors Komandos 2026/2027), Tricheco veterano (30, −30% su Mors Level / Dip Goals, codici in arrivo) e Tricheco leggenda (50, un codice per un quadrante oro a scelta: Mors Legenda Król 2026/2027 o Mors Legenda Posejdon 2026/2027). Al massimo un ingresso al giorno conta (stagione 1 ottobre – 30 aprile), e una sessione solo in sauna non conta. Sono tre quadranti di stagione distinti, in arrivo nel Connect IQ Store, gratis da installare: ottienili con un rango in Cold Dip. Non sono nei pacchetti da $5.99 / $7.99, e ogni stagione arrivano nuovi quadranti.</p>
+            <p>Tutti i record — acqua più fredda e ingresso più lungo, di sempre e in questa stagione — fanno ora parte di Pro. Continuano a essere salvati per tutti, e l'app gratuita mostra “Nuovo record! Vedi in Pro”. Dopo il terzo ingresso compare una richiesta unica di valutazione. Cronometraggio, frequenza cardiaca e salvataggio in Garmin Connect restano gratis. Sugli orologi più vecchi e in bianco e nero senza Pro i record restano gratis.</p>
+            <p>La temperatura dell'acqua si può ora impostare sotto 0°C.</p>
+          </li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.1.2</h3>
+            </div>
+            <p>La temperatura dell'acqua inserita dopo l'uscita si applica ora solo a quella sessione. La richiesta ignora una pressione accidentale subito dopo l'uscita. Più solido: memoria piena o un errore di salvataggio non bloccano più l'app, e un campo o uno sport non supportato su un orologio più vecchio non ferma più l'avvio. Corretti i consigli di riscaldamento in polacco e russo.</p>
+          </li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.1.1</h3>
+            </div>
+            <p>Corretto un blocco circa 20 secondi dopo il salvataggio di una sessione (segnalato su Venu 3S). Dopo essere uscito, l'orologio chiede la temperatura dell'acqua; è gratis e si può disattivare nelle impostazioni.</p>
+          </li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.1.0</h3>
+              </div>
+            <p>Cold Dip Pro è arrivato. Tutto ciò che c'era in 1.0.3 resta gratis. Pro è facoltativo: sblocco una tantum a 4,99 $, con prova gratuita di 7 giorni. Nuove modalità: sauna, doccia fredda, contrasto guidato e preparazione del respiro; avvisi personalizzati e fasi nominate in acqua; statistiche di stagione, badge e serie giornaliere (7 / 14 / 30); schermate extra, temi colore e modalità semplice.</p>
+          </li>
+<li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.0.3</h3>
+              
+              </div>
+            <p>133 orologi, tra cui Instinct 2, Instinct 2S, Instinct 2X, Instinct 3 Solar, Instinct E e Instinct Crossover, più un nuovo layout in bianco e nero per gli schermi MIP.</p>
+          </li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.0.2</h3>
+              
+            </div>
+            <p>126 orologi, tra cui il Forerunner 55.</p>
+          </li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.0.1</h3>
+              <span class="ch-date">17 Nov 2026</span>
+            </div>
+            <p>105 orologi, tra cui layout rettangolari per Venu X1 e Venu Sq 2.</p>
+          </li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.0.0</h3>
+              <span class="ch-date">14 Nov 2026</span>
+            </div>
+            <p>Prima versione.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="testimonials" hidden data-flag="showTestimonials">
+      <div class="wrap">
+        <h2 class="sec-title">Da chi già entra con l'app</h2>
+        <div class="quotes">
+          <blockquote class="quote">
+            <p>“Działa idealnie” <span class="tr">(Funziona alla perfezione)</span></p>
+            <footer>Radosław S., Facebook — Poznań, Jezioro Rusałka, 16 min</footer>
+          </blockquote>
+          <blockquote class="quote">
+            <p>Un ingresso di oltre 10 minuti a 5°C — temperatura dell'acqua sull'orologio, e tutti i dati salvati in Garmin Connect.</p>
+            <footer>Jadwiga</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="howto" class="howto" data-mfold="Show all steps">
+      <div class="wrap" id="faq">
+        <h2 class="sec-title">Come si usa</h2>
+        <p class="sec-lead">Alcune cose che le persone chiedono spesso dopo l'installazione.</p>
+        <!-- howto-video:start -->
+        <div class="howto-video" id="how-to-video">
+          <figure class="howto-player">
+            <video src="../assets/video/howto-en.mp4" poster="assets/video/howto-en.jpg" width="480" height="616" autoplay muted loop playsinline controls preload="metadata" aria-label="Video: Cold Dip su un orologio Garmin dall'avvio all'attività salvata"></video>
+            <figcaption>Registrato nel simulatore Garmin (Venu 2 Plus), tempo accelerato.</figcaption>
+          </figure>
+          <div class="howto-steps">
+            <h3>Guardala in 1 minuto</h3>
+            <ol>
+            <li>Apri Cold Dip sulla riva. Imposta la temperatura dell'acqua con − / + e premi AVVIA (tasto in alto).</li>
+            <li><b>Sulla riva</b>: il timer scorre mentre ti prepari. Premi il tasto in alto quando entri in acqua.</li>
+            <li><b>In acqua</b>: tempo in acqua, tempo al punto di riferimento, frequenza cardiaca e temperatura dell'acqua. Premi il tasto in alto quando esci.</li>
+            <li>Il tasto Indietro durante la sessione apre <b>Terminare?</b>  — Riprendi / Salva / Annulla.</li>
+            <li><b>Dopo l'uscita</b>: tempo da quando sei uscito e il conto alla rovescia di afterdrop (riscaldamento). Tasto in alto → <b>Termina</b>.</li>
+            <li><b>Sensazione</b>: il tasto in alto cambia la valutazione, il tasto in basso = OK.</li>
+            <li><b>Riepilogo</b> → <b>Salva</b>. L'attività va in Garmin Connect.</li>
+            <li>Opzioni: nella schermata iniziale tocca la parte alta del display o tieni premuto il tasto menu → <b>Menu</b>: Profilo, Elenco, Vibrazione e suono, Impostazioni obiettivo.</li>
+            </ol>
+          </div>
+        </div>
+        <!-- howto-video:end -->
+                        <div class="faq">
+          <details>
+            <summary><h3>Come la installo?</h3></summary>
+            <p class="answer">Installala dall'app Connect IQ Store sul telefono — non da Google Play o dall'App Store. Sull'orologio trovi Cold Dip nell'elenco attività / app.</p>
+          </details>
+          <details>
+            <summary><h3>Come imposto la temperatura dell'acqua?</h3></summary>
+            <p class="answer">Nel profilo “Buco nel ghiaccio” usa i tasti − / + nella schermata iniziale. Negli altri profili impostala dal menu: “Temp. acqua manuale”. Se in acqua vedi “--°C”, la temperatura non è ancora stata impostata.</p>
+          </details>
+          <details>
+            <summary><h3>Dove sono i miei dati in Garmin Connect?</h3></summary>
+            <p class="answer">Apri l'attività, vai alla scheda Statistiche e scorri fino alla sezione “Connect IQ”. Frequenza cardiaca, temperatura dell'acqua, meteo, come ti sei sentito e i tempi delle fasi sono tutti lì. I riquadri della schermata Panoramica li imposta Garmin — l'app non può modificarli.</p>
+          </details>
+          <details>
+            <summary><h3>L'orologio misura la temperatura corporea?</h3></summary>
+            <p class="answer">No. L'orologio non può misurare la temperatura corporea. Il sensore legge la temperatura dell'orologio stesso, influenzata dalla pelle e dall'aria. In Cold Dip la temperatura dell'acqua si inserisce a mano.</p>
+          </details>
+          <details>
+            <summary><h3>E le calorie?</h3></summary>
+            <p class="answer">Le calorie le stima l'orologio dalla frequenza cardiaca, non le calcola Cold Dip.</p>
+          </details>
+          <details>
+            <summary><h3>Funziona senza il telefono?</h3></summary>
+            <p class="answer">Sì. La registrazione gira sull'orologio, quindi il telefono può restare in borsa. Senza il telefono perdi solo il meteo, perché arriva dalla meteo Garmin sul telefono. L'attività si sincronizza con Garmin Connect la volta successiva in cui l'orologio si collega al telefono. Ti serve il telefono per installare l'app e per sbloccare Pro.</p>
+          </details>
+          <details>
+            <summary><h3>Come viene misurata la temperatura dell'acqua?</h3></summary>
+            <p class="answer">L'orologio non può misurare da solo la temperatura dell'acqua — il sensore integrato legge l'orologio, scaldato dalla pelle e dall'aria. In Cold Dip imposti la temperatura dell'acqua con − / + (o dal menu), e dopo essere uscito l'app te la chiede. Se hai un sensore Garmin Tempe accoppiato, l'app usa quella lettura. Il sensore dell'orologio e la temperatura dell'aria non vengono mai fatti passare per temperatura dell'acqua.</p>
+          </details>
+          <details>
+            <summary><h3>Cosa mi dà Pro?</h3></summary>
+            <p class="answer">Pro è facoltativo e l'app resta gratis. Pro aggiunge sauna, doccia fredda, contrasto guidato e preparazione del respiro, avvisi personalizzati, statistiche di stagione, record di sempre e di stagione (acqua più fredda, ingresso più lungo), badge e serie giornaliere, schermate extra e temi, una modalità semplice pensata per i guanti, un suggerimento di tempo in base alla temperatura dell'acqua (un suggerimento, mai un limite) e un grafico della frequenza. Costa 4,99 $ una tantum dopo una prova gratuita di 7 giorni. <a href="#pro">Vedi tutte le funzioni Pro</a>.</p>
+          </details>
+          <details>
+            <summary><h3>Come funziona il codice di sblocco KiezelPay?</h3></summary>
+            <p class="answer">I pagamenti passano da KiezelPay. Quando vuoi tenere Pro, l'orologio mostra un codice a 6 cifre. Inseriscilo su <a href="https://kzl.io/cold-dip-pro" rel="noopener" target="_blank">kzl.io/cold-dip-pro</a> (per i quadranti a pagamento: <a href="https://kzl.io/code" rel="noopener" target="_blank">kzl.io/code</a>) e paga una tantum. Tieni il telefono vicino, con Garmin Connect e il Bluetooth accesi — l'orologio si sblocca tramite quella connessione, di solito entro 5 minuti.</p>
+          </details>
+          <details>
+            <summary><h3>Quali orologi sono supportati?</h3></summary>
+            <p class="answer">Oltre 130 orologi Garmin con Connect IQ: Forerunner, fēnix, epix, Enduro, Venu, vívoactive, Instinct 2 / 3 / E / Crossover e altri. Pro richiede Connect IQ 4 o successivo. I modelli molto vecchi come il Forerunner 920XT non sono supportati. <a href="#watches">Controlla il tuo modello</a>.</p>
+          </details>
+          <details>
+            <summary><h3>E Amazfit, Huawei, Wear OS e Apple Watch?</h3></summary>
+            <p class="answer">Una versione per Amazfit (Zepp OS) è pronta e in attesa di revisione nello Zepp App Store. Le versioni per Huawei, Wear OS (Samsung Galaxy Watch, Pixel Watch) e Apple Watch sono in preparazione — niente date per ora. <a href="#notify">Ricevi un avviso</a>.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="safety" class="howto" data-mfold="More safety tips">
+      <div class="wrap">
+        <div class="safety">
+          <h2 class="sec-title">Stai al sicuro</h2>
+          <p class="sec-lead">L'acqua fredda è una cosa seria. Sono promemoria di sicurezza generali, non un parere medico. Decidi tu quando entrare e quando uscire.</p>
+          <div class="safety-list">
+            <article class="safety-item">
+              <h3>Non entrare mai da solo</h3>
+              <p>Vai sempre con qualcuno che possa aiutarti se hai un problema, o assicurati che qualcuno sulla riva ti stia guardando.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Dai tempo al tuo corpo</h3>
+              <p>Se sei all'inizio con l'acqua fredda, abituati poco alla volta invece di partire con un ingresso lungo in acqua molto fredda.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Tieni i primi ingressi brevi</h3>
+              <p>Molti iniziano con poco tempo in acqua e aumentano piano. Non c'è un tempo che “devi” resistere.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Esci quando lo senti</h3>
+              <p>Esci dall'acqua appena senti che è il momento — brividi forti, dolore, intorpidimento, confusione, o semplicemente la sensazione che basti. Cold Dip non ti dice mai di uscire e non imposta mai un tempo da battere. Il tuo ultimo tempo è solo un riferimento.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Riscaldati dopo</h3>
+              <p>Asciugati e riscalda il prima possibile dopo essere uscito. Tieni i vestiti caldi pronti prima di entrare.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Afterdrop</h3>
+              <p>Dopo essere uscito, la temperatura del nucleo può continuare a scendere per un po', mentre il sangue più freddo torna da pelle e arti. Spesso si chiama afterdrop. Continua a riscaldarti, prendila con calma e aspetta di sentirti bene prima di guidare o andare in bici.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Non è un dispositivo medico</h3>
+              <p>Cold Dip è un'app di registrazione, non un dispositivo medico, e non dà pareri medici. Non può dirti se è sicuro per te entrare in acqua fredda. Se hai una condizione di salute, sei in gravidanza o sei incerto, parla prima con un professionista qualificato.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="guides" class="guides">
+      <div class="wrap">
+        <h2 class="sec-title">Guide al nuoto invernale</h2>
+        <p class="sec-lead">Letture brevi e pratiche di un nuotatore invernale. Consigli generali, non un parere medico.</p>
+        <div class="features guides-grid">
+          <article class="card guide-card">
+            <h3><a href="guide/quanto-tempo-in-acqua-fredda.html">Quanto tempo restare in acqua fredda?</a></h3>
+            <p>Una regola pratica popolare dei club in base alla temperatura dell'acqua — e perché non è un limite sicuro.</p>
+            <p class="guide-more"><a href="guide/quanto-tempo-in-acqua-fredda.html">Leggi la guida →</a></p>
+          </article>
+          <article class="card guide-card">
+            <h3><a href="guide/afterdrop.html">Cos'è l'afterdrop?</a></h3>
+            <p>Perché puoi sentire più freddo dopo essere uscito, e come riscaldarti con calma.</p>
+            <p class="guide-more"><a href="guide/afterdrop.html">Leggi la guida →</a></p>
+          </article>
+          <article class="card guide-card">
+            <h3><a href="guide/come-iniziare-il-nuoto-invernale.html">Come iniziare il nuoto invernale in sicurezza</a></h3>
+            <p>Primi ingressi passo dopo passo: compagnia, tempi brevi, vestiti caldi pronti.</p>
+            <p class="guide-more"><a href="guide/come-iniziare-il-nuoto-invernale.html">Leggi la guida →</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="video" hidden data-flag="showVideo">
+      <div class="wrap">
+        <h2 class="sec-title">Guardala in acqua</h2>
+        <p class="sec-lead">Uno sguardo breve a un ingresso, dalla schermata iniziale al salvataggio in Garmin Connect.</p>
+        <button type="button" class="video-facade" data-youtube="" data-title="Guardala in acqua" aria-label="Riproduci il video">
+          <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></span>
+          <span class="play-label">Riproduci il video</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="notify" class="request notify">
+      <div class="wrap">
+        <div class="request-box">
+          <h2 class="sec-title">Avvisami quando arriva sul mio orologio</h2>
+          <p class="sec-lead">Cold Dip sta arrivando su altri orologi. Lascia la tua e-mail e scegli l'orologio — ti scriverò una volta, quando quella versione sarà pronta.</p>
+          <form class="cd-form notify-form" data-cd-form="notify" novalidate data-msg-ok="Grazie! Ti scriverò quando la versione {p} sarà pronta." data-msg-err="Invio non riuscito. Riprova o scrivi a lukasz.pszenny@gmail.com." data-msg-email="Inserisci un indirizzo e-mail valido." data-msg-pick="Scegli un orologio." data-msg-sending="Invio…">
+            <fieldset class="nf-platforms">
+              <legend>Quale orologio?</legend>
+              <label class="nf-chip"><input type="radio" name="platform" value="apple" data-label="Apple Watch"><span>Apple Watch</span></label>
+              <label class="nf-chip"><input type="radio" name="platform" value="wearos" data-label="Wear OS"><span>Wear OS</span></label>
+              <label class="nf-chip"><input type="radio" name="platform" value="huawei" data-label="Huawei"><span>Huawei</span></label>
+              <label class="nf-chip"><input type="radio" name="platform" value="amazfit" data-label="Amazfit"><span>Amazfit</span></label>
+              <label class="nf-chip"><input type="radio" name="platform" value="suunto" data-label="Suunto"><span>Suunto</span></label>
+              <label class="nf-chip"><input type="radio" name="platform" value="inny" data-label="Other"><span>Other</span></label>
+            </fieldset>
+            <div class="nf-fields">
+              <label class="nf-field"><span>E-mail</span><input type="email" name="email" required autocomplete="email" inputmode="email" maxlength="254"></label>
+              <label class="nf-field"><span>Modello di orologio (facoltativo)</span><input type="text" name="model" maxlength="120" autocomplete="off"></label>
+            </div>
+            <input class="nf-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <button type="submit" class="btn nf-submit">Avvisami</button>
+            <p class="nf-status" role="status" aria-live="polite"></p>
+          </form>
+          <p class="search-note nf-privacy">Conservo il tuo indirizzo solo per inviarti questo messaggio. Niente newsletter. Scrivimi e lo cancello. Preferisci una e-mail normale? <a class="nf-mail" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20notify%20me">lukasz.pszenny@gmail.com</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="clubs" class="clubs">
+      <div class="wrap">
+        <div class="clubs-box">
+          <div class="clubs-copy">
+            <h2 class="sec-title">Per i club di nuoto invernale</h2>
+            <p class="sec-lead">Gestisci un gruppo, un club o una pagina di nuoto invernale? Sentiti libero di condividere Cold Dip con i tuoi membri. È gratis, e le grafiche e il testo qui sotto sono pronti da pubblicare.</p>
+            <label class="share-label" for="club-text">Testo da copiare</label>
+            <textarea id="club-text" class="share-text" rows="6" readonly>❄️ Nuoto invernale con un orologio Garmin? Cold Dip è un'app gratuita per i bagni freddi: fasi (sulla riva, in acqua, dopo l'uscita), tempo in acqua, frequenza cardiaca, temperatura dell'acqua, e la sessione salvata in Garmin Connect come attività a sé, non come un nuoto. Funziona su oltre 130 orologi Garmin. Realizzata da un nuotatore invernale di Bydgoszcz, Polonia. 👉 https://lukaszpszenny.github.io/ColdDip/it/</textarea>
+            <p class="cta-row clubs-actions">
+              <button type="button" class="btn" data-copy-target="club-text">Copia il testo</button>
+              <a class="btn btn-ghost" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20ice%20swimming%20club&amp;body=Hi%20%C5%81ukasz%2C%0A%0A">Scrivimi del tuo club</a>
+            </p>
+          </div>
+          <div class="clubs-media">
+            <a class="share-dl" href="../assets/img/share/og-en.jpg" download="colddip-en-1200x630.jpg">
+              <img src="../assets/img/share/og-en.jpg" width="1200" height="630" alt="" loading="lazy" decoding="async">
+              <span>⬇ Scarica grafica 1200×630 (post con link)</span>
+            </a>
+            <a class="share-dl share-dl-post" href="../assets/img/share/colddip-post-en.jpg" download="colddip-post-en.jpg">
+              <img src="../assets/img/share/colddip-post-en.jpg" width="720" height="900" alt="" loading="lazy" decoding="async">
+              <span>⬇ Scarica grafica 4:5 (post nel feed)</span>
+            </a>
+          </div>
+        </div>
+        <div class="clubs-offers">
+          <article class="card clubs-offer">
+            <h3>🏷️ Codice club per Cold Dip Pro</h3>
+            <p>Scrivimi e il tuo club riceverà un proprio codice sconto Pro per i membri.</p>
+          </article>
+          <article class="card clubs-offer">
+            <h3>🖨️ Manifesto A4 con codice QR</h3>
+            <p>Per lo spogliatoio, la sauna o la bacheca del club. Il codice QR porta a questo sito.</p>
+            <p class="clubs-poster-links">
+              <a class="btn btn-sm" href="../assets/posters/colddip-plakat-en.pdf" download data-gc-event="klik-klub-plakat">⬇ Scarica il PDF</a>
+              <a class="btn btn-ghost btn-sm" href="../assets/posters/colddip-plakat-en.png" download data-gc-event="klik-klub-plakat">⬇ Scarica il PNG</a>
+            </p>
+          </article>
+          <article class="card clubs-offer">
+            <h3>⌚ Quadrante con il logo del tuo club</h3>
+            <p>Un quadrante Garmin con il logo del tuo club, realizzato su richiesta. Dimmi cosa hai in mente.</p>
+          </article>
+        </div>
+        <form class="cd-form club-form" data-cd-form="klub" novalidate data-msg-ok="Grazie! Risponderò all'indirizzo che hai indicato." data-msg-err="Invio non riuscito. Riprova o scrivi a lukasz.pszenny@gmail.com." data-msg-email="Inserisci un indirizzo e-mail valido." data-msg-pick="" data-msg-sending="Invio…">
+          <h3>Scrivimi del tuo club</h3>
+          <input type="hidden" name="platform" value="klub">
+          <div class="nf-fields">
+            <label class="nf-field"><span>E-mail</span><input type="email" name="email" required autocomplete="email" inputmode="email" maxlength="254"></label>
+            <label class="nf-field"><span>Nome del club</span><input type="text" name="model" maxlength="120" autocomplete="organization"></label>
+          </div>
+          <label class="nf-field nf-field-wide"><span>Messaggio (es. codice Pro, manifesti, quadrante con logo)</span><textarea name="message" rows="3" maxlength="2000"></textarea></label>
+          <input class="nf-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit" class="btn nf-submit">Invia</button>
+          <p class="nf-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="request" id="contact"
+      data-i18n-copy="Copy"
+      data-i18n-copied="Copied"
+      data-i18n-gmail="Write via Gmail">
+      <div class="wrap">
+        <div class="request-box">
+          <h2 class="sec-title">Vuoi Cold Dip su Apple Watch o Suunto?</h2>
+          <p class="sec-lead">Hai un'idea per un'app o un quadrante Garmin? Scrivimi e dimmi quale orologio usi.</p>
+          <div class="interest-row">
+            <a class="btn" href="#notify" data-notify-platform="apple" data-gc-event="klik-chce-apple">Lo voglio su Apple Watch</a>
+            <a class="btn btn-ghost" href="#notify" data-notify-platform="suunto" data-gc-event="klik-chce-suunto">Lo voglio su Suunto</a>
+            <a class="btn btn-ghost" href="#notify" data-notify-platform="inny" data-gc-event="klik-chce-inny">Uso un altro orologio</a>
+          </div>
+          <div class="cta-row">
+            <a class="btn btn-ghost" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%94%20Apple%20Watch%2C%20Suunto%20or%20an%20idea&amp;body=Hi%20%C5%81ukasz%2C%0A%0A">Scrivi a Łukasz</a>
+            <a class="btn btn-ghost" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">Lascia una recensione</a>
+          </div>
+          <p class="search-note">Se usi già Cold Dip, una recensione in Connect IQ aiuta tantissimo — grazie!</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="support" hidden data-flag="showSupport">
+      <div class="wrap">
+        <div class="support-box">
+          <h2 class="sec-title">Offrimi un caffè</h2>
+          <p class="sec-lead">Cold Dip è gratis. Se ti aiuta con i bagni, puoi sostenere il lavoro che c'è dietro.</p>
+          <a class="btn" id="support-link" href="#">Offrimi un caffè</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <p>© 2026 Łukasz Pszenny, Bydgoszcz, Polonia</p>
+        <address><a href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%94%20Apple%20Watch%2C%20Suunto%20or%20an%20idea&amp;body=Hi%20%C5%81ukasz%2C%0A%0A">lukasz.pszenny@gmail.com</a></address>
+      </div>
+      <p class="footer-guides">Guide al nuoto invernale: <a href="guide/quanto-tempo-in-acqua-fredda.html">Quanto tempo restare in acqua fredda?</a> · <a href="guide/afterdrop.html">Cos'è l'afterdrop?</a> · <a href="guide/come-iniziare-il-nuoto-invernale.html">Come iniziare il nuoto invernale in sicurezza</a></p>
+      <p class="privacy" data-counter-text="Questo sito conta le visite in modo anonimo con GoatCounter, senza cookie né dati personali — nel browser viene salvata solo la preferenza di lingua, se la cambi.">Cold Dip non raccoglie dati personali su alcun server. Le sessioni restano sull'orologio (e, su Garmin, in Garmin Connect). Il meteo su Garmin arriva dal servizio meteo Garmin sul telefono; su Amazfit arriva da MET Norway (CC BY 4.0). <span data-privacy-site>Questo sito non usa tracker né cookie di analisi — nel browser viene salvata solo la preferenza di lingua, se la cambi.</span></p>
+    </div>
+  </footer>
+  <script src="../assets/js/config.js?v=20261126g"></script>
+  <script src="../assets/js/devices.js?v=20261124p"></script>
+  <script src="../assets/js/app.js?v=20261124p"></script>
+  <script src="../assets/js/lang.js?v=20261127l"></script>
+  <script src="../assets/js/extras.js?v=20261126f"></script>
+</body>
+</html>

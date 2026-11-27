@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cold Dip – žiemos maudynių ir pasinerimų į šaltą vandenį programa „Garmin“ laikrodžiams</title>
+  <meta name="description" content="Nemokama „Garmin“ programa šaltoms maudynėms ir žiemos plaukimui. Fazės, laikmatis, pulsas, vandens temperatūra, GPS ir daugiau. Veikia 130+ „Garmin“ laikrodžių.">
+  <meta name="author" content="Łukasz Pszenny">
+  <meta name="theme-color" content="#07111c">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Cold Dip">
+  <meta property="og:title" content="Cold Dip – žiemos maudynių ir pasinerimų į šaltą vandenį programa „Garmin“ laikrodžiams">
+  <meta property="og:description" content="Nemokama „Garmin“ programa šaltoms maudynėms ir žiemos plaukimui. Fazės, laikmatis, pulsas, vandens temperatūra, GPS ir daugiau. Veikia 130+ „Garmin“ laikrodžių.">
+  <meta property="og:url" content="https://lukaszpszenny.github.io/ColdDip/lt/">
+  <meta property="og:image" content="https://lukaszpszenny.github.io/ColdDip/assets/img/share/og-en.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Cold Dip – žiemos maudynių ir pasinerimų į šaltą vandenį programa „Garmin“ laikrodžiams">
+  <meta property="og:locale" content="lt_LT">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="pl_PL">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="cs_CZ">
+  <meta property="og:locale:alternate" content="sk_SK">
+  <meta property="og:locale:alternate" content="fi_FI">
+  <meta property="og:locale:alternate" content="nb_NO">
+  <meta property="og:locale:alternate" content="sv_SE">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="ru_RU">
+  <meta property="og:locale:alternate" content="uk_UA">
+  <meta property="og:locale:alternate" content="da_DK">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta property="og:locale:alternate" content="nl_NL">
+  <meta property="og:locale:alternate" content="hu_HU">
+  <meta property="og:locale:alternate" content="it_IT">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cold Dip – žiemos maudynių ir pasinerimų į šaltą vandenį programa „Garmin“ laikrodžiams">
+  <meta name="twitter:description" content="Nemokama „Garmin“ programa šaltoms maudynėms ir žiemos plaukimui. Fazės, laikmatis, pulsas, vandens temperatūra, GPS ir daugiau. Veikia 130+ „Garmin“ laikrodžių.">
+  <meta name="twitter:image" content="https://lukaszpszenny.github.io/ColdDip/assets/img/share/og-en.jpg">
+  <meta name="twitter:image:alt" content="Cold Dip – žiemos maudynių ir pasinerimų į šaltą vandenį programa „Garmin“ laikrodžiams">
+  <link rel="canonical" href="https://lukaszpszenny.github.io/ColdDip/lt/">
+  <link rel="icon" href="../assets/img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="../assets/img/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <meta name="apple-mobile-web-app-title" content="Cold Dip">
+  <link rel="preload" as="image" type="image/webp" href="../assets/img/promo/en/1.webp" fetchpriority="high">
+  <link rel="alternate" hreflang="en" href="https://lukaszpszenny.github.io/ColdDip/">
+  <link rel="alternate" hreflang="pl" href="https://lukaszpszenny.github.io/ColdDip/pl/">
+  <link rel="alternate" hreflang="de" href="https://lukaszpszenny.github.io/ColdDip/de/">
+  <link rel="alternate" hreflang="cs" href="https://lukaszpszenny.github.io/ColdDip/cs/">
+  <link rel="alternate" hreflang="sk" href="https://lukaszpszenny.github.io/ColdDip/sk/">
+  <link rel="alternate" hreflang="fi" href="https://lukaszpszenny.github.io/ColdDip/fi/">
+  <link rel="alternate" hreflang="nb" href="https://lukaszpszenny.github.io/ColdDip/nb/">
+  <link rel="alternate" hreflang="sv" href="https://lukaszpszenny.github.io/ColdDip/sv/">
+  <link rel="alternate" hreflang="es" href="https://lukaszpszenny.github.io/ColdDip/es/">
+  <link rel="alternate" hreflang="ru" href="https://lukaszpszenny.github.io/ColdDip/ru/">
+  <link rel="alternate" hreflang="uk" href="https://lukaszpszenny.github.io/ColdDip/uk/">
+  <link rel="alternate" hreflang="da" href="https://lukaszpszenny.github.io/ColdDip/da/">
+  <link rel="alternate" hreflang="fr" href="https://lukaszpszenny.github.io/ColdDip/fr/">
+  <link rel="alternate" hreflang="nl" href="https://lukaszpszenny.github.io/ColdDip/nl/">
+  <link rel="alternate" hreflang="hu" href="https://lukaszpszenny.github.io/ColdDip/hu/">
+  <link rel="alternate" hreflang="it" href="https://lukaszpszenny.github.io/ColdDip/it/">
+  <link rel="alternate" hreflang="lt" href="https://lukaszpszenny.github.io/ColdDip/lt/">
+  <link rel="alternate" hreflang="x-default" href="https://lukaszpszenny.github.io/ColdDip/">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261127a">
+  <script>
+  (function () {
+    var LANGS = ["en","pl","de","cs","sk","fi","nb","sv","es","ru","uk","da","fr","nl","hu","it","lt"];
+    var parts = location.pathname.split("/").filter(Boolean);
+    if (parts.length && parts[parts.length - 1] === "index.html") parts.pop();
+    if (parts.length && LANGS.indexOf(parts[parts.length - 1]) !== -1) parts.pop();
+    var root = location.origin + "/" + (parts.length ? parts.join("/") + "/" : "");
+    function abs(lang) { return (!lang || lang === "en" || lang === "x-default") ? root : root + lang + "/"; }
+    var here = document.documentElement.lang || "en";
+    document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(function (l) {
+      l.href = abs(l.getAttribute("hreflang"));
+    });
+    var canon = document.querySelector('link[rel="canonical"]');
+    if (canon) canon.href = abs(here);
+    function setMeta(sel, val) {
+      var m = document.querySelector(sel);
+      if (m) m.setAttribute("content", val);
+    }
+    setMeta('meta[property="og:url"]', abs(here));
+  })();
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Cold Dip",
+  "alternateName": [
+    "Morsowanie",
+    "Eisbaden",
+    "Otužování",
+    "Otužovanie",
+    "Avanto",
+    "Isbading",
+    "Vinterbad",
+    "Baño frío",
+    "Моржевание",
+    "Моржування",
+    "Vinterbadning",
+    "Bain froid",
+    "IJsbaden",
+    "Jeges fürdés",
+    "Bagno freddo",
+    "Žiemos maudynės"
+  ],
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Garmin Connect IQ",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "url": "https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0",
+  "downloadUrl": "https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0",
+  "installUrl": "https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0",
+  "isAccessibleForNemokama": true,
+  "description": "Nemokama „Garmin“ programa šaltoms maudynėms ir žiemos plaukimui. Fazės, laikmatis, pulsas, vandens temperatūra, GPS ir daugiau. Veikia 130+ „Garmin“ laikrodžių.",
+  "author": {
+    "@type": "Person",
+    "name": "Łukasz Pszenny",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bydgoszcz",
+      "addressCountry": "PL"
+    }
+  },
+  "inLanguage": [
+    "en",
+    "pl",
+    "de",
+    "cs",
+    "sk",
+    "fi",
+    "nb",
+    "sv",
+    "es",
+    "ru",
+    "uk",
+    "da",
+    "fr",
+    "nl",
+    "hu",
+    "it",
+    "lt"
+  ],
+  "featureList": [
+    "Prieš / vandenyje / po",
+    "Pulsas ir vandens temperatūra",
+    "Orai iš telefono",
+    "Maudynių GPS žemėlapis",
+    "Savijauta, 1–5",
+    "Išsaugota kaip atskira veikla"
+  ]
+}
+  </script>
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true"></div>
+  <a class="skip" href="#main">Pereiti prie turinio</a>
+  <header class="header">
+    <div class="wrap">
+      <a class="brand" href="./" aria-label="Cold Dip">
+        <img src="../assets/img/logo.webp" width="36" height="36" alt="" decoding="async">
+        Cold Dip
+      </a>
+      <nav class="nav">
+        <a href="#features">Funkcijos</a>
+        <a class="nav-pro" href="#pro">Pro</a>
+        <a href="#watches">Laikrodžiai</a>
+        <a class="nav-faces" href="#faces">Ciferblatai <span class="badge-new">New</span></a>
+        <a href="#howto">Kaip naudotis</a>
+        <a class="nav-changelog" href="#changelog">Kas naujo</a>
+        <a class="nav-clubs" href="#clubs">Klubams</a>
+        <a href="#contact">Kontaktai</a>
+      </nav>
+      <a class="header-cta" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">Atsisiųskite programą</a>
+      <details class="lang">
+        <summary aria-label="Kalba: Lietuvių"><img class="lang-flag" src="../assets/flags/gb.png?v=20261127l" alt="" width="18" height="13"><span>Lietuvių</span></summary>
+        <ul class="lang-panel"><li><a href="../" hreflang="en" lang="en"><img class="lang-flag" src="../assets/flags/gb.png?v=20261127l" alt="" width="18" height="13">English</a></li><li><a href="../pl/" hreflang="pl" lang="pl"><img class="lang-flag" src="../assets/flags/pl.png?v=20261127l" alt="" width="18" height="13">Polski</a></li><li><a href="../de/" hreflang="de" lang="de"><img class="lang-flag" src="../assets/flags/de.png?v=20261127l" alt="" width="18" height="13">Deutsch</a></li><li><a href="../cs/" hreflang="cs" lang="cs"><img class="lang-flag" src="../assets/flags/cz.png?v=20261127l" alt="" width="18" height="13">Čeština</a></li><li><a href="../sk/" hreflang="sk" lang="sk"><img class="lang-flag" src="../assets/flags/sk.png?v=20261127l" alt="" width="18" height="13">Slovenčina</a></li><li><a href="../fi/" hreflang="fi" lang="fi"><img class="lang-flag" src="../assets/flags/fi.png?v=20261127l" alt="" width="18" height="13">Suomi</a></li><li><a href="../nb/" hreflang="nb" lang="nb"><img class="lang-flag" src="../assets/flags/no.png?v=20261127l" alt="" width="18" height="13">Norsk</a></li><li><a href="../sv/" hreflang="sv" lang="sv"><img class="lang-flag" src="../assets/flags/se.png?v=20261127l" alt="" width="18" height="13">Svenska</a></li><li><a href="../es/" hreflang="es" lang="es"><img class="lang-flag" src="../assets/flags/es.png?v=20261127l" alt="" width="18" height="13">Español</a></li><li><a href="../ru/" hreflang="ru" lang="ru"><img class="lang-flag" src="../assets/flags/ru.png?v=20261127l" alt="" width="18" height="13">Русский</a></li><li><a href="../uk/" hreflang="uk" lang="uk"><img class="lang-flag" src="../assets/flags/ua.png?v=20261127l" alt="" width="18" height="13">Українська</a></li><li><a href="../da/" hreflang="da" lang="da"><img class="lang-flag" src="../assets/flags/dk.png?v=20261127l" alt="" width="18" height="13">Dansk</a></li><li><a href="../fr/" hreflang="fr" lang="fr"><img class="lang-flag" src="../assets/flags/fr.png?v=20261127l" alt="" width="18" height="13">Français</a></li><li><a href="../nl/" hreflang="nl" lang="nl"><img class="lang-flag" src="../assets/flags/nl.png?v=20261127l" alt="" width="18" height="13">Nederlands</a></li><li><a href="../hu/" hreflang="hu" lang="hu"><img class="lang-flag" src="../assets/flags/hu.png?v=20261127l" alt="" width="18" height="13">Magyar</a></li><li><a href="../it/" hreflang="it" lang="it"><img class="lang-flag" src="../assets/flags/it.png?v=20261127l" alt="" width="18" height="13">Italiano</a></li><li><a href="./" hreflang="lt" lang="lt" aria-current="page"><img class="lang-flag" src="../assets/flags/lt.png?v=20261127l" alt="" width="18" height="13">Lietuvių</a></li></ul>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <span class="badge">Nemokama programa „Garmin“ laikrodžiams</span>
+          <div class="hero-title"><h1>Cold Dip</h1><span class="hero-free">NEMOKAMA</span></div>
+          
+          <p class="tagline">Šaltos maudynės ir žiemos plaukimas, įrašomi tinkamai — ne kaip plaukimas.</p>
+          <div class="cta-row">
+            <a class="btn btn-xl" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank"><span class="btn-main">Atsisiųskite nemokamai</span><small class="btn-sub">Connect IQ Store · Garmin</small></a>
+            <a class="btn btn-ghost" href="#faces">Žr. ciferblatus</a>
+          </div>
+          <figure class="hero-media" data-hero-loop>
+            <video class="loop-video" src="../assets/video/dip-loop-en.mp4" poster="assets/video/dip-loop-en.jpg" width="300" height="386" autoplay muted loop playsinline preload="metadata" aria-label="Animacija: Cold Dip „Garmin“ laikrodyje — ant kranto, vandenyje, po išėjimo, savijauta ir išsaugojimas"></video>
+          </figure>
+          <p class="hero-proof"><a href="#reviews"><span class="stars" aria-hidden="true">★★★★★</span> <b>5.0</b> „Connect IQ“ · <b>1000+</b> atsisiuntimų</a></p>
+          <p class="search-note">Arba ieškokite „Cold Dip“ telefono „Connect IQ“ programoje.</p>
+          <p class="howto-link"><a href="#how-to-video">▶ Žiūrėkite: kaip naudotis (1 min)</a></p>
+          <p class="byline">Sukūrė Łukasz Pszenny, žiemos maudynių entuziastas iš Bydgoszcz, Lenkija.</p>
+        </div>
+        <div class="gallery">
+          <figure>
+            <img src="../assets/img/promo/en/1.webp" width="720" height="900" alt="Pradžios ekranas: GPS, orai ir vandens temperatūra prieš įeinant" fetchpriority="high" decoding="async">
+            <figcaption>Prieš įeinant</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/promo/en/2.webp" width="720" height="900" alt="Vandenyje: laikas ir pulsas" loading="lazy" decoding="async">
+            <figcaption>Vandenyje</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/promo/en/3.webp" width="720" height="900" alt="Išėjus: santrauka ir savijauta" loading="lazy" decoding="async">
+            <figcaption>Išėjus</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="platforms" class="platforms-band" aria-labelledby="platforms-title">
+      <div class="wrap">
+        <p class="morslevel-kicker" id="platforms-title">Platformos</p>
+        <p class="platforms-lead">Cold Dip jau veikia „Garmin“ laikrodžiuose. „Amazfit“ (Zepp OS) versija peržiūrima „Zepp App Store“. Versijos „Huawei“, „Wear OS“ ir „Apple Watch“ – rengiamos.</p>
+        <ul class="platforms-list">
+          <li class="platforms-item is-live">
+            <a href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">
+              <span class="platforms-name">Garmin</span>
+              <span class="platforms-status">Jau prieinama</span>
+            </a>
+          </li>
+          <li class="platforms-item is-live is-review">
+            <a href="amazfit.html">
+              <span class="platforms-name">Amazfit <span class="platforms-note">Zepp OS</span></span>
+              <span class="platforms-status">Prieinama / netrukus „Zepp App Store“</span>
+            </a>
+          </li>
+          <li class="platforms-item is-soon">
+            <span class="platforms-name">Huawei</span>
+            <span class="platforms-status">Netrukus</span>
+          </li>
+          <li class="platforms-item is-soon">
+            <span class="platforms-name">Wear OS <span class="platforms-note">Samsung Galaxy Watch, Pixel Watch</span></span>
+            <span class="platforms-status">Netrukus</span>
+          </li>
+          <li class="platforms-item is-soon">
+            <span class="platforms-name">Apple Watch</span>
+            <span class="platforms-status">Netrukus</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="wrap">
+        <h2 class="sec-title">Ką moka</h2>
+        <p class="sec-lead">Sukurta maudynėms, ne baseino treniruotei. Visą laiką sprendžiate jūs.</p>
+        <div class="features">
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14"/><path d="M5 12h14"/><path d="M5 17h14"/><circle cx="9" cy="7" r="1.6" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"/><circle cx="15" cy="17" r="1.6" fill="currentColor" stroke="none"/></svg></div>
+            <h3>Prieš / vandenyje / po</h3>
+            <p>Viršutinis mygtukas keičia etapus. Laikas vandenyje tiesiog skaičiuojamas toliau — programa niekada nesako išeiti. Sprendžiate jūs. Paskutinis laikas – tik atskaitos taškas, ne tikslas, kurį reikia įveikti.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.6-7 10-7 10z"/></svg></div>
+            <h3>Pulsas ir vandens temperatūra</h3>
+            <p>Pulsas fiksuojamas visą laiką. Vandens temperatūrą įvedate ranka ir ji išsaugoma su veikla.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 16h10a4 4 0 0 0 0-8 6 6 0 0 0-11.5 1.5A3.5 3.5 0 0 0 7 16z"/><path d="M8 19v1M12 19v2M16 19v1"/></svg></div>
+            <h3>Orai iš telefono</h3>
+            <p>Oro temperatūra, jaučiama temperatūra ir vėjas — iš „Garmin“ orų telefone.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.2"/></svg></div>
+            <h3>Maudynių GPS žemėlapis</h3>
+            <p>Maudynių vieta išsaugoma ir rodoma žemėlapyje „Garmin Connect“.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 13.5s1.5 2.5 4 2.5 4-2.5 4-2.5"/><path d="M9 9.5h.01M15 9.5h.01"/></svg></div>
+            <h3>Savijauta, 1–5</h3>
+            <p>Po kiekvienų maudynių – greitas savijautos įvertinimas. Taip pat pulso viršūnė ir atsistatymas bei Body Battery ir stresas prieš įeinant.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></div>
+            <h3>Išsaugota kaip atskira veikla</h3>
+            <p>Viskas „Garmin Connect“ išsaugoma kaip atskira veikla, ne kaip plaukimas.</p>
+          </article>
+        </div>
+        <div class="compat">
+          <h3>17 kalbų</h3>
+          <p>Anglų, lenkų, vokiečių, čekų, slovakų, suomių, norvegų, švedų, ispanų, rusų, ukrainiečių, danų, prancūzų, olandų, vengrų, italų ir lietuvių. Programa automatiškai seka laikrodžio kalbą.</p>
+          <div class="pill-row">
+<a class="pill" href="../" hreflang="en" lang="en"><img class="lang-flag" src="../assets/flags/gb.png?v=20261127l" alt="" width="18" height="13">English</a><a class="pill" href="../pl/" hreflang="pl" lang="pl"><img class="lang-flag" src="../assets/flags/pl.png?v=20261127l" alt="" width="18" height="13">Polski</a><a class="pill" href="../de/" hreflang="de" lang="de"><img class="lang-flag" src="../assets/flags/de.png?v=20261127l" alt="" width="18" height="13">Deutsch</a><a class="pill" href="../cs/" hreflang="cs" lang="cs"><img class="lang-flag" src="../assets/flags/cz.png?v=20261127l" alt="" width="18" height="13">Čeština</a><a class="pill" href="../sk/" hreflang="sk" lang="sk"><img class="lang-flag" src="../assets/flags/sk.png?v=20261127l" alt="" width="18" height="13">Slovenčina</a><a class="pill" href="../fi/" hreflang="fi" lang="fi"><img class="lang-flag" src="../assets/flags/fi.png?v=20261127l" alt="" width="18" height="13">Suomi</a><a class="pill" href="../nb/" hreflang="nb" lang="nb"><img class="lang-flag" src="../assets/flags/no.png?v=20261127l" alt="" width="18" height="13">Norsk</a><a class="pill" href="../sv/" hreflang="sv" lang="sv"><img class="lang-flag" src="../assets/flags/se.png?v=20261127l" alt="" width="18" height="13">Svenska</a><a class="pill" href="../es/" hreflang="es" lang="es"><img class="lang-flag" src="../assets/flags/es.png?v=20261127l" alt="" width="18" height="13">Español</a><a class="pill" href="../ru/" hreflang="ru" lang="ru"><img class="lang-flag" src="../assets/flags/ru.png?v=20261127l" alt="" width="18" height="13">Русский</a><a class="pill" href="../uk/" hreflang="uk" lang="uk"><img class="lang-flag" src="../assets/flags/ua.png?v=20261127l" alt="" width="18" height="13">Українська</a><a class="pill" href="../da/" hreflang="da" lang="da"><img class="lang-flag" src="../assets/flags/dk.png?v=20261127l" alt="" width="18" height="13">Dansk</a><a class="pill" href="../fr/" hreflang="fr" lang="fr"><img class="lang-flag" src="../assets/flags/fr.png?v=20261127l" alt="" width="18" height="13">Français</a><a class="pill" href="../nl/" hreflang="nl" lang="nl"><img class="lang-flag" src="../assets/flags/nl.png?v=20261127l" alt="" width="18" height="13">Nederlands</a><a class="pill" href="../hu/" hreflang="hu" lang="hu"><img class="lang-flag" src="../assets/flags/hu.png?v=20261127l" alt="" width="18" height="13">Magyar</a><a class="pill" href="../it/" hreflang="it" lang="it"><img class="lang-flag" src="../assets/flags/it.png?v=20261127l" alt="" width="18" height="13">Italiano</a><a class="pill" href="./" hreflang="lt" lang="lt"><img class="lang-flag" src="../assets/flags/lt.png?v=20261127l" alt="" width="18" height="13">Lietuvių</a>
+          </div>
+        </div>
+        <div class="compat">
+          <h3 data-compat-title data-compat-live="Veikia 130+ „Garmin“ laikrodžių">Veikia 130+ „Garmin“ laikrodžių</h3>
+          <p>Forerunner, Fenix, Epix, Enduro, Venu, Vivoactive, Instinct 2 / 3 / E / Crossover ir daugiau. Nepalaikoma: labai seni laikrodžiai, pvz. Forerunner 920XT (Connect IQ 1.x).</p>
+        </div>
+      
+      </div>
+    </section>
+
+    <section id="pro" class="pro-band" data-mfold="Show all Pro features and comparison">
+      <div class="wrap">
+        <div class="face-copy">
+          <span class="badge" data-pro-soon hidden>Netrukus „Connect IQ Store“</span>
+          <h2 class="sec-title">Cold Dip Pro <span class="pro-star">⭐ PRO</span></h2>
+          <p class="local-name">Pasirenkami priedai nemokamai programai — mokate tik tada, jei jų norite</p>
+          <p class="sec-lead">Programa, kuria jau naudojatės, lieka nemokama. „Pro“ skirta tiems, kurie iš sezono nori šiek tiek daugiau: naujų treniruočių būdų, aiškesnio pažangos vaizdo ir paprastesnio ekrano vandenyje.</p>
+          <p class="face-price">$4.99 <small>vienkartinis, plius PVM ten, kur privaloma · 7 dienų nemokamas bandymas</small></p>
+          <p class="cta-row">
+            <a class="btn btn-pro" href="#pro-unlock">Išbandykite „Pro“ 7 dienas nemokamai — tada 4,99 USD</a>
+            <a class="btn" data-pro-store hidden href="#">Atsisiųskite naujinimą „Connect IQ“</a>
+          </p>
+        </div>
+        <div class="pro-features">
+          <article class="card">
+            <h3>Sauna, kontrastas ir nauji režimai <span class="pro-star">⭐ PRO</span></h3>
+            <p>Darykite sauną su laikrodžiu ant riešo, imkite šaltą dušą, sekite vedamą saunos ir vandens kontrastą arba trumpai pasiruoškite kvėpavimu prieš įeidami. Fazės keitimą visada patvirtinate mygtuku.</p>
+          </article>
+          <article class="card">
+            <h3>Savi signalai vandenyje <span class="pro-star">⭐ PRO</span></h3>
+            <p>Įvardyti etapai ir signalai jūsų pasirinktu laiku, be nemokamų minutės, pusiaukelės ir 3-2-1 signalų, kurie lieka kaip buvę.</p>
+          </article>
+          <article class="card">
+            <h3>Matykite visą sezoną <span class="pro-star">⭐ PRO</span></h3>
+            <p>Bendras laikas vandenyje ir saunoje, visų laikų ir sezono rekordai (šalčiausias vanduo, ilgiausios maudynės) ir istorija iki 200 sesijų. Nemokamas sąrašas vis dar rodo paskutines 30.</p>
+          </article>
+          <article class="card">
+            <h3>Ženkleliai ir dienų serijos <span class="pro-star">⭐ PRO</span></h3>
+            <p>Laikykite 7, 14 ar 30 dienų seriją ir gaukite ženklelius už 10, 25, 50 ir 100 sesijų, pirmąsias maudynes žemiau 5°C, kontrasto sesiją ir sauną su maudynėmis iš eilės.</p>
+          </article>
+          <article class="card">
+            <h3>Papildomi ekranai ir spalvų temos <span class="pro-star">⭐ PRO</span></h3>
+            <p>Didelis laikmatis, pulso ir raundų puslapis ir temos (ledas, tamsi, didelis kontrastas, sauna). Puslapį keiskite Aukštyn ir Žemyn.</p>
+          </article>
+          <article class="card">
+            <h3>Paprastas režimas, tinka su pirštinėmis <span class="pro-star">⭐ PRO</span></h3>
+            <p>Didžiulis laikmatis vandenyje, vandens temperatūra ir pulsas. Vienas mygtukas pradėti ir stabdyti. Jokių papildomų meniu ar ekranų. Įjunkite nuostatose, kai atrakinsite „Pro“.</p>
+          </article>
+          <article class="card">
+            <h3>Laiko užuomina — ne riba <span class="pro-star">⭐ PRO</span></h3>
+            <p>Siūlomas laikas pagal vandens temperatūrą, pagal įprastą klubo taisyklę (maždaug tiek minučių, kiek vanduo turi °C, nuo 0:30 iki 5:00). Tai tik užuomina: programa niekada neužbaigia sesijos ir niekada nesako, kad laikas saugus.</p>
+          </article>
+          <article class="card">
+            <h3>„Glance“ ir ciferblato komplikacijos</h3>
+            <p>Naujesniuose laikrodžiuose galite prisegti „glance“ ir komplikacijas: dienos seriją, paskutinių maudynių laiką ir sezono minutes. „Glance“ tuose laikrodžiuose nemokama. Komplikacijoms reikia ciferblato, kuris palaiko programų komplikacijas.</p>
+          </article>
+          <article class="card">
+            <h3>Sesijos kortelė, kurią galite nufotografuoti <span class="pro-star">⭐ PRO</span></h3>
+            <p>Išsaugojus maudynes, paprasta kortelė rodo laiką, temperatūrą, savijautą ir seriją. Nufotografuokite ekraną, jei norite pasidalinti. Istorijos sąrašas lieka laikrodyje, o „Garmin Connect“ vis tiek gauna FIT veiklą. Nėra debesies eksporto ar „Instagram“ paveikslėlio — „Connect IQ“ pati nuotraukų siųsti negali.</p>
+          </article>
+          <article class="card">
+            <h3>Pulso ir atsistatymo diagrama <span class="pro-star">⭐ PRO</span></h3>
+            <p>Po maudynių matote paprastą pulso kreivę, viršūnę ir 1 bei 2 minučių atsistatymo reikšmes. Tai tik užuomina, ne medicininė konsultacija.</p>
+          </article>
+          <article class="card">
+            <h3>Išsaugotos vietos prieš išeinant iš namų <span class="pro-star">⭐ PRO</span></h3>
+            <p>Išsaugokite maudynių vietą su paskutine ten užfiksuota vandens temperatūra. Kai esate netoliese, pradžios ekranas gali rodyti tą paskutinį apsilankymą. Tai ne gyva ežero temperatūra — „Connect IQ“ neturi vandens temperatūros API.</p>
+          </article>
+          <article class="card">
+            <h3>Laikrodis paliktas už saunos, plius šilimas <span class="pro-star">⭐ PRO</span></h3>
+            <p>Jei laikrodį paliekate lauke, kad neperkaistų, įjunkite parinktį: programa saunoje nesitikės pulso nuo riešo ir po to galės pradėti šilimo etapą. Šilimą po maudynių galite pradėti ir iš meniu.</p>
+          </article>
+        </div>
+        <div class="cmp-wrap">
+          <h3 class="sec-title" style="font-size:1.35rem;margin-bottom:16px;">Nemokama ir „Pro“ greta</h3>
+          <table class="cmp">
+            <thead>
+              <tr>
+                <th scope="col">Kas įeina</th>
+                <th scope="col">Nemokama</th>
+                <th class="pro-col" scope="col">Pro <span class="pro-star">⭐ PRO</span></th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">Viskas, kas jau yra Cold Dip 1.0.3 — keturi profiliai, 30 įrašų istorija, vedamas kvėpavimas, GPS ir daugiau</th>
+              <td class="is-yes">✓ Taip</td>
+              <td class="is-yes">✓ Taip</td>
+            </tr>
+            <tr>
+              <th scope="row">Sauna, kontrastas ir nauji režimai <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Taip</td>
+            </tr>
+            <tr>
+              <th scope="row">Savi signalai vandenyje <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Taip</td>
+            </tr>
+            <tr>
+              <th scope="row">Matykite visą sezoną <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Taip</td>
+            </tr>
+            <tr>
+              <th scope="row">Visų laikų ir sezono rekordai — šalčiausias vanduo, ilgiausios maudynės <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Taip</td>
+            </tr>
+            <tr>
+              <th scope="row">Ženkleliai ir dienų serijos <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Taip</td>
+            </tr>
+            <tr>
+              <th scope="row">Papildomi ekranai ir spalvų temos <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Taip</td>
+            </tr>
+            <tr>
+              <th scope="row">Paprastas režimas, tinka su pirštinėmis <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Taip</td>
+            </tr>
+            <tr>
+              <th scope="row">Laiko užuomina — ne riba <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Taip</td>
+            </tr>
+            <tr>
+              <th scope="row">„Glance“ ir ciferblato komplikacijos (naujesni laikrodžiai)</th>
+              <td class="is-yes">Naujesniuose laikrodžiuose</td>
+              <td class="is-yes">Naujesniuose laikrodžiuose</td>
+            </tr>
+            <tr>
+              <th scope="row">Sesijos kortelė ir istorijos sąrašas <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Taip</td>
+            </tr>
+            <tr>
+              <th scope="row">Pulso ir atsistatymo diagrama <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Taip</td>
+            </tr>
+            <tr>
+              <th scope="row">Išsaugotos vietos su paskutine vandens temperatūra <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Taip</td>
+            </tr>
+            <tr>
+              <th scope="row">Laikrodis už saunos ir šilimas <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Taip</td>
+            </tr>
+            <tr>
+              <th scope="row">Kaina</th>
+              <td>Nemokama</td>
+              <td class="pro-col">7 dienų bandymas, tada vieną kartą 4,99 USD</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pro-unlock" id="pro-unlock">
+          <h3>Kaip atrakinti</h3>
+          <ol class="face-steps">
+            <li>Atnaujinkite Cold Dip į 1.2.0. Programa parodo, kas naujo, ir pradeda 7 dienų nemokamą „Pro“ bandymą.</li>
+            <li>Kai norite pasilikti „Pro“, laikrodyje pasirodo 6 skaitmenų kodas. Įveskite jį <a href="https://kzl.io/cold-dip-pro" data-pro-unlock rel="noopener" target="_blank">kzl.io/cold-dip-pro</a> — vienkartinis 4,99 USD mokėjimas per KiezelPay.</li>
+            <li>Laikykite telefoną netoliese, su veikiančiu „Garmin Connect“ ir įjungtu „Bluetooth“. Laikrodžiui šio ryšio reikia atrakinimui, paprastai per 5 minutes.</li>
+          </ol>
+        </div>
+                <div class="pro-compat">
+          <h3>Kurie laikrodžiai palaiko „Pro“?</h3>
+          <p>„Pro“ veikia naujesniuose „Garmin“ laikrodžiuose su „Connect IQ 4“ ar naujesne, įskaitant Venu 2 / 3 / 4, Venu Sq 2, Venu X1, vívoactive 5 / 6, Forerunner 165 / 170 / 255 / 265 / 570 / 955 / 965 / 970, fēnix 7 / 8 / 9, epix (Gen 2), Instinct 3 AMOLED, Descent Mk3, Enduro 3 / 4, Approach S50 / S70 / S72 ir MARQ (Gen 2) / (Gen 3). Neveikia senesniuose ar mažesnės atminties modeliuose, pvz. fēnix 5 / 6, pirmajame Venu, vívoactive 3 / 4, Forerunner 55 / 245 / 645 / 945, Instinct 2, Instinct 3 Solar ar Instinct E — nemokama programa ten vis dar veikia. <a href="#watches">Patikrinkite savo modelį sąraše</a>.</p>
+        </div>
+        <p class="pro-note">„Garmin Connect“ saunos sesija išsaugoma kaip treniruotė arba meditacija, nes „Garmin“ neturi saunos veiklos tipo.</p>
+        <p class="pro-disclaimer">Laiko užuomina nėra medicininė konsultacija ir nereiškia, kad sesija saugi. Šaltas vanduo ir sauna kelia riziką. Pasitarkite su gydytoju, niekada neikite vieni ir vadovaukitės savo nuovoka. Visą laiką sprendžiate jūs.</p>
+      </div>
+    </section>
+
+<section id="watches"
+      data-i18n-supported="Supported"
+      data-i18n-copy="Copy"
+      data-i18n-copied="Copied"
+      data-i18n-gmail="Write via Gmail"
+      data-i18n-more="{n} more matches — type a little more to narrow the list."
+      data-i18n-not-found="This model is not on the supported list."
+      data-i18n-not-found-body="Cold Dip only runs on Garmin watches with Connect IQ 3.0 or later."
+      data-i18n-legacy="This is an older watch with Connect IQ 1.x or 2.x, so Cold Dip cannot run on it. It does not have the features the app needs, and there is not enough memory."
+      data-i18n-ask="Ask if your model can be added"
+      data-i18n-ask-subject="Cold Dip – is this watch supported?"
+      data-i18n-empty="Pradžia typing a model name to see if it is supported."
+      data-i18n-pro-yes=\"⭐ PRO\"
+      data-i18n-pro-no=\"Nemokama app only\">
+      <div class="wrap">
+        <h2 class="sec-title">Ar veikia jūsų laikrodyje?</h2>
+        <p class="sec-lead">Ieškokite savo modelio. Sąrašas atitinka 133 „Cold Dip“ laikrodžius.</p>
+        <div class="checker">
+          <form role="search" action="#" method="get">
+            <div class="checker-field">
+              <label for="watch-q">Laikrodžio modelis</label>
+              <input id="watch-q" name="q" type="search" autocomplete="off" spellcheck="false" placeholder="pvz. Venu 2 Plus arba Forerunner 265">
+            </div>
+          </form>
+          <div id="watch-results" class="watch-results" aria-live="polite"></div>
+          <p class="chk-note">Labai seni „Connect IQ 1.x“ laikrodžiai, pvz. Forerunner 920XT, nepalaikomi. „Pro“ reikia naujesnio laikrodžio — ieškokite savo modelio, ar jis įtrauktas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faces" class="faces-band">
+      <div class="wrap faces-intro">
+        <p class="morslevel-kicker">Ciferblatai</p>
+        <h2 class="sec-title">Ciferblatai</h2>
+        <p class="sec-lead">Ciferblatai žiemos maudynėms, įskaitant sezoninius, kuriuos uždirbate maudynėmis Cold Dip. „Mors – tarcza“ keičiasi su orais. „Mors Level“ auga su sezono minutėmis. „Dip Goals“ ir „Afterdrop“ netrukus.</p>
+        <div class="faces-ranks">
+          <div class="faces-ranks-head">
+            <p class="morslevel-kicker">Sezonas 2026/2027</p>
+            <h3>Ciferblatai, kuriuos uždirbate maudynėmis <span class="badge">Netrukus „Connect IQ Store“</span></h3>
+            <p class="faces-ranks-intro">Jie nemokami — jų nusipirkti negalima. Atrakinami tik maudynėmis nemokamoje Cold Dip programoje.</p>
+          </div>
+          <div class="faces-ranks-grid">
+            <article class="faces-ranks-card faces-ranks-komandos">
+              <figure class="faces-ranks-solo">
+                <div class="faces-ranks-media">
+                <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/faces/rank/komandos.webp" width="360" height="360" aria-label="Ciferblato „Mors Komandos 2026/2027“ animacija">
+                  <source src="../assets/img/faces/rank/komandos.webm" type="video/webm">
+                  <source src="../assets/img/faces/rank/komandos.mp4" type="video/mp4">
+                </video>
+                <span class="faces-ranks-lock"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6 1.2A2.6 2.6 0 0 0 3.4 3.8V5H2.6A.6.6 0 0 0 2 5.6v5.2c0 .33.27.6.6.6h6.8a.6.6 0 0 0 .6-.6V5.6a.6.6 0 0 0-.6-.6H8.6V3.8A2.6 2.6 0 0 0 6 1.2Zm-1.4 2.6A1.4 1.4 0 0 1 7.4 3.8V5H4.6V3.8Z"/></svg>15 dips</span>
+              </div>
+              </figure>
+              <h4>Mors Komandos 2026/2027</h4>
+              <p>15 maudynės per sezoną. Kodas MK.</p>
+            </article>
+            <article class="faces-ranks-card faces-ranks-legenda">
+              <div class="faces-ranks-pair">
+                <figure class="faces-ranks-watch">
+                  <div class="faces-ranks-media">
+                <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/faces/rank/krol.webp" width="360" height="360" aria-label="Ciferblato „Mors Legenda Król 2026/2027“ animacija">
+                  <source src="../assets/img/faces/rank/krol.webm" type="video/webm">
+                  <source src="../assets/img/faces/rank/krol.mp4" type="video/mp4">
+                </video>
+                <span class="faces-ranks-lock"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6 1.2A2.6 2.6 0 0 0 3.4 3.8V5H2.6A.6.6 0 0 0 2 5.6v5.2c0 .33.27.6.6.6h6.8a.6.6 0 0 0 .6-.6V5.6a.6.6 0 0 0-.6-.6H8.6V3.8A2.6 2.6 0 0 0 6 1.2Zm-1.4 2.6A1.4 1.4 0 0 1 7.4 3.8V5H4.6V3.8Z"/></svg>50 dips</span>
+              </div>
+                  <figcaption>Król</figcaption>
+                </figure>
+                <figure class="faces-ranks-watch">
+                  <div class="faces-ranks-media">
+                <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/faces/rank/posejdon.webp" width="360" height="360" aria-label="Ciferblato „Mors Legenda Posejdon 2026/2027“ animacija">
+                  <source src="../assets/img/faces/rank/posejdon.webm" type="video/webm">
+                  <source src="../assets/img/faces/rank/posejdon.mp4" type="video/mp4">
+                </video>
+                <span class="faces-ranks-lock"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6 1.2A2.6 2.6 0 0 0 3.4 3.8V5H2.6A.6.6 0 0 0 2 5.6v5.2c0 .33.27.6.6.6h6.8a.6.6 0 0 0 .6-.6V5.6a.6.6 0 0 0-.6-.6H8.6V3.8A2.6 2.6 0 0 0 6 1.2Zm-1.4 2.6A1.4 1.4 0 0 1 7.4 3.8V5H4.6V3.8Z"/></svg>50 dips</span>
+              </div>
+                  <figcaption>Posejdon</figcaption>
+                </figure>
+              </div>
+              <h4>Mors Legenda 2026/2027</h4>
+              <p>50 maudynės per sezoną. Kodas MZ. Rinkitės Król arba Posejdon.</p>
+            </article>
+          </div>
+          <p class="faces-ranks-note">Be rango ciferblatas rodo tik laiką ir datą. Kodas veikia tik jūsų laikrodyje.</p>
+          <p class="faces-ranks-steps-title">Kaip atrakinti</p>
+          <ol class="faces-ranks-steps">
+            <li>Įdiekite ciferblatą (netrukus „Connect IQ“ parduotuvėje).</li>
+            <li>Cold Dip atidarykite Rangus.</li>
+            <li>Įveskite ciferblato ID.</li>
+            <li>Įveskite kodą ciferblato nuostatose.</li>
+          </ol>
+        </div>
+
+        <figure class="faces-promo">
+          <div class="faces-promo-gallery">
+            <img src="../assets/img/faces/dip-goals-banner.webp" width="1024" height="687" alt="„Dip Goals“ ciferblatas „Garmin“ išmaniesiems laikrodžiams: trys spalvų temos ant užšalusio ežero" loading="lazy" decoding="async">
+            <img src="../assets/img/faces/dip-goals-designs.webp" width="1024" height="687" alt="„Dip Goals“ išdėstymai ir spalvų temos „Garmin“ ciferblatams, įskaitant bateriją tausojantį Always-on vaizdą" loading="lazy" decoding="async">
+          </div>
+          <figcaption>Dip Goals <span class="badge faces-card-soon">Netrukus</span></figcaption>
+        </figure>
+        <div class="faces-cards">
+          <article class="faces-card faces-card-tarcza">
+            <figure class="faces-card-media">
+              <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/face/frost.webp" width="360" height="360" aria-label="Mors – tarcza šaltyje: vėplys užsideda kepurę, kai pakeliate riešą">
+                <source src="../assets/img/face/frost.webm" type="video/webm">
+                <source src="../assets/img/face/frost.mp4" type="video/mp4">
+              </video>
+            </figure>
+            <div>
+              <h3>Mors – tarcza</h3>
+              <p class="faces-card-lead">Animuotas vėplio ciferblatas žiemos maudynėms</p>
+              <p class="faces-card-price">$3.99 <small>24 valandų nemokamas bandymas</small></p>
+            </div>
+            <p class="faces-card-actions">
+              <span class="badge" data-face-soon>Netrukus „Connect IQ Store“</span>
+              <a class="btn" data-face-store hidden href="#">Gaukite „Connect IQ“</a>
+              <a class="btn btn-ghost" href="#face">Daugiau</a>
+            </p>
+          </article>
+          <article class="faces-card faces-card-level">
+            <figure class="faces-card-media">
+              <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/mors-level/wake.webp" width="720" height="720" aria-label="„Mors Level“ pažadinimo animacija: vėplys pašoka, o eigos juosta prisipildo pakėlus riešą">
+                <source src="../assets/img/mors-level/wake.webm" type="video/webm">
+                <source src="../assets/img/mors-level/wake.mp4" type="video/mp4">
+              </video>
+            </figure>
+            <div>
+              <h3>Mors Level <span class="badge-new">New</span></h3>
+              <p class="faces-card-lead">Žaidybinis vėplio ciferblatas šaltoms maudynėms</p>
+              <p class="faces-card-price">$2.99 <small>7 dienų nemokamas bandymas</small></p>
+            </div>
+            <p class="faces-card-actions">
+              <span class="badge" data-morslevel-soon hidden>Netrukus „Connect IQ Store“</span>
+              <a class="btn" data-morslevel-store href="https://apps.garmin.com/en-US/apps/fe325c7e-b38d-4a9a-b43e-f5b09780f3a8" rel="noopener" target="_blank">Gaukite „Connect IQ“</a>
+              <a class="btn btn-ghost" href="#mors-level">Daugiau</a>
+            </p>
+          </article>
+          <article class="faces-card faces-card-goals">
+            <figure class="faces-card-media">
+              <img src="../assets/img/faces/dip-goals.webp" width="360" height="360" alt="„Dip Goals“ ciferblatas temomis Ice, Aurora ir Gold, su savaitės maudynių žiedais, sezono minutėmis ir serija" loading="lazy" decoding="async">
+            </figure>
+            <div>
+              <h3>Dip Goals <span class="badge faces-card-soon">Netrukus</span></h3>
+              <p class="faces-card-lead">Tikslų žiedai savaitės maudynėms, sezono minutėms ir serijai, plius vandens ir oro temperatūra, Body Battery ir pulsas. Keturios temos.</p>
+            </div>
+          </article>
+          <article class="faces-card faces-card-afterdrop">
+            <figure class="faces-card-media">
+              <img src="../assets/img/faces/afterdrop.webp" width="360" height="360" alt="„Afterdrop“ ciferblatas su dideliu laiku ir trimis duomenų laukais, keliomis spalvų temomis" loading="lazy" decoding="async">
+            </figure>
+            <div>
+              <h3>Afterdrop <span class="badge faces-card-soon">Netrukus</span></h3>
+              <p class="faces-card-lead">Nemokamas „Garmin“ ciferblatas su dideliu laiku ir 3 duomenų laukais. Jis niekada neužsirakina. Pasirenkamas Afterdrop Pro atrakina Cold Dip laukus, oro temperatūrą, saulėtekį ir saulėlydį bei 4 papildomas temas.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+    <section id="face" class="face-panel" data-mfold="More about this watch face">
+      <div class="wrap">
+        <div class="face-grid">
+          <div class="face-copy">
+            <span class="badge" data-face-soon>Netrukus „Connect IQ Store“</span>
+            <h2 class="sec-title">Mors – tarcza</h2>
+            <p class="local-name">Animuotas vėplio ciferblatas žiemos maudynėms</p>
+            <p class="sec-lead">Vėplys reaguoja į orus: bangos geru oru, užsideda kepurę šaltyje, nusišoka sniegą ir šoka į eketę, kai laikas maudytis. Laikas, data, oro temperatūra, orai, pulsas, žingsniai ir baterija. Animacija rodoma pažadinus laikrodį — niekada always-on režimu.</p>
+            <p class="face-price">$3.99 <small>vienkartinis, plius PVM ten, kur privaloma</small></p>
+            <ol class="face-steps">
+              <li>24 valandų nemokamas bandymas įdiegus ciferblatą.</li>
+              <li>Tada laikrodyje pasirodo 6 skaitmenų kodas. Įveskite jį <a href="https://kzl.io/code" rel="noopener" target="_blank">kzl.io/code</a> atrakinti — vienkartinis 3,99 USD mokėjimas per KiezelPay.</li>
+              <li>Laikykite telefoną netoliese, su veikiančiu „Garmin Connect“ ir įjungtu „Bluetooth“. Laikrodžiui šio ryšio su telefonu reikia atrakinimui, paprastai per 5 minutes.</li>
+            </ol>
+            <p class="cta-row">
+              <a class="btn" data-face-store hidden href="#">Gaukite „Connect IQ“</a>
+            </p>
+          </div>
+          <figure class="face-hero-clip">
+            <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/face/frost.webp" width="360" height="360" aria-label="Ciferblatas šaltyje: vėplys su mėlyna kepure">
+              <source src="../assets/img/face/frost.webm" type="video/webm">
+              <source src="../assets/img/face/frost.mp4" type="video/mp4">
+            </video>
+            <figcaption>Šaltyje vėplys užsideda kepurę.</figcaption>
+          </figure>
+        </div>
+        <p class="anim-note">AMOLED laikrodžiuose vėplys juda pakėlus riešą — niekada always-on režimu.</p>
+        <div class="face-scenes">
+          <figure>
+            <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/face/wave.webp" width="360" height="360" aria-label="Ciferblatas geru oru: vėplys su bangomis">
+              <source src="../assets/img/face/wave.webm" type="video/webm">
+              <source src="../assets/img/face/wave.mp4" type="video/mp4">
+            </video>
+            <figcaption>Good weather</figcaption>
+          </figure>
+          <figure>
+            <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/face/frost.webp" width="360" height="360" aria-label="Ciferblatas šaltyje: vėplys su mėlyna kepure">
+              <source src="../assets/img/face/frost.webm" type="video/webm">
+              <source src="../assets/img/face/frost.mp4" type="video/mp4">
+            </video>
+            <figcaption>Frost</figcaption>
+          </figure>
+          <figure>
+            <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/face/snow.webp" width="360" height="360" aria-label="Ciferblatas sningant: vėplys nusišoka sniegą">
+              <source src="../assets/img/face/snow.webm" type="video/webm">
+              <source src="../assets/img/face/snow.mp4" type="video/mp4">
+            </video>
+            <figcaption>Snow</figcaption>
+          </figure>
+          <figure>
+            <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/face/dip.webp" width="360" height="360" aria-label="Ciferblatas maudynių oru: vėplys prie eketės">
+              <source src="../assets/img/face/dip.webm" type="video/webm">
+              <source src="../assets/img/face/dip.mp4" type="video/mp4">
+            </video>
+            <figcaption>Dip weather</figcaption>
+          </figure>
+          <figure>
+            <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/face/rain.webp" width="360" height="360" aria-label="Ciferblatas lietuje">
+              <source src="../assets/img/face/rain.webm" type="video/webm">
+              <source src="../assets/img/face/rain.mp4" type="video/mp4">
+            </video>
+            <figcaption>Rain</figcaption>
+          </figure>
+        </div>
+        <div class="face-families">
+          <article class="card">
+            <h3>AMOLED — visa animacija</h3>
+            <p>Spalvota animacija AMOLED laikrodžiuose, pvz. Venu 2, 2 Plus, 3 ir 4, vívoactive 5 ir 6, Forerunner 165, 170, 265, 570, 965 ir 970, Fenix 8 ir 9 (AMOLED), Epix 2, Descent Mk3, D2 Mach, Approach S70 ir S72, Instinct 3 AMOLED ir MARQ 2 ir 3.</p>
+          </article>
+          <article class="card">
+            <h3>Ne MIP laikrodžiuose</h3>
+            <p>Šis ciferblatas neprieinamas MIP ar mažesnės atminties laikrodžiuose, pvz. Fenix 5 Plus, Fenix 6 ir 7, Fenix Solar, Forerunner 245, 255, 745, 945 ir 955, Enduro, Descent Mk2, vívoactive 4, Venu 1 ir pirmos kartos MARQ. Tie ekranai negali rodyti spalvotos animacijos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="mors-level" class="face-panel face-panel-level" data-mfold="More about this watch face">
+      <div class="wrap">
+        <div class="face-grid">
+          <div class="face-copy">
+            <span class="badge" data-morslevel-soon hidden>Netrukus „Connect IQ Store“</span>
+            <h2 class="sec-title">Mors Level <span class="badge-new">New</span></h2>
+            <p class="local-name">Žaidybinis vėplio ciferblatas šaltoms maudynėms</p>
+            <p class="sec-lead">Jūsų vėplio palydovas kyla per 5 etapus, augant sezono minutėms šaltame vandenyje — sinchronizuojama gyvai iš nemokamos Cold Dip programos. Rūkstanti eketė žiemą, paplūdimys vasarą, dienų serijos ženklelis, vandens temperatūra, pulsas, baterija ir švarus always-on ekranas. Pažadinimo animacija rodoma pažadinus laikrodį — niekada always-on režimu.</p>
+            <p class="face-price">$2.99 <small>vienkartinis, plius PVM ten, kur privaloma · 7 dienų nemokamas bandymas</small></p>
+            <ol class="face-steps">
+              <li>7 dienų nemokamas bandymas įdiegus ciferblatą.</li>
+              <li>Tada laikrodyje pasirodo 6 skaitmenų kodas. Įveskite jį <a href="https://kzl.io/morslevel" data-morslevel-unlock rel="noopener" target="_blank">kzl.io/morslevel</a> atrakinti — vienkartinis 2,99 USD mokėjimas per KiezelPay.</li>
+              <li>Laikykite telefoną netoliese, su veikiančiu „Garmin Connect“ ir įjungtu „Bluetooth“. Laikrodžiui šio ryšio su telefonu reikia atrakinimui, paprastai per 5 minutes.</li>
+            </ol>
+            <p class="face-note">Kad kiltumėte su gyvomis minutėmis, serija ir vandens temperatūra, įdiekite nemokamą <a href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">Cold Dip</a> programą. Be jos tie laukai tiesiog rodo laikrodžio duomenis.</p>
+            <p class="cta-row">
+              <a class="btn" data-morslevel-store href="https://apps.garmin.com/en-US/apps/fe325c7e-b38d-4a9a-b43e-f5b09780f3a8" rel="noopener" target="_blank">Gaukite „Connect IQ“</a>
+            </p>
+          </div>
+          <figure class="face-hero-clip">
+            <video class="face-clip" muted loop playsinline preload="none" poster="assets/img/mors-level/wake.webp" width="720" height="720" aria-label="„Mors Level“ pažadinimo animacija: vėplys pašoka, o eigos juosta prisipildo pakėlus riešą">
+              <source src="../assets/img/mors-level/wake.webm" type="video/webm">
+              <source src="../assets/img/mors-level/wake.mp4" type="video/mp4">
+            </video>
+            <figcaption>Pažadinimo animacija: vėplys pašoka, o juosta prisipildo pakėlus riešą (~1 s, AMOLED). MIP lieka nejudrus; niekada always-on režimu.</figcaption>
+          </figure>
+        </div>
+
+          <figure class="face-hero-clip ml-demo">
+            <div class="ml-demo-frame" data-ml-demo role="img" aria-label="Demonstracija: vėplys kyla per penkis etapus, augant sezono minutėms">
+              <div class="ml-demo-dial">
+                <div class="ml-demo-hud">
+                  <p class="ml-demo-time" aria-hidden="true">07:42</p>
+                  <p class="ml-demo-level"><span data-ml-name>NOVICE</span> <span data-ml-frac>1/5</span></p>
+                  <div class="ml-demo-bar-row">
+                    <div class="ml-demo-bar" aria-hidden="true"><i data-ml-bar></i></div>
+                    <svg class="ml-demo-crown" data-ml-crown viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.5 18h17l-1.2-9.2-4.3 3.4L12 7.5 8.9 12.2 4.7 8.8zM5 19.5h14V21H5z"/></svg>
+                  </div>
+                </div>
+                <div class="ml-demo-chars">
+              <img src="../assets/img/mors-level/stage-1.webp" width="424" height="400" alt="Mors Level, 1 etapas: NOVICE" class="is-on" decoding="async">
+              <img src="../assets/img/mors-level/stage-2.webp" width="424" height="400" alt="Mors Level, 2 etapas: TAMER" decoding="async">
+              <img src="../assets/img/mors-level/stage-3.webp" width="424" height="400" alt="Mors Level, 3 etapas: ICE WARRIOR" decoding="async">
+              <img src="../assets/img/mors-level/stage-4.webp" width="424" height="400" alt="Mors Level, 4 etapas: VETERAN" decoding="async">
+              <img src="../assets/img/mors-level/stage-5.webp" width="424" height="400" alt="Mors Level, 5 etapas: ICE KING" decoding="async">
+                </div>
+              </div>
+            </div>
+            <figcaption>Vėplys kyla, augant sezono minutėms.</figcaption>
+          </figure>
+        <p class="morslevel-kicker">5 levels</p>
+        <ol class="morslevel-levels">
+          <li>
+            <img src="../assets/img/mors-level/stage-1.webp" width="424" height="400" alt="Mors Level, 1 etapas: NOVICE" loading="lazy" decoding="async">
+            <p class="lvl">1/5</p>
+            <h3>NOVICE</h3>
+            <p>0–29 min šį sezoną</p>
+          </li>
+          <li>
+            <img src="../assets/img/mors-level/stage-2.webp" width="424" height="400" alt="Mors Level, 2 etapas: TAMER" loading="lazy" decoding="async">
+            <p class="lvl">2/5</p>
+            <h3>TAMER</h3>
+            <p>30–119 min šį sezoną</p>
+          </li>
+          <li>
+            <img src="../assets/img/mors-level/stage-3.webp" width="424" height="400" alt="Mors Level, 3 etapas: ICE WARRIOR" loading="lazy" decoding="async">
+            <p class="lvl">3/5</p>
+            <h3>ICE WARRIOR</h3>
+            <p>120–299 min šį sezoną</p>
+          </li>
+          <li>
+            <img src="../assets/img/mors-level/stage-4.webp" width="424" height="400" alt="Mors Level, 4 etapas: VETERAN" loading="lazy" decoding="async">
+            <p class="lvl">4/5</p>
+            <h3>VETERAN</h3>
+            <p>300–599 min šį sezoną</p>
+          </li>
+          <li>
+            <img src="../assets/img/mors-level/stage-5.webp" width="424" height="400" alt="Mors Level, 5 etapas: ICE KING" loading="lazy" decoding="async">
+            <p class="lvl">5/5</p>
+            <h3>ICE KING</h3>
+            <p>600+ min šį sezoną</p>
+          </li>
+        </ol>
+        <div class="face-scenes">
+          <figure>
+            <img src="../assets/img/mors-level/en/winter.webp" width="720" height="720" alt="„Mors Level“ žiemą: rūkstanti eketė ir maudynių dienų serija" loading="lazy" decoding="async">
+            <figcaption>Winter ice hole</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/mors-level/en/summer.webp" width="720" height="720" alt="„Mors Level“ vasarą: vėplys paplūdimyje" loading="lazy" decoding="async">
+            <figcaption>Summer beach</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/mors-level/en/aod.webp" width="720" height="720" alt="„Mors Level“ always-on ekranas: laikas, data ir lygis, su labai nedaug įjungtų pikselių" loading="lazy" decoding="async">
+            <figcaption>Always-on</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/mors-level/en/mip.webp" width="520" height="520" alt="„Mors Level“ MIP laikrodyje: statinis, bateriją tausojantis ciferblatas" loading="lazy" decoding="async">
+            <figcaption>MIP watches</figcaption>
+          </figure>
+          <figure class="morslevel-watch">
+            <img src="../assets/img/mors-level/watch.webp" width="900" height="1238" alt="„Mors Level“ „Garmin“ laikrodyje" loading="lazy" decoding="async">
+            <figcaption>„Garmin“ laikrodyje</figcaption>
+          </figure>
+        </div>
+        <div class="face-families">
+          <article class="card">
+            <h3>AMOLED — visa animacija</h3>
+            <p>Spalvota animacija 51 AMOLED laikrodžiuose, pvz. Venu 2, 2 Plus, 3 ir 4, vívoactive 5 ir 6, Forerunner 165, 170, 265, 570, 965 ir 970, Fenix 8 ir 9 (AMOLED), Epix 2, Descent Mk3, D2 Mach, Approach S70 ir S72, Instinct 3 AMOLED ir MARQ 2 ir 3. Always-on įjungia labai nedaug pikselių.</p>
+          </article>
+          <article class="card">
+            <h3>MIP — statinis ir tausojantis bateriją</h3>
+            <p>Aiškus, statinis ciferblatas 19 MIP laikrodžių, pvz. Fenix 7, Fenix 8 Solar, Forerunner 255 ir 955 bei Enduro 3 ir 4. Iš viso „Mors Level“ palaiko 70 „Garmin“ laikrodžių, 11 kalbų.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    </section>
+
+
+    <section id="reviews" class="reviews">
+      <div class="wrap">
+        <h2 class="sec-title">Ką sako žiemos maudynių entuziastai</h2>
+        <p class="sec-lead">Vidutinis įvertinimas 5,0 ★ „Connect IQ Store“ ir 1000+ atsisiuntimų.</p>
+        <div class="quotes quotes-4">
+          <blockquote class="quote" cite="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0">
+            <p class="quote-stars" aria-label="5/5">★★★★★</p>
+            <p lang="pl">„Super, pierwsze morsowanie z apką za mną, działa! Tego mi było trzeba! Dzięki”</p>
+            <p class="tr">Super, pirmosios maudynės su programa įvyko, veikia! Būtent to ir reikėjo! Ačiū <small>(Išversta iš lenkų kalbos)</small></p>
+            <footer>Monika · Connect IQ Store</footer>
+          </blockquote>
+          <blockquote class="quote" cite="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0">
+            <p class="quote-stars" aria-label="5/5">★★★★★</p>
+            <p lang="pl">„Rewelacyjna apka. Przetestowana podczas morsowania. Wszystko działa dobrze”</p>
+            <p class="tr">Puiki programa. Išbandyta žiemos maudynėse. Viskas veikia gerai <small>(Išversta iš lenkų kalbos)</small></p>
+            <footer>Radek · Connect IQ Store</footer>
+          </blockquote>
+          <blockquote class="quote" cite="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0">
+            <p class="quote-stars" aria-label="5/5">★★★★★</p>
+            <p lang="pl">„Działa nawet na starszym Garminie za co duże brawa dla autora”</p>
+            <p class="tr">Veikia ir senesniame „Garmin“ — dideli plojimai kūrėjui <small>(Išversta iš lenkų kalbos)</small></p>
+            <footer>Pawel · Connect IQ Store</footer>
+          </blockquote>
+          <blockquote class="quote" cite="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0">
+            <p class="quote-stars" aria-label="5/5">★★★★★</p>
+            <p lang="pl">„Świetna sprawa!💙”</p>
+            <p class="tr">Puikus dalykas!💙 <small>(Išversta iš lenkų kalbos)</small></p>
+            <footer>Justyna · Connect IQ Store</footer>
+          </blockquote>
+        </div>
+        <p class="cta-row reviews-more"><a class="btn btn-ghost" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">Visos apžvalgos „Connect IQ“</a></p>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="wrap">
+        <h2 class="sec-title">Laikrodyje</h2>
+        <p class="sec-lead">Vienos maudynės nuo pradžios iki išsaugojimo — tikri ekranai iš „Garmin“ simuliatoriaus.</p>
+        <div class="gallery-show">
+          <figure class="loop-figure">
+            <video class="loop-video" src="../assets/video/dip-loop-en.mp4" poster="assets/video/dip-loop-en.jpg" width="300" height="386" autoplay muted loop playsinline preload="metadata" aria-label="Animacija: Cold Dip „Garmin“ laikrodyje — ant kranto, vandenyje, po išėjimo, savijauta ir išsaugojimas"></video>
+            <figcaption>Tikras „Garmin“ simuliatoriaus įrašas (Venu 2 Plus), laikas pagreitintas.</figcaption>
+          </figure>
+          <div class="shot-row">
+          <figure>
+            <img src="../assets/img/gallery/en/venu/start.webp" width="474" height="720" alt="Pradžios ekranas: GPS, orai ir vandens temperatūra prieš įeinant" loading="lazy" decoding="async">
+            <figcaption>Prieš įeinant</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/venu/water.webp" width="474" height="720" alt="Vandenyje: laikas ir pulsas" loading="lazy" decoding="async">
+            <figcaption>Vandenyje</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/gallery/en/venu/after.webp" width="474" height="720" alt="Išėjus: santrauka ir savijauta" loading="lazy" decoding="async">
+            <figcaption>Išėjus</figcaption>
+          </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="changelog" data-mfold="Older versions">
+      <div class="wrap">
+        <h2 class="sec-title">Kas naujo</h2>
+        <p class="sec-lead">Naujausios Cold Dip versijos.</p>
+        <ol class="changelog">
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.2.0</h3>
+              <span class="ch-flag is-current">Dabartinė versija</span>
+            </div>
+            <p>Rangai nemokami ir skirti tik smagumui — niekas su niekuo nevaržosi: Pingvinas (1), Ruonis (5, 7 „Pro“ dienos nemokamai), Partizanas vėplys (15, kodas ciferblatui „Mors Komandos 2026/2027“), Veteranas vėplys (30, −30 % „Mors Level“ / „Dip Goals“, kodai netrukus) ir Legendinis vėplys (50, kodas auksiniam ciferblatui pasirinktinai: „Mors Legenda Król 2026/2027“ arba „Mors Legenda Posejdon 2026/2027“). Skaičiuojamos daugiausiai vienerios maudynės per dieną (sezonas spal. 1 – bal. 30), o tik saunos sesija nesiskaito. Tai trys atskiri sezoniniai ciferblatai, netrukus „Connect IQ“ parduotuvėje, diegiami nemokamai: uždirbkite juos rangu Cold Dip. Jie neįeina į 5,99 / 7,99 USD rinkinius, o nauji ciferblatai ateina kiekvieną sezoną.</p>
+            <p>Visi rekordai — šalčiausias vanduo ir ilgiausios maudynės, visų laikų ir šį sezoną — dabar priklauso „Pro“. Jie visiems ir toliau saugomi, o nemokama programa rodo „Naujas rekordas! Žr. „Pro““. Po trečiųjų maudynių vieną kartą pasirodo prašymas įvertinti. Laiko matavimas, pulsas ir išsaugojimas į „Garmin Connect“ lieka nemokami. Senesniuose ir nespalvotuose laikrodžiuose be „Pro“ rekordai lieka nemokami.</p>
+            <p>Vandens temperatūrą dabar galima nustatyti žemiau 0°C.</p>
+          </li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.1.2</h3>
+            </div>
+            <p>Išėjus įvesta vandens temperatūra dabar taikoma tik tai sesijai. Užklausa nepaiso atsitiktinio mygtuko paspaudimo tuoj po išėjimo. Patikimiau: pilna atmintis ar išsaugojimo klaida nebeužšaldo programos, o nepalaikomas laukas ar sportas senesniame laikrodyje nebestabdo pradžios. Pataisyti lenkų ir rusų šilimo patarimai.</p>
+          </li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.1.1</h3>
+            </div>
+            <p>Pataisyta strigtis praėjus apie 20 sekundžių po sesijos išsaugojimo (pranešta Venu 3S). Išėjus laikrodis klausia vandens temperatūros; tai nemokama ir galima išjungti nuostatose.</p>
+          </li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.1.0</h3>
+              </div>
+            <p>Štai ir Cold Dip Pro. Viskas iš 1.0.3 lieka nemokama. „Pro“ pasirenkama: vienkartinis 4,99 USD atrakinimas su 7 dienų nemokamu bandymu. Nauji režimai: sauna, šaltas dušas, vedamas kontrastas ir kvėpavimo paruošimas; savi signalai ir įvardyti etapai vandenyje; sezono statistika, ženkleliai ir dienų serijos (7 / 14 / 30); papildomi ekranai, spalvų temos ir paprastas režimas.</p>
+          </li>
+<li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.0.3</h3>
+              
+              </div>
+            <p>133 laikrodžiai, įskaitant Instinct 2, Instinct 2S, Instinct 2X, Instinct 3 Solar, Instinct E ir Instinct Crossover, plius naujas juodai baltas išdėstymas MIP ekranams.</p>
+          </li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.0.2</h3>
+              
+            </div>
+            <p>126 laikrodžiai, įskaitant Forerunner 55.</p>
+          </li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.0.1</h3>
+              <span class="ch-date">17 Nov 2026</span>
+            </div>
+            <p>105 laikrodžiai, įskaitant stačiakampius išdėstymus Venu X1 ir Venu Sq 2.</p>
+          </li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.0.0</h3>
+              <span class="ch-date">14 Nov 2026</span>
+            </div>
+            <p>Pirmasis leidimas.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="testimonials" hidden data-flag="showTestimonials">
+      <div class="wrap">
+        <h2 class="sec-title">Iš tų, kurie jau maudosi su ja</h2>
+        <div class="quotes">
+          <blockquote class="quote">
+            <p>“Działa idealnie” <span class="tr">(Veikia puikiai)</span></p>
+            <footer>Radosław S., Facebook — Poznań, Jezioro Rusałka, 16 min</footer>
+          </blockquote>
+          <blockquote class="quote">
+            <p>Daugiau kaip 10 minučių maudynės 5°C — vandens temperatūra laikrodyje, ir visi duomenys išsaugoti „Garmin Connect“.</p>
+            <footer>Jadwiga</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="howto" class="howto" data-mfold="Show all steps">
+      <div class="wrap" id="faq">
+        <h2 class="sec-title">Kaip naudotis</h2>
+        <p class="sec-lead">Keli dalykai, kurių žmonės dažnai klausia įdiegę.</p>
+        <!-- howto-video:start -->
+        <div class="howto-video" id="how-to-video">
+          <figure class="howto-player">
+            <video src="../assets/video/howto-en.mp4" poster="assets/video/howto-en.jpg" width="480" height="616" autoplay muted loop playsinline controls preload="metadata" aria-label="Vaizdo įrašas: Cold Dip „Garmin“ laikrodyje nuo pradžios iki išsaugotos veiklos"></video>
+            <figcaption>Įrašyta „Garmin“ simuliatoriuje (Venu 2 Plus), laikas pagreitintas.</figcaption>
+          </figure>
+          <div class="howto-steps">
+            <h3>Pažiūrėkite per 1 minutę</h3>
+            <ol>
+            <li>Ant kranto atidarykite Cold Dip. Nustatykite vandens temperatūrą − / + ir paspauskite PRADĖTI (viršutinis mygtukas).</li>
+            <li><b>Ant kranto</b>: laikmatis eina, kol ruošiatės. Paspauskite viršutinį mygtuką eidami į vandenį.</li>
+            <li><b>Vandenyje</b>: laikas vandenyje, laikas iki atskaitos taško, pulsas ir vandens temperatūra. Paspauskite viršutinį mygtuką išeidami.</li>
+            <li>Mygtukas Atgal sesijos metu atveria <b>Baigti?</b> — Tęsti / Išsaugoti / Atmesti.</li>
+            <li><b>Po išėjimo</b>: laikas nuo išėjimo ir afterdrop (šilimo) atgalinis laikmatis. Viršutinis mygtukas → <b>Baigti</b>.</li>
+            <li><b>Savijauta</b>: viršutinis mygtukas keičia įvertinimą, apatinis = Gerai.</li>
+            <li><b>Santrauka</b> → <b>Išsaugoti</b>. Veikla pateks į „Garmin Connect“.</li>
+            <li>Parinktys: pradžios ekrane bakstelėkite ekrano viršų arba palaikykite meniu mygtuką → <b>Meniu</b>: Profilis, Kontrolinis sąrašas, Vibracija ir garsas, Tikslo nuostatos.</li>
+            </ol>
+          </div>
+        </div>
+        <!-- howto-video:end -->
+                        <div class="faq">
+          <details>
+            <summary><h3>Kaip įdiegti?</h3></summary>
+            <p class="answer">Įdiekite iš telefono „Connect IQ Store“ programos — ne iš „Google Play“ ar „App Store“. Laikrodyje Cold Dip rasite veiklų / programų sąraše.</p>
+          </details>
+          <details>
+            <summary><h3>Kaip nustatyti vandens temperatūrą?</h3></summary>
+            <p class="answer">Profile „Eketė“ pradžios ekrane naudokite mygtukus − / +. Kituose profiliuose nustatykite iš meniu: „Rankinė vandens temp.“ Jei vandenyje matote „--°C“, temperatūra dar nenustatyta.</p>
+          </details>
+          <details>
+            <summary><h3>Kur mano duomenys „Garmin Connect“?</h3></summary>
+            <p class="answer">Atidarykite veiklą, eikite į skirtuką „Statistika“ ir slinkite iki skyriaus „Connect IQ“. Ten yra pulsas, vandens temperatūra, orai, savijauta ir etapų laikai. Apžvalgos langelių vaizdą nustato „Garmin“ — programa jų pakeisti negali.</p>
+          </details>
+          <details>
+            <summary><h3>Ar laikrodis matuoja kūno temperatūrą?</h3></summary>
+            <p class="answer">Ne. Laikrodis negali matuoti kūno temperatūros. Jutiklis skaito paties laikrodžio temperatūrą, kurią veikia oda ir oras. Cold Dip vandens temperatūrą įvedate ranka.</p>
+          </details>
+          <details>
+            <summary><h3>O kaip dėl kalorijų?</h3></summary>
+            <p class="answer">Kalorijas laikrodis apytiksliai skaičiuoja iš pulso, ne Cold Dip.</p>
+          </details>
+          <details>
+            <summary><h3>Ar veikia be telefono?</h3></summary>
+            <p class="answer">Taip. Įrašymas vyksta laikrodyje, tad telefonas gali likti krepšyje. Be telefono prarandate tik orus, nes jie ateina iš „Garmin“ orų telefone. Veikla sinchronizuojama su „Garmin Connect“, kai laikrodis kitą kartą prisijungs prie telefono. Telefono reikia programai įdiegti ir „Pro“ atrakinti.</p>
+          </details>
+          <details>
+            <summary><h3>Kaip matuojama vandens temperatūra?</h3></summary>
+            <p class="answer">Laikrodis pats vandens temperatūros išmatuoti negali — įmontuotas jutiklis skaito laikrodį, kurį šildo oda ir oras. Cold Dip vandens temperatūrą nustatote − / + (arba meniu), o išėjus programa jos paklausia. Jei turite susietą „Garmin Tempe“ jutiklį, programa naudoja jo rodmenį. Laikrodžio jutiklis ir oro temperatūra niekada nepateikiami kaip vandens temperatūra.</p>
+          </details>
+          <details>
+            <summary><h3>Ką duoda „Pro“?</h3></summary>
+            <p class="answer">„Pro“ yra pasirenkama, o programa lieka nemokama. „Pro“ prideda sauną, šaltą dušą, vedamą kontrastą ir kvėpavimo paruošimą, savus signalus, sezono statistiką, visų laikų ir sezono rekordus (šalčiausias vanduo, ilgiausios maudynės), ženklelius ir dienų serijas, papildomus ekranus ir temas, pirštinėms tinkamą paprastą režimą, laiko užuominą pagal vandens temperatūrą (užuomina, niekada ne riba) ir pulso diagramą. Kaina – vienkartiniai 4,99 USD po 7 dienų nemokamo bandymo. <a href="#pro">Visos „Pro“ funkcijos</a>.</p>
+          </details>
+          <details>
+            <summary><h3>Kaip veikia KiezelPay atrakinimo kodas?</h3></summary>
+            <p class="answer">Mokėjimai eina per KiezelPay. Kai norite pasilikti „Pro“, laikrodis rodo 6 skaitmenų kodą. Įveskite jį <a href="https://kzl.io/cold-dip-pro" rel="noopener" target="_blank">kzl.io/cold-dip-pro</a> (mokamiems ciferblatams: <a href="https://kzl.io/code" rel="noopener" target="_blank">kzl.io/code</a>) ir sumokėkite vieną kartą. Laikykite telefoną netoliese su įjungtu „Garmin Connect“ ir „Bluetooth“ — laikrodis atrakinamas per tą ryšį, paprastai per 5 minutes.</p>
+          </details>
+          <details>
+            <summary><h3>Kurie laikrodžiai palaikomi?</h3></summary>
+            <p class="answer">Daugiau kaip 130 „Garmin“ laikrodžių su „Connect IQ“: Forerunner, fēnix, epix, Enduro, Venu, vívoactive, Instinct 2 / 3 / E / Crossover ir daugiau. „Pro“ reikia „Connect IQ 4“ ar naujesnės. Labai seni modeliai, pvz. Forerunner 920XT, nepalaikomi. <a href="#watches">Patikrinkite modelį</a>.</p>
+          </details>
+          <details>
+            <summary><h3>O kaip dėl „Amazfit“, „Huawei“, „Wear OS“ ir „Apple Watch“?</h3></summary>
+            <p class="answer">Versija „Amazfit“ (Zepp OS) paruošta ir laukia peržiūros „Zepp App Store“. Versijos „Huawei“, „Wear OS“ (Samsung Galaxy Watch, Pixel Watch) ir „Apple Watch“ rengiamos — datų dar nėra. <a href="#notify">Gaukite pranešimą</a>.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="safety" class="howto" data-mfold="More safety tips">
+      <div class="wrap">
+        <div class="safety">
+          <h2 class="sec-title">Būkite saugūs</h2>
+          <p class="sec-lead">Šaltas vanduo yra rimtas dalykas. Tai bendri saugumo priminimai, ne medicininė konsultacija. Jūs sprendžiate, kada eiti ir kada išeiti.</p>
+          <div class="safety-list">
+            <article class="safety-item">
+              <h3>Niekada neikite vieni</h3>
+              <p>Visada eikite su kuo nors, kas galėtų padėti ištikus bėdai, arba pasirūpinkite, kad jus stebėtų kas nors ant kranto.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Duokite kūnui laiko</h3>
+              <p>Jei šaltas vanduo jums nauja, pripraskite palaipsniui, o ne pradėkite ilgomis maudynėmis labai šaltame vandenyje.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Pirmąsias maudynes laikykite trumpas</h3>
+              <p>Daugelis pradeda trumpai vandenyje ir ilgina pamažu. Nėra laiko, kurį „privalote“ išlaikyti.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Išeikite, kai pajuntate</h3>
+              <p>Išeikite iš vandens, vos pajutę, kad laikas — stiprus drebėjimas, skausmas, tirpimas, sumišimas ar tiesiog jausmas, kad gana. Cold Dip niekada nesako išeiti ir niekada nenustato tikslo, kurį reikia įveikti. Paskutinis laikas – tik atskaita.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Po to sušilkite</h3>
+              <p>Išėję kuo greičiau nusisausinkite ir sušilkite. Šiltus drabužius pasiruoškite prieš įeidami.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Afterdrop</h3>
+              <p>Išėjus branduolio temperatūra dar kurį laiką gali kristi, kol vėsesnis kraujas grįžta iš odos ir galūnių. Tai dažnai vadinama afterdrop. Šilkite toliau, neskubėkite ir palaukite, kol gerai jausitės, prieš vairuodami ar važiuodami dviračiu.</p>
+            </article>
+            <article class="safety-item">
+              <h3>Ne medicinos priemonė</h3>
+              <p>Cold Dip yra įrašymo programa, ne medicinos priemonė, ir neduoda medicininių patarimų. Ji negali pasakyti, ar jums saugu eiti į šaltą vandenį. Jei turite sveikatos sutrikimų, esate nėščia arba abejojate, pirmiausia pasitarkite su specialistu.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="guides" class="guides">
+      <div class="wrap">
+        <h2 class="sec-title">Žiemos maudynių gidai</h2>
+        <p class="sec-lead">Trumpi, praktiniai tekstai iš žiemos maudynių entuziasto. Bendri patarimai, ne medicininė konsultacija.</p>
+        <div class="features guides-grid">
+          <article class="card guide-card">
+            <h3><a href="gidai/kiek-laiko-saltame-vandenyje.html">Kiek laiko būti šaltame vandenyje?</a></h3>
+            <p>Populiari klubo taisyklė pagal vandens temperatūrą — ir kodėl tai nėra saugi riba.</p>
+            <p class="guide-more"><a href="gidai/kiek-laiko-saltame-vandenyje.html">Skaitykite gidą →</a></p>
+          </article>
+          <article class="card guide-card">
+            <h3><a href="gidai/afterdrop.html">Kas yra afterdrop?</a></h3>
+            <p>Kodėl išėjus gali būti šalčiau ir kaip ramiai sušilti.</p>
+            <p class="guide-more"><a href="gidai/afterdrop.html">Skaitykite gidą →</a></p>
+          </article>
+          <article class="card guide-card">
+            <h3><a href="gidai/kaip-pradeti-ziemos-maudynes.html">Kaip saugiai pradėti žiemos maudynes</a></h3>
+            <p>Pirmosios maudynės žingsnis po žingsnio: kompanija, trumpi laikai, šilti drabužiai paruošti.</p>
+            <p class="guide-more"><a href="gidai/kaip-pradeti-ziemos-maudynes.html">Skaitykite gidą →</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="video" hidden data-flag="showVideo">
+      <div class="wrap">
+        <h2 class="sec-title">Pamatykite vandenyje</h2>
+        <p class="sec-lead">Trumpas žvilgsnis į vienas maudynes: nuo pradžios ekrano iki išsaugojimo „Garmin Connect“.</p>
+        <button type="button" class="video-facade" data-youtube="" data-title="Pamatykite vandenyje" aria-label="Rodyti vaizdo įrašą">
+          <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></span>
+          <span class="play-label">Rodyti vaizdo įrašą</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="notify" class="request notify">
+      <div class="wrap">
+        <div class="request-box">
+          <h2 class="sec-title">Praneškite, kai atsiras mano laikrodyje</h2>
+          <p class="sec-lead">Cold Dip ateina ir į kitus laikrodžius. Palikite el. paštą ir pasirinkite laikrodį — parašysiu kartą, kai ta versija bus paruošta.</p>
+          <form class="cd-form notify-form" data-cd-form="notify" novalidate data-msg-ok="Ačiū! Parašysiu, kai {p} versija bus paruošta." data-msg-err="Nepavyko išsiųsti. Bandykite dar kartą arba rašykite lukasz.pszenny@gmail.com." data-msg-email="Įveskite galiojantį el. pašto adresą." data-msg-pick="Pasirinkite laikrodį." data-msg-sending="Siunčiama…">
+            <fieldset class="nf-platforms">
+              <legend>Kurį laikrodį?</legend>
+              <label class="nf-chip"><input type="radio" name="platform" value="apple" data-label="Apple Watch"><span>Apple Watch</span></label>
+              <label class="nf-chip"><input type="radio" name="platform" value="wearos" data-label="Wear OS"><span>Wear OS</span></label>
+              <label class="nf-chip"><input type="radio" name="platform" value="huawei" data-label="Huawei"><span>Huawei</span></label>
+              <label class="nf-chip"><input type="radio" name="platform" value="amazfit" data-label="Amazfit"><span>Amazfit</span></label>
+              <label class="nf-chip"><input type="radio" name="platform" value="suunto" data-label="Suunto"><span>Suunto</span></label>
+              <label class="nf-chip"><input type="radio" name="platform" value="inny" data-label="Other"><span>Other</span></label>
+            </fieldset>
+            <div class="nf-fields">
+              <label class="nf-field"><span>El. paštas</span><input type="email" name="email" required autocomplete="email" inputmode="email" maxlength="254"></label>
+              <label class="nf-field"><span>Laikrodžio modelis (neprivaloma)</span><input type="text" name="model" maxlength="120" autocomplete="off"></label>
+            </div>
+            <input class="nf-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <button type="submit" class="btn nf-submit">Praneškite man</button>
+            <p class="nf-status" role="status" aria-live="polite"></p>
+          </form>
+          <p class="search-note nf-privacy">Jūsų adresą saugosiu tik šiai vienai žinutei išsiųsti. Be naujienlaiškio. Parašykite man, ir ištrinsiu. Verčiau paprastas el. laiškas? <a class="nf-mail" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20notify%20me">lukasz.pszenny@gmail.com</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="clubs" class="clubs">
+      <div class="wrap">
+        <div class="clubs-box">
+          <div class="clubs-copy">
+            <h2 class="sec-title">Žiemos maudynių klubams</h2>
+            <p class="sec-lead">Vadovaujate žiemos maudynių grupei, klubui ar gerbėjų puslapiui? Drąsiai dalinkitės Cold Dip su nariais. Programa nemokama, o grafika ir tekstas žemiau paruošti skelbti.</p>
+            <label class="share-label" for="club-text">Tekstas kopijuoti</label>
+            <textarea id="club-text" class="share-text" rows="6" readonly>❄️ Žiemos maudynės su „Garmin“ laikrodžiu? Cold Dip – nemokama programa šaltoms maudynėms: fazės (ant kranto, vandenyje, po išėjimo), laikas vandenyje, pulsas, vandens temperatūra, o sesija „Garmin Connect“ išsaugoma kaip atskira veikla, ne kaip plaukimas. Veikia 130+ „Garmin“ laikrodžių. Sukūrė žiemos maudynių entuziastas iš Bydgoszcz, Lenkija. 👉 https://lukaszpszenny.github.io/ColdDip/lt/</textarea>
+            <p class="cta-row clubs-actions">
+              <button type="button" class="btn" data-copy-target="club-text">Kopijuoti tekstą</button>
+              <a class="btn btn-ghost" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%93%20ice%20swimming%20club&amp;body=Hi%20%C5%81ukasz%2C%0A%0A">Parašykite apie savo klubą</a>
+            </p>
+          </div>
+          <div class="clubs-media">
+            <a class="share-dl" href="../assets/img/share/og-en.jpg" download="colddip-en-1200x630.jpg">
+              <img src="../assets/img/share/og-en.jpg" width="1200" height="630" alt="" loading="lazy" decoding="async">
+              <span>⬇ Atsisiųsti grafiką 1200×630 (nuorodos įrašas)</span>
+            </a>
+            <a class="share-dl share-dl-post" href="../assets/img/share/colddip-post-en.jpg" download="colddip-post-en.jpg">
+              <img src="../assets/img/share/colddip-post-en.jpg" width="720" height="900" alt="" loading="lazy" decoding="async">
+              <span>⬇ Atsisiųsti grafiką 4:5 (srauto įrašas)</span>
+            </a>
+          </div>
+        </div>
+        <div class="clubs-offers">
+          <article class="card clubs-offer">
+            <h3>🏷️ Klubo kodas „Cold Dip Pro“</h3>
+            <p>Parašykite man, ir jūsų klubas gaus savo „Pro“ nuolaidos kodą nariams.</p>
+          </article>
+          <article class="card clubs-offer">
+            <h3>🖨️ A4 plakatas su QR kodu</h3>
+            <p>Persirengimo kambariui, saunai ar klubo skelbimų lentai. QR kodas veda į šią svetainę.</p>
+            <p class="clubs-poster-links">
+              <a class="btn btn-sm" href="../assets/posters/colddip-plakat-en.pdf" download data-gc-event="klik-klub-plakat">⬇ Atsisiųsti PDF</a>
+              <a class="btn btn-ghost btn-sm" href="../assets/posters/colddip-plakat-en.png" download data-gc-event="klik-klub-plakat">⬇ Atsisiųsti PNG</a>
+            </p>
+          </article>
+          <article class="card clubs-offer">
+            <h3>⌚ Ciferblatas su jūsų klubo logotipu</h3>
+            <p>„Garmin“ ciferblatas su jūsų klubo logotipu, pagaminamas pagal užsakymą. Parašykite, ką sumanėte.</p>
+          </article>
+        </div>
+        <form class="cd-form club-form" data-cd-form="klub" novalidate data-msg-ok="Ačiū! Atsakysiu adresu, kurį nurodėte." data-msg-err="Nepavyko išsiųsti. Bandykite dar kartą arba rašykite lukasz.pszenny@gmail.com." data-msg-email="Įveskite galiojantį el. pašto adresą." data-msg-pick="" data-msg-sending="Siunčiama…">
+          <h3>Parašykite apie savo klubą</h3>
+          <input type="hidden" name="platform" value="klub">
+          <div class="nf-fields">
+            <label class="nf-field"><span>El. paštas</span><input type="email" name="email" required autocomplete="email" inputmode="email" maxlength="254"></label>
+            <label class="nf-field"><span>Klubo pavadinimas</span><input type="text" name="model" maxlength="120" autocomplete="organization"></label>
+          </div>
+          <label class="nf-field nf-field-wide"><span>Žinutė (pvz. „Pro“ kodas, plakatai, ciferblatas su logotipu)</span><textarea name="message" rows="3" maxlength="2000"></textarea></label>
+          <input class="nf-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit" class="btn nf-submit">Siųsti</button>
+          <p class="nf-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="request" id="contact"
+      data-i18n-copy="Copy"
+      data-i18n-copied="Copied"
+      data-i18n-gmail="Write via Gmail">
+      <div class="wrap">
+        <div class="request-box">
+          <h2 class="sec-title">Norite Cold Dip „Apple Watch“ ar „Suunto“?</h2>
+          <p class="sec-lead">Turite idėją „Garmin“ programai ar ciferblatui? Parašykite man ir pasakykite, kokį laikrodį naudojate.</p>
+          <div class="interest-row">
+            <a class="btn" href="#notify" data-notify-platform="apple" data-gc-event="klik-chce-apple">Noriu jos „Apple Watch“</a>
+            <a class="btn btn-ghost" href="#notify" data-notify-platform="suunto" data-gc-event="klik-chce-suunto">Noriu jos „Suunto“</a>
+            <a class="btn btn-ghost" href="#notify" data-notify-platform="inny" data-gc-event="klik-chce-inny">Naudoju kitą laikrodį</a>
+          </div>
+          <div class="cta-row">
+            <a class="btn btn-ghost" href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%94%20Apple%20Watch%2C%20Suunto%20or%20an%20idea&amp;body=Hi%20%C5%81ukasz%2C%0A%0A">Rašykite Łukaszui</a>
+            <a class="btn btn-ghost" href="https://apps.garmin.com/en-US/apps/b386c269-1eec-45a3-be73-6c3a3b51d8b0" rel="noopener" target="_blank">Palikite atsiliepimą</a>
+          </div>
+          <p class="search-note">Jei jau naudojate Cold Dip, atsiliepimas „Connect IQ“ labai padeda — ačiū!</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="support" hidden data-flag="showSupport">
+      <div class="wrap">
+        <div class="support-box">
+          <h2 class="sec-title">Pavaišinkite kava</h2>
+          <p class="sec-lead">Cold Dip nemokama. Jei padeda jūsų maudynėms, galite paremti darbą, kuris stovi už jos.</p>
+          <a class="btn" id="support-link" href="#">Pavaišinkite kava</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <p>© 2026 Łukasz Pszenny, Bydgoszcz, Lenkija</p>
+        <address><a href="mailto:lukasz.pszenny@gmail.com?subject=Cold%20Dip%20%E2%80%94%20Apple%20Watch%2C%20Suunto%20or%20an%20idea&amp;body=Hi%20%C5%81ukasz%2C%0A%0A">lukasz.pszenny@gmail.com</a></address>
+      </div>
+      <p class="footer-guides">Žiemos maudynių gidai: <a href="gidai/kiek-laiko-saltame-vandenyje.html">Kiek laiko būti šaltame vandenyje?</a> · <a href="gidai/afterdrop.html">Kas yra afterdrop?</a> · <a href="gidai/kaip-pradeti-ziemos-maudynes.html">Kaip saugiai pradėti žiemos maudynes</a></p>
+      <p class="privacy" data-counter-text="Ši svetainė lankytojus skaičiuoja anonimiškai su GoatCounter, be slapukų ir asmens duomenų — naršyklėje įrašoma tik kalbos nuostata, jei ją pakeičiate.">Cold Dip nerenka asmens duomenų jokiame serveryje. Jūsų sesijos lieka laikrodyje (o „Garmin“ – ir „Garmin Connect“). „Garmin“ orai ateina iš „Garmin“ orų tarnybos telefone; „Amazfit“ – iš MET Norway (CC BY 4.0). <span data-privacy-site>Ši svetainė nenaudoja sekimo priemonių ar analitikos slapukų — naršyklėje įrašoma tik kalbos nuostata, jei ją pakeičiate.</span></p>
+    </div>
+  </footer>
+  <script src="../assets/js/config.js?v=20261126g"></script>
+  <script src="../assets/js/devices.js?v=20261124p"></script>
+  <script src="../assets/js/app.js?v=20261124p"></script>
+  <script src="../assets/js/lang.js?v=20261127l"></script>
+  <script src="../assets/js/extras.js?v=20261126f"></script>
+</body>
+</html>
