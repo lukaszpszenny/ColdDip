@@ -2024,3 +2024,158 @@ a.btn[aria-disabled="true"]:hover { color: var(--cta-text); }
   .hero-copy .howto-link { order: 8; }
   .hero-copy .byline { order: 9; }
 }
+
+/* Seasonal rank faces (Komandos, Legenda) — prominent, mobile-first */
+.faces-ranks {
+  margin: 22px 0 0;
+  padding: 18px 14px 16px;
+  background: linear-gradient(165deg, rgba(240, 201, 135, 0.12), var(--bg-elev) 42%);
+  border: 1px solid rgba(240, 201, 135, 0.32);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow), inset 3px 0 0 #e0b55a;
+}
+.faces-ranks-head { margin: 0 0 14px; }
+.faces-ranks-head .morslevel-kicker { margin-bottom: 4px; }
+.faces-ranks-head h3 {
+  margin: 0 0 8px;
+  font-size: 1.22rem;
+  letter-spacing: -0.03em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.faces-ranks-head h3 .badge { margin: 0; }
+.faces-ranks-intro {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.95rem;
+  max-width: 40rem;
+}
+.faces-ranks-grid {
+  display: grid;
+  gap: 16px;
+}
+@media (min-width: 800px) {
+  .faces-ranks-grid { grid-template-columns: 1fr 1fr; align-items: start; }
+}
+.faces-ranks-card {
+  margin: 0;
+  padding: 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.faces-ranks-komandos { box-shadow: var(--shadow), inset 3px 0 0 #8fbf7a; }
+.faces-ranks-legenda {
+  background: linear-gradient(160deg, rgba(240, 201, 135, 0.12), var(--bg-card) 48%);
+  border-color: rgba(240, 201, 135, 0.3);
+  box-shadow: var(--shadow), inset 3px 0 0 #e0b55a;
+}
+.faces-ranks-card h4 {
+  margin: 10px 0 4px;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+}
+.faces-ranks-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.faces-ranks-media {
+  position: relative;
+  margin: 0 auto;
+  width: min(72vw, 240px);
+  aspect-ratio: 1;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #050b12;
+  border: 1px solid var(--line);
+  box-shadow: 0 0 0 1px rgba(240, 201, 135, 0.12);
+}
+.faces-ranks-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-items: start;
+}
+.faces-ranks-pair .faces-ranks-media { width: 100%; }
+.faces-ranks-media video,
+.faces-ranks-media img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  display: block;
+  background: #050b12;
+}
+.faces-ranks-lock {
+  position: absolute;
+  left: 50%;
+  bottom: 7%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  max-width: calc(100% - 12px);
+  background: rgba(7, 17, 28, 0.88);
+  border: 1px solid rgba(240, 201, 135, 0.5);
+  color: #f4deaa;
+  border-radius: 999px;
+  padding: 3px 8px 3px 6px;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.faces-ranks-lock svg {
+  width: 11px;
+  height: 11px;
+  flex: 0 0 auto;
+}
+.faces-ranks-pair figcaption {
+  margin: 6px 0 0;
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 650;
+  color: var(--text);
+}
+.faces-ranks-note {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  max-width: 42rem;
+}
+.faces-ranks-steps-title {
+  margin: 14px 0 6px;
+  font-size: 0.92rem;
+  font-weight: 750;
+}
+.faces-ranks-steps {
+  margin: 0;
+  padding-left: 1.2em;
+  color: var(--text);
+  font-size: 0.9rem;
+  max-width: 42rem;
+}
+.faces-ranks-steps li { margin: 0 0 4px; }
+.faces-ranks-steps li:last-child { margin-bottom: 0; }
+@media (max-width: 419px) {
+  .faces-ranks { padding: 14px 10px 14px; }
+  .faces-ranks-media { width: min(68vw, 220px); }
+  .faces-ranks-lock { font-size: 0.6rem; padding: 2px 7px 2px 5px; }
+}
+
+.faces-ranks-watch { margin: 0; }
+.faces-ranks-watch .faces-ranks-media { width: 100%; }
+
+.faces-ranks-solo { margin: 0; }
+.faces-ranks-solo .faces-ranks-media { width: min(72vw, 240px); }
+.faces-ranks-watch { margin: 0; }
+.faces-ranks-watch .faces-ranks-media { width: 100%; }
+@media (max-width: 419px) {
+  .faces-ranks-solo .faces-ranks-media { width: min(68vw, 220px); }
+}
