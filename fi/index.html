@@ -311,7 +311,7 @@
           </article>
           <article class="card">
             <h3>Näe koko kausi <span class="pro-star">⭐ PRO</span></h3>
-            <p>Kokonaisaika vedessä ja saunassa, lisäennätyksiä ja historia enintään 200 käyntiin. Ilmainen lista näyttää edelleen viimeiset 30.</p>
+            <p>Kokonaisaika vedessä ja saunassa, kaikkien aikojen ja kauden ennätykset (kylmin vesi, pisin käynti) ja historia enintään 200 käyntiin. Ilmainen lista näyttää edelleen viimeiset 30.</p>
           </article>
           <article class="card">
             <h3>Merkit ja päivittäiset sarjat <span class="pro-star">⭐ PRO</span></h3>
@@ -362,7 +362,7 @@
             </thead>
             <tbody>
             <tr>
-              <th scope="row">Kaikki, mikä on jo Cold Dip 1.0.3:ssa — neljä profiilia, 30 käynnin historia, ennätykset, ohjattu hengitys, GPS ja muuta</th>
+              <th scope="row">Kaikki, mikä on jo Cold Dip 1.0.3:ssa — neljä profiilia, 30 käynnin historia, ohjattu hengitys, GPS ja muuta</th>
               <td class="is-yes">✓ Kyllä</td>
               <td class="is-yes">✓ Kyllä</td>
             </tr>
@@ -378,6 +378,11 @@
             </tr>
             <tr>
               <th scope="row">Näe koko kausi <span class="pro-star">⭐ PRO</span></th>
+              <td class="is-no">—</td>
+              <td class="is-yes">✓ Kyllä</td>
+            </tr>
+            <tr>
+              <th scope="row">Kaikkien aikojen ja kauden ennätykset — kylmin vesi, pisin käynti <span class="pro-star">⭐ PRO</span></th>
               <td class="is-no">—</td>
               <td class="is-yes">✓ Kyllä</td>
             </tr>
@@ -437,7 +442,7 @@
         <div class="pro-unlock" id="pro-unlock">
           <h3>Miten avaat Pron</h3>
           <ol class="face-steps">
-            <li>Päivitä Cold Dip versioon 1.1.0. Sovellus näyttää uutuudet ja aloittaa Pron 7 päivän ilmaisen kokeilun.</li>
+            <li>Päivitä Cold Dip versioon 1.2.0. Sovellus näyttää uutuudet ja aloittaa Pron 7 päivän ilmaisen kokeilun.</li>
             <li>Kun haluat pitää Pron, kelloon ilmestyy 6-numeroinen koodi. Syötä se osoitteessa <a href="https://kzl.io/cold-dip-pro" data-pro-unlock rel="noopener" target="_blank">kzl.io/cold-dip-pro</a> — kertaosto 4,99 USD KiezelPayn kautta.</li>
             <li>Pidä puhelin lähellä, Garmin Connect käynnissä ja Bluetooth päällä. Kello tarvitsee tämän yhteyden, yleensä 5 minuutissa.</li>
           </ol>
@@ -815,10 +820,18 @@
         <h2 class="sec-title">Mitä uutta</h2>
         <p class="sec-lead">Cold Dipin viimeisimmät versiot.</p>
         <ol class="changelog">
-                    <li>
+          <li>
+            <div class="ch-head">
+              <h3 class="ch-ver">1.2.0</h3>
+              <span class="ch-flag is-current">Nykyinen versio</span>
+            </div>
+            <p>Arvot ovat ilmaisia, vain huvin vuoksi — kukaan ei kilpaile kenenkään kanssa: Pingviini (1), Hylje (5, 7 päivää Prota ilmaiseksi), Sissimursu (15, koodi Mors Komandos 2026/2027 -kellotauluun), Veteraanimursu (30, −30 % Mors Levelistä / Dip Goalsista, koodit tulossa) ja Legendamursu (50, koodi valitsemaasi kultaiseen kellotauluun: Mors Legenda Król 2026/2027 tai Mors Legenda Posejdon 2026/2027). Enintään yksi pulahdus päivässä lasketaan (kausi 1.10.–30.4.), ja pelkkä sauna ilman veteen menoa ei laske. Nämä ovat kolme erillistä kausikellotaulua, tulossa pian Connect IQ -kauppaan, ilmaisia ladata: ne ansaitaan arvolla Cold Dipissä. Ne eivät sisälly 5,99 / 7,99 USD:n paketteihin, ja uusille kausille tulee uusia kellotauluja.</p>
+            <p>Kaikki ennätykset — kylmin vesi ja pisin käynti, kaikkien aikojen ja kauden — ovat nyt Prossa. Ne tallentuvat kaikille edelleen, ja ilmainen sovellus näyttää «Uusi ennätys! Katso Prossa». Kertaluonteinen arviopyyntö tulee kolmannen pulahduksen jälkeen. Ajanotto, syke ja tallennus Garmin Connectiin pysyvät ilmaisina. Vanhemmissa ja mustavalkoisissa kelloissa ilman Prota ennätykset pysyvät ilmaisina.</p>
+            <p>Veden lämpötilan voi nyt asettaa alle 0°C.</p>
+          </li>
+          <li>
             <div class="ch-head">
               <h3 class="ch-ver">1.1.2</h3>
-              <span class="ch-flag is-current">Nykyinen versio</span>
             </div>
             <p>Vedestä noustua syötetty veden lämpötila koskee nyt vain kyseistä sessiota. Kysely ohittaa vahingossa tehdyn painalluksen heti noston jälkeen. Vakaampi: täysi muisti tai tallennusvirhe ei enää jumita sovellusta, eikä vanhemman kellon tukematon kenttä tai laji enää estä aloitusta. Korjattu puolan- ja venäjänkieliset lämmittelyvinkit.</p>
           </li>
@@ -938,7 +951,7 @@
           </details>
           <details>
             <summary><h3>Mitä Pro tuo?</h3></summary>
-            <p class="answer">Pro on vapaaehtoinen, ja sovellus pysyy ilmaisena. Pro tuo saunan, kylmän suihkun, ohjatun kontrastin ja hengitysvalmistelun, omat hälytykset, kauden tilastot, merkit ja päiväputket, lisänäkymät ja teemat, hanskoilla helpon yksinkertaisen tilan, aikavihjeen veden lämpötilan mukaan (vihje, ei koskaan raja) ja sykekäyrän. Kertamaksu 4,99 USD 7 päivän ilmaisen kokeilun jälkeen. <a href="#pro">Kaikki Pro-ominaisuudet</a>.</p>
+            <p class="answer">Pro on vapaaehtoinen, ja sovellus pysyy ilmaisena. Pro tuo saunan, kylmän suihkun, ohjatun kontrastin ja hengitysvalmistelun, omat hälytykset, kauden tilastot, kaikkien aikojen ja kauden ennätykset (kylmin vesi, pisin käynti), merkit ja päiväputket, lisänäkymät ja teemat, hanskoilla helpon yksinkertaisen tilan, aikavihjeen veden lämpötilan mukaan (vihje, ei koskaan raja) ja sykekäyrän. Kertamaksu 4,99 USD 7 päivän ilmaisen kokeilun jälkeen. <a href="#pro">Kaikki Pro-ominaisuudet</a>.</p>
           </details>
           <details>
             <summary><h3>Miten KiezelPayn avauskoodi toimii?</h3></summary>
